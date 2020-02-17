@@ -1,0 +1,65 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/C_remainder.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:57 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>孫子定理</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">孫子定理</font></b></u></p>
+<p>程式可以計算孫子定理(中國餘數定理Chinese Remainder 
+Theorem)的問題，程式會計算最小正值解及其通解。要注意這個定理的限制條件，就是任何兩個除數必須為<font color="#FF0000">互質關係</font>，否則計算不成立。若果希望計算更一般情況下的聯立同餘式問題，請使用<a href="congruences.html">聯立同餘式(I)</a>及<a href="congruences2.html">聯立同餘式(II)</a>程式進行計算。</p>
+<p>程式 (59 bytes，使用記憶A, B, C及M)</p>
+<p><font color="#FF0000">程式需要在 BASE 模式下執行，因此在輸入程式前請先按 Mode Mode 3 進入BASE模式。</font></p>
+<p>Dec: ?→M: ?→C: Lbl 0: ?→A: ?→B:</p>
+<p>A<font color="#FF0000">M-</font>: Lbl 1: M - M÷B×B
+<font color="#FF0000">=&gt;</font> C<font color="#FF0000">M+</font>
+<font color="#FF0000">=&gt;</font> Goto 1:</p>
+<p>A<font color="#FF0000">M+</font>: BC→C: Ans→B: M→A: Goto 0</p>
+<p>　</p>
+<p>例題1: 一正整數被3除餘2；被5除餘3；被7除餘2，求這個的最少值。</p>
+<p>按 Prog 1 再按&nbsp; 2 EXE 3 EXE 3 EXE 5 EXE 2 EXE 7 EXE 
+(顯示答案為23) EXE (顯示105)</p>
+<p>所以通解  = 23 + 105n</p>
+<p>計算完結後按 AC 終止程式</p>
+<p>　</p>
+<p>例題2: 計算以下聯立同餘式: </p>
+<p>x ≡ 1 (mod 2)</p>
+<p>x ≡ 2 (mod 3)</p>
+<p>x ≡ 3 (mod 5)</p>
+<p>x ≡ 2 (mod 7)</p>
+<p>x ≡ 3 (mod 11)</p>
+<p>按 Prog 1 再按 EXE 2 EXE 2 EXE 3 EXE 3 EXE 5 EXE 2 EXE 7 EXE </p>
+<p>3 EXE 11 EXE (顯示答案為443) EXE (顯示2310)</p>
+<p>所以通解  = 
+443 + 2310n</p>
+<p>計算完結後按 AC 終止程式</p>
+<p>　</p>
+<p>注意: 輸入的任意兩個除數必須為<b><font color="#FF0000">互質</font></b>，否則計算的解可能不是最小的解。</p>
+<p>註: 若果計算大除數問題，時間可能會很長，這是定理本身的缺點，建議使用<a href="congruences2.html">聯立同餘式(II)</a>程式。</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC185
+程式集</a></p>
+<p>相關程式:</p>
+<p><a href="congruences.html">聯立同餘式(I)</a></p>
+<p><a href="congruences2.html">聯立同餘式(II)</a></p>
+<p>有關聯立同餘式的參考資料:</p>
+<p><a href="http://www.edp.ust.hk/previous/math/history/5/5_4/5_4_5.htm">孫子定理</a></p>
+<p><a href="http://mathworld.wolfram.com/LinearCongruenceEquation.html">
+simultaneous linear congruences</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/C_remainder.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:57 GMT -->
+</html>

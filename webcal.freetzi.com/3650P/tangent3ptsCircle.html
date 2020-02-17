@@ -1,0 +1,125 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/tangent3ptsCircle.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:45 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>己知斜率求圓的切線及三點求圓</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">己知斜率求圓的切線及三點求圓</font></b></u></p>
+<p align="center"><u><b><font size="5">Tangent to Circle with given slope and 
+Circle from three points</font></b></u></p>
+
+<p>第二個程式雖然較長一點，但計算三點求圓時輸入沒有任何限制(註2)。</p>
+
+<p>程式更新日期: 2009年4月10日</p>
+
+<p>第一個程式 (160 bytes)</p>
+
+<p>?→A: ?→B: ?→C: ?→D: (1 + D<sup>2</sup>)(A<sup>2</sup> + B<sup>2</sup> - 4C: </p>
+
+<p>2<sup>-1</sup>(DA - B + √√Ans<sup>2</sup>→Y: DA - B - Y→M:
+ </p>
+
+<p>?→Y: ?→M: (A - Y) ┘(M - B→X:</p>
+
+<p>M + B - XY - XA→A: (C - Y) ┘(M - D→B:</p>
+<p>D - BY - BC<font color="#FF0000">M+</font>: (M - A) ┘(2X- 2B→A◢ </p>
+<p>B Ans + M┘2→B◢ <font color="#FF0000">Pol(</font> A - C, B - D◢ </p>
+<p>-2A◢ -2B◢ A<sup>2</sup> + B<sup>2 </sup>- X<sup>2 </sup> 
+</p>
+
+<p>　</p>
+
+<p>第二個程式 (161 bytes)</p>
+
+<p>?→A: ?→B: ?→C: ?→D: (1 + D<sup>2</sup>)(A<sup>2</sup> + B<sup>2</sup> - 4C: </p>
+
+<p>2<sup>-1</sup>(DA - B + √√Ans<sup>2</sup>→Y: DA - B - Y→M:
+ </p>
+
+<p>?→Y: ?→M: Y - C + 0 <font color="#FF0000">Pol(</font> M - B, A 
+- Y:</p>
+
+<p>Ans sin Y + cos Y (D - M: </p>
+
+<p>Ans ÷ sin(Y + 0 <font color="#FF0000">Pol(</font> D - B, A - 
+C ) - Y→X:</p>
+
+<p>2<sup>-1</sup>(A + C + X cos Y→A◢ 2<sup>-1</sup>(B 
++ D
++ X sin Y→B◢ </p>
+<p> <font color="#FF0000">Pol(</font> A - C, B - D◢ -2A◢ -2B◢ A<sup>2</sup> 
++ B<sup>2 </sup>- X<sup>2 </sup> 
+</p>
+
+<p>　</p>
+<p>
+例題1: 
+一直線的斜率為 - 2，它與圓 
+x<sup>2</sup> + y<sup>2</sup> + 2x + 4y = 0相切，求直線方程。</p>
+<p>
+按 Prog 1 再按 2 EXE 4 
+EXE 0 EXE - 2 EXE (顯示切線的y-截距為1)
+</p>
+<p>
+EXE (顯示另一切線的y-截距為-9)</p>
+<p>
+所以兩切線分別為 y = - 2x + 1
+及 y = - 2x - 9</p>
+<p>
+　</p>
+<p>
+計算完結後按 AC 終止程式，按 RCL Y 及RCL M 分別顯示兩直線的y-截距。</p>
+<p>　</p>
+<p>
+例題2: 
+圓經過三點 (2,0)，(0,1)
+及 (0,4)，求圓心, 
+半徑及圓的方程。</p>
+<p>
+按 Prog 1 再按 2 EXE 0 EXE 0 EXE 1 EXE 0 EXE 4 EXE (顯示2) EXE (顯示5/2, 即圓心為(2, 5/2))</p>
+<p>
+EXE (顯示半徑為2.5) EXE (顯示D為 
+-4) EXE (顯示E為 
+-5) = (顯示F為 
+4)</p>
+<p>
+所以圓的方程為: 
+x<sup>2</sup> + y<sup>2</sup> – 4x – 5y + 4 = 0</p>
+<p>　</p>
+<p>程式執行完成後，使用可以按 
+ 
+RCL A, RCL B及RCL X分別顯示圓心的座標及半徑。</p>
+<p>　</p>
+<p>註1: 計算已知斜率求圓切線時，輸入的圓方程必須真實存在，否則計算不成立。</p>
+<p>註2: 使用第一個程式計算三點求圓時，若兩點的y坐標相同，程式有可能出現Math ERROR，解決的方法是將<font color="#FF0000">相同y座標的兩點</font>作為第一點
+及第二點輸入即可。
+使用第二個程式則沒有這個限制。</p>
+<p>註3: 計算三點求圓時，若三點在同一直線上(即不可能有答案)，程式會出現Math ERROR。</p>
+<p>
+註4: 計算三點求圓時，若輸入為整數或分數，第一個程式計算的圓心能夠直接得出分數答案。</p>
+
+
+<p>
+　</p>
+
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/tangent3ptsCircle.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:45 GMT -->
+</html>

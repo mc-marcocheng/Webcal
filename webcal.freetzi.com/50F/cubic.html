@@ -1,0 +1,169 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/cubic.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:11 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>一元三次方程</title>
+<meta name="Microsoft Theme" content="cnpeach 011">
+<script src="webcal.js"></script></head>
+
+<body background="di5.gif" bgcolor="#EEFFF7" text="#000000" link="#008000" vlink="#808080" alink="#808000">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><font size="5">一元三次方程</font></b></u></p>
+<p>程式利用近似值的方法計算一元三次方程的其中一個根，當知到其中一根，就可以很易分解出二次因式，若果餘下的兩根為實根，可以再使用計數機內置<a href="quadratic1.html">一元二次方程</a>功能計算餘下的兩根。</p>
+<p>程式編寫日期: 2006年6月1日</p>
+<p>程式長度: 28步 </p>
+<p align="left"><font color="#FF0000">注意: </font>輸入程式前，請按 SHIFT KAC 1 Kin 5，確保程式能順利輸入。</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse; " width="100%" id="AutoNumber1" bordercolorlight="#669900" bordercolordark="#669900">
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">x<sup>y</sup><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">+<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 2 <!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">x<sup>2</sup><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">+<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 3<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">+<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 4<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin - 5<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">÷</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">X←→K 5<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin - 6<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">X←→K 6<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">M-<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">x<sup>2</sup><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">x &gt; 0<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MODE .<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p align="left">參考資料:</p>
+<p align="left">若 ax<sup>3</sup> + bx<sup>2</sup> + cx + d = (Ax<sup>2</sup> + 
+Bx + C)(x - α) , 則</p>
+<p align="left">A = a, </p>
+<p align="left">B = b + αA</p>
+<p align="left">C = - d / <font face="細明體">α</font></p>
+<p>　</p>
+<p>例題1: 解 2x<sup>3</sup> - x<sup>2</sup> - 72x + 36 =0</p>
+<p>
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> SHIFT KAC (</span>必要<span lang="EN-US">)
+<font color="#FF0000">2</font> SHIFR Kin 1 <font color="#FF0000">1 +/-</font> 
+SHIFT Kin 2 <font color="#FF0000">72 +/-</font> Kin 3 <font color="#FF0000">36</font> 
+Kin 4 (</span>輸入方程<span lang="EN-US">)</span></p>
+<p>
+<span lang="EN-US">SHIFT EXP SHIFT Min (</span>輸入起始點，建議使用<font face="Times New Roman">π值)
+</font><span lang="EN-US">P1 (</span>顯示第一個根為 0.5)</p>
+<p>
+再按 1 FMLA&nbsp; RUN + MR <span lang="en">× 2 RUN 36 ÷ MR +/- RUN (</span>顯示第二個根為6)</p>
+<p>
+RUN (顯示第三個根為 -6)</p>
+<p>　</p>
+<p>例題2: 解 x<sup>3</sup> -  2x - 1 = 0</p>
+<p>
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> SHIFT KAC (</span>必要<span lang="EN-US">)
+<font color="#FF0000">1</font> SHIFR Kin 1 <font color="#FF0000">0</font> SHIFT 
+Kin 2 <font color="#FF0000">2 +/-</font> Kin 3 <font color="#FF0000">1 +/-</font> 
+Kin 4 (</span>輸入方程<span lang="EN-US">)</span></p>
+<p>
+<span lang="EN-US">SHIFT EXP SHIFT Min (</span>輸入起始點，建議使用<font face="Times New Roman">π值)
+</font><span lang="EN-US">P1 (</span>顯示第一個根為 -0.618033988)</p>
+<p>
+再按 1 FMLA&nbsp; RUN + MR<span lang="en"> RUN Kout 4 ÷ MR +/- RUN (</span>顯示第二個根為 
+1.618033989)</p>
+<p>
+RUN (顯示第三個根為 -1)</p>
+<p>　</p>
+<p>例題3: 解 3x<sup>3</sup> - 5x<sup>2</sup> + x - 4 =0</p>
+<p>
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> SHIFT KAC (</span>必要<span lang="EN-US">)
+<font color="#FF0000">3</font> SHIFR Kin 1 <font color="#FF0000">5 +/-</font> 
+SHIFT Kin 2 <font color="#FF0000">1</font> Kin 3 <font color="#FF0000">4 +/-</font> 
+Kin 4 (</span>輸入方程<span lang="EN-US">)</span></p>
+<p>
+<span lang="EN-US">SHIFT EXP SHIFT Min (</span>輸入起始點，建議使用<font face="Times New Roman">π值)
+</font><span lang="EN-US">P1 (</span>顯示-E-，因為計算誤差)</p>
+<p>
+再按 AC MR (顯示第一個根為1.86977421)</p>
+<p>
+再按 1 FMLA&nbsp; RUN + MR <span lang="en">× 3 RUN Kout 4 ÷ MR +/- RUN (</span>顯示-E-，表示為餘下兩根為複數根)</p>
+<p>
+　</p>
+<p>
+註1: 使用內置一元二次方程時若出現-E-，請檢查判別式(按 Kout 6)是否一個很細少的值，若為很少的負數，表示方程並非複數根(誤差造成)，而是實數重根。</p>
+<p>
+註2: 使用程式計算第一個根時，有可能出現-E-，這是計算誤差造成，只要再按 AC MR 顯示第一個根即可。</p>
+<p>
+註3: 程式所使用的起始值可以是任何非零的數值，不過為了避免出現問題，建議使用計數機常數<font face="Times New Roman">π值。</font></p>
+<p>
+<font face="Times New Roman">註4: 
+程式使用正割法計算的第一個根，計算可能需要較多時間，另外若果第一個根為重根，誤差可能會多一些。</font></p>
+<p>　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<a href="index.html">返回 fx-50F專頁</a></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/cubic.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:11 GMT -->
+</html>

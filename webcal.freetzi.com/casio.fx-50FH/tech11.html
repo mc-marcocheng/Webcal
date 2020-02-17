@@ -1,0 +1,90 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/casio.fx-50FH/tech11.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:28 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>隱形記憶的使用</title>
+<meta name="Microsoft Theme" content="indust 011">
+<script src="webcal.js"></script></head>
+
+<body background="indtextb.jpg" bgcolor="#FFFFFF" text="#000000" link="#3366CC" vlink="#666666" alink="#996600">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">
+隱形記憶的使用</font></b></u></p>
+<font size="4">
+<p>
+　</p>
+<p>
+除了常用的七個數字記憶及統計變數記憶外，計數機內部其實還有其它記憶，用於一般的計算，由於這些記憶用於內部運算，所以沒有符號代表這些記憶，因此就稱號為隱形記憶
+，對於fx-50FH及fx-50F PLUS已知有三個統計隱形記憶，另外在For結構中亦存兩個隱形記憶。</p>
+<p>
+　</p>
+<p>
+<font color="#0000FF"><b>三個統計隱形記憶</b></font></p>
+<p>
+其中有在三個 隱形記應用在統計數據的輸入，請參看以下例子:</p>
+<p>在REG 模式，執行</p>
+<p><font color="#FF0000">2 , 3 ; 4 DT</font></p>
+<p>執行這個指令除了輸入了數據，同時將三個資料儲放在隱形記憶中，所以再執行 <font color="#FF0000">DT</font> 
+指令，就可以相當於再執 <font color="#FF0000">2 , 3 ; 4 DT</font>的指令，其實這些隱形記憶用於簡化輸入相同數據。</p>
+<p>　</p>
+<p>大家會問隱形記憶並無實際符號代表，那麼如何應在編寫程式方面？</p>
+<p>不錯隱形記憶因無符號代表，使用上其實有一定難度，不過就現在所知，儲存x數據的隱形記憶可以用替身記憶代表，請參看以下例子:</p>
+<p>先執行<font color="#FF0000" size="4"> 2 , 3 ; 4 DT</font></p>
+<p>..........</p>
+<p>當需要提取x隱形記憶，只要再執行 <font color="#FF0000">; 0 DT</font></p>
+<p>這時計數機內部執行相當於 <font color="#FF0000">2 , 3 ; 0 DT</font>的指令，另一方面答案記憶(Ans)亦會同時被更新，變成 
+x隱形記憶的數值，亦即是2，因此替身Ans記憶就可以代表x隱形記憶了，因此就可應用在編寫程式方面，要注意頻數為0，這樣就可以不影響其它統計變數的數值。至於另外兩個隱形記
+憶，要使用難度就相當高，差不多可以說無法使用，特別是儲存頻數的隱形記憶，至於儲存y數據的隱形記憶，在某些特別情況下，亦有機會可以使用，對程式有興趣的朋友，可以參考以下的程式，
+程式都使用了統計變數記憶，並且運用了ｘ隱形記憶。</p>
+<p>
+<a href="matrix_Mult.html">三階矩陣乘法</a> (3×3 matrix multiplication)</p>
+<p>
+　</p>
+<p>
+<font color="#0000FF"><b>For 結構兩個隱形記憶</b></font></p>
+<p>
+兩個For結構隱形憶記憶應用在For語句中，請參考以下例子:</p>
+<p>
+For 0<font face="新細明體">→A To <font color="#FF0000">2+9</font> Step
+<font color="#FF0000">1+1</font>: ....... : Next</font></p>
+<p>
+<font face="新細明體">fx-50FH及fx-50F PLUS For 結構與現時很多高階電腦不同，For 
+結構的運算不是採用完全動態的形式，即For的條件語句不是完全重新執行，當For開始執行時，在To及Step之後的數值<font color="#FF0000">(上面紅色位置)</font>會被儲存在兩個隱形記憶中，在之後整個For結構的運算中，這兩個數值會一直保持不變(不可動態改變)，這兩個隱形記憶只應用在For結構的條件運算中。</font></p>
+<p>
+我經一些研究及測試，相信To的隱形記憶應該很難應用於程式之中(最少到目前為止都未找到方法)，不過Step的隱形記憶就有機會可應用在程式編寫中(在某些特定條件下)，通常可以在記憶不足的情況下暫時儲存一些數，可以參考以下語句看看如何儲存及提取Step隱形記憶的數值:</p>
+<p>
+For A<font face="新細明體">→A To A Step 2: .......... : <font color="#008000">A: 
+Next: A - Ans</font>&nbsp; </font></p>
+<p>
+<font face="新細明體">上面Step 2 指令就是將2的數值儲存在Step隱形記憶中，而綠色的程式碼用作提取Step隱形記憶的數值，即是最後執行的 
+A - Ans 就是Step隱形記憶的數值，上述方法使用隱形記憶有以下兩個限制條件要注意:</font></p>
+<p>
+<font face="新細明體">1. 
+在For結構中(即Step至Next之間)的程式碼，不可改變用於條件語句中的字母記憶數值(上面例子使用字母A)，否則For結構的執行可能永遠無法終止或要經很長時間才可終止。</font></p>
+<p>
+<font face="新細明體">2. Step隱形記憶儲存的數值，&#32118;對值相對於用於條件字母記憶的&#32118;對值不可以太小，否則有可能出現Argument 
+ERROR，一般這個限制是指Step隱形記憶的數值不可以是零。</font></p>
+<p>　</p>
+<p>
+<a href="fx-50F_Plus.html">返回 CASIO fx-50FH、fx-3650P II、fx-50FH II及fx-50F PLUS 程式集</a></font></a></p>
+
+
+<!--mstheme--></font>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/casio.fx-50FH/tech11.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:28 GMT -->
+</html>
+
+

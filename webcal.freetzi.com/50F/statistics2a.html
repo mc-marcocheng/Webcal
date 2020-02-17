@@ -1,0 +1,107 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/statistics2a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:12 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>線性回歸計算</title>
+<style>
+<!--
+table.MsoTableGrid
+	{border:1.0pt solid windowtext;
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+<meta name="Microsoft Theme" content="cnpeach 011">
+<script src="webcal.js"></script></head>
+
+<body background="di5.gif" bgcolor="#EEFFF7" text="#000000" link="#008000" vlink="#808080" alink="#808000">
+
+<!--mstheme--><font face="新細明體">
+<p align="center">
+<span style="text-decoration: underline"><font size="5">
+<span style="font-weight: 700">其</span></font></span><font size="5"><span style="font-family: 新細明體; font-weight: 700; text-decoration: underline">它</span><span lang="EN-US" style="font-family: 新細明體; font-weight: 700; text-decoration: underline">回歸</span><span style="font-family: 新細明體; font-weight: 700; text-decoration: underline">計算</span></font></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+<b><font color="#800080">1. 倒數回歸</font></b></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+公式: y = A + B / x</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+輸入數據項目是 x 的倒數 ( 1/x )，而 y 與線性回歸相同。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+操作及回歸係數修正基本上與線性回歸相同。要計算 x 的估值，按 <font color="#FF0000">數值y</font> 再按 
+<font color="#FF0000">SHIFT&nbsp; <b>)]</b>&nbsp; 1/x</font>&nbsp; ，要計算 y 估值，按 
+<font color="#FF0000">數值x</font> 再按 <font color="#FF0000">1/x&nbsp; <b>&nbsp;)]</b></font>&nbsp; 
+。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+注意: Σ(1/x)、Σ(1/x<sup>2</sup>)及Σ(y/x)是由Σx、Σx<sup>2</sup>及Σxy 代替求得。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+　</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+　</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+<font color="#800080"><b>2</b></font><b><font color="#800080">. 對數回歸</font></b></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+公式: y = A + B˙ ln x</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+輸入數據項目是 x 的對數 ( ln x )，而 y 與線性回歸相同。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+操作及回歸係數修正基本上與線性回歸相同。要計算 x 的估值，按 <font color="#FF0000">數值y</font> 再按 
+<font color="#FF0000">SHIFT&nbsp; <b>)]</b>&nbsp; SHIFT e<sup>x</sup></font>&nbsp; 
+，要計算 y 估值，按 <font color="#FF0000">數值x</font> 再按 <font color="#FF0000">ln&nbsp;
+<b>&nbsp;)]</b></font>&nbsp; 。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+注意: Σ ln x、Σ(ln x)<sup>2</sup>及Σ ln x˙y是由Σx、Σx<sup>2</sup>及Σxy 代替求得。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+　</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+<b><font color="#800080">3. 指數回歸</font></b></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+公式: y = A˙e<sup>Bx</sup></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+輸入數據項目是 y 的對數 ( ln y )，而 x 與線性回歸相同。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+修正操作基本上與線性回歸相同。要求得A的數值，按 <font color="#FF0000">SHIFT 7 SHIFT e<sup>x</sup></font> 
+，要計算 x 的估值，按 <font color="#FF0000">數值y</font> 再按 <font color="#FF0000">ln SHIFT&nbsp;
+<b>)]</b></font> ，要計算 y 估值，按 <font color="#FF0000">數值x</font> 再按 
+<font color="#FF0000"><b>)]</b></font>&nbsp; <font color="#FF0000">SHIFT e<sup>x</sup></font>。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+注意: Σ ln y、Σ(ln y)<sup>2</sup>及Σx˙ln y是由Σy、Σy<sup>2</sup>及Σxy 代替求得。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+　</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+<font color="#800080"><b>4</b></font><b><font color="#800080">. 乘方回歸</font></b></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+公式: y = A˙x<sup>B</sup></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+輸入數據項目是 ln x 及 ln y。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+修正操作基本上與線性回歸相同。要求得A的數值，按 <font color="#FF0000">SHIFT 7 SHIFT e<sup>x</sup></font> 
+，要計算 x 的估值，按 <font color="#FF0000">數值y</font> 再按 <font color="#FF0000">ln SHIFT&nbsp;
+<b>)]</b></font>&nbsp; <font color="#FF0000">SHIFT e<sup>x</sup></font>，要計算 y 
+估值，按 <font color="#FF0000">數值x</font> 再按 <font color="#FF0000">ln</font>
+<font color="#FF0000"><b>)]</b></font>&nbsp; <font color="#FF0000">SHIFT e<sup>x</sup></font>。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+注意: Σ ln x、Σ(ln x)<sup>2</sup>、Σ ln y、Σ(ln y)<sup>2</sup>及Σln x˙ln y是由Σx、Σx<sup>2</sup>、Σy、Σy<sup>2</sup>及Σxy 
+代替求得。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<a href="http://hk.geocities.com/kl_cheuk/50F/index.htm">返回 fx-50F專頁</a></p>
+<p><a href="http://hk.geocities.com/kl_cheuk/fx-3900PV/index.htm">返回 fx-3900PV程式集</a></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+<a href="http://hk.geocities.com/kl_cheuk/285II/fx-992S.htm">返回fx-992S內置功能</a></p>
+<p>
+　</p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/statistics2a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:12 GMT -->
+</html>

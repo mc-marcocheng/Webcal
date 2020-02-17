@@ -1,0 +1,83 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/area_polygon.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:43 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>多邊形面積(邊及夾角)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">多邊形面積(邊及夾角)</font></b></u></p>
+<p>若已知多邊形的N - 1個邊長及N-2個內角，程式可以計算多邊形的面積及最後一邊的長度。</p>
+
+<p>程式編寫日期: 2008年3月27日</p>
+
+<p>程式 (112 bytes)</p>
+
+<p>Mem clear: ?→Y: Lbl 0: ?→A: ?→B: A - X→A:</p>
+
+<p>A&gt;2π<sup>r</sup> <font color="#FF0000">=&gt;</font> A - 2π<sup>r</sup>→A: √( Y<sup>2</sup> + B<sup>2</sup> - 2YB cosA→C:  </p>
+
+<p>2<sup>-1</sup>YB sin A<font color="#FF0000">M+</font>: <font color="#FF0000">cos<sup>-1</sup> </font>( (B<sup>2</sup> + C<sup>2</sup> 
+- Y<sup>2</sup>) <span lang="en">÷  2BC→X:  </span></p>
+
+<p> <span lang="en">(0&gt;A) + (A&gt;π<sup>r</sup>)
+<font color="#FF0000">=&gt;</font> -X→X: M→A: C→B: C→Y: Goto 0</span></p>
+
+<p><span lang="en">&nbsp;</span></p>
+
+<p>註1: 順序輸入數據，第一邊長、第一邊及第二邊的內角、第二邊長、第二邊及第三邊的內角、第三邊長 .....，當輸入至第N-1邊後顯示面積及第N邊長度。</p>
+
+<p>註2: 輸入的邊長及內角必須順多相連，否則計算不成立。</p>
+
+<p>註3: 注意輸入的夾角是內角，而內角是可以大於180<sup>o</sup>。</p>
+
+<p>　</p>
+
+<p>例題1: 一五邊形，其中四個邊及三個內角順序為 2、30<sup>o</sup>、2、300<sup>o</sup>、2、30<sup>o</sup>及2，求五邊形的面積及第五邊的長度。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1再按 2 EXE 30 EXE 2 EXE 300 EXE 2 EXE </p>
+<p>
+30 EXE 2 EXE (顯示面積為2.26795) EXE (顯示第五邊的長度為2)</p>
+
+<p>計算完後後，
+請按 AC 終止程式</p>
+
+<p>　</p>
+<p>例題2: 
+a=4, b=5, ∠C=40<sup>o</sup>
+，求三角形面積及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按<font color="#FF0000"> </font>
+4 EXE 40 EXE 5 EXE (顯示面積為6.42788) EXE (顯示c為3.21842)</p>
+
+<p>計算完後後，
+請按 AC 終止程式</p>
+
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/area_polygon.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:43 GMT -->
+</html>

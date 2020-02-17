@@ -1,0 +1,142 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/amortizationSchedule.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:53 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>攤銷進度表</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">攤銷進度表</font></b></u></p>
+<p>
+程式編寫日期: 2006年7月23日</p>
+<p>
+程式會計算攤銷進度表(Amortization 
+Schedule)，每一期的貸款利[息(Loan 
+Interest)、償還貸款(Loan Repaid)及尚欠貸款(Outstanding Balance)。程式假設利息每期結算、息率不變及每期供款不變(最後一期供款可以較少)。注意程式每一次計算準確至小數後兩位，與實際情況一樣。</p>
+<p>程式 (70 bytes)</p>
+<p>?→M: ?→A: ?→B: ?→C: Lbl 0:</p>
+<p>MAB ÷ 1200: Fix 2: Rnd: Norm 1: </p>
+<p>Ans→D◢ D+M→X: X≧C <font color="#FF0000">=&gt;</font> C - D<font color="#FF0000">M-</font>◢
+</p>
+<p>C&gt;X <font color="#FF0000">=&gt;</font> M<font color="#FF0000">M-</font>◢ 
+M◢ X&gt;C <font color="#FF0000">=&gt;</font> Goto 0: X</p>
+<p>
+　</p>
+<p>例題: 某銀行提供私人貸款，年利率 15%，提供貸款當日起計之後的每月結算利息及供款。張先生銀行申請得 $ 40 000的私人貸款，並同意每月供款 
+$9000給銀行直至貸款全數清還(最後一個月的供款可以少於 $9000)，試完成以下攤銷進度表。</p>
+<!--mstheme--></font>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber3" bordercolorlight="#999900" bordercolordark="#666666">
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">月<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">貸款利息<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">償還貸款<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">尚欠貸款<!--mstheme--></font></td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">4<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p class="MsoNormal">按 Prog 1&nbsp; 40000 (貸款) EXE 15 EXE (年利率) 1 EXE (一個月結算) </p>
+<p class="MsoNormal">9000 EXE (每月供款，顯示第1個月的貸款利[息為 500) </p>
+<p class="MsoNormal">EXE (顯示第1個月的償還貸款為 8500) </p>
+<p class="MsoNormal">EXE (顯示第1個月的尚欠貸款為 31500)</p>
+<p class="MsoNormal">EXE (顯示第2個月的貸款利[息為 393.75) </p>
+<p class="MsoNormal">EXE (顯示第2個月的償還貸款為 8606.25)</p>
+<p class="MsoNormal">EXE (顯示第2個月的尚欠貸款為 22893.75)</p>
+<p class="MsoNormal">EXE (顯示 286.17) EXE (顯示 8713.83) EXE (顯示 14179.92)</p>
+<p class="MsoNormal">EXE (顯示 177.25) EXE (顯示 8822.75) EXE (顯示 5357.17)</p>
+<p class="MsoNormal">EXE (顯示 66.96) EXE (顯示 5357.17) EXE (顯示 
+<font color="#FF0000">0</font>，表示最後一期)</p>
+<p class="MsoNormal">EXE (顯示<font color="#FF0000">最後一期的供款</font>為 5424.13)</p>
+<p class="MsoNormal">所以答案為: </p>
+<!--mstheme--></font>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber3" bordercolorlight="#999900" bordercolordark="#666666">
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">月<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">貸款利息<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">償還貸款<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">尚欠貸款<!--mstheme--></font></td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">500<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">8500<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">31500<!--mstheme--></font></td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">393.75<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">8606.25<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">22893.75<!--mstheme--></font></td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">286.17<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">8713.83<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">14179.92<!--mstheme--></font></td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">4<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">177.25<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">8822.75<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">5357.17<!--mstheme--></font></td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">66.96<!--mstheme--></font></td>
+    <td width="29%"><!--mstheme--><font face="新細明體">5357.17<!--mstheme--></font></td>
+    <td width="30%"><!--mstheme--><font face="新細明體">0<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p>　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/amortizationSchedule.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:53 GMT -->
+</html>

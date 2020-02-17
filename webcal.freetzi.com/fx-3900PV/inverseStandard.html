@@ -1,0 +1,418 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/fx-3900PV/inverseStandard.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:22 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>程式編寫日期</title>
+<meta name="Microsoft Theme" content="china 011">
+<style>
+<!--
+span.GramE
+	{}
+-->
+</style>
+<script src="webcal.js"></script></head>
+
+<body background="di1.gif" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#FF9933" alink="#FF3300">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b>
+<span style="font-family: 新細明體">
+<font size="5">反查</font></span><span lang="EN-US" style="font-family: 新細明體"><font size="5">標準常態分佈概率(</span><span style="font-family: 新細明體">I</span><span lang="EN-US" style="font-family: 新細明體">) </span>
+</font> 
+</b></u></p>
+
+<p>程式使用直接計算方法，速度很快，最大的&#32118;對值誤差亦小於4.5x10<sup>-4</sup>，使用時要注意輸入概率範圍為 
+<font color="#FF0000"><b>0&lt; P&lt; 0.5</b></font>。</p>
+
+<p>程式編寫日期: 2006年9月27日</p>
+
+<p>程式(70步)</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber1" bordercolorlight="#1445A1" bordercolordark="#1445A1">
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">1</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">2.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">.<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">3.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">4.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">5.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">x<sup>2</sup><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">6.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1/x<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">7.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">ln<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">8.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">√<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">9.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin 1<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">10.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin 3<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">11.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin 5<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">12.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">13.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">x<sup>2</sup><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">14.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin 2<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">15.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin 4<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">16.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 5</span><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">17.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">18.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">0<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">19.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">20.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">21.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">22.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">23.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 1</span><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">24.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">25.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">0<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">26.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">27.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">28.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">29.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 2</span><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">30.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kout 2<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">31.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin + 1<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">32.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">33.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">34.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">35.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">36.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">37.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">38.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">7<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">39.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin + 1<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">40.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">41.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">4<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">42.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">43.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">44.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">7<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">45.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">46.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">47.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 3</span><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">48.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">49.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">50.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">9<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">51.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">52.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">6<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">53.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">9<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">54.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 4</span><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">55.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">56.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">57.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">0<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">58.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">59.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 5</span><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">60</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kout 5<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">61.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin + 3<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">62.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kout 4<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">63.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin + 3<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">64.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">6<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">65.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">10<sup>x</sup><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">66.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin + 3<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">67.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kout 1<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">68.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <span lang="en">÷</span><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">69.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kout 3<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">70.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+  </tr>
+  </table>
+
+<!--mstheme--><font face="新細明體">
+<p>LRN 模式輸入程式(供  fx-3800P使用，程式長度: 70步 )</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber3" bordercolorlight="#1445A1" bordercolordark="#1445A1">
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">.<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">x<sup>2</sup><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1/x<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">ln<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">√<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin 1<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin 3<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin 5<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">x<sup>2</sup><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin 2<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin 4<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 5</span><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">0<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 1</span><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">0<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 2</span><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kout 2<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin + 1<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">7<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin + 1<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">4<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">7<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 3</span><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">9<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">6<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">9<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 4</span><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">0<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin <span lang="en">× 5</span><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kout 5<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin + 3<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kout 4<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin + 3<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">6<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">10<sup>x</sup><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin + 3<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kout 1<!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <span lang="en">÷</span><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kout 3<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 2; ">
+    <!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 2; ">
+    <!--mstheme--><font face="新細明體">MODE .<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 2; ">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 2; ">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 2; ">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 2; ">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p>　</p>
+<p>例題: 若<font face="Times New Roman, Times, serif">P(0</font><span lang="EN-US"><font face="Times New Roman, Times, serif"><font face="新細明體, 細明體">≦</font> 
+Z</font>≦</span><font face="Times New Roman, Times, serif">x<span lang="EN-US">) 
+= 0.3</span></font>，求 <font face="Times New Roman, Times, serif">x</font> 的值，其中 
+<font face="Times New Roman, Times, serif">Z ~ N(0, 1)</font>。</p>
+<p>
+<span style="font-family: 新細明體">按</span><span lang="EN-US">&nbsp;&nbsp; 0.3&nbsp; 
+P1</span><span style="font-family: 新細明體"> 
+(顯示 x為0.841456717)</span></p>
+<p align="left">　</p>
+<p align="left">註:  程式輸入概率範圍為 <b><font color="#FF0000">0&lt; P&lt; 0.5</font></b>，否則程式可能會出現-E-或不能正常運作。</p>
+<p align="left">　</p>
+<p><a href="index.html">返回 fx-3900PV程式集</a></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/fx-3900PV/inverseStandard.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:22 GMT -->
+</html>

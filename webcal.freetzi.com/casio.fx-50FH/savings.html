@@ -1,0 +1,112 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/casio.fx-50FH/savings.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:24 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>零存整付計算</title>
+<meta name="Microsoft Theme" content="indust 011">
+<script src="webcal.js"></script></head>
+
+<body background="indtextb.jpg" bgcolor="#FFFFFF" text="#000000" link="#3366CC" vlink="#666666" alink="#996600">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">零存整付計算</font></b></u></p>
+<p>更新日期: 2014年8月31日</p>
+
+<p>
+程式可以計算零存整付問題，假定利息每月計算及息率固定不變，程式可以計算以下問題:</p>
+<p>
+˙本利和 (已知每月存款，年利率及存款期數)</p>
+<p>
+˙每月存款 (已知本利和，年利率及存款期數)</p>
+<p>˙存款期數 
+(已知本利和，每月存款及年利率)</p>
+<p>參考公式:</p>
+<p>
+<img border="0" src="Image136.gif" width="146" height="38"></p>
+<p>(A為本利和，P為每月存款及 r 為每月利率 (即年利率÷12))</p>
+<p>　</p>
+<p>程式 (78 bytes)</p>
+<p>ClrMemory: 1200→X: ?→A: ?→B: ?→C: ?→D: </p>
+<p>1 + C÷X→Y: 
+A=0 <font color="#FF0000">=&gt;</font> BXYC<sup>-1</sup>(Y^( D ) - 1◢</p>
+<p>D 
+<font color="#FF0000">=&gt;</font> AC ÷ ( XY(Y^( D ) - 1◢</p>
+<p>log( Y,
+1 +
+AC ÷ <b><font color="#800080">(</font></b>XBY</p>
+
+<p>
+<span lang="en">
+註: 如果是使用fx-3650P II或fx-50FH II，上述程式中</span>紫色的開括號 <font color="#800080"><b>(
+</b></font>
+<span lang="en">
+可以省略，程式長度可減1 byte。</span></p>
+
+<p>
+　</p>
+<p>
+例題1: 
+每月存款3000元，年利率為4%，預計存款24個月，求本利和。</p>
+<p>
+按 Prog 1 再按 EXE 
+(不輸入數值代表計算本利和)
+</p>
+<p>
+3000 EXE (每月存款)</p>
+<p>4 EXE (年利率)</p>
+<p></p>
+<p>
+24 EXE (存款期數，顯示本利和為 
+$75078.09)</p>
+<p>
+計算完結按 AC 終止程式</p>
+<p>
+　</p>
+<p>
+例題2: 
+已知本利和為$75078.09，年利率為4%，存款期為24月，求每月存款。</p>
+<p>
+按 Prog 1 再按 
+75078.09 EXE (本利和)
+</p>
+<p>
+EXE (不輸入數值代表計算每月存款)</p>
+<p>
+4 EXE (年利率)</p>
+<p>24 EXE 
+(存款期數，顯示每存款為 $3000)</p>
+<p>
+計算完結按 AC 終止程式</p>
+<p>　</p>
+<p>
+例題3:
+已知本利和為$75078.09，每月存款3000元，年利率為4%，求存款期數。</p>
+<p>
+按 Prog 1 再按 
+75078.09 EXE (本利和)
+</p>
+<p>
+3000 EXE (每月存款)</p>
+<p>
+4 EXE (年利率)</p>
+<p>EXE 
+(不輸入數值代表計算存款期數，顯示存款期數為24月)</p>
+<p>
+　</p>
+<p><a href="fx-50F_Plus.html">返回 CASIO fx-50FH、fx-3650P II、fx-50FH II及fx-50F PLUS 程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/casio.fx-50FH/savings.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:25 GMT -->
+</html>

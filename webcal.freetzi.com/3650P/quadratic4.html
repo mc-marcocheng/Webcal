@@ -1,0 +1,166 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quadratic4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:09 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>二次函數因式分解及一元二次方程</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">二次函數因式分解及一元二次方程</font></b></u></p>
+<p><b><font color="#0000FF">程式新版</font></b></p>
+<p>第一個程式及第三個程式雖然較簡短，但計算較大的因子時(例如: 分解 10000x<sup>2</sup> + 200x + 
+1)，速度會很慢，亦是現時大部份二次因式分解程式的問題。<b>第二個程式</b>克服了這方面的問題，能夠快速計算出較大的整數因子。
+網頁尾的附錄亦附加了這兩個程式二次方程式，答案以分數形式表示的版本</p>
+<p>更新日期: 2012年1月7日</p>
+<p><font color="#0000FF">第一個程式</font> (100 bytes)</p>
+<p>Mem clear: ?→A: ?→B: ?→C: B<sup>2</sup> - 4AC→C: </p>
+<p>. 5( A<sup>-1</sup>(√C - B→X<font color="#008000">◢</font> . 5( A<sup>-1</sup>(- √C - B→Y<font color="#008000">◢</font></p>
+<p>Lbl 0: 1<font color="#FF0000">M+</font>: XM: Fix 0: Rnd: Norm 1:</p>
+<p>XM - Ans<font color="#FF0000"> =&gt;</font> Goto 0: A÷M→A: M<font color="#FF0000">M-</font>◢ 
+- XAns◢</p>
+<p>&nbsp;Y→X: D=0→D
+<font color="#FF0000">=&gt;</font> Goto 0: A</p>
+<p>　</p>
+<p><font color="#0000FF">第二個程式</font> (153 bytes):</p>
+<p>Mem clear: ?→A: ?→B: ?→C: B<sup>2</sup> - 4AC→C: </p>
+<p>&nbsp;. 5( A<sup>-1</sup>(√C - B→X<font color="#008000">◢</font> . 5( A<sup>-1</sup>(- √C - B→Y<font color="#008000">◢</font></p>
+<p>Lbl 0: 1→B: X→C: Lbl 1: B→D: X÷B: Fix 0: Rnd: </p>
+<p>X - AnsB→B: B=0
+<font color="#FF0000">=&gt;</font> 1→D <font color="#FF0000">=&gt;</font> Goto 2: D→X: B<sup>-1</sup>: Rnd: </p>
+<p>√Ans<sup>2</sup>→D: AnsC: Rnd: DC - Ans <font color="#FF0000">
+=&gt;</font> Goto 1: Lbl 2: Norm 1: </p>
+<p>D◢ - DC◢ A÷D→A: Y→X: M=0→M <font color="#FF0000">=&gt;</font> 
+Goto 0: A </p>
+<p>　</p>
+<p>第三個程式由網友 Skwai 提供。</p>
+<p><font color="#0000FF">第三個程式(簡短版本)</font> (84 bytes)</p>
+<p><font color="#FF0000"><b>注意:</b></font> 這個程式為第一個程式精簡版本，雖然更加簡短，但速度較慢，另外亦有一些額外限
+制，程式可能無法解 
+ax<sup>2</sup> + bx =0 形式的方程(即其中一個解為x=0的情況)，因此亦可能無法分解 ax<sup>2</sup> + bx 
+(即其中一個因子為x)，。</p>
+<p>Mem clear: ?→A: ?→B: ?→C: <br>
+<br>
+2C<font face="新細明體">┘</font>(-B - √( B<sup>2</sup> - 4AC→B◢ C<font face="新細明體">┘(
+</font>A Ans→C◢ <br>
+<br>
+Lbl 0: 1<font color="#FF0000">M+</font>: <font face="新細明體">π<sup>r</sup></font>BM: </p>
+<p>sin Ans <font color="#FF0000">=&gt;</font> Goto 0: A┘M→A: <br>
+<br>
+M<font color="#FF0000">M-</font>◢ - BAns◢ C→B: D=0→D <font color="#FF0000">=&gt;</font> 
+Goto 0: A</p>
+<p>　</p>
+<p>註1:輸入的係數可以是整數、<font color="#FF0000">小數</font>或<font color="#FF0000">分數</font>。若果所得的答案為小數可按 <font size="4">a</font> 
+b/c 嘗試轉為分數。</p>
+<p>註2:若果只計一元二次方程問題，顯示兩根後可直接按AC中止程式。</p>
+<p>註3: 若果不想顯示一元二次方程式的根，可將綠色的<font color="#008000">◢</font>改為 
+<font color="#FF0000">:</font> 即可。</p>
+<p>註4: 若果函數不能分解為有理數因子，<font color="#0000FF">第一個程式及第三個程式</font>會出現Math 
+ERROR或是長時間顯示空白，這時請按AC中止程式執行，<font color="#0000FF">第二個程式</font>則會出現Math ERROR或顯示<font color="#FF0000">很大的分子或分母(大於10個位整數)</font>，要注意這
+時是近似值答案，實際上沒有簡單因子。</p>
+<p>
+　</p>
+<p>
+例題1: 
+因式分解 f(x)=42x<sup>2</sup> – 
+20x + 2</p>
+<p>
+按 Prog 1&nbsp; 
+再按 42 EXE - 20 EXE 2 
+EXE (顯示 f(x)=0的一個根為0.333333333)</p>
+<p>
+ EXE (顯示 f(x)=0的另一個根為0.142857142) </p>
+<p>
+EXE (顯示第一個因子x項係數為 <font color="#FF0000">3</font>)</p>
+<p>
+EXE (顯示第一個因子常數項係數為 <font color="#FF0000">-1</font>)</p>
+<p>
+EXE (顯示第二個因子x項係數為 <font color="#800080">7</font>)</p>
+<p>
+EXE (顯示第二個因子常數項係數為 <font color="#800080">-1</font>)</p>
+<p>
+EXE (顯示第三個常數因子)為<font color="#000080"> 2</font></p>
+<p>
+因此，42x<sup>2</sup> – 
+20x + 2 = <font color="#000080">2</font>(<font color="#FF0000">3</font>x
+<font color="#FF0000">- 1</font>)(<font color="#800080">7</font>x 
+<font color="#800080">- 1</font>)</p>
+<p>　</p>
+<p>例題2: 因式分解 9a<sup>2</sup> - 12ab + 4b<sup>2</sup></p>
+<p>
+按 Prog 1&nbsp; 再按 9 EXE - 12 EXE 4 
+EXE (顯示0.666666666) </p>
+<p>
+EXE (顯示0.666666666) </p>
+<p>
+EXE (顯示3) EXE (顯示 - 2)</p>
+<p>
+EXE (顯示3) EXE (顯示 - 2)</p>
+<p>
+EXE (顯示1)</p>
+<p>
+因此，9a<sup>2</sup> 
+– 12ab + 4b<sup>2</sup> = (3a -&nbsp; 2b)<sup>2 </sup></p>
+<p>　</p>
+<p>
+例題3: 因式分解 18a<sup>2</sup> - 32b<sup>2</sup></p>
+<p>
+按 Prog 1&nbsp; 
+再按 18 EXE 0 EXE -32 
+EXE (顯示 
+1.333333333)</p>
+<p>
+EXE (顯示 
+- 1.333333333) </p>
+<p>
+EXE (顯示3) EXE (顯示 - 4)</p>
+<p>
+EXE (顯示3) EXE (顯示 4)</p>
+<p>
+EXE (顯示2)</p>
+<p>
+因此，18a<sup>2</sup>–32b<sup>2</sup> 
+= 2(3a–4b)(3a + 4b)</p>
+<p>　</p>
+<hr>
+<p><b><font color="#FF0000">附錄</font></b></p>
+<p>注意: <font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p><font color="#0000FF">第一個程式分數根顯示版本</font>(103 bytes)</p>
+<p>Mem clear: ?→A: ?→B: ?→C: B<sup>2</sup> - 4AC→C: </p>
+<p>(√C - B)┘( 2A→X<font color="#008000">◢</font> (√C + B)┘- 
+2A→Y<font color="#008000">◢</font></p>
+<p>Lbl 0: 1<font color="#FF0000">M+</font>: . 1XM <font color="#FF0000">10<sup>x</sup></font>1: Fix 0: Rnd: Norm 1:</p>
+<p>XM - Ans<font color="#FF0000"> =&gt;</font> Goto 0: A÷M→A: M<font color="#FF0000">M-</font>◢ 
+- XAns◢</p>
+<p>&nbsp;Y→X: D=0→D
+<font color="#FF0000">=&gt;</font> Goto 0: A</p>
+<p>　</p>
+<p><font color="#0000FF">第二個程式分數根顯示版本</font> (156 bytes)</p>
+<p>Mem clear: ?→A: ?→B: ?→C: B<sup>2</sup> - 4AC→C: </p>
+<p>(√C - B)┘( 2A→X<font color="#008000">◢</font> (√C + B)┘- 
+2A→Y<font color="#008000">◢</font></p>
+<p>Lbl 0: 1→B: X→C: Lbl 1: B→D: . 1X÷ . 1B: Fix 0: Rnd: </p>
+<p>X - AnsB→B: B=0
+<font color="#FF0000">=&gt;</font> 1→D <font color="#FF0000">=&gt;</font> Goto 2: D→X: B<sup>-1</sup>: Rnd: </p>
+<p>√Ans<sup>2</sup>→D: AnsC: Rnd: DC - Ans <font color="#FF0000">
+=&gt;</font> Goto 1: Lbl 2: Norm 1: </p>
+<p>D◢ - DC◢ A÷D→A: Y→X: M=0→M <font color="#FF0000">=&gt;</font> 
+Goto 0: A </p>
+<p>　</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quadratic4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:09 GMT -->
+</html>

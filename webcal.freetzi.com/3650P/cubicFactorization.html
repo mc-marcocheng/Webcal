@@ -1,0 +1,122 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/cubicFactorization.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:17 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>三次函數因式分解</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">三次函數因式分解</font></b></u></p>
+<p>程式可以將三次函數分解，三次函數的形式為 ax<sup>3</sup> + bx<sup>2</sup> + cx + 
+d 或 ax<sup>3</sup> + bx<sup>2</sup>y + cxy<sup>2</sup> + dy<sup>3</sup>，程式會將函數先分解為一個一次式及一個二次式，若果二次式可以分解，則會再分解二次式為兩個一次式及一個常數因子。</p>
+<p>程式編寫日期: 2007年4月21日 修改日期: 2009年1月21日</p>
+<p><font color="#FF0000">程式需要在 SD 模式下執行，因此在輸入程式前請先按 Mode Mode 1 進入SD模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數(<font color="#0000FF">n</font> 按 shift 1 3 ，<span style="text-decoration: overline"><font color="#0000FF">x</font></span>為平均x 
+按 shift 2 1)，而5! M <sup>o</sup> 是按 5 SHIFT x! MR SHIFT Ans 1</p>
+<p>程式 (358 bytes) </p>
+<p>Stat clear:?→A: ?→B: B <b><font color="#FF0000">;</font></b> 
+A <font color="#FF0000">DT</font>: -B┘(3A→B: ?→C: ?→D: </p>
+<p>B<sup>3</sup> - (BC+D)┘(2A→M: M<sup>2
+</sup>+ (C┘(3A) - B<sup>2</sup>)<sup>3</sup>→Y: </p>
+<p>0&gt;Y <font color="#FF0000">=&gt;</font> Goto 0: B + <font color="#FF0000"><sup>3</sup>√</font>(M 
++ √Y) + <font color="#FF0000"><sup>3</sup>√</font>(M -
+√Y→A: 1→M: Goto 1:</p>
+<p>Lbl 0: 2<font color="#FF0000"><sup>3</sup>√ 
+Pol( </font>M, √-Y→X: Y÷3→Y: 3→M: Lbl 4: 
+B + Xcos( Y+ 5! M<sup>o</sup>→A: 
+ 
+</p>
+<p>Lbl 1:<font color="#0000FF"> n</font>A: Sci 0: Rnd: Ans<font face="新細明體">→D:
+</font>Fix 0: Rnd: D - Ans <font color="#FF0000">=&gt;</font> M - 1<font face="新細明體">→M
+<font color="#FF0000">=&gt;</font> </font>Goto 4: Norm 1:  </p>
+<p>M<sup>-1</sup>:
+
+0→M: Fix 0: Lbl 2: 1 + M→M: . 
+1AM<font color="#FF0000">10<sup>x</sup></font>1: Rnd: AM - Ans
+<font color="#FF0000">=&gt;</font> Goto 2: Norm 1: M◢  </p>
+<p>-AM→X◢ <font color="#0000FF">
+n</font> ÷ M→A◢ M<sup>-1</sup>(<span style="text-decoration: overline"><font color="#0000FF">x</font></span> 
+- XAns→B◢ M<sup>-1</sup>(C - XAns◢ B<sup>2</sup> - 4AnsA→C: </p>
+<p>
+0→D: 0→M: (√C - B) ÷ 2A→X: AX: Fix 0: Rnd: 
+Norm 1: AX - Ans <font color="#FF0000">=&gt;</font> log 0: </p>
+<p>(- √C - B) ÷ 2A→Y:<font color="#008000"> </font>Lbl 3: 1 + M<font face="新細明體">→M:</font> XM: Fix 0: Rnd: Norm 1:</p>
+<p>XM - Ans<font color="#FF0000"> =&gt;</font> Goto 3: A÷M→A: M◢ 
+- XAns◢ 0→M:&nbsp;Y→X: D=0→D
+<font color="#FF0000">=&gt;</font> Goto 3: A</p>
+<p>　</p>
+<p>例題1: 因式分解 3x<sup>3</sup> - 7x<sup>2</sup> + 29x - 9</p>
+<p>按 Prog 1 再按 3 EXE - 7 EXE 29 EXE - 9 EXE (顯示一次因子的x係數為 3)</p>
+<p>EXE (顯示一次因子的常數項為 -1)</p>
+<p>EXE (顯示二次因子的x<sup>2</sup>係數為 1)</p>
+<p>EXE (顯示二次因子的x係數為 -2)</p>
+<p>EXE (顯示二次因子的常數項為 9)</p>
+<p>EXE (出現Math ERROR表示二次因子不能再分解)</p>
+<p>所以 3x<sup>3</sup> - 7x<sup>2</sup> + 29x - 9 = (3x - 1)(x<sup>2</sup> - 2x + 
+9)</p>
+<p>　</p>
+<p>例題2: 因式分解 30x<sup>3</sup> + 31x<sup>2</sup> - 25x - 6</p>
+<p>按 Prog 1 再按 30 EXE 31 EXE - 25 EXE - 6 EXE (顯示一次因子的x係數為 3)</p>
+<p>EXE (顯示一次因子的常數項為 - 2)</p>
+<p>EXE (顯示二次因子的x<sup>2</sup>係數為 10)</p>
+<p>EXE (顯示二次因子的x係數為 17)</p>
+<p>EXE (顯示二次因子的常數項為 3)</p>
+<p>EXE (顯示第二個一次因子的x係數為 5)</p>
+<p>EXE (顯示第二個一次因子的x常數項為 1)</p>
+<p>EXE (顯示第三個一次因子的x係數為 2)</p>
+<p>EXE (顯示第三個一次因子的x常數項為 3)</p>
+<p>EXE (顯示<font color="#FF0000">常數因子</font>為<font color="#FF0000">1</font>)</p>
+<p>所以 </p>
+<p>30x<sup>3</sup> + 31x<sup>2</sup> - 25x - 6 = (3x - 2)(10x<sup>2</sup> + 17x 
++ 3)</p>
+<p>30x<sup>3</sup> + 31x<sup>2</sup> - 25x - 6 = <font color="#FF0000">1</font>(3x 
+- 2)(5x + 1)(2x + 3) = (3x - 2)(5x + 1)(2x + 3)</p>
+<p>　</p>
+<p>例題3: 因式分解 8x<sup>3</sup> + 27y<sup>3</sup></p>
+<p>按 Prog 1 再按 8 EXE 0 EXE 0 EXE 27 EXE (顯示一次因子的x係數為 2)</p>
+<p>EXE (顯示一次因子的y係數為 3)</p>
+<p>EXE (顯示二次因子的x<sup>2</sup>係數為 4)</p>
+<p>EXE (顯示二次因子的xy係數為 - 6)</p>
+<p>EXE (顯示二次因子的y<sup>2</sup>係數為 9)</p>
+<p>EXE (出現Math ERROR表示二次因子不能再分解)</p>
+<p>所以 8x<sup>3</sup> + 27y<sup>3 </sup>= (2x + 3y)(4x<sup>2</sup> - 6xy + 9y<sup>2</sup>)</p>
+<p>　</p>
+<p>註: 程式亦可以用作分解二次函數，依次輸入係數，最後的數據輸入0，只要將答案其中一個中 x + 0 的因子捨去即可。</p>
+<p>例題4: 因式分解 x<sup>2</sup> - 7x + 12</p>
+<p>按 Prog 1 再按 1 EXE - 7 EXE 12 EXE <font color="#FF0000">0</font> EXE (最後輸入<font color="#FF0000">0</font>，顯示一次因子的x係數為 
+1)</p>
+<p>EXE (顯示一次因子的常數項為 - 4)</p>
+<p>EXE (顯示二次因子的x<sup>2</sup>係數為 1)</p>
+<p>EXE (顯示二次因子的x係數為 -3)</p>
+<p>EXE (顯示二次因子的常數項為 0)</p>
+<p>EXE (顯示第二個一次因子的x係數為 1)</p>
+<p>EXE (顯示第二個一次因子的x常數項為 - 3)</p>
+<p>EXE (顯示第三個一次因子的x係數為 <font color="#0000FF">1</font>)</p>
+<p>EXE (顯示第三個一次因子的x常數項為 <font color="#0000FF">0</font>)</p>
+<p>EXE (顯示<font color="#FF0000">常數因子</font>為<font color="#FF0000">1</font>)</p>
+<p>所以 x<sup>2</sup> - 7x + 12 = (x - 4)(x - 3)</p>
+<p>　</p>
+<p>
+註1: 注意輸入的係數必須為整數，否則計算不成立。</p>
+<p>
+註2: 若果程式出現math ERROR即表示不能再分解。</p>
+<p>
+註3: 第一個係數的數值越大，計算的時間可能會越長。</p>
+<p>　</p>
+<p>
+<a href="3650.html"><span lang="en-us">返回</span> fx-3650P及SC185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/cubicFactorization.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:17 GMT -->
+</html>

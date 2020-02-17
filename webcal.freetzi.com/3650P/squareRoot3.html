@@ -1,0 +1,103 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/squareRoot3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:19 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>小數換轉換平方根</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">小數轉換平方根</font></b></u></p>
+<p>程式可以將一個計算後小數答案(答案記憶Ans)轉換為一個平方根 (a/b)√c，其中a, b及c為整數。這個程式亦可用於平方根式的化簡。
+
+</p>
+<p>網頁尾附加的附錄程式是這個程式的簡化版本(現時一些類似程式慣常寫法)，<font color="#FF0000">簡化版程式雖然會簡短很多(97 bytes)，但計算某些簡單問題會很慢(包括答案是細小平方根的情況)，詳情請參考例題4，另外簡化版本容許計算誤差亦較小，因此成功轉化為平方根的機會亦會較低，所以在程式容量許可的情況請盡量不要選用附錄程式。</font></p>
+<p>程式編寫日期: 2007年1月7日 <font color="#0000FF">(修改日期: 2011年9月<span lang="en-us">29</span>日)</font></p>
+<p>程式 (1<span lang="en-us">40</span> bytes) </p>
+
+<p>Mem clear: Ans→D: Ans<sup>2</sup>→A: Ans→B: 1→C: Fix 0:  </p>
+
+<p>Lbl 0: A: Rnd: Ans→X: A - X <font color="#FF0000">=&gt;</font> Ans<sup>-1</sup>→A: 
+YX + C→X:</p>
+<p>Y→C: X→Y: BY: Sci 9: Rnd:  Ans→X: Fix 0: Rnd:</p>
+<p>X - Ans <font color="#FF0000">=&gt;</font> Goto 0:  XY →X:
+
+1:  Lbl 1: Rnd: </p>
+<p>√X Ans<sup>-1</sup> - . 5: Rnd: Ans→M:&nbsp; X ÷ M<sup>2</sup>→C: 
+</p>
+<p>Rnd: C - Ans <font color="#FF0000">
+=&gt;</font> C + . 5 <font color="#FF0000">=&gt;</font> Goto 1: Norm 1: 
+</p>
+<p> M┘√Y<sup>2</sup>(D ÷ 
+√D<sup>2</sup>◢ C</p>
+<p>　</p>
+<p>例題1: 將計數機的 tan 30°的數值以平根形式表示。</p>
+<p>注意: 計算時要使用DEG MODE</p>
+<p>按 tan 30 EXE 再按 Prog 1 (顯示 1/3) EXE (顯示3)</p>
+<p>所以 tan 30° = (1/3)√3</p>
+<p>　</p>
+<p>例題2: 化簡 √18</p>
+<p>
+按 √18 
+EXE 再按  Prog 1&nbsp; 
+(顯示 3) EXE (顯示 2)</p>
+<p>所以 √18 = 3√2</p>
+<p>　</p>
+<p>例題3: 化簡 √(8/27)</p>
+<p>
+按 √(8÷27 EXE 
+再按  Prog 1 
+(顯示 2/9) EXE (顯示 6)</p>
+<p>所以 √(8/27) = (2/9) √6</p>
+<p>　</p>
+<p>例題4: 化簡 (√8) / 400</p>
+<p>按 √8 ÷ 400 EXE 再按 Prog 1 
+(顯示 1/200) EXE (顯示 2)</p>
+<p>所以 (√8) / 400 = (√2) / 200</p>
+<p>現時不少同類程式在計算例4問題時，雖然答案分母只有200，不算很大，但速度己非常慢，甚至可以說無法求得答案(fx-3650P所需時間超過30分鐘，時間實在太長)，因此
+很可能會誤會是無法轉化為平方根形式，本程式克服了這方面問題，能夠很快得出正確答案。</p>
+<p>　</p>
+<p>例題5: 將 10 + 1 ÷ √11 - 
+10 的小數答案轉化為簡化平方根。</p>
+<p>按 10 + 1 ÷ √11 - 10 EXE 
+再按 Prog 1 
+(顯示 1/11) EXE (顯示 11)</p>
+<p>所以答案 = (√11) / 11</p>
+<p>
+若果使用網頁尾的附錄程式或現時流行同類程式寫法，則無法得出例5的正確答案，甚至某些情況出現錯誤答案0，本程式經過特別的調整，克服了一般常見計算的誤差問題，增加了成功轉化為平方根的機會率。</p>
+<p>　</p>
+<p>註1: 若果小數不能轉化為 (a/b)√c的形式(其中a,b及c為整數)，程式會長時間顯示空白，這時請按AC終止程式。另外，由於程式要化簡平方根所以時間會較長，特別是c的數值較大時。</p>
+<p>註2: 這個程式改為以答案記憶(Ans)輸入數值，與傳統使字母記憶輸入不同，主要是考慮到一般算式運算不是在程式中進行，而且可以先觀察算式計算結果Ans，在有需要情況下才執行程式 
+(答案為整數、分數或簡單小數等情況(例如: sin 
+30=0.5)，那麼根本就不需要使用程式進行轉化為平方根，減慢運算速度)。若果希望程式改為傳統字母記憶輸入，可以將程式開始的 &quot;Ans→D&quot; 改為 
+&quot;?→D&quot;即可。</p>
+<p>註3: 若在程式執行中(顯示空白時)按AC終止程式，計數機會保持在小數零位(Fix 0)的設定。</p>
+<p>　</p>
+<p><b><font color="#0000FF">附錄程式</font></b>(簡化版程式，現時不少類似程式慣常寫法，某些情況速度會很慢
+，誤差稍大時會無法得出答案)</p>
+<p>程式編寫日期: 2008年8月7日</p>
+<p>程式 (89 bytes) </p>
+<p>Ans→D: D<sup>2</sup>→C:  M<font color="#FF0000">M-</font>:  Fix 0: Lbl 0: 1<font color="#FF0000">M+</font>: 
+MC: </p>
+<p>Rnd: MC - Ans <font color="#ff0000">=&gt;</font> Goto 0: MCM→A: √A - . 5: Rnd:
+</p>
+<p>Ans→B: Lbl 1: A ÷ Ans<sup>2</sup>→C: Rnd: C - Ans </p>
+<p> <font color="#FF0000">
+=&gt;</font> B - 1→B <font color="#FF0000">=&gt;</font> Goto 1: Norm 1: B┘M (D÷√D<sup>2</sup>◢ C</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/squareRoot3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:19 GMT -->
+</html>

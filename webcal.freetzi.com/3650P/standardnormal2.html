@@ -1,0 +1,89 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/standardnormal2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:51 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>標準常態分佈概率</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b>
+
+<font size="5">標準常態分佈概率(I</font><font size="5">I</font><font size="5">)</font></b></u></p>
+<p>程式編寫日期:2005年12月9日 <font color="#0000FF">(更正日期: 2005年12月9日)</font></p>
+<p>第一個程式較短，但準確度較低，誤差小於0.00003。第二個程式較長，但準確度很高，能夠準確至小數7位，誤差則小於7.5 x 10<sup>-8</sup> 
+。考高考的朋友注意：高考所用的標準常能分佈表準確至小數4位，若果用第一個程式以四位小數四捨五入，有機會與查表的數值有0.0001的差別，故不建議應用於高考，<b>為確保與查表的結果一致</b>，建議使用第二個程式的<a href="standardnormal2a.html">高考精簡版</a>或<a href="standardnormal5.html"><font color="#FF0000">高考準確版</font></a>。</p>
+<p>　</p>
+<p><font color="#FF0000">第一個程式 </font>(42 bytes / <font color="#008000">51 bytes</font>，使用記憶為A):</p>
+<p>?→A: <font color="#FF0000">e </font>- A<sup>2</sup>: 2<sup>-1</sup>√(1 - 30<sup>-1</sup> 
+(7√Ans +  7Ans + πAnsA<sup>2</sup> 
+÷ 4 </p>
+<p>+ 16Ans^(2 - √2 <font color="#008000">◢ . 5 - Ans ◢ 1 - Ans</font></p>
+<p><font color="#008000">註:</font> 若果不想同時計算P(Z≧X)及P(Z≦X)，綠色的程式碼可以略去。</p>
+<p>　</p>
+<p><font color="#FF0000">第二個程式</font> (93 bytes / <font color="#008000">102 
+bytes</font>，使用記憶為A)</p>
+<p>注意: <font color="#FF0000">e</font>是按shift 
+e<sup>x</sup>，<font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p>?→A: 1 ÷ (1 + . 2316419√A<sup>2</sup>: . 5 - √<font color="#FF0000">e</font> 
+- A<sup>2</sup> <font color="#FF0000">10<sup>x</sup></font> - 9 (</p>
+<p>127414795Ans - 142248368Ans<sup>2</sup> + 710706870Ans<sup>3</sup> 
+-</p>
+<p>726576013Ans^4 + 530702714Ans^5 <font color="#008000">◢ . 5 - 
+Ans ◢ 1 - Ans</font></p>
+<p><font color="#008000">註:</font> 若果不想同時計算P(Z≧X)及P(Z≦X)，綠色的程式碼可以略去。</p>
+<p><a href="standardnormal2a.html">第二個程式的高考精簡版 </a></p>
+<p><a href="standardnormal5.html"><font color="#800080">第二個程式的高考準確版</font></a></p>
+<p>　</p>
+<p>例題: 計算 P(0≦ 
+Z≦1)、P(Z≧1)
+及 P(Z≦1)，其中 
+Z ~ N(0, 1)。</p>
+<p>
+<font color="#FF0000">第一個程式按法:</font></p>
+<p>
+按 Prog 1 
+再按 1 EXE (顯示P(0≦ 
+Z≦1)為0.34136382)</p>
+<p>
+EXE 
+(顯示P(Z≧1)為0.158636179) 
+EXE 
+(顯示P(Z≦1)為0.84136382)</p>
+<p>
+<font color="#FF0000">第二個程式按法:</font></p>
+<p>
+按 Prog 1 
+再按 1 EXE (顯示P(0≦ 
+Z≦1)為0.341344741)</p>
+<p>
+EXE 
+(顯示P(Z≧1)為0.158655259) 
+EXE 
+(顯示P(Z≦1)為0.841344741)</p>
+<p>　</p>
+<p>註: 如果輸入的數值X
+為負數，程式會計算P(X≦ 
+Z≦0)，然後順序計算P(Z
+≦ X)及P(Z 
+≧ X)。</p>
+<p>　</p>
+<p>
+
+<a href="3650.html">返回 fx-3650P及SC-185
+程式集</a></p>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/standardnormal2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+</html>

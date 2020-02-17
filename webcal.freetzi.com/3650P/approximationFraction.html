@@ -1,0 +1,61 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/approximationFraction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:19 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>小數近似值轉換為可能分數</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">小數近似值轉換為可能分數</font></b></u></p>
+<p>更新日期: 2011年10月10日</p>
+<p>程式由網友 3173137 提供，可以計算小數近似值誤差範圍內可能的分數。</p>
+<p>注意: <font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p>程式 (165 bytes)</p>
+<p>Ans→A: ?→A: ?→B: 2→M: ?→M: 1<font color="#FF0000">M-</font>:</p>
+<p>A - . 5 <font color="#FF0000">10<sup>x</sup></font> - B→C: 2A - C→D:  Lbl 0: 
+Fix 0: 1<font color="#FF0000">M+</font>:</p>
+<p>CM + . 5: Rnd: Ans<font face="新細明體">≧DM</font> <font color="#FF0000">=&gt;</font> Goto 0: CM:</p>
+<p>Rnd: Ans + (CM&gt;Ans→X: DM: Rnd: Ans - (Ans≧DM→Y:</p>
+<p>X=Y <font color="#FF0000">=&gt;</font> X→A <font color="#FF0000">=&gt;</font> M→B
+<font color="#FF0000">=&gt;</font> Goto 1: Norm 2: X◢ Y◢ M◢ </p>
+<p>Goto 0: Lbl 1: A÷B - . 5: Rnd: A - BAns→Y: B→A: </p>
+<p>Y→B <font color="#FF0000">=&gt;</font> Goto 1: A - 1
+<font color="#FF0000">=&gt;</font> Goto 0: Norm 2: X◢ M◢ Goto 0</p>
+<p><br>
+　</p>
+<p>註1: 顯示X及Y表示分子，M表示分母。當出現Y時表示同一個分母有多於一個可能分數，分子可能的值由X至Y的整數。</p>
+<p>註2: 輸入的小數為正數，否則計算有可能不成立。</p>
+<p>註3: 程式不會自動終止，因為有無限個可能的分數，若要終止程式請按 AC 或 ON。</p>
+<p>註4: 程式若在執行中未顯示任何數值答案(X、Y或Z)時按 AC 或 ON終止程式，計算機會保留在小數0位的設定，請自行清除這個設定。</p>
+<p>註5: 預設計算的近似值為Ans記憶的數值(之前計算結果)，輸入時只要直接 EXE 輸入即可，若是其它數值請自行輸入。</p>
+<p>　</p>
+<p>例題: 數值0.5準確至小數1位，試計算這個近似值可能的分數。</p>
+<p>按 Prog 1 再按 0.5 EXE (數值) 1 EXE (準確至小數1位)</p>
+<p>EXE (輸入開始分母數值，直接按 EXE 則接受預設值2開始，顯示X為1)</p>
+<p>EXE (顯示M為2，即第一個可能分數為 1/2)</p>
+<p>EXE (顯示X為5) EXE (顯示Y為6，由於出現Y表示分子可能的範圍是 5至6的整數)</p>
+<p>EXE (顯示M為11，即第二及第三個可能分為 5/11及6/11)</p>
+<p>...............</p>
+<p>若要終止程式，請按 AC。</p>
+<p>
+　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+<p>　</p>
+<p>　</p>
+<p>　</p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/approximationFraction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:19 GMT -->
+</html>

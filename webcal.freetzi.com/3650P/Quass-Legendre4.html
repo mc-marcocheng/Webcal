@@ -1,0 +1,68 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/Quass-Legendre4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>高斯-勒讓德七點定積分(II)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">高斯-勒讓德七點定積分(II)</font></b></u></p>
+<p>程式編寫日期: 2008年3月24日</p>
+<p>以下程式使用了高斯-勒讓德法七點方法(Gauss-Legendre Quadrature)計算一個定積分的近似值，現時不少圖像計算機亦是使用相似的方法計算定積分的近似值。
+準確度將取決於方法使用的點數及分割的區間數目，點數及區間越多準確度越高，但計算時間亦越長。</p>
+<p>程式 (210 bytes，不包括綠色的函數方程)</p>
+<p>Mem clear: ?→A: ?→B: ?→C: . 5C<sup>-1</sup>(B - A→B: </p>
+<p>Lbl 0: A + B+ BX: <font color="#008000">ln Ans</font>: Ans ( . 4179591837(Y=0)
+</p>
+<p>+ . 1294849662(Y<sup>2</sup>+2=3Y) + . 2797053915(Y&gt;2)(5&gt;Y)</p>
+<p>+ . 3818300505(Y&gt;4<font color="#FF0000">M+</font>: 1+Y→Y: 
+-X→X:</p>
+<p>Y=1 <font color="#FF0000">=&gt;</font> . 9491079123→X: Y=3 <font color="#FF0000">
+=&gt;</font> . 7415311856→X: </p>
+<p>Y=5 <font color="#FF0000">=&gt;</font> . 4058451514→X: Y-7 <font color="#FF0000">
+=&gt;</font> Goto 0: A + 2B→A: </p>
+<p><font color="#FF0000">Rec(</font> 0 , 0: C-1→C <font color="#FF0000">=&gt;</font> 
+Goto 0: MB</p>
+<p>　</p>
+<p>註1: 程式輸入的區間數目n是指將定積分計算的範圍分割為n個獨立區間(n為正整數)，而每一個獨立區間都會應用高斯-勒讓德七點方法計算這個區間定積分的近似值，
+最後將所有區間的計算結果相加求出答案，
+因此n值越大準確度越高，但計算時間亦會越長。</p>
+<p>註2: 綠色的 <font color="#008000">ln Ans</font>是函數方程(變數是Ans)，若果想計算其它函數的積分，只要修改綠色的部份。</p>
+<p>　</p>
+<p>例題: 利用高斯-勒讓德七點方法(Gauss-Legendre Quadrature)及區間數目為2，計算 
+<img border="0" src="Image84.gif" width="49" height="34"></p>
+<p>
+按 Prog 1 再按 1 EXE 2 EXE 2 EXE (顯示答案為0.386294361)</p>
+<p>
+　</p>
+<p>
+參考資料:</p>
+<p>
+<a href="http://mathworld.wolfram.com/Legendre-GaussQuadrature.html">
+http://mathworld.wolfram.com/Legendre-GaussQuadrature.html</a></p>
+<p>
+<a href="http://en.wikipedia.org/wiki/Gaussian_quadrature">
+http://en.wikipedia.org/wiki/Gaussian_quadrature</a></p>
+<p>
+　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/Quass-Legendre4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+</html>

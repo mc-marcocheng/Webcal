@@ -1,0 +1,289 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/SC185_problem.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:25 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>Truly SC185不會出現程式自動消失測試情況</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><font size="5">Truly SC-185程式自動消失問題</font></b></u></p>
+<p><font color="#0000FF">內容更新日期: 2007年4月22日 , 4月23日, 4月24日, 4月25日, 4月30日</font></p>
+<p><b><font color="#800000">2007年8月推出的新版本已修正程式自動消失問題</font></b></p>
+<p align="left">Truly SC-185計算機在使用清除指令 PCL (按 MODE MODE MODE 
+3)後，計算機有可能出現異常，包括以下兩個情況: (1) 自動關機，(2) 計算機右方的數字不停閃動，只可按 ON 
+終止，而這時計數機的所有資料亦被清除。由於這個問題在<font color="#000000">新版本(21/4/2007)推出後才被我首先發現，新版</font>的Truly 
+SC185計算機並沒有修正這方面的問題。以下是測試的例子，大家可以試試。 </p>
+<p><b><font color="#000000">測試例子一:</font></b></p>
+<p><b>1. 先 <font color="#800080">SHIFT MODE 3</font> 重設計算機</b></p>
+<p><b>2. 在P2程式位置任意輸入一個240 bytes的程式</b></p>
+<p><b>3. 在P1程式位置任意輸入一個12 bytes的程式</b></p>
+<p><b>4. 按 <font color="#800080">MODE MODE MODE 3 1</font> 將P1位置的程式完全清除，這時問題已存在</b></p>
+<p><b>5. 再按 <font color="#800080">MODE MODE MODE 1 1</font> 時計數機自動關機，要重新按 ON 
+才可以使用</b></p>
+<p><b>6. 再按 <font color="#800080">MODE MODE MODE 1 4 Ans</font> 嘗試輸入 1 
+bytes，這時計數機右邊的數字不停閃動，按 ON 才可以終止，但P2程式亦消失了</b></p>
+<p>　</p>
+<p><b>註1: 步驟5可以省略，不會影響步驟6的結果，步驟5的意義除了出現異常外，就是再不能輸入程式在程式位置P1，因為己經關機。</b></p>
+<p><b>註2: 步驟6主要的目的是改變程式的總長度，在測試中發現，(1)若果不執行步驟6，改為按 <font color="#800080">MODE 
+MODE MODE 1 2 DEL</font> 嘗試刪除程式位置P2的1 byte，亦會出現右邊數字不停閃動的問題，同樣按ON 
+才可以終止，但P2程式亦消失了。(2) 若果不執行步驟6，改為按 <font color="#800080">MODE MODE MODE 3 2</font> 
+嘗試完全刪除程式位置P2，同樣右邊數字不停閃動的問題，同樣按ON 才可以終止。<font color="#FF0000">由以上推測在執行完 PCL指令後，問題己經存在，只要任何情況對程式總長有影響的操作均會出現程式消失現象。</font></b></p>
+<p><b>註3: 步驟2將240 bytes的程式輸入P2位置，若果輸入的位置改為P3或P4，其實結果相同，但將步驟3，12 
+bytes輸入P1位置改為其它程式位置測試，發現不會出現任何問題。<font color="#FF0000">由以上推測問題出現與使用 PCL 
+指令清除程式位置P1有關</font>(<font color="#800080">MODE MODE MODE 3 1</font>)。</b></p>
+<p><b>註4: 步驟4清除程式改為按 <font color="#800080">MODE MODE MODE 1 DEL DEL DEL ......</font>，直至程式完全清除，那麼問題就不會出現，<font color="#FF0000">所以差不多可以肯定與執行 
+PCL 指令有關 </font>(<font color="#800080">MODE MODE MODE 3</font> )</b></p>
+<p><b>註5: 步驟出現自動關機的異常，但這時計算機程式還未消失，即使用 Mode Clear (按 SHIFT MODE 2 EXE) 
+亦不能令計算機清除問題及回復正常，即是再執行步驟6會出現程式自動消失現象。</b></p>
+<p>　</p>
+<p><b>測試例子二:</b></p>
+<p><b>1. 先 <font color="#800080">SHIFT MODE 3</font> 重設計算機</b></p>
+<p><b>2. 在P2程式位置任意輸入一個250 bytes的程式</b></p>
+<p><b>3. 在P1程式位置任意輸入一個1 bytes的程式</b></p>
+<p><b>4. 按 <font color="#800080">MODE MODE MODE 3 1</font> 將P1位置的程式完全清除，這時問題已存在
+，與測試例子一不同的是可以正常進入P1或P3或P4編輯式、編寫程式，甚至刪除這些程式位置亦無問題，但若果按 <font color="#800080">MODE MODE MODE 3 2</font> 
+清除程式位置P2時計數機右邊的數字不停出現異常閃動，按 ON 才可以終止，看來在這個情況下，問題將可能會<font color="#FF0000">延後在很久時間才被發現。</font></b></p>
+<p>　</p>
+<p><b>
+其實若果能肯定出現程式自動消失的條件，大家才可以有效防止問題的出現，雖然現時還未完全肯定出現程式自動消失的條件，但經過進一步反複很多測試及研究，相信出現的<font color="#FF0000">充份條件除了使用 
+PCL 指令外，還要滿足程式的總長度大於248 bytes的條件，</font>即程式總長度大於248 bytes有可能出現問題，但不是一定出現問題，相反程式總長度少於或等於248 
+bytes時，即使用 PCL 指令問題亦不會發生。有關我對這個條件做過一定數量測試，為了進一步確認及驗証<font color="#FF0000">不會出現程式
+問題的條件</font>，我做以下情況的測試，每一項測試與上述測試例子相似‧要注意的是雖然做了不測試，但不可能完全測試所有情況(天文數字)，因此內容可能有錯，若果發現有所出錯請通知<a href="../contact.html">網主</a>，以便作出進一步的測試 
+、研究及更正。希望這些料資料對使用SC185的朋友會有 一點幫助，若對這個問題有任何疑問或補充，歡迎在<a href="http://webcal.forumcircle.com/viewforum.php?f=1&amp;sid=38efe43740d62bbdee46bd132b7ea551">WebCal論壇</a>留言討論。</b></p>
+<p>Test Cases (Black Box Test):</p>
+<p>表格中程式長度以byte為單位，表格內我的測試全部沒有出現任異常或程式自動消失的問題。</p>
+<!--mstheme--></font>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber1" bordercolorlight="#999900" bordercolordark="#666666">
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">測試編號<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">P1長度<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">P2長度<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">P3長度<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">P4長度<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">程式總長度<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">25 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">25 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">50<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">16 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">17 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">17 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">50<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">13 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">12 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">13 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">12 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">50<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">4<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">10 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">15 (REG Quad)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">15 (SD)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">50<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">1 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">99 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">100<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">6<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">1 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">1 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">98 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">100<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">7<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">1 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">1 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">1 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">97 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">100<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">8<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">25 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">25 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">25 (SD)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">25 (REG Lin)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">100<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">9<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">75 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">75 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">150<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">10<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">60 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">60 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">60 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">180<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">11<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">50 (BASE)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">30 (REG Lin)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">80 (REG Log)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">40 (REG Exp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">200<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">12<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">5 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">215 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">220<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">13<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">130 (REG Pwr)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">100 (REG Inv)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">230<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">14<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">50 (SD)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">190 (SD)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">240<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">15<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">120 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">125 (REG 
+    Quad)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">245<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">16<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">100 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">46 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">100 (SD)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">246<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">17<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">247 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">1 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">247<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">18<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">47 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">50 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">50 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">50 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">247<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">19<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">248 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">1 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">248<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">20<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">62 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">62 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">62 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">62 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">248<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">21<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">1 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">247 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">248<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">22<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">237 (SD)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">11 (SD)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">248<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">23<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">30 (BASE)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">218 (BASE)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">248<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><!--mstheme--><font face="新細明體">24<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">48 (comp)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">100 (cmplx)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">100 (SD)<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="18%" align="center"><!--mstheme--><font face="新細明體">248<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p>註: 直至目前為在執行RCL指令時，程式小於或等於248 bytes是不會出現異常及程式自動消失的問題<font color="#FF0000">(不包括問題延後的情況)</font>，但程式總長大於248 
+bytes的情況下，執行PCL 指令則開始發現有出現異常及程式自動消失的例子。</p>
+<p>　</p>
+<p><b><font color="#0000FF">後話: </font></b>最初我發現這個問題時，3個程式的總長度其實是297 
+bytes，最初還以為是偶然發生的問題，因為不是所有程式總長度為297bytes就會出現問題，即使遇上問題亦很可能會誤以為是偶然發生的事件，後來經過較多測試才可以將問題確立，才可以將具體的測試例子(情況)寫出來，這個問題其實<font color="#0000FF">舊版本的SC185早已存在</font>，只是在推出新版前未有人發現，而Truly公司在推出新版前的測試相信亦未能找出問題，可見問題相當難被發現。我亦在佷偶然的機會下發現及進行很多不同測試才可以找到
+一些特點，而找出248 
+bytes這個數值亦要做很多測試，由於沒有記下所以不能列出給大家參考，所以之前大家看到簡單的測試例子及推論，其實是做了很多測試的研究結果，可能不是網友想像中那麼容易的事。</p>
+<p><a href="SC185_3650.html">fx-3650P及SC-185功能比較</a></p>
+<p><a href="complexPb.html">SC-185複數計算問題</a></p>
+<p><a href="TrulySC185.html">SC-185用後報告及評價</a></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<a href="3650.html"><span lang="en-us">返回</span> fx-3650P及SC185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/SC185_problem.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:25 GMT -->
+</html>

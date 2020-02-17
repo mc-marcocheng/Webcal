@@ -1,0 +1,221 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/fx-3900PV/quadratic3600.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:22 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>一元二次方程</title>
+<style>
+<!--
+span.GramE
+	{}
+-->
+</style>
+<meta name="Microsoft Theme" content="china 011">
+<script src="webcal.js"></script></head>
+
+<body background="di1.gif" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#FF9933" alink="#FF3300">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><font size="5">一元二次方程(IV)</font></b></u></p>
+<p>程式可計算一元二次方程的根。若輸入的係數為整數及根為有理數，答案會以<font color="#FF0000"><b>假分數</b></font>形式表示。</p>
+<p>程式編寫日期: 2007年1月28日</p>
+<p>程式長度: 29步 </p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse; " width="100%" id="AutoNumber1" bordercolorlight="#1445A1" bordercolordark="#1445A1">
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">ab/c<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">4 <!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">ENT 1<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">÷ 1</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">ENT 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin 4<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin 5<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">x<sup>2</sup><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">ENT 0<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">÷</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin + 1<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin 6<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">√<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin - 4<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin + 5<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">+/-<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">× 4</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">× 5</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 4<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">d/c<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">HLT<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 5<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">d/c<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MODE .<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p align="left">　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">例題</span><span lang="EN-US">1: </span>
+<span style="font-family: 新細明體">解</span><span lang="EN-US"> x<sup>2</sup> - 7x + 
+12 = 0 </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="en-us"> P1</span><span lang="EN-US"> </span>
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> 1 </span>RUN<span lang="EN-US"> 7 
++/- RUN 12 RUN (</span><span style="font-family: 新細明體">顯示第一個實數根為</span><span lang="EN-US">4) 
+RUN (</span><span style="font-family: 新細明體">顯示第二<span class="GramE">個</span>實數根為</span><span lang="EN-US">3)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體">∴</span><span lang="EN-US"> x = 4 </span>
+<span style="font-family: 新細明體">或</span><span lang="EN-US"> x = 3</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US">&nbsp;&nbsp;</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">例題</span><span lang="EN-US">2: </span>
+<span style="font-family: 新細明體">解</span><span lang="EN-US"> x<sup>2</sup> + 6x + 
+25 = 0</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按<span lang="en-us"> P1 </span>再按</span><span lang="EN-US"> 1 RUN 6 RUN 25 RUN 
+(</span>顯示-E-表示無實根)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+註:
+<font face="新細明體" EN-US>程式執行完結後</font>，按 Kout 6 顯示判別式的值，若有實數根，可按 Kout 4 及 Kout 
+5 分別顯示兩根的數值。</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<u><b><font size="4" color="#800080">利用這個程式求二次函數的因式分解</font></b></u></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體">
+解簡單的一元二次方程是可以用因式分解的方法，因此我們可以從二次方程的解(分數根)，估計到兩個一次式的因子 (即是因子為 &quot;<font color="#0000FF">(分母 
+x</font><font color="#FF0000"> - </font><font color="#0000FF">分子)</font>&quot;)，看看一些簡單的例子。 </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US" style="FONT-FAMILY: 新細明體">&nbsp;</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體">例題3<span lang="EN-US">: 因式分解</span></span><span lang="EN-US"> 
+x<sup>2</sup> + 2x–15 </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">假設使用一元二次方程(I)的程式</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> P1</span><span style="font-family: 新細明體">再按</span><span lang="EN-US"> 1 </span>
+RUN<span lang="EN-US"> 2 RUN 15 +/- RUN (</span><span style="font-family: 新細明體">顯示</span><span lang="EN-US">3</span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">3=3/1，即因子為</span><span lang="EN-US">x–3) </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="en-us">RUN</span><span lang="EN-US"> (</span><span style="font-family: 新細明體">顯示</span><span lang="EN-US">-5</span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">即因子為</span><span lang="EN-US">x 
++ 5)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">因此</span><span style="FONT-FAMILY: 新細明體">，</span><span lang="EN-US"> 
+x<sup>2</sup> + 2x – 15 = (x–3)(x + 5)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+<span style="font-family: 新細明體">例題4</span><span lang="EN-US">: </span>
+<span style="font-family: 新細明體">因式分解</span> <span lang="EN-US">42x<sup>2</sup> - 
+20x + 2</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> P1&nbsp; </span>
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> 42 RUN 20 +/- RUN 2 
+RUN (</span><span style="font-family: 新細明體">顯示</span><span lang="en-us"> 1/3</span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">即因子為</span><span lang="EN-US">3x 
+- 1) </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> RUN (</span><span style="font-family: 新細明體">顯示<span lang="en-us"> 
+1/7</span></span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">即因子為</span><span lang="EN-US">7x 
+- 1) </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">最後</span><span style="FONT-FAMILY: 新細明體">，別忘記看看有沒常數因子<span lang="EN-US">(= 
+42 </span></span><span lang="EN-US" style="font-family: Symbol">&cedil;</span><span lang="EN-US" style="FONT-FAMILY: 新細明體"> 
+3 </span><span lang="EN-US" style="font-family: Symbol">&cedil;</span><span lang="EN-US" style="FONT-FAMILY: 新細明體"> 
+7 = 2)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體">因此，</span><span lang="EN-US">42x<sup>2</sup>–20x + 2 = 2(3x–1)(7x–1)</span></p>
+<p>　</p>
+<p>例題5: 因式分解 9a<sup>2</sup> - 12ab + 4b<sup>2</sup></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> P1 </span>
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> 9 RUN 12 +/- RUN 16 
+RUN (</span><span style="font-family: 新細明體">顯示</span><span lang="en-us"> 2/3</span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">即因子為</span><span lang="EN-US">3</span>a<span lang="EN-US"> 
+- 2b)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> RUN (</span><span style="font-family: 新細明體">顯示<span lang="en-us"> 
+2/3</span></span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">即因子為</span><span lang="en-us">3a</span><span lang="EN-US"> 
+- 2b) </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體">因此，</span><span lang="en-us">9</span><span lang="EN-US">a<sup>2</sup> 
+– 12ab + 4b<sup>2</sup> = (3a -&nbsp;2b)<sup>2 </sup></span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="en-us">例題6: </span>因式分解 18a<sup>2</sup> - 32b<sup>2</sup></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> P1 </span>
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> 18 RUN 0 RUN 32 +/- 
+RUN (</span><span style="font-family: 新細明體">顯示</span><span lang="en-us"> 4/3</span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">即因子為</span><span lang="EN-US">3a 
+- 4b)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> RUN (</span><span style="font-family: 新細明體">顯示<span lang="en-us"> 
+- 4/3</span></span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">即因子是
+為</span><span lang="en-us">3a</span><span lang="EN-US"> 
++ 4b) </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">常數因子 = 18 </span><span lang="en">÷3 ÷ 3 = 2</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體">因此，</span><span lang="en-us">18</span><span lang="EN-US">a<sup>2</sup>–32</span>b<sup>2</sup><span lang="EN-US"> 
+= 2(3a–4b)(3a + 4b)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+　</p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+<a href="fx-3600PV.html">返回fx-3600PV程式集</a></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/fx-3900PV/quadratic3600.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:22 GMT -->
+</html>

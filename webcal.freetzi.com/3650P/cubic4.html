@@ -1,0 +1,157 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/cubic4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:09 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>一元三次方程(IV)</title>
+<style>
+<!--
+span.GramE
+	{}
+-->
+</style>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font face="Times New Roman, Times, serif" size="5">
+一元三次方程(IV)</font></b></u></p>
+<p>程式更新日期: 2011年5月29日</p>
+
+<p>程式由網友<span class="gen"><span class="postername"> <font color="#0000FF">
+roviury</font> 提供。</span> </span></p>
+
+<p><font color="#FF0000">程式需要在 CMPLX 模式下執行，因此在輸入程式前請先按 Mode 2。</font></p>
+<p class="MsoNormal">注意: 5<font color="#000080"><b>!</b></font><sup>o</sup>是按 5 SHIFT
+<font color="#0000FF">x!</font> SHIFT Ans 1。</p>
+<p>程式一(實數係數版本，110 bytes，使用記憶A, B, C及M)</p>
+<p>?→A: ?→B: ?→C: ?→M: </p>
+<p>B<sup>3</sup> - 9┘2A( BC - 3MA→M: B<sup>2</sup> - 3AC→C:&nbsp; √( M<sup>2 </sup>- 
+C<sup>3</sup>: <br>
+<br>
+Ans - M - 
+2Ans(Ans=M→M:&nbsp;
+<font color="#FF0000"><sup>3</sup>√</font>Abs Ans <font color="#FF0000">=&gt;</font> 
+Ans∠(3<sup>-1</sup> arg M→M: </p>
+<p>Lbl 0: Abs M <font color="#FF0000">=&gt;</font> M + C<span lang="en"><font face="新細明體">÷</font></span>M: 
+(Ans - B)<span lang="en"><font face="新細明體">÷</font></span>3A◢ M (1∠5!<sup>o</sup>→M: 
+Goto 0</p>
+<p>　</p>
+<p>程式二(複數係數版本，125 bytes，使用記憶A, B, C及M)</p>
+<p>?→A: ?→B: ?→C: ?→M: </p>
+<p>B<sup>3</sup> - 9┘2A( BC - 3MA→M: B<sup>2</sup> - 3AC→C:&nbsp;</p>
+<p>√ Abs ( M<sup>2 </sup>- 
+C<sup>3</sup>) <font color="#FF0000">=&gt;</font> Ans∠( . 5 arg ( M<sup>2 </sup>- 
+C<sup>3</sup>:  Ans - M - 
+2Ans(Ans=M→M:&nbsp; </p>
+<p>
+<font color="#FF0000"><sup>3</sup>√ </font> Abs Ans <font color="#FF0000">=&gt;</font> 
+Ans∠(3<sup>-1</sup> arg M→M: </p>
+<p>Lbl 0: Abs M <font color="#FF0000">=&gt;</font> M + C<span lang="en"><font face="新細明體">÷</font></span>M: 
+(Ans - B)<span lang="en"><font face="新細明體">÷3</font></span>A◢ M (1∠5!<sup>o</sup>→M: 
+Goto 0</p>
+<p class="MsoNormal">　</p>
+<p>例題1: 解 3x<sup>3</sup> - 5x<sup>2</sup> + x - 4 =0</p>
+<p>
+按 Prog 1 
+再按 3 EXE - 5 EXE 1 EXE 
+- 4 EXE (顯示第一個根為1.86977)</p>
+<p>
+EXE
+
+
+<strong><font color="#FF0000">( 此時計算機右上角出現R&lt;=&gt;I，表示為複數解)</font></strong></p>
+
+<p>
+(顯示第二個根實數部為 - 
+0.101554) 
+ 
+</p>
+<p>
+Shift Re&lt;=&gt;Im (顯示第
+二個根虛數部為  0.838323 i)</p>
+<p>
+EXE (顯示第三個根的實數部為 
+- 0.101554)</p>
+<p>
+Shift Re&lt;=&gt;Im (顯示第
+三個根虛數部為 - 0.838323 i)</p>
+
+<p>
+計算完結後按 AC 終止程式</p>
+
+<p>　</p>
+<p>例題2: 解 x<sup>3</sup> + ( -3 - 9i)x<sup>2</sup> + ( -29 + 12i)x + 25 + 21i = 0</p>
+<p>
+按 Prog 1 
+再按 1 EXE -3 - 9i EXE 
+-29 + 12i EXE </p>
+<p>
+25 + 21i EXE  
+
+(顯示第一個根的實數部為 
+4)</p>
+<p>
+Shift Re&lt;=&gt;Im (顯示第
+一個根虛數部為 5 i)</p>
+
+<p>
+EXE (顯示第二個根的實數部為1)</p>
+
+<p>
+Shift Re&lt;=&gt;Im (顯示第二個根虛數部為&nbsp; i)</p>
+<p>
+EXE (顯示第三個根的實數部為 
+- 2)</p>
+<p>
+Shift Re&lt;=&gt;Im (顯示第三個根虛數部為 3 i)</p>
+
+<p>
+計算完結後按 AC 終止程式</p>
+
+<p>
+　</p>
+<p>
+例題3: 
+解 x<sup>2</sup> - 7x + 
+12 = 0&nbsp; (一元二次方程)</p>
+<p>
+方程可以寫成 x<sup>3</sup> - 7x<sup>2</sup> + 12x = 0 (其中捨去 一個 x=0 的解)</p>
+<p>
+按 Prog 1&nbsp; 
+再按 1 EXE 
+- 7 EXE 12 EXE 0 EXE(顯示第一個實數根為4) 
+ 
+</p>
+<p>
+EXE (顯示第二個根為0
+
+<font color="#FF0000">
+(捨去)</font>) 
+EXE (顯示第三<span class="GramE">個實數根為3)&nbsp; </p>
+
+<p>計算完結後按 AC 終止程式</p>
+
+
+</span>
+
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+　</p>
+
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<a href="3650.html"><span lang="en-us">返回</span> fx-3650P及SC185程式集</a></p>
+
+<p class="MsoNormal">　</p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/cubic4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:09 GMT -->
+</html>

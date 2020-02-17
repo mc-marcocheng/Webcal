@@ -1,0 +1,198 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/poisson.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:52 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>泊松分佈及二項分佈(I)</title><script src="webcal.js"></script></head>
+
+<body bgcolor="#CCFFFF">
+
+
+<p align="center"><u><b><font size="5">泊松分佈及二項分佈(I)</font></b></u></p>
+
+
+<p align="left">修改日期: 05年8月3日</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr align="center">
+    <td width="12%">(</td>
+    <td width="12%">0</td>
+    <td width="12%">A</td>
+    <td width="12%">+</td>
+    <td width="13%">B</td>
+    <td width="13%">)</td>
+    <td width="13%">y<sup>x</sup></td>
+    <td width="13%">(</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">A</td>
+    <td width="12%">cos</td>
+    <td width="12%">sin<sup>-1</sup></td>
+    <td width="12%">C</td>
+    <td width="13%">y<sup>x</sup></td>
+    <td width="13%">10<sup>x</sup></td>
+    <td width="13%">+/-</td>
+    <td width="13%">9</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">9</td>
+    <td width="12%">)</td>
+    <td width="12%">A</td>
+    <td width="12%">n!</td>
+    <td width="13%">x<sup>-1</sup></td>
+    <td width="13%">e<sup>x</sup></td>
+    <td width="13%">+/-</td>
+    <td width="13%">B</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">cos </td>
+    <td width="12%">sin<sup>-1</sup></td>
+    <td width="12%">C</td>
+    <td width="12%">y<sup>x</sup></td>
+    <td width="13%">10<sup>x</sup></td>
+    <td width="13%">+/-</td>
+    <td width="13%">9</td>
+    <td width="13%">9</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">+</td>
+    <td width="12%">B</td>
+    <td width="12%">C</td>
+    <td width="12%">y<sup>x</sup></td>
+    <td width="13%">10<sup>x</sup></td>
+    <td width="13%">+/-</td>
+    <td width="13%">9</td>
+    <td width="13%">9</td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><sub>n</sub>C<sub>r</sub></td>
+    <td width="12%">A</td>
+    <td width="12%">C</td>
+    <td width="12%">y<sup>x</sup></td>
+    <td width="13%">10<sup>x</sup></td>
+    <td width="13%">+/-</td>
+    <td width="13%">9</td>
+    <td width="13%">9</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">×</td>
+    <td width="12%">C</td>
+    <td width="12%">y<sup>x</sup></td>
+    <td width="12%">(</td>
+    <td width="13%">A</td>
+    <td width="13%">+</td>
+    <td width="13%">10<sup>x</sup></td>
+    <td width="13%">+/-</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">9</td>
+    <td width="12%">9</td>
+    <td width="12%">)</td>
+    <td width="12%">(</td>
+    <td width="13%">1</td>
+    <td width="13%">-</td>
+    <td width="13%">C</td>
+    <td width="13%">)</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">y<sup>x</sup></td>
+    <td width="12%">(</td>
+    <td width="12%">B</td>
+    <td width="12%">-</td>
+    <td width="13%">A</td>
+    <td width="13%">)</td>
+    <td width="26%" colspan="2">STO F1 或 F2</td>
+  </tr>
+  </table>
+<p>例題1: 若X ~ Bin(9,0.5)，求P(X=4)。<br>
+<br>
+按 RCL F1 ALGB 4 = 9 = 0.5 = (顯示答案為0.24609)<br>
+<br>
+　</p>
+<p>例題2: 若X ~ Po(5)，求P(X=4)。<br>
+<br>
+按 RCL F1 ALGB 4 = 5 = 0 = (0代表泊松分佈，顯示答案為0.17547)<br>
+<br>
+　</p>
+<p>例題3: 若X ~ Bin(9,0.5)，求P(X=4)，P(X=5)，P(X=6)，P(X=7)及P(4≦X≦7)。<br>
+<br>
+按 RCL F1 ALGB 4 = 9 = 0.5 = (顯示P(X=4)為0.24609) STO M <br>
+5 STO A↑↑ (找回程式) M+ (顯示P(X=5)為0.24609)<br>
+6 STO A ↑ M+ (顯示P(X=6)為0.16406)<br>
+7 STO A ↑ M+ (顯示P(X=7)為0.00703)<br>
+RCL M (顯示P(4≦X≦7)為0.72656)<br>
+<br>
+另一種按法:<br>
+按 RCL F1 ALGB 4 = 9 = 0.5 = (顯示P(X=4)為0.24609) STO M<br>
+↑ ALGB 5 = = = M+ (顯示P(X=5)為0.24609)<br>
+↑ ALGB 6 = = = M+ (顯示P(X=6)為0.16406)<br>
+↑ ALGB 7 = = = M+ (顯示P(X=7)為0.07031)<br>
+RCL M (顯示P(4≦X≦7)為0.72656)<br>
+<br>
+　</p>
+<p>例題4: 若X ~ Po(5)，求P(X=4)，P(X=5)，P(X=6)，P(X=7)及P(4≦X≦7)。<br>
+<br>
+按 RCL F1 ALGB 4 = 5 = 0 = (0代表泊松分佈，顯示P(X=4)為0.17547) STO M <br>
+5 STO A↑↑ (找回程式) M+ (顯示P(X=5)為0.17547)<br>
+6 STO A ↑ M+ (顯示P(X=6)為0.14622)<br>
+7 STO A ↑ M+ (顯示P(X=7)為0.10444)<br>
+RCL M (顯示P(4≦X≦7)為0.60160)<br>
+<br>
+另一種按法:<br>
+按 RCL F1 ALGB 4 = 5 = 0 = (顯示P(X=4)為0.17547) STO M<br>
+↑ ALGB 5 = = = M+ (顯示P(X=5)為0.17547)<br>
+↑ ALGB 6 = = = M+ (顯示P(X=6)為0.14622)<br>
+↑ ALGB 7 = = = M+ (顯示P(X=7)為0.10444)<br>
+RCL M (顯示P(4≦X≦7)為0. 60160)</p>
+<p>　</p>
+<p><a href="506Vmain.html">返回EL-506程式集主頁</a></p>
+
+
+<p>相關資料:</p>
+
+
+<p>
+<a href="normal1.html">標準常態分佈(應用置積分功能)</a>
+(Standard normal distribution)</p>
+
+<p>
+<a href="normal2.html">常態分佈(應用內置積分功能)</a>
+(Normal distribution)</p>
+
+<p>
+<a href="normal3.html">標準常態分佈概率(II)</a>
+(Normal Probability Calculation II)</p>
+
+<p>
+<a href="inverseNormalD1.html">反查標準常態分佈概率(I)</a>
+ (Inverse Standard Normal Probability Calculation I)
+</p>
+
+<p>
+<a href="binDist.html">二項分佈</a>
+(Binomial distribution)</p>
+
+<p>
+<a href="poisson2.html">二項分佈及泊松分佈(II)</a>
+(Poisson distribution and binomial distribution II)</p>
+
+<p>
+<a href="poisson3.html">二項分佈及泊松分佈(III)</a>
+(Poisson distribution and binomial distribution III)</p>
+
+<p>
+<a href="inverseNormalD.html">反查標準常態分佈概率(II)</a>
+ (Inverse Standard Normal Probability Calculation II)
+</p>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/poisson.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:52 GMT -->
+</html>

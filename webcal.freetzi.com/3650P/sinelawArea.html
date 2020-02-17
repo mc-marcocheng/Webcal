@@ -1,0 +1,211 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/sinelawArea.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:43 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>正弦定律及三角形面積</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">正弦定律及三角形面積</font></b></u></p>
+<p>這個程式會根據輸入來計算:</p>
+<p>
+(1) 已知兩角及一邊(2 angles and 1 side)，其餘兩邊、第三個角及三角形面積</p>
+<p>(2) 已知兩邊及一非夾角(2 
+sides and 1 non-included angle)，其餘二角、第三邊及三角形面積</p>
+<p>
+註: 若果較習慣使用程式編號區分情況的朋友，可以使用網頁尾<a href="#Q1">附錄程式(有程式編號的版本 
+79 bytes)</a>。</p>
+<p>程式編寫日期: 2006年2月24日</p>
+<p><font color="#FF0000">注意:
+<font color="#0000FF">π</font><sup>r</sup></font> 
+是按 Shift EXP Shift Ans 2</p>
+<p>程式 (80 bytes，使用記憶為A, B及C):</p>
+<p>?→A: ?→B: ?→C: 0&gt;C <font color="#FF0000">=&gt;</font> - B sin C 
+÷ sin A <font color="#FF0000">=&gt;</font> Goto 0:</p>
+<p><font color="#FF0000">sin</font><sup><font color="#FF0000">-1</font> </sup>(C 
+sin A ÷ B→C: Lbl 0◢ 
+<font color="#0000FF">π</font><font color="#0000FF"><sup>r</sup></font>
+- A - √C<sup>2</sup>◢</p>
+<p>B sin Ans ÷ sin A◢ 2<sup>-1</sup>BAns sin√C<sup>2</sup>◢
+
+</p>
+<p>C&gt;A <font color="#FF0000">=&gt;</font>
+
+<font color="#0000FF">π</font><font color="#0000FF"><sup>r</sup></font>
+- C→C <font color="#FF0000">=&gt;</font> Goto 0: Norm 1</p>
+<p>
+　</p>
+<p>
+例題1: 
+∠A = 40<sup>o</sup>，a 
+= 5，∠B 
+= 60<sup>o</sup>，求b，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 40 
+EXE 5 EXE <font color="#FF0000">-</font> 60 EXE </p>
+<p>
+(<font color="#FF0000">注意</font><font color="#FF0000">: 
+第三個</font>數值為<font color="#FF0000">負值</font>代表輸入的是<font color="#FF0000">角</font>，顯示b為6.7365)</p>
+<p>
+EXE (顯示∠C為 80<sup>o</sup>) EXE (顯示c為7.6604) EXE (顯示面積為16.5853)</p>
+<p>
+EXE (顯示0及Norm 1表示計算已完結)</p>
+<p>　</p>
+<p>
+例題2: 
+∠A = 50<sup>o</sup>，a 
+= 10，b = 13，求∠B，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 50 EXE 10 EXE 13 EXE 
+(顯示∠B為84.7832<sup>o</sup>)
+</p>
+<p>
+EXE (顯示∠C為 45.2168<sup>o</sup>) EXE (顯示c為9.2655) EXE (顯示面積為46.1355)</p>
+<p>
+EXE (顯示另一個∠B的解為95.2168<sup>o</sup>) EXE (顯示另一可能∠C為 34.7832<sup>o</sup>) </p>
+<p>
+EXE (顯示另一可能c為7.44699) EXE (顯示另一可能面積為37.0807)</p>
+<p>
+請按 AC 終止程式</p>
+<p>
+　</p>
+<p>
+例題3: 
+∠A = 
+150<sup>o</sup>，a 
+= 10，b = 6，求∠B，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 150 EXE 10 EXE 6 
+EXE (顯示∠B為17.4576<sup>o</sup>)
+</p>
+<p>
+EXE (顯示∠C為 12.5424<sup>o</sup>) EXE (顯示c為4.3432)</p>
+<p>
+EXE (顯示面積為6.51486)</p>
+<p>
+EXE (顯示0及Norm 1表示答案只有一組解答)</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<p>
+　</p>
+<!--msthemeseparator--><p align="center"><img src="alevrule.gif"></p>
+
+
+<p><font color="#0000FF"><a name="Q1" id="Q1"></a>附錄: 有程式編號版本</font></p>
+<p>程式編寫日期: 2007年3月26日</p>
+<p><font color="#0000FF">附錄程式</font> (79 bytes，使用記憶為A, B, C及D):</p>
+<p>?→D: ?→A: ?→B: ?→C: <font color="#FF0000">cos<sup>-1</sup></font> D <font color="#FF0000">=&gt;</font> B sin C 
+÷ sin A <font color="#FF0000">=&gt;</font> Goto 0:</p>
+<p><font color="#FF0000">sin</font><sup><font color="#FF0000">-1</font> </sup>(C 
+sin A ÷ B→C: Lbl 0◢ 
+<font color="#0000FF">π</font><font color="#0000FF"><sup>r</sup></font>
+- A - C◢</p>
+<p>B sin Ans ÷ sin A◢ 2<sup>-1</sup>BAns sin C◢
+
+</p>
+<p>DC&gt;A <font color="#FF0000">=&gt;</font>
+
+<font color="#0000FF">π</font><font color="#0000FF"><sup>r</sup></font>
+- C→C <font color="#FF0000">=&gt;</font> Goto 0: Norm 1</p>
+<p>
+　</p>
+<p>
+<font color="#FF0000">附錄程式</font>例題1: 
+∠A = 40<sup>o</sup>，a 
+= 5，∠B 
+= 60<sup>o</sup>，求b，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 0 EXE (0代表以兩角及一邊計算，最後輸入數據為角度)</p>
+<p>
+40 
+EXE 5 EXE 60 EXE (顯示b為6.7365)</p>
+<p>
+EXE (顯示∠C為 80<sup>o</sup>) EXE (顯示c為7.6604) EXE (顯示面積為16.5853)</p>
+<p>
+EXE (顯示0及Norm 1表示計算已完結)</p>
+<p>　</p>
+<p>
+<font color="#FF0000">附錄程式</font>例題2: 
+∠A = 50<sup>o</sup>，a 
+= 10，b = 13，求∠B，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 1 EXE (1代表以兩邊及一角計算，最後輸入數據為邊長)</p>
+<p>
+50 EXE 10 EXE 13 EXE 
+(顯示∠B為84.7832<sup>o</sup>)
+</p>
+<p>
+EXE (顯示∠C為 45.2168<sup>o</sup>) EXE (顯示c為9.2655) EXE (顯示面積為46.1355)</p>
+<p>
+EXE (顯示另一個∠B的解為95.2168<sup>o</sup>) EXE (顯示另一可能∠C為 34.7832<sup>o</sup>) </p>
+<p>
+EXE (顯示另一可能c為7.44699) EXE (顯示另一可能面積為37.0807)</p>
+<p>
+請按 AC 終止程式</p>
+<p>
+　</p>
+<p>
+<font color="#FF0000">附錄程式</font>例題3: 
+∠A = 
+150<sup>o</sup>，a 
+= 10，b = 6，求∠B，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 1 EXE (1代表以兩邊及一角計算，最後輸入數據為邊長)</p>
+<p>
+150 EXE 10 EXE 6 
+EXE (顯示∠B為17.4576<sup>o</sup>)
+</p>
+<p>
+EXE (顯示∠C為 12.5424<sup>o</sup>) EXE (顯示c為4.3432)</p>
+<p>
+EXE (顯示面積為6.51486)</p>
+<p>
+EXE (顯示0及Norm 1表示答案只有一組解答)</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/sinelawArea.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:43 GMT -->
+</html>

@@ -1,0 +1,67 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/4centre.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:45 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>三角形重心</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">三角形重心、垂心、外心及內心(I)</font></b></u></p>
+<p>已知三角形三頂點的坐標，程式可計算三角形的重心、垂心、外心及內心的坐標。另外為方便以假分數顯示，建議將計數機預先設定為假分數形式表示(按六次 
+Mode，再按 1 2 EXE )。</p>
+<p>程式編寫日期: 2006年8月10日 最新更新日期: 2008年3月26日</p>
+<p><font color="#FF0000">程式需要在 SD 模式下執行，因此在輸入程式前請先按 Mode Mode 1 進入SD模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數(<font color="#0000FF">n</font> 按 shift 1 3 ，<font color="#0000FF">Σx</font>為平均x 
+按 shift 1 2)</p>
+<p>程式 (208 bytes)</p>
+<p>Stat clear: ?→A: ?→B: ?→C: ?→D: ?→X: ?→Y:</p>
+<p><font color="#FF0000">; </font>Y - 1 <font color="#FF0000">DT</font>: X
+<font color="#FF0000">DT</font>: (A + C + X)┘3◢ (B + D + Y)┘3◢</p>
+<p>(X - A)┘(B - Y→M: D - MC→X: (C - A)┘(B - D→Y:</p>
+<p>(<font color="#0000FF">n</font> - Y<font color="#0000FF">Σx</font> - X)┘(M - 
+Y→Y◢ AnsM + X→M◢ </p>
+<p>(A + C + <font color="#0000FF">Σx</font> - Y)┘2◢ (B + D +
+<font color="#0000FF">n</font> - M)┘2◢</p>
+<p><font color="#FF0000">Pol(</font> A-C , B-D→M: <font color="#FF0000">Pol(</font>C-<font color="#0000FF">Σx</font> 
+, D-<font color="#0000FF">n</font>: √( (A - <font color="#0000FF">Σx</font>)<sup>2</sup> 
++ (B - <font color="#0000FF">n</font>)<sup>2</sup>→Y:</p>
+<span lang="en">
+<p>(AX+CY+<font color="#0000FF">Σx</font>M)┘(X+Y+M◢ (BX+DY+<font color="#0000FF">n</font>M)┘(X+Y+M</p>
+<p>　</p>
+<p>例題: A、B及C三點的坐標分別為(4 , 3)、(0 , 0) 及 (4 , 0)，求三角形ABC的重心、垂心、外心及內心的坐標。</p>
+<p>按 Prog 1 再按 4 EXE 3 EXE 0 EXE 0 EXE 4 EXE 0 </p>
+<p>EXE (顯示8/3) EXE (顯示1，所以重心=(8/3, 1))</p>
+<p>EXE (顯示4) EXE (顯示0，所以垂心=(4, 0))</p>
+<p>EXE (顯示2) EXE (顯示3/2，所以外心=(2, 3/2))</p>
+<p>EXE (顯示3) EXE (顯示1，所以內心 = (3 , 1))</p>
+<p>
+　</p>
+<p>
+註1: 若兩點的y坐標相同，程式有</span>可能會<span lang="en">出現Math ERROR，</span>請將不相同y坐標的點作為第一點輸入即可<span lang="en">。</p>
+<p>
+註2: 外心亦是三點共圓的圓心。</p>
+<p>
+　</p>
+<p>
+參考資料:</p>
+<p>
+<a href="http://agutie.homestead.com/files/center/nine_point_center_euler.html">
+http://agutie.homestead.com/files/center/nine_point_center_euler.html</a></p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/4centre.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:45 GMT -->
+</html>

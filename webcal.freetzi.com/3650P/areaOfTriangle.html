@@ -1,0 +1,114 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/areaOfTriangle.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:43 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>三角形面積</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b>
+<font size="5">三角形面積</font></b></u></p>
+<p>程式編寫日期: 2005年11月11日 <font color="#FF0000">程式更正日期: 2006年1月7日</font></p>
+<p>程式可以計算下列兩種程情況下的三角形面積:</p>
+<p>(i) 已知三角形的兩邊及夾角</p>
+<p>(ii) 己知三角形的三邊 (希羅公式)</p>
+<p>
+註1: 若果較習慣使用程式編號區分情況的朋友，可以使用網頁尾<a href="#Q1">附錄程式一(有程式編號
+的版本 43 bytes)</a>。其實兩邊及來角的情況，計算較簡單，亦可以不用程式，若果只需要計算希羅公式問題，可以使用<a href="#Q2">附錄程式二(只計希羅公式的版本 32 bytes)</a></p>
+<p>　</p>
+<p>程式 (40 bytes，使用記憶A、B及C)</p>
+<p>?→A: ?→B: ?→C: 2<sup>-1</sup>AB sin C◢</p>
+<p>2<sup>-1</sup>AB sin <font color="#FF0000">cos<sup>-1</sup></font> ( (A<sup>2</sup> 
++ B<sup>2</sup> - C<sup>2</sup> ) ÷ 2AB</p>
+<p>　</p>
+<p>例題1: 
+a=4, b=5, ∠C=40<sup>o</sup>
+，求三角形面積。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1&nbsp; 
+再按<font color="#FF0000"> </font>
+4 EXE 5 EXE 40 EXE (顯示面積為6.4279)</p>
+<p>
+計算完結後按AC終程式。</p>
+<p>　</p>
+<p>例題2: 
+a=4, b=5, c=6，求三角形面積。</p>
+<p>
+按 Prog 1 再按 4 EXE 5 EXE 
+6EXE
+<font color="#FF0000">EXE</font> (<font color="#FF0000">必要</font>，按<font color="#FF0000">EXE</font>忽略一個數值
+代表以三邊計算面積，顯示面積為9.9216)</p>
+<p>註2: 若果輸入的三邊不能構成三角形，程式會出現Math 
+ERROR。</p>
+<p>　</p>
+<p>附錄 : </p>
+<p><a name="Q1" id="Q1"></a>附錄程式一(有程式編號版本 43 bytes，使用記憶A、B、C及D)</p>
+<p>程式編寫日期: 2007年3月23日</p>
+<p>?→D: ?→A: ?→B: ?→C:  </p>
+<p>D <font color="#FF0000">=&gt;&nbsp; cos<sup>-1</sup></font> ( (A<sup>2</sup> 
++ B<sup>2</sup> - C<sup>2</sup> ) ÷ 2AB→C:</p>
+<p>2<sup>-1</sup>AB sin C</p>
+<p>　</p>
+<p><a name="Q2" id="Q2"></a>附錄程式二(只計希羅公式問題 33 bytes，使用記憶A、B及C)</p>
+<p>?→A: ?→B: ?→C: </p>
+<p>2<sup>-1</sup>AB sin <font color="#FF0000">cos<sup>-1</sup></font> ( (A<sup>2</sup> 
++ B<sup>2</sup> - C<sup>2</sup> ) ÷ 2AB</p>
+<p>　</p>
+<p><font color="#FF0000">附錄程式</font>例題1: 
+a=4, b=5, ∠C=40<sup>o</sup>
+，求三角形面積。</p>
+<p>
+注意:要在DEG 
+Mode執行及<font color="#FF0000">只適用附錄程式一</font></p>
+<p>
+按 Prog 1 
+再按 0 EXE (0代表以兩邊及夾角計算面積)</p>
+<p>
+4 EXE 5 EXE 40 EXE (顯示面積為6.4279)</p>
+<p>　</p>
+<p><font color="#FF0000">附錄程式</font>例題2: 
+a=4, b=5, c=6，求三角形面積。</p>
+<p>
+附錄程式一按法:</p>
+<p>
+按 Prog 1 
+再按 1 EXE (1代表以三邊計算面積)</p>
+<p>
+4 EXE 5 EXE 
+6EXE (顯示面積為9.9216)</p>
+<p>
+　</p>
+<p>
+附錄程式二按法:</p>
+<p>
+按 Prog 1 再按 4 EXE 5 EXE 
+6EXE (顯示面積為9.9216)</p>
+<p>
+　</p>
+<p>註2: 若果輸入的三邊不能構成三角形，程式會出現Math 
+ERROR。</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P 程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/areaOfTriangle.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:43 GMT -->
+</html>

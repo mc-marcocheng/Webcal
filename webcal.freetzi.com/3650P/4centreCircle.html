@@ -1,0 +1,76 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/4centreCircle.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:45 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>三角形的內心、重心、垂心 、外心、外心圓半徑及圓方程</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">三角形的內心、重心 、垂心、外心、外心圓半徑及圓方程</font></b></u></p>
+<p>程式是參考網友 yuen 的<a href="https://err.freewebhostingarea.com/404.html">程式</a>編寫。</p>
+<p>已知三角形三頂點的坐標，程式可計算三角形的內心、重心 、垂心、外心、外心圓半徑及圓方程。另外為方便以假分數顯示，建議將計數機預先設定為假分數形式表示(按六次 
+Mode，再按 1 2 EXE )。</p>
+<p>程式編寫日期: 2008年3月26日</p>
+<p><font color="#FF0000">程式需要在 SD 模式下執行，因此在輸入程式前請先按 Mode Mode 1 進入SD模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數(<font color="#0000FF">n</font> 按 shift 1 3 ，<font color="#0000FF">Σx</font>為平均x 
+按 shift 1 2)。另外若果不計算外心圓半徑及圓方程，綠色的程式碼可以不輸入，程式長度則變為208 bytes。</p>
+<p>程式 (238 bytes / <font color="#008000">208 bytes</font>)</p>
+<p>Stat clear: ?→A: ?→B: ?→C: ?→D: ?→X: ?→Y:</p>
+<p><font color="#FF0000">; </font>Y - 1 <font color="#FF0000">DT</font>: X
+<font color="#FF0000">DT</font>: <font color="#FF0000">Pol(</font> A-C , B-D→M: </p>
+<p> <font color="#FF0000">Pol(</font>C-<font color="#0000FF">Σx</font> 
+, D-<font color="#0000FF">n</font>: √( (A - <font color="#0000FF">Σx</font>)<sup>2</sup> 
++ (B - <font color="#0000FF">n</font>)<sup>2</sup>→Y:</p>
+<span lang="en">
+<p>(AX+CY+<font color="#0000FF">Σx</font>M)┘(X+Y+M◢ (BX+DY+<font color="#0000FF">n</font>M)┘(X+Y+M◢</p>
+<p>(A + C + <font color="#0000FF">Σx</font>)┘3◢ (B + D + <font color="#0000FF">n</font>)┘3◢
+</span>
+(<font color="#0000FF">Σx</font> - A)┘(B - <font color="#0000FF">n</font>→M: </p>
+<p>D - MC→X: (C - A)┘(B - D→Y: (<font color="#0000FF">n</font> - Y<font color="#0000FF">Σx</font> - X)┘(M - 
+Y→Y◢  </p>
+<p>YM + X→M◢ (<span lang="en">A + C + <font color="#0000FF">Σx</font></span>
+- Y)┘2<font color="#008000">→A</font>◢ </p>
+<p>(<span lang="en">B + D + <font color="#0000FF">n</font></span>
+- M)┘2<font color="#008000">→B◢ Pol( A - C, B - D◢ -2A◢ -2B◢ A<sup>2</sup> 
++ B<sup>2 </sup>&nbsp;- X<sup>2</sup></font></p>
+
+<p>　</p>
+<p>例題: A、B及C三點的坐標分別為(4 , 3)、(0 , 0) 及 (4 , 0)，求三角形ABC的內心、重心 、垂心、外心、外心圓半徑及外心圓方程。</p>
+<p>按 Prog 1 再按 4 EXE 3 EXE 0 EXE 0 EXE 4 EXE 0 </p>
+<p>EXE (顯示3) EXE (顯示1，所以內心 = (3 , 1))</p>
+<p>EXE (顯示8/3) EXE (顯示1，所以重心=(8/3, 1))</p>
+<p>EXE (顯示4) EXE (顯示0，所以垂心=(4, 0))</p>
+<p>EXE (顯示2) EXE (顯示3/2，所以外心=(2, 3/2))</p>
+<p>EXE (顯示外心圓半徑為2.5)</p>
+<p>EXE (顯示 - 4) EXE (顯示 - 3) EXE (顯示 0)</p>
+<p>所以外心圓方程為 x<sup>2</sup> + y<sup>2</sup> - 4x - 3y = 0</p>
+<p>　</p>
+<p>
+註1: 若兩點的y坐標相同，程式有可能會出現Math ERROR，可以嘗試改變點的先後次序。</p>
+<p>
+註2: 外心亦是三點共圓的圓心。</p>
+<p>
+　</p>
+<p>
+參考資料:</p>
+<p>
+<a href="http://agutie.homestead.com/files/center/nine_point_center_euler.html">
+http://agutie.homestead.com/files/center/nine_point_center_euler.html</a></p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/4centreCircle.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:46 GMT -->
+</html>

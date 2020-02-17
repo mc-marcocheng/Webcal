@@ -1,0 +1,62 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/tech9.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:28 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>其它方案使用兩個額外數子記憶</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b>
+<font size="5">其它方案使用兩個額外數字記憶</font></b></u></p>
+<p><font size="4">編寫日期: 2006年3月30日</p>
+<p>之前提及有關兩個額外數字記憶，會存在一個限制，就是要確定那個變數為非零的數值，否則就要加上一個很小的數值，令數值不會出現零 (<font color="#008000">A ; B +
+</font><font color="#FF0000">10<sup>x</sup></font><font color="#008000">-50 DT</font>)，這個方法最大的缺點就是最後的答案原本為零，但卻可能出現一個很小的值，另外雖然加入的數值很細，但對於某些特別程式來說，一樣有可能產生問題，例如: 
+出現Math ERROR。以下提供一些解決方案。</p>
+<p>　</p>
+<p><b><font color="#800080">方案一 (SD 模式):</font></b></p>
+<p><font color="#008000">stat clear: ?→A: ?→B: ; A - 1 DT: B DT:</font></p>
+<p>需要使用記憶，只要按出<font color="#0000FF">n</font>或<font color="#0000FF">Σx</font>即可，這個方案同舊有方法所佔用的程式空間一樣，但可以解決0的問題，另外舊有的方法當儲存數後，就很難對數值修改，這個方案的變數就較容易修改，不過亦存有一個缺點，就是當A的&#32118;對值小於10<sup>-12</sup>時，A的數值會因計數機只得十二位準確度，A會自動變為0，不過對於一般計算，這個方案亦可以接受，要完全解決問題，可以使用方案二。</p>
+<p>　</p>
+<p><b><font color="#800080">方案二 (SD 模式)</font></b></p>
+<p><font color="#008000">stat clear: ?→A: ?→B:</font><b><font color="#FF0000"> 
+;</font></b><font color="#008000"> -1 DT: A DT: 0 </font><b>
+<font color="#FF0000">;</font></b><font color="#008000"> B DT:
+</font></p>
+<p>需要使用記憶，只要按出<font color="#0000FF">Σx</font>或<font color="#0000FF">n</font>即可，這個方案解決了舊有方法及方案一的問題，但要使用多三個位元的程式空間。</p>
+<p>　</p>
+<p><b><font color="#800080">方案三 (REG Quad 模式)</font></b></p>
+<p><font  color="#008000">stat clear: ?→A: ?→B: <sup>3</sup>√A , B DT:</font></p>
+<p>需要使用記憶，只要按出<font color="#0000FF">Σx<sup>3</sup></font>或<font color="#0000FF">Σy</font>即可，這個方案解決了舊有方法零的問題，並且節省了4個位元的程式空間，不過不能輸入分數 
+，否則程式會出現Math ERROR，若果要輸入分數，要用除號代替分號輸入，另外要注意用這個模式儲存數值，會影響A、B、C、D、X及Y記憶的數值，所以只適宜在程式剛開始的時候
+進行，限制較多。</p>
+<p>　</p>
+<p><b><font color="#800080">方案四 (REG Quad 模式)</font></b></p>
+<p><font color="#008000">stat clear: ?→M: M: ?→M: <sup>3</sup>√Ans , M 
+DT:</font></p>
+<p>需要使用記憶，只要按出<font color="#0000FF">Σx<sup>3</sup></font>或<font color="#0000FF">Σy</font>即可，這個方案解決了方案四分數的問題，但要額用2個位元的程式空間。</p>
+<p>　</p>
+<p><a href="technics.html">返回編寫程式小技巧</a></p>
+<p><a href="https://err.freewebhostingarea.com/404.html">返回主頁</a></font></p>
+
+
+<p>　</p>
+<p>　</p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/tech9.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:28 GMT -->
+</html>

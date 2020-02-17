@@ -1,0 +1,184 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/gamma2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:52 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>伽瑪函數(II)</title><script src="webcal.js"></script></head>
+
+<body bgcolor="#CCFFFF">
+
+
+<p align="center"><u><b><font size="5">伽瑪函數(II)</font></b></u></p>
+
+
+<p align="left">這個程利用Lanczos approximation的方法去計算伽瑪函數的值，因此使用上限制較少，不過程式<br>
+會較長，需要用兩個程式記憶去儲存程式。</p>
+
+
+<p align="left">程式第一部份</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr align="center">
+    <td width="12%">e<sup>x</sup></td>
+    <td width="12%">(</td>
+    <td width="12%">ln</td>
+    <td width="12%">(</td>
+    <td width="13%">(</td>
+    <td width="13%">2</td>
+    <td width="13%">.</td>
+    <td width="13%">5</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">0</td>
+    <td width="12%">6</td>
+    <td width="12%">6</td>
+    <td width="12%">2</td>
+    <td width="13%">8</td>
+    <td width="13%">6</td>
+    <td width="13%">6</td>
+    <td width="13%">5</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">+</td>
+    <td width="12%">3</td>
+    <td width="12%">7</td>
+    <td width="12%">.</td>
+    <td width="13%">0</td>
+    <td width="13%">9</td>
+    <td width="13%">1</td>
+    <td width="13%">5</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">7</td>
+    <td width="12%">2</td>
+    <td width="12%">0</td>
+    <td width="12%">6</td>
+    <td width="13%">÷</td>
+    <td width="13%">(</td>
+    <td width="13%">X</td>
+    <td width="13%">+</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">1</td>
+    <td width="12%">)</td>
+    <td width="12%">-</td>
+    <td width="12%">2</td>
+    <td width="13%">2</td>
+    <td width="13%">.</td>
+    <td width="13%">9</td>
+    <td width="13%">9</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">8</td>
+    <td width="12%">1</td>
+    <td width="12%">2</td>
+    <td width="12%">5</td>
+    <td width="13%">8</td>
+    <td width="13%">7</td>
+    <td width="13%">÷</td>
+    <td width="13%">(</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">X</td>
+    <td width="12%">+</td>
+    <td width="12%">2</td>
+    <td width="12%">)</td>
+    <td width="13%">+</td>
+    <td width="13%">1</td>
+    <td width="13%">.</td>
+    <td width="13%">6</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">4</td>
+    <td width="12%">1</td>
+    <td width="12%">5</td>
+    <td width="12%">1</td>
+    <td width="13%">8</td>
+    <td width="13%">1</td>
+    <td width="13%">0</td>
+    <td width="13%">2</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">÷</td>
+    <td width="12%">(</td>
+    <td width="12%">X</td>
+    <td width="12%">+</td>
+    <td width="13%">3</td>
+    <td width="13%">)</td>
+    <td width="13%">)</td>
+    <td width="13%">÷</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">X</td>
+    <td width="12%">)</td>
+    <td width="12%">+</td>
+    <td width="12%">(</td>
+    <td width="13%">X</td>
+    <td width="13%">+</td>
+    <td width="13%">0</td>
+    <td width="13%">.</td>
+  </tr>
+  <tr align="center">
+    <td width="100%" colspan="8">STO F1</td>
+  </tr>
+</table>
+
+
+<p align="left">程式第二部份</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2">
+  <tr align="center">
+    <td width="12%">5</td>
+    <td width="12%">)</td>
+    <td width="12%">ln</td>
+    <td width="12%">(</td>
+    <td width="13%">X</td>
+    <td width="13%">+</td>
+    <td width="13%">4</td>
+    <td width="13%">.</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">0</td>
+    <td width="12%">5</td>
+    <td width="12%">5</td>
+    <td width="12%">)</td>
+    <td width="13%">-</td>
+    <td width="13%">X</td>
+    <td width="13%">-</td>
+    <td width="13%">4</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">.</td>
+    <td width="12%">0</td>
+    <td width="12%">5</td>
+    <td width="12%">5</td>
+    <td width="13%">)</td>
+    <td width="39%" colspan="3">STO F2</td>
+  </tr>
+  </table>
+<p>例題: 計算Γ(0.35)的值。<br>
+<br>
+按RCL F1 RCL F2 ALGB 0.35 = (顯示答案為2.546146977)<br>
+　</p>
+
+
+<p><a href="506Vmain.html">返回EL-506程式集主頁</a></p>
+
+
+<p>相關資料:</p>
+
+
+<p>
+<a href="gamma1.html">伽瑪函數(I)</a>
+(Gamma Function I)</p>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/gamma2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:52 GMT -->
+</html>

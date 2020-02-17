@@ -1,0 +1,60 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/baseN4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:29 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>N進數的補數與10進數間轉換</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><font size="5"><b>
+N進數的補數與10進數間轉換</b></font></u></p>
+<p class="MsoNormal">程式編寫日期: 2007年2月9日</p>
+<p class="MsoNormal">程式 (136 bytes)</p>
+<p>Mem clear: ?→D: ?→A: ?→B: ?→C: 1→Y:</p>
+<p>0&gt;A <font color="#FF0000">=&gt;</font> B^C + A→A: Fix 0: D 
+<font color="#FF0000">=&gt;</font> Goto 1:</p>
+<p>Lbl 0: A <font color="#FF0000">=&gt;</font> A÷10 - . 5: Rnd: Ans→X: 
+Y(A - 10X <font color="#FF0000">M+</font>:</p>
+<p>BY→Y: X→A <font color="#FF0000">=&gt;</font> Goto 0: M≧B^C÷2
+<font color="#FF0000">=&gt;</font> B^C <font color="#FF0000">M-</font>:</p>
+<p>Lbl 1: A <font color="#FF0000">=&gt;</font> A÷B - . 5: Rnd: Ans→X: 
+Y(A - BX <font color="#FF0000">M+</font>:</p>
+<p>10Y→Y: X→A <font color="#FF0000">=&gt;</font> Goto 1: Norm 1: M</p>
+<p>　</p>
+<p>例題1: 若5位的2進數補數為11001，將這數轉換為10進數。</p>
+<p>Prog 1 再按 0 EXE (0代表計算10進數的數值)</p>
+<p>11001 EXE 2 EXE 5 EXE (顯示答案為 - 7)</p>
+<p>計算完結後按 MODE 1 返回正常計算模式。</p>
+<p>　</p>
+<p>例題2: 將10進數 - 7 以2進數的補數(5位)表示。</p>
+<p>
+按 Prog 1&nbsp; 
+再按 1 EXE (1代表計算n進數的補數)</p>
+<p>
+- 7 EXE 2 EXE 5 EXE (顯示答案為 11001)</p>
+<p>計算完結後按 MODE 1 返回正常計算模式。</p>
+<p>　</p>
+<p>註: 若十進數數值為x，m位n進數的範圍為 - n<sup>m-1</sup> ≦ x ≦ n<sup>m-1</sup> - 
+1，若果計算不在計算範圍，計算的答案將不成立。</p>
+<p>　</p>
+<p>
+<a href="https://err.freewebhostingarea.com/404.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/baseN4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:29 GMT -->
+</html>

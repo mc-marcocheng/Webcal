@@ -1,0 +1,86 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/mastermind.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:00 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>MasterMind 遊戲</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><font size="5"><b>珠</b></font><b><font size="5">機妙算(MindMaster)遊戲</font></b></u></p>
+<p>
+<b><font color="#800080">程式最新版</font></b></p>
+<p>
+最新更新日期: 2010年8月22日</p>
+<p>
+最新版程式是由<font color="#FF0000">網友 3173137 提供</font>，
+程式會隨機產生四個不重複的數值(0-9的數值)，遊戲目的是要找出這四個數值，每一次猜測這四個數值後都會有提示，個位的數值代表位置及數值正確，
+小數位數值代表數值正確但位置錯誤。<font face="新細明體">第二個程式較短，但沒有記錄猜測所用的總次數。</font></p>
+<p>
+網友提供程式日期: 2007年12月16日</p>
+<p align="left">注意: <font color="#FF0000">E</font>是按 EXP 。</p>
+<p align="left"><font color="#0000FF">第一個程式</font> (173 bytes)</p>
+<p align="left">Mem clear: Fix 1: Lbl 1: Ran# + 4<sup>-1</sup>: Rnd: Ans→A:</p>
+<p align="left">Ans=B <font color="#FF0000">=&gt;</font> Goto 1: A=C
+<font color="#FF0000">=&gt;</font> Goto 1:</p>
+<p align="left">D <font color="#FF0000">=&gt;</font> A≠D <font color="#FF0000">=&gt;</font> 
+Goto 3: C→D: B→C: A→B:</p>
+<p align="left">Goto 1: Lbl 3: ?→M: <font color="#FF0000">E</font> - 9 +
+<font color="#FF0000">E</font> - 4(Y+M→Y:</p>
+<p align="left">40→M: Lbl 7: Y + 4<sup>-1</sup>: Rnd: Ans→X: </p>
+<p align="left">9.9 + . 1(B≠Ans)(C≠Ans)(D≠Ans <font color="#FF0000">M-</font>: </p>
+<p align="left">A=X<font color="#FF0000">M+</font>: 3 + 10(Y - X→Y: A→X: B→A: 
+C→B: </p>
+<p align="left">D→C: X→D: M≧7 <font color="#FF0000">=&gt;</font> Goto 7: M - 4
+<font color="#FF0000">=&gt;</font> Goto 3: </p>
+<p align="left"><font color="#FF0000">E</font> 5Y: Norm 1</p>
+<p align="left">　</p>
+<p align="left">注意: <font color="#FF0000">E</font>是按 EXP ，<font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p align="left"><font color="#0000FF">第二個程式</font> (157 bytes)</p>
+<p align="left">Mem clear: Fix 1: Lbl 1: Ran# + 4<sup>-1</sup>: Rnd: Ans→A:</p>
+<p align="left">Ans=B <font color="#FF0000">=&gt;</font> Goto 1: A=C
+<font color="#FF0000">=&gt;</font> Goto 1:</p>
+<p align="left">D <font color="#FF0000">=&gt;</font> A≠D <font color="#FF0000">=&gt;</font> 
+Goto 3: C→D: B→C: A→B:</p>
+<p align="left">Goto 1: Lbl 3: ?→Y: 4<font color="#FF0000">M-</font>: Lbl 7:
+<font color="#FF0000">E</font> - 4Y + 4<sup>-1</sup>: Rnd:</p>
+<p align="left">10Y - <font color="#FF0000">E</font> 5 Ans + 3
+<font color="#FF0000">E</font> 4 +  <font color="#FF0000">10<sup>x</sup></font>M(10(A=Ans) + 1 - </p>
+<p align="left">(B≠Ans)(C≠Ans)(D≠Ans→Y: 1<font color="#FF0000">M+</font>: A→X: </p>
+<p align="left">B→A: C→B: D→C: X→D: M <font color="#FF0000">=&gt;</font> Goto 7:</p>
+<p align="left">Y - 4 <font color="#FF0000">=&gt;</font> Goto 3: Norm1</p>
+<p>
+<br>
+　</p>
+<p>操作舉例:</p>
+<p>按 Prog 1 (程式會自動產生四個不同的數值(假設是0137)，這時會顯示0.0)</p>
+<p>再按 0123 (輸入猜測的四位數字，這裡使用0123)</p>
+<p>再按 EXE (這時顯示2.1，個位2代表有2個數字位置及數字同時正確，小數位1代表有1個數字正確但位置錯誤)</p>
+<p>再按 5678 (輸入另一個猜測的四位數字，這裡使用5678)</p>
+<p>再按 EXE (這時顯示0.1，個位0代表有0個數字位置及數字同時正確，小數位1代表有1個數字正確但位置錯誤)</p>
+<p>........ 不斷猜測直至猜中為止，這時會顯示Norm 1，若使用<font color="#0000FF">第一個程式</font>會顯示猜測所用的總次數。</p>
+<p>　</p>
+<p>註1: 若未完全猜中數字按ON離開程式，程式會保留在小數1位的設定，這時要取消這個設定可以按 MODE MODE MODE MODE MODE 3 1。</p>
+<p>註2: 若未能猜中數字可以按ON終止程式，執行算式 E4A + E3B + E2C + E1D - 3333可以查看要估的數值。</p>
+<p>　</p>
+<font face="新細明體">
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185
+程式集</a></p>
+<p>
+　</p>
+</font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/mastermind.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:00 GMT -->
+</html>

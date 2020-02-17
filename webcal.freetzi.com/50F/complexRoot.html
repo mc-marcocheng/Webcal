@@ -1,0 +1,162 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/complexRoot.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:10 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>二次方程複數根</title>
+<meta name="Microsoft Theme" content="cnpeach 011">
+<script src="webcal.js"></script></head>
+
+<body background="di5.gif" bgcolor="#EEFFF7" text="#000000" link="#008000" vlink="#808080" alink="#808000">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><font size="5">二次方程複數根</font></b></u></p>
+<p>注意這個程式不單獨使用，必須配合內置<a href="quadratic1.html">一元二次方程(I)</a>同時使用。</p>
+<p>程式編寫日期: 2006年3月11日</p>
+<p>程式長度: 10步 </p>
+<p style="text-justify: inter-ideograph; text-align: justify">
+<font color="#FF0000">注意</font>輸入程式前請先按 SHIFT KAC 1 SHIFT Kin 1確保程式能順利輸入。</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber2" bordercolorlight="#669900" bordercolordark="#669900" height="33">
+  <tr>
+    <td width="20%" align="center" style="border-width: 3" height="20">
+    <!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="20">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">× 1</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="20">
+    <!--mstheme--><font face="新細明體">Kout 1<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="20">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">÷ 6</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="20">
+    <!--mstheme--><font face="新細明體">+/-<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">÷ 2</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">÷ 6</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">B<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kout 6<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="18">
+    <!--mstheme--><font face="新細明體">√<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體"><span lang="en-us">MODE .</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="18">
+    <!--mstheme--><font face="新細明體"><!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p style="text-justify: inter-ideograph; text-align: justify">
+　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">例題</span><span lang="EN-US">1: </span>
+<span style="font-family: 新細明體">解</span><span lang="EN-US"> x<sup>2</sup> + 6x + 
+25 = 0</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US">
+<font color="#FF0000">1</font> FMLA </span>
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> 1 RUN 6 RUN 25 RUN&nbsp;(</span>顯示-E-表示為複數根)<span lang="EN-US"> </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+再按 AC P1 (顯示實數部為 -3)
+<span lang="EN-US">RUN (</span><span style="font-family: 新細明體">顯示根虛數部為</span><span lang="EN-US"> 4)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">所以方程的解為</span><span lang="EN-US"> x = -3 </span>
+<span style="FONT-FAMILY: 新細明體">±</span><span lang="EN-US"> 4i</span></p>
+<p style="text-justify: inter-ideograph; text-align: justify"><span style="font-family: 新細明體">
+程式執行完結後，按Kout 2 及 Kout 6分別顯示實數部及虛數部的值。</span></p>
+<p style="text-justify: inter-ideograph; text-align: justify">　</p>
+<p style="text-justify: inter-ideograph; text-align: justify">註: 若果想同時配合<a href="fraction.html">小數轉換分數(I)</a>，可改用以下程式:</p>
+<p>程式長度: 12步 </p>
+<p style="text-justify: inter-ideograph; text-align: justify">
+<font color="#FF0000">注意</font>輸入程式前請先按 SHIFT KAC 1 SHIFT Kin 1確保程式能順利輸入。</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber3" bordercolorlight="#669900" bordercolordark="#669900" height="33">
+  <tr>
+    <td width="20%" align="center" style="border-width: 3" height="20">
+    <!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="20">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">× 1</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="20">
+    <!--mstheme--><font face="新細明體">Kout 1<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="20">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">÷ 6</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="20">
+    <!--mstheme--><font face="新細明體">+/-<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">÷ 2</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">÷ 6</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">B<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin 4<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="18">
+    <!--mstheme--><font face="新細明體">Kout 6<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">√<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin 5<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體"><span lang="en-us">MODE .</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" height="18">
+    <!--mstheme--><font face="新細明體"><!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">例題</span><span lang="en-us">2</span><span lang="EN-US">: </span>
+<span style="font-family: 新細明體">解</span><span lang="EN-US"> 3x<sup>2</sup> - 36x + 
+25 = 0</span></p>
+<p style="text-justify: inter-ideograph; text-align: justify">
+假設程式儲存在P1，<a href="fraction.html">小數轉換分數(I)</a>程式儲存在P2。</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US">
+<font color="#FF0000">1</font> FMLA </span>
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> 36 RUN 36 +/- RUN 25 RUN&nbsp;(</span>顯示-E-表示為複數根)<span lang="EN-US"> </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+再按 AC P1 (顯示實數部為 0.5)
+<span lang="EN-US">RUN (</span><span style="font-family: 新細明體">顯示根虛數部為</span><span lang="EN-US"> 
+0.666666666)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">所以方程的解為</span><span lang="EN-US"> x = 0.5 </span>
+<span style="FONT-FAMILY: 新細明體">±</span><span lang="EN-US"> 0.666666666i</span></p>
+<p style="text-justify: inter-ideograph; text-align: justify">0 SHIFT Kin 1 (必要) 
+SHIFT P2 (顯示分子為 1) RUN (顯示分母為 2)</p>
+<p style="text-justify: inter-ideograph; text-align: justify">SHIFT P2 (顯示分子為 2) 
+RUN (顯示分母為 3)</p>
+<p style="text-justify: inter-ideograph; text-align: justify">
+<span style="font-family: 新細明體">所以方程的解為</span><span lang="EN-US"> x = 1/2 </span>
+<span style="FONT-FAMILY: 新細明體">±</span><span lang="EN-US"> 2i/3</span></p>
+<p style="text-justify: inter-ideograph; text-align: justify">　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<a href="index.html">返回 fx-50F專頁</a></p>
+<p>　</p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/complexRoot.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:10 GMT -->
+</html>

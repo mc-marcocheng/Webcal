@@ -1,0 +1,112 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/standardnormal5.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>標準常分佈高考精簡版</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><font size="5"><b>標準常態分佈高考<font color="#FF0000">準確版</font> </font></b>
+</u></p>
+<p> <font color="#FF0000">程式更新日期: 2010年1月5日</font></p>
+<p>這個程式除了確保與高考標準常態分佈查表的數值<font color="#FF0000">完全一樣(兩位小數查對應概率)。</font>另外計算不能用查表方法直接
+求得的數值時(例如: 
+多過兩位小數)，本程式將使用與查表所得的數據，再配合正比例的方法求出答案，因此可以<b><font color="#FF0000">確保與高考的標準答案全完相同</font></b>。</p>
+<p>注意: <font color="#FF0000">e</font>是按shift 
+e<sup>x</sup>，<font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p>若果不想同時計算P(Z≧X)及P(Z≦X)，綠色的程式碼可以略去。</p>
+<p>程式 (124 bytes 或 <font color="#008000">133 bytes</font>，使用記憶為A、B、C及M)</p>
+<p>?→C: √C<sup>2</sup>→C <font color="#FF0000">=&gt;</font> C - . 005: Fix 2: Rnd: 
+Ans→M:</p>
+<p>Lbl 0: A→B: 1 ÷ (1 + . 23165M: . 5 - Ans√<font color="#FF0000">e</font> 
+- M<sup>2</sup> <font color="#FF0000">10<sup>x</sup></font> - <span lang="en">4 </span></p>
+<p>(1274 - 1422Ans + Ans<sup>2 </sup>(7107 - 7266Ans + 5307Ans<sup>2</sup>:  </p>
+<p>Fix 4: Rnd: Ans→A: C&gt;M <font color="#FF0000">=&gt;</font> 
+. 01<font color="#FF0000">M+ =&gt;</font> Goto 0: C<font color="#FF0000">M-</font>:</p>
+<p>Norm 1: A - M<font color="#FF0000">10<sup>x</sup></font>2(A - B<font color="#008000">◢ . 5 - 
+Ans ◢ 1 - Ans</font></p>
+<p align="left">　</p>
+<p>例題1: 計算 P(≦
+Z≦1)、P(Z≧1) 
+及 P(Z≦1)，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 1 EXE (顯示P(0≦ 
+Z≦1)為0.3413)</p>
+<p>
+EXE 
+(顯示P(Z≧1)為0.1587) 
+EXE 
+(顯示P(Z≦1)為0.8413)</p>
+<p>
+　</p>
+<p>例題2: 計算 P(0≦ 
+Z≦0.0045)、P(Z≧0.0045) 
+及 P(Z≦0.0045)，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 1 EXE (顯示P(0≦ 
+Z≦0.0045)為0.0018)</p>
+<p>
+EXE 
+(顯示P(Z≧0.0045)為0.4982) 
+EXE 
+(顯示P(Z≦0.0045)為0.5018)</p>
+<p>
+　</p>
+<p>註1: 如果輸入的數值X
+為負數，程式會計算P(X≦ 
+Z≦0)，然後順序計算P(Z
+≦X)及P(Z 
+≧ X)。</p>
+<p>註2: 如果輸入的數值多於小數兩位，由於要使用正比例計算答案(Linear 
+Interpolation)，程式所用的時間會略為增長。</p>
+<p>註3: 輸入多於2位小數，程式會使正比例方法(Linear 
+Interpolation)，程式執行完結後可以按 <font color="#0000FF">RCL A</font>及<font color="#0000FF">RCL 
+B</font>顯示查表時使用的兩個概率的數值，由於一般考試需要詳細步驟，你亦可以直接使用這兩個數值作為考試步驟的數據。</p>
+<p>註5: 程式保留沒有使用的記憶為D、X及Y。</p>
+<p>　</p>
+<p>
+
+<a href="3650.html">返回 fx-3650P及SC185 
+程式集</a></p>
+<p>　</p>
+<p>註1: 現時很多這類程式在計算一些特別情況都會出現錯誤，例如: 例題2的計算P(0≦ 
+Z≦0.0045)會得出錯誤的答案 
+0，這個程式沒有這方面的問題。</p>
+
+<p>　</p>
+<p>　</p>
+<hr><hr>
+<p><font color="#0000FF">程式舊版</font></p>
+<p>程式編寫日期: 2006年11月28日 <font color="#800080">(新版日期: 2007年1月3日)</font></p>
+<p>若果不想同時計算P(Z≧X)及P(Z≦X)，綠色的程式碼可以略去。</p>
+<p>程式 (143 bytes 或 <font color="#008000">152 bytes</font>，使用記憶為A、B、C及M)</p>
+<p>?→C: √C<sup>2</sup>→C <font color="#FF0000">=&gt;</font> C - . 005: Fix 2: Rnd: 
+Ans→M:</p>
+<p>Lbl 0: A→B: 1 ÷ (1 + . 231642M: . 5 - √<font color="#FF0000">e</font> 
+- M<sup>2</sup> <font color="#FF0000">10<sup>x</sup></font> - 7 (</p>
+<p>1274148Ans - 1422484Ans<sup>2</sup> + 7107069Ans<sup>3</sup> 
+-</p>
+<p>7265760Ans^4 + 5307027Ans^5 : Fix 4: Rnd: </p>
+<p>Ans→A: C&gt;M <font color="#FF0000">=&gt;</font> 
+. 01<font color="#FF0000">M+ =&gt;</font> Goto 0: C<font color="#FF0000">M-</font>:</p>
+<p>Norm 1: A - M<font color="#FF0000">10<sup>x</sup></font>2(A - B<font color="#008000">◢ . 5 - 
+Ans ◢ 1 - Ans</font></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/standardnormal5.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+</html>

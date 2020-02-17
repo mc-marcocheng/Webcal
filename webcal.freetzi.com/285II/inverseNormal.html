@@ -1,0 +1,66 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/285II/inverseNormal.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:23 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>反查標準常態分佈概率</title>
+<meta name="Microsoft Theme" content="cnlove 011">
+<script src="webcal.js"></script></head>
+
+<body background="di1.gif" bgcolor="#FFDEE0" text="#000000" link="#FF3399" vlink="#9933FF" alink="#CC0099">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b>
+<span style="font-family: 新細明體">
+<font size="5">反查</font></span><span lang="EN-US" style="font-family: 新細明體"><font size="5">標準常態分佈概率</font></span></b></u></p>
+<p><font color="#FF0000">程式修改日期: 2006年1月2日</font></p>
+<p>程式 (共70字，按EXP或E可以產生<font size="1">E</font>。):</p>
+<p align="left">
+√( ln( ( . 5 - A)<sup> 2 -1</sup> ) ) - X<sub>2</sub> 
+(2515517 +
+802853Ans +
+10328Ans<sup>2</sup>)<span lang="en"> </span> </p>
+<p align="left">
+<span lang="en"> /</span> (1<font size="1">E </font>6+ 1432788Ans + 189269Ans<sup>2</sup> +1308Ans^3&nbsp;&nbsp; </p>
+<p>SAVE PROG1 或 PROG2 <b><font color="#0000FF">(SRP-285II計數機)</font></b></p>
+<p align="left">STO EQN <b><font color="#0000FF">(HP 30S計數機)</font></b></p>
+<p>　</p>
+<p align="left">註1: 程式輸入概率的範圍為 0≦ P&lt; 0.5，否則程式可能會出現Math error或不能正常運作。</p>
+<p>註<span lang="EN-US">2: 若果想反查P(-x≦Z≦0)，可以利用標準常態分佈曲線的對稱特性。</span></p>
+<p>　</p>
+<p>例題<span lang="EN-US">: 若</span><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;"> 
+P(0</span>≦<span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">Z</span>≦<span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">x) 
+= 0.3</span>，求 
+<span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">x</span><span lang="EN-US"> 
+的值，其中 </span><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">
+Z ~ N(0, 1)</span>。</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+SRP-285II 按法:<span lang="EN-US">&nbsp;&nbsp;</span></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+按 <font color="#FF0000">2nd 
+CL-VAR</font>&nbsp; P/V RCL，再按  ← 選擇正確的PROG，再按 = = </p>
+<p>0.3 =&nbsp; = (必要及忽略產生的數值)↑1 = (必要，顯示0.841456717)</p>
+<p>　</p>
+<p align="left">HP 30S 按法:</p>
+<p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph">
+按&nbsp; <font color="#FF0000">2nd 
+CL-VAR</font> VRCL，再按 ← = =<span lang="EN-US"> </span></p>
+<p>0.3 =&nbsp; = (必要及忽略產生的數值)↑1 = (必要，顯示0.841456717)</p>
+<p>　</p>
+<p>
+<a href="285II.html">返回SRP-285II及HP 30S程式集</a></p>
+<p>　</p>
+<p>　</p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/285II/inverseNormal.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:23 GMT -->
+</html>

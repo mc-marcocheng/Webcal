@@ -1,0 +1,122 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/truly_SC185_error.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>Truly SC185計算機的誤差問題</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="6">Truly SC185計算機的誤差問題</font></b></u></p>
+
+<p>編寫日期: 2007年9月7日</p>
+
+<p>大家都知道計數機的運算存有誤差，所以計數機 (特別是SVPAM或DAL計算機)都加入針對誤差問題的自動修正功能，
+若果沒有進行自動修正功能，對於某些計算或程式的使用會增加潛在風險。最典型的例子是使用一元二次公式計算一元二次方程的重根問題(特別是係數為循環小數或無理數)，由於誤差原因，判別
+式的值不是0，而變成一個很小的負數，最後結果是使算式或程式出現錯誤 
+(Math error)，使用者很多時就會誤以為方程為無解(其實是重根)，導致最後答案出錯。</p>
+<p>　</p>
+<p>雖然Truly SC-185有針對加減數很接近零的情況下，自動將答案修正為0的功能(舊版本fx-3650P沒有這個功能)，但另一種對完整數值(例如: 
+整數，但不包括零)的修正功能就欠缺或有問題，而這種自動修正的功能，在較舊款的科學計算機亦存在，例如: 內部只有11位數值的CASIO 
+fx-3900PV，但很可惜SC-185就沒有，因此亦較大可能會累積誤差，令誤差進一步擴大。對於不少運算產生問題，大家可試試以下的三種況作為參考:</p>
+<p>　</p>
+<p><b>(A) 分數功能失效問題:</b></p>
+<p>例1:  </p>
+<p>先按 <font color="#800080">1</font><span lang="en"><font color="#800080">÷3×3 
+EXE</font> </span>，這時會顯示答案是1，</p>
+<p>再按 <font color="#800080">Ans - 1┘2 EXE</font>，按道理 1 
+- 1┘2 應能得出分數答案 1/2，但Truly SC-185計算機卻顯示0.5的小數答案，我亦以其它有分數功能的會考計算作測試(CASIO fx-50F, 
+CASIO fx-3650P, SHARP EL-506VCITIZEN SRP-285II及HP-30S)，全部能得出分數答案1/2。 
+這個例子SC-185得出0.5小數答案，但依然可以使用內置小數轉換分數功能，將0.5轉化為分數1/2。</p>
+<p>　</p>
+<p>例2:  </p>
+<p>先按 <font color="#800080">tan </font><font color="#FF0000">tan<sup>-1</sup></font><font color="#800080"> 10</font>，這時會顯示答案是10，</p>
+<p>再按 <font color="#800080">Ans┘3</font>，按道理即是 10┘3應能得分數答案，但Truly 
+SC-185計算機卻顯示 
+3.333333333的小數答案(fx-3650P能正常得到分數答案)，而且SC-185使用小數轉換分數功能亦不能成功能轉化為分數。這個例子的運算亦不算太多，但誤差
+已擴大至內置小數轉換分數功能失效。</p>
+<p>　</p>
+<p><b>(B) 出現Math ERROR問題</b></p>
+<p>例3:  </p>
+
+<p>先按 <font color="#800080">1<span lang="en">÷3×3 EXE</span></font>，這時會顯示答案是1，</p>
+
+<p>再按 <font color="#800080">Ans </font><font color="#FF0000"> <sub>n</sub>C<sub>r</sub></font><font color="#800080"> 
+0 EXE</font>，(即是相等於計算 1<sub> n</sub>C<sub>r</sub> 0) ，SC-185計算機出現Math 
+ERROR。</p>
+
+<p>　</p>
+
+<p>例4: </p>
+
+<p>先按 <font color="#800080">tan </font><font color="#FF0000">tan<sup>-1</sup></font><font color="#800080"> 
+10 EXE</font>，這時會顯示答案是10，</p>
+
+<p>再按 <font color="#800080">Ans </font><font color="#FF0000"> <sub>n</sub>C<sub>r</sub></font><font color="#800080"> 
+1 EXE</font>，(即是相常於計算 10<sub>n</sub>C<sub>r</sub> 1)，SC-185計算機出現Math 
+ERROR。</p>
+
+<p>註: 以上例3及例4，若以fx-3650P, EL-506V, fx-50F, SRP-285II及HP-30S都能得出正確答案 
+，甚至是內部只有11位的舊款fx-3900PV亦能得出正確答案。</p>
+
+<p>　</p>
+
+<p>註: 例1至例4的操作亦可以改為一個算式執行，例如: 例2可以改為按 <font color="#800080">(tan </font>
+<font color="#FF0000">tan<sup>-1</sup></font><font color="#800080"> 10)┘3 EXE</font>，最後結果依然不變。 </p>
+
+<p>　</p>
+
+<p><b>(C) 誤差容易累積，出現錯誤答案的機會較高</b></p>
+
+<p>例5: </p>
+
+<p>先按 <font color="#800080">MODE 2</font> 進入複數模式，</p>
+
+<p>再按 <font color="#800080">MODE MODE MODE MODE 2 </font>選用弧度數，</p>
+
+<p>再按 <font color="#800080">1 ∠ (120<sup>o </sup><span lang="en">× 3 E</span>XE</font> 
+(注意<sup>o</sup>是按 SHIFT Ans 1)，很明顯輻角為360<span lang="en">°</span>亦即是0<span lang="en">°</span>，所以應該會得出實數1的答案(fx-3650P的答案)，但SC-185計算機卻出現複數答案，雖然虛數部的數值很少( 
+-1<span lang="en">×10<sup>-12</sup> i)</span>，但在解方程時，複數的答案已代表無實解，所以結果可以相差很遠，而上述的計算中的輻
+角計算亦是簡單的120<span lang="en"><sup>o</sup> 
+×3</span>，並不是經過很多複雜的計算，但答案已經不能準確計算，若果算中包含更多複雜運算，誤差進一步累積，誤差會較大。</p>
+
+<p>　</p>
+<p>
+以上的問題出現主要是由於計算機的誤差所造成，但為何其它計算機沒有問題，其實就是其它計算機有採用了對完整數值(例如:整數)答案修正，亦有助減少誤差累積到下一個運算中，以例1的運算來說，1<span lang="en">÷3×3</span>，計算機會先計算1<span lang="en">÷3</span>，由於是循環小數，而計算機的位數始終有限，亦即是0.333 
+3333333333 (一共有13個3)，因此一定有誤差存在，再<span lang="en">執行0.3333333333333×3</span>，答案當然是0.9999999999999，有修正功能的計算機則會修正為整數1，但SC-185計算機卻沒有這種修正功能，雖然1<span lang="en">÷3×3</span>依然可以顯示出整數答案1，但內部的數值係然是0.9999999999999 
+(十三個9)，由於是小數，所以再減1┘2時，由於與小數混合進行運算，所以就不能直接產生分數答案(1/2)。</p>
+<p>　</p>
+<p>為何我會知道SC-185沒有進行修正，只要執行下列運算互相比較就可以知道。</p>
+<p>先按 <font color="#800080">1</font><span lang="en"><font color="#800080">÷3×3 
+EXE</font> </span>，這時會顯示答案是1(亦即是Ans=1)，</p>
+<p>再按 <font color="#800080">Ans + 10 <span lang="en">÷ 3 - 4.333 EXE</span></font><span lang="en">，這時會顯示答案為 
+</span>3.333 3333 <font color="#FF0000">2</font> <span lang="en">× 10<sup>-4</sup></span>。</p>
+<p>現在不使用Ans來計算，改用數值1直接進行計算，那麼我們就可推算到原先的Ans內部數值是不是1，還是小數0.999 999 999 999 9</p>
+<p>按 <font color="#800080">1 + 10 <span lang="en">÷ 3 - 4.333 EXE</span></font>，<span lang="en">這時會顯示</span>答案為<span lang="en">
+</span>3.333 3333 <font color="#FF0000">3</font> <span lang="en">× 10<sup>-4</sup></span>。從結果得知只有最後的位數相差1，亦即上述算式中的Ans不是等於1，而是0.999 
+999 999 999 9，亦即是SC-185沒有修正功能的存在，其實這種修正功能都算是一個很<b>基本的功能</b>，否則就會較容易出現問題，即使是較舊款CASIO 
+fx-3900PV 或 fx-50F早已有這種修正能力，不知為何新推出的Truly 
+SC-185(無論是新版還是舊版本)，竟然沒有這種修正功能存在，令計算機的可靠性大大降低，因此較容易出現問題，亦令人懷疑Truly是否很嚴謹生產計算機，我對Truly 
+SC-185計算機的品質相當有保留。</p>
+<p>　</p>
+<p>各位網友若對上述內容有任何意見、補充或疑問，歡迎到<a href="http://webcal.forumcircle.com/viewforum.php?f=1">WebCal論壇</a>留言討論。</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<p>
+　</p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/truly_SC185_error.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+</html>

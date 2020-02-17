@@ -1,0 +1,66 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/congruences1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>聯立同餘式</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><font size="5"><b>聯立同餘式精簡版</b></font></u></p>
+<p>程式可以求整數論中聯立同餘式(simultaneous linear congruences) 的解，程式會計算最小正值解及通解。</p>
+<p>程式編寫日期: 2006年8月15日</p>
+<p><font color="#FF0000">程式需要在 BASE 模式下執行，因此在輸入程式前請先按 Mode Mode 3 進入BASE模式。</font></p>
+<p>程式 (93 bytes，使用記憶為A、B、C、D、X及M)</p>
+<p>Dec: ?→M: ?→B: Lbl 0: ?→C: ?→D: 
+C<font color="#FF0000">M-</font>: </p>
+<p>Lbl 1: M - M<span lang="en">÷D×D <font color="#FF0000">=&gt;</font> B<font color="#FF0000">M+ 
+=&gt;</font> Goto 1: C<font color="#FF0000">M+</font>: B</span>→C: </p>
+<p>D→X: Lbl 2: X→A: C - C<span lang="en">÷X×X→X <font color="#FF0000">=&gt;</font> 
+A→C <font color="#FF0000">=&gt;</font> Goto 2: </span></p>
+<p><span lang="en">BD÷A→B: Ans→D: M→C: Goto 0</span> </p>
+<p>　</p>
+<p>例題1: 計算以下聯立同餘式:</p>
+<p>x ≡ 4 (mod 5)</p>
+<p>x ≡ 1 (mod 3)</p>
+<p>x ≡ 9 (mod 10)</p>
+<p>按 Prog 1&nbsp; 4 EXE 5 EXE 1 EXE 3 EXE 9 EXE 10 EXE (顯示19) EXE (顯示30)</p>
+<p>所以最小的正值為19，通解 = 19 + 30n</p>
+<p>計算完結按MODE 1終止程式及返回comp MODE</p>
+<p>　</p>
+<p>例題2: 計算以下聯立同餘式:</p>
+<p>x ≡ 4 (mod 5)</p>
+<p>x ≡ 1 (mod 3)</p>
+<p>x ≡ 9 (mod 10)</p>
+<p>x ≡ 2 (mod 7)</p>
+<p>x ≡ 7 (mod 12)</p>
+<p>按 Prog 1&nbsp; 4 EXE 5 EXE 1 EXE 3 EXE 9 EXE 10 EXE 2 EXE 7 EXE </p>
+<p>7 EXE 12 EXE (顯示79) EXE (顯示420)</p>
+<p>所以最小的正值為79，通解 = 79 + 420n</p>
+<p>計算完結按MODE 1終止程式及返回comp MODE</p>
+<p>　</p>
+<p>註: 若果要輸入負數，請用減號代替負號。</p>
+<p>　</p>
+<p>註: 若同餘式為 x ≡ a (mod b)，精簡版的限制為 a及b為正數，另一個限制是輸入第一條同餘式時，a 要小於 
+b，否則不能正確計算最小正值的解，但通解依然成立。</p>
+<p>　</p>
+<p>
+<font face="新細明體">
+<a href="3650.html"><span lang="en-us">返回</span> fx-3650P 
+程式集</a></font></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/congruences1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+</html>

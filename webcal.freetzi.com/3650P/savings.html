@@ -1,0 +1,140 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/savings.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>零存整付計算</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><b><u>
+<font size="5">零存整付計算</font></u></b></p>
+<p><b>
+<font color="#0000FF">程式新版編寫日期:2006年8月23日</font></b></p>
+<p>
+程式可以計算零存整付問題，假定利息每月計算及息率固定不變，程式可以計算以下問題:</p>
+<p>
+˙本利和 (已知每月存款，年利率及存款期數)</p>
+<p>
+˙每月存款 (已知本利和，年利率及存款期數)</p>
+<p>
+˙年利率 (已知本利和，每月存款及存款期數) <b><font color="#FF0000">(只適用於第二個程式)</font></b></p>
+<p>˙存款期數 
+(已知本利和，每月存款及年利率)</p>
+<p>參考公式:</p>
+<p>
+<img border="0" src="Image136.gif" width="146" height="38"></p>
+<p>(A為本利和，P為每月存款及 r 為每月利率 (即年利率÷12))</p>
+<p>　</p>
+<p><font color="#0000FF">第一個程式</font> (73 bytes)</p>
+<p>Mem clear: 1200→X: ?→A: ?→B: ?→C: ?→D: </p>
+<p>1 + C÷X→Y: D=0 <font color="#FF0000">=&gt;</font> log (AC÷XBY + 1) ÷ logY◢</p>
+<p>XYC<sup>-1</sup>(Y^D - 1→Y: B <font color="#FF0000">=&gt;</font> BY◢ 
+A ÷ Y</p>
+<p>註: 計算零存整付問題的年利率需要使用近以值求根的方法，由於超出會考課程的範圍，所以第一個程式省略了這個功能，若果需要計算年利率，請使用第二個程式。</p>
+<p>　</p>
+<p>注意: <font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p><font color="#0000FF">第二個程式 </font>(143 bytes)</p>
+<p>Mem clear: 1200→X: ?→A: ?→B: ?→C: ?→D: </p>
+<p>1 + C÷X→Y: D=0 <font color="#FF0000">=&gt;</font> log (AC÷XBY + 1) ÷ logY◢</p>
+<p>C <font color="#FF0000">=&gt;</font> 
+XYC<sup>-1</sup>(Y^D - 1→Y: A=0 <font color="#FF0000">=&gt;</font> BY◢ C
+<font color="#FF0000">=&gt;</font> A ÷ Y◢  </p>
+<p>4<font color="#FF0000">M+</font>: Lbl 0: M→Y: 
+1 + M ÷ X:  </p>
+<p>( Ans XB (Ans^D - 1) - AM) ÷ ( B(1 + D)Ans^D - A - B<font color="#FF0000">M-</font>:&nbsp;
+ </p>
+<p>(Y-M)<sup>2</sup> ≧ <font color="#FF0000">10<sup>x</sup></font> 
+- 6 <font color="#FF0000">=&gt;</font> Goto 0: M</p>
+<p>　</p>
+<p>
+例題1: 
+每月存款3000元，年利率為4%，預計存款24個月，求本利和。</p>
+<p>
+按 Prog 1 再按 EXE 
+(不輸入數值代表計算本利和)
+</p>
+<p>
+3000 EXE (每月存款)</p>
+4 EXE (年利率)</p>
+<p>
+24 EXE (存款期數，顯示本利和為 
+$75078.09)</p>
+<p>
+計算完結按 AC 終止程式</p>
+<p>
+　</p>
+<p>
+例題2: 
+已知本利和為$75078.09，年利率為4%，存款期為24月，求每月存款。</p>
+<p>
+按 Prog 1 再按 
+75078.09 EXE (本利和)
+</p>
+<p>
+EXE (不輸入數值代表計算每月存款)</p>
+<p>
+4 EXE (年利率)</p>
+<p>24 EXE 
+(存款期數，顯示每存款為 $3000)</p>
+<p>
+計算完結按 AC 終止程式</p>
+<p>　</p>
+<p>
+例題3:
+已知本利和為$75078.09，每月存款3000元，年利率為4%，求存款期數。</p>
+<p>
+按 Prog 1 再按 
+75078.09 EXE (本利和)
+</p>
+<p>
+3000 EXE (每月存款)</p>
+<p>
+4 EXE (年利率)</p>
+<p>EXE 
+(不輸入數值代表計算存款期數，顯示存款期數為24月)</p>
+<p>
+計算完結按 AC 終止程式</p>
+<p>
+　</p>
+<p>
+例題4:
+已知本利和為$75078.09，每月存款3000元，存款期為24月，求年利率。</p>
+<p>
+<font color="#FF0000">注意: 只適用於第二個程式</font></p>
+
+<p>
+按 Prog 1 再按 
+75078.09 EXE (本利和)
+</p>
+<p>
+3000 EXE (每月存款)</p>
+<p>
+EXE (不輸入數值代表計算年利率)</p>
+<p>24 EXE 
+(存款期數，顯示年利率為 4%)</p>
+<p>
+註: 計算利率時，由於需要重複計算，所以計算時間可能會較長。</p>
+
+<p>　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/savings.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+</html>

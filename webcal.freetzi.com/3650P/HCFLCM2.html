@@ -1,0 +1,65 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/HCFLCM2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>兩數的最大公因數及最小公倍數</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">兩數的最大公因數及最小公倍數</font></b></u></p>
+<p>程式編日期: 2006年6月21日</p>
+<p>程式可以計算兩數的最大公因數及最小公倍數。第一個程式較簡短，但程式需要在BASE模式執行，操作較不便(完結後需後按MODE 
+1返回正常計算模式)，第二個程式較長但在COMP模式執行，容許輸入的數值亦較大。</p>
+<p>第一個程式(49 bytes，使用記憶為A、B、C、D及X)</p>
+<p><font color="#FF0000">程式需要在 BASE 模式下執行，因此在輸入程式前請先按 Mode Mode 3 進入BASE模式。</font></p>
+<p>Dec: ?→A: ?→B: A→D: B→X: Lbl 0: B→C:</p>
+<p>A - A ÷ B × B→B <font color="#FF0000">=&gt;</font> C→A
+<font color="#FF0000">=&gt;</font> Goto 0: </p>
+<p>C◢ X ÷ C × D </p>
+<p>　</p>
+<p>第二個程式 (<font color="#FF0000">COMP模式</font>，52 bytes，使用記憶為A、B、C及D)</p>
+<p>?→A: ?→B: AB→D: Lbl 0: B→C: </p>
+<p>A ÷ B - . 5: Fix 0: Rnd: Norm 1: </p>
+<p>A - Ans B→B <font color="#FF0000">=&gt;</font> C→A
+<font color="#FF0000">=&gt;</font> Goto 0:</p>
+<p>C◢ D ÷ C</p>
+<p>　</p>
+<p>註: 輸入的數值必須為正整數，否則答案錯誤。</p>
+<p>　</p>
+<p>
+例題: 
+找 370368及617280的最大公因數及最小公倍數。</p>
+<p>
+按 Prog 1 再按 370368 EXE 617280 EXE (顯示最大公因數為123456)</p>
+<p>
+EXE (顯示最小公倍數為1851840)</p>
+<p>
+若果是第一個程式，計算完結後按 MODE 1返回正常計算模式</p>
+<p>　</p>
+<p><font color="#800080">程式設計小貼士:</font></p>
+<p>使用基數模式編寫程式，要注意數值必需小於2147483647，否則會出現錯，令程式的運算能力大減，例如: 第一個程式中若果將 X ÷ C × D 
+改為XD ÷ C表面上是無分別，但這樣做例題中的問題就無法求得答案(Math ERROR)。</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<p>　</p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/HCFLCM2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+</html>

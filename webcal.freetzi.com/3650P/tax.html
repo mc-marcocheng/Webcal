@@ -1,0 +1,180 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/tax.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:53 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>薪俸稅(累進稅率) Salaries tax (Progressive rate)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">薪俸稅(累進稅率) Salaries tax (Progressive rate)<u><b><font size="5"> </font></b></u></font></b></u></p>
+<p>
+程式編寫日期: 2008年12月9日</p>
+<p>
+注意: <font size="1">E</font> 是按 EXP。</p>
+<p>程式 (46 bytes)</p>
+<p>Mem clear: ?→A: Lbl 0: ?→B: ?→C:</p>
+<p>B <font color="#FF0000">=&gt;</font> A&gt;B <font color="#FF0000">=&gt;</font> BC ÷<font size="1"> 
+E</font>2 <font color="#FF0000">M+ =&gt;</font> A - B→A <font color="#FF0000">=&gt;</font> 
+Goto 0:</p>
+<p>M + AC ÷<font size="1"> E</font>2</p>
+<p>　</p>
+<p>註1: 若果想保留一些記憶用作儲存臨時數據，可將程式中&quot;Mem clear&quot;改為&quot;M<font color="#FF0000">M-</font>&quot;，而程式所使用的記憶為A，B，C及M。</p>
+<p>註2: 應課稅入息實額，即應評稅入息減去扣除及免稅額。</p>
+<p>　</p>
+<p>例題1: 一位文員一年應課稅入息實額為 $75 000，請按下表資料計算他的薪俸稅。</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="38%" id="AutoNumber1">
+  <tr>
+    <td width="13%" align="center">　</td>
+    <td width="49%" align="center">應課稅入息實額</td>
+    <td width="38%" align="center">稅率</td>
+  </tr>
+  <tr>
+    <td width="13%" align="center">首</td>
+    <td width="49%" align="center">40000</td>
+    <td width="38%" align="center">2%</td>
+  </tr>
+  <tr>
+    <td width="13%" align="center">另</td>
+    <td width="49%" align="center">40000</td>
+    <td width="38%" align="center">7%</td>
+  </tr>
+  <tr>
+    <td width="13%" align="center">另</td>
+    <td width="49%" align="center">40000</td>
+    <td width="38%" align="center">12%</td>
+  </tr>
+  <tr>
+    <td width="13%" align="center">餘額</td>
+    <td width="49%" align="center">　</td>
+    <td width="38%" align="center">17%</td>
+  </tr>
+</table>
+
+<p>
+　</p>
+
+
+<p>
+按 Prog 1 再按 75000 EXE (應課稅入息實額)</p>
+
+
+<p>
+40000 EXE (首4萬) 2 EXE (稅率)</p>
+
+
+<p>
+EXE (可不用輸入另4萬，因為已是4萬) 7 EXE (稅率，程式計算完結，顯示薪俸稅為 $3250)</p>
+
+
+<p>
+　</p>
+
+
+<p>例題2: 一位律師一年的淨收入為 $1500 000，而免稅額為 $200 000，請按下表資料計算他的薪俸稅。。</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="38%" id="AutoNumber2">
+  <tr>
+    <td width="13%" align="center">　</td>
+    <td width="50%" align="center">應課稅入息實額</td>
+    <td width="37%" align="center">稅率</td>
+  </tr>
+  <tr>
+    <td width="13%" align="center">首</td>
+    <td width="50%" align="center">30000</td>
+    <td width="37%" align="center">2%</td>
+  </tr>
+  <tr>
+    <td width="13%" align="center">另</td>
+    <td width="50%" align="center">40000</td>
+    <td width="37%" align="center">7%</td>
+  </tr>
+  <tr>
+    <td width="13%" align="center">另</td>
+    <td width="50%" align="center">40000</td>
+    <td width="37%" align="center">12%</td>
+  </tr>
+  <tr>
+    <td width="13%" align="center">餘額</td>
+    <td width="50%" align="center">　</td>
+    <td width="37%" align="center">17%</td>
+  </tr>
+</table>
+
+<p>
+　</p>
+
+
+
+<p>
+注意:
+
+應課稅入息實額，即應評稅入息減去扣除及免稅額。</p>
+
+
+<p>
+按 Prog 1 再按 1500 000 - 200 000 EXE (應課稅入息實額)</p>
+
+
+<p>
+30000 EXE (首3萬) 2 EXE (稅率)</p>
+
+
+<p>
+40000 EXE (另4萬) 8 EXE (稅率)</p>
+
+
+<p>
+EXE (可不用輸入另4萬，因為已是4萬) 14 EXE (稅率)</p>
+
+
+<p>
+0 EXE (輸入0代表餘額) 20 EXE (稅率，顯示薪俸稅為 $247 400)</p>
+
+
+<p>
+　</p>
+
+
+<p>
+參考資料: </p>
+
+
+<p>
+香港薪俸稅及個人入息課稅 (包括不同年份)</p>
+
+
+<p>
+<a href="http://www.gov.hk/tc/residents/taxes/taxfiling/taxrates/salariesrates.htm">
+http://www.gov.hk/tc/residents/taxes/taxfiling/taxrates/salariesrates.htm</a></p>
+
+
+<p>
+計算香港香港薪俸稅及個人入息課稅 (包括不同年份)</p>
+
+
+<p>
+<a href="http://www.gov.hk/tc/residents/taxes/etax/services/tax_computation.htm">
+http://www.gov.hk/tc/residents/taxes/etax/services/tax_computation.htm</a></p>
+
+
+<p>
+　</p>
+
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/tax.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:53 GMT -->
+</html>

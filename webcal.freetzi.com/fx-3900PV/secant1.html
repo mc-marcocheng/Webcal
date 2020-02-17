@@ -1,0 +1,230 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/fx-3900PV/secant1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:21 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>程式編寫日期</title>
+<meta name="Microsoft Theme" content="china 011">
+<style>
+<!--
+span.GramE
+	{}
+-->
+</style>
+<script src="webcal.js"></script></head>
+
+<body background="di1.gif" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#FF9933" alink="#FF3300">
+
+<!--mstheme--><font face="新細明體">
+<p align="center">
+<span lang="EN-US" style="font-family: 新細明體; font-weight: 700; text-decoration: underline">
+<font size="5">正割法(</span><span style="font-family: 新細明體; font-weight: 700; text-decoration: underline">I</span><span lang="EN-US" style="font-family: 新細明體; font-weight: 700; text-decoration: underline">)</span></font></p>
+<p align="left">這個程式需要使用兩個程式位置，函數方程亦可以獨立使用。</p>
+<p align="left">程式編寫日期: 2006年2月15日</p>
+
+<p>程式第一部份(9步)</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber1" bordercolorlight="#1445A1" bordercolordark="#1445A1">
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">1</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin - 2<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">2.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <span lang="en">÷</span><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">3.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">X←→K2<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">4.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <span lang="en">×</span><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">5.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">6.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">Kin - 1<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">7.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">X←→K1<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">8.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">M-<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">9.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">10.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+  </table>
+
+<!--mstheme--><font face="新細明體">
+
+<p>程式第二部份為<font color="#FF0000"><b>函數方程</b></font></p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber5" bordercolorlight="#1445A1" bordercolordark="#1445A1">
+  <tr>
+    <td width="5%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">1</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體"><font color="#FF0000">Min</font><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">2.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">x<sup>y</sup><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">3.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">4.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">5.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">6.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">7.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">8.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">9.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="5%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">
+    <font color="#FF00FF">10.</font><!--mstheme--></font></td>
+    <td width="15%" style="border-width: 2" align="center" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+  </tr>
+  </table>
+
+<!--mstheme--><font face="新細明體">
+<p><font color="#FF0000">注意:</font> 若果想計算其它方程，只要修改銀色的函數方程即可，函數方程使用變數記憶M。</p>
+<p align="left">　</p>
+<p align="left">LRN模式輸入程式第一部份(供 fx-3600PV及fx-3800P使用，程式長度: 9步 )</p>
+<p align="left"><font color="#FF0000">注意: </font>輸入程式前，請按 SHIFT KAC<font color="#FF0000"> 
+1 </font>，確保程式能順利輸入。</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber2" bordercolorlight="#1445A1" bordercolordark="#1445A1">
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin - 2<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體"><span lang="en">÷</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">X←→K 2<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin - 1<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">X←→K 1<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">M-<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">MODE .<!--mstheme--></font></td>
+  </tr>
+  </table>
+<!--mstheme--><font face="新細明體">
+<p align="left">LRN模式輸入程式第二部份函數方程</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber4" bordercolorlight="#1445A1" bordercolordark="#1445A1">
+  <tr>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體"><font color="#FF0000">Min</font><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">x<sup>y</sup><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體"><span lang="en">MODE .</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3" bgcolor="#C0C0C0">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p><font color="#FF0000">注意:</font> 若果想計算其它方程，只要修改銀色的函數方程即可。</p>
+<p>　</p>
+<p class="MsoNormal"><span style="font-family: 新細明體">例題</span><span lang="EN-US">:
+</span><span style="font-family: 新細明體">用正割法解</span><span lang="EN-US"> x<sup>3</sup> 
+– 2x – 1 = 0, 1 &lt; x &lt; 2</span><span style="font-family: 新細明體">。</span></p>
+<p>假設程式第一部份及第二部份分別儲存於P1及P2</p>
+<p class="MsoNormal"><span style="font-family: 新細明體">按</span><span lang="EN-US"> 
+1 P2 (</span>顯示 f(1)為 -2) <font color="#FF0000">P1</font> (忽略顯示的數值) 2 P2 (顯示 
+f(2)為 3) </p>
+<p class="MsoNormal">P1 <span lang="EN-US">(</span><span style="font-family: 新細明體">顯示第</span><span lang="EN-US">1</span><span style="font-family: 新細明體">近似值</span><span lang="EN-US">1.4) </span>P2 
+(顯示 f(1.4)為 -1.056) </p>
+<p class="MsoNormal">P1<span lang="EN-US"> (</span><span style="font-family: 新細明體">顯示第</span><span lang="EN-US">2</span><span style="font-family: 新細明體">近似值</span><span lang="EN-US">1.556213) </span>P2 (顯示 f(1.556213)為 -0.34359)  </p>
+<p class="MsoNormal">P1<span lang="EN-US"> (</span><span style="font-family: 新細明體">顯示第</span><span lang="EN-US">3</span><span style="font-family: 新細明體">近似值</span><span lang="EN-US">1.631554) </span>P2 (顯示 f(1.631554)為 0.08004)  </p>
+<p class="MsoNormal">P1<span lang="EN-US"> (</span><span style="font-family: 新細明體">顯示第</span><span lang="EN-US">4</span><span style="font-family: 新細明體">近似值</span><span lang="EN-US">1.617320) …………</span></p>
+<p>　</p>
+<p><a href="index.html">返回 fx-3900PV程式集</a></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/fx-3900PV/secant1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:21 GMT -->
+</html>

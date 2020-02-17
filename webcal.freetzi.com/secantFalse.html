@@ -1,0 +1,188 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/secantFalse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:57 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>正割法及試位法</title><script src="webcal.js"></script></head>
+
+<body bgcolor="#CCFFFF">
+
+
+<p align="center"><u><b><font size="5">正割法及試位法</font></b></u></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr align="center">
+    <td width="12%">)</td>
+    <td width="12%">x<sup>-1</sup></td>
+    <td width="12%">(</td>
+    <td width="12%" bgcolor="#00FF00">0</td>
+    <td width="13%" bgcolor="#00FF00">K</td>
+    <td width="13%" bgcolor="#00FF00">K</td>
+    <td width="13%" bgcolor="#00FF00">K</td>
+    <td width="13%" bgcolor="#00FF00">K</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">
+    <div style="background-color: #00FF00">
+      K</div>
+    </td>
+    <td width="12%">+</td>
+    <td width="12%">0</td>
+    <td width="12%">A</td>
+    <td width="13%">-</td>
+    <td width="13%">B</td>
+    <td width="13%">)</td>
+    <td width="13%">)</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">y<sup>x</sup></td>
+    <td width="12%">(</td>
+    <td width="12%">1</td>
+    <td width="12%">-</td>
+    <td width="13%">D</td>
+    <td width="13%">÷</td>
+    <td width="13%">2</td>
+    <td width="13%">)</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">y<sup>x</sup></td>
+    <td width="12%">(</td>
+    <td width="12%">1</td>
+    <td width="12%">-</td>
+    <td width="13%">3</td>
+    <td width="13%">D</td>
+    <td width="13%">)</td>
+    <td width="13%">+</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">2</td>
+    <td width="12%">D</td>
+    <td width="12%">-</td>
+    <td width="12%">1</td>
+    <td width="13%">)</td>
+    <td width="13%">÷</td>
+    <td width="13%">(</td>
+    <td width="13%">ANS</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">-</td>
+    <td width="12%">K</td>
+    <td width="12%">cos</td>
+    <td width="12%">sin<sup>-1</sup></td>
+    <td width="13%">D</td>
+    <td width="13%">-</td>
+    <td width="13%">A</td>
+    <td width="13%">)</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">)</td>
+    <td width="12%">x<sup>-1</sup></td>
+    <td width="12%">+</td>
+    <td width="12%">A</td>
+    <td width="13%">+</td>
+    <td width="13%">ANS</td>
+    <td width="13%">cos</td>
+    <td width="13%">sin<sup>-1</sup></td>
+  </tr>
+  <tr align="center">
+    <td width="12%">D</td>
+    <td width="88%" colspan="7">STO F1 或 F2</td>
+  </tr>
+  </table>
+<p><a href="Kmemory.html"><font color="#FF0000">如何在程式中加入K字元</font></a></p>
+<p>例題1: 用試法解 x&sup3; – 2x – 1 = 0, 1 
+&lt; x &lt; 2。<br>
+<br>
+先計算f(1)= -2&lt;0及f(2)=3&gt;0 (需要自行計算)</p>
+<p>按 ON/C 1 = (先輸入x<sub>2</sub>) 2ndF ANS y<sup>x</sup> 3–2 2ndF ANS–1 (函數變數為ANS) </p>
+<p>RCL F1 ALGB 2 = 3 = 1 = (再輸入x<sub>1</sub>及f(x<sub>1</sub>)的值，最後輸入數值是1，這是必要的，代表使用試位<br>
+法，顯示第1近似值為1.4，如果入錯x<sub>1</sub>及x<sub>2</sub>的次序，計算第二近似值時，會出現Error 2<br>
+，但可糾正錯誤(註1))</p>
+<p>= (顯示第2近似值為1.556213)</p>
+<p>= (顯示第3近似值為1.601817)</p>
+<p>= (顯示第4近似值為1.613872)</p>
+<p>= (顯示第5近似值為1.616972)</p>
+<p>= (顯示第6近似值為1.617763)</p>
+<p>= (顯示第7近似值為1.617965)</p>
+<p>= (顯示第8近似值為1.618016) ……………</p>
+<p><br>
+<br>
+例題2: 用正割法解 x&sup3; – 2x – 1 = 0, 1 &lt; 
+x &lt; 2。<br>
+<br>
+按 2ndF DEL (必要) + 1 = (輸入a的值) ON/C 2 = (輸入b的值)</p>
+<p>RCL F1 2ndF <font face="新細明體">→ </font>&nbsp;2ndF ANS y<sup>x</sup> 3 – 2 
+2ndF ANS – 1 (ANS變數的函數方程)<br>
+<font face="新細明體">→ → → </font>DEL <font face="新細明體">→</font> y<sup>x</sup> 3 – 
+2 <font face="新細明體">→</font> – 1 DEL DEL DEL (將綠色陰影改為K變數的函數方程)</p>
+<p>= (顯示第1近似值1.4)</p>
+<p>= (顯示第2近似值1.556213)</p>
+<p>= (顯示第3近似值1.631554)</p>
+<p>= (顯示第4近似值1.617320)</p>
+<p>= (顯示第5近似值1.618026)</p>
+<p>= (顯示第6近似值1.618034)</p>
+<p>= (顯示第7近似值1.618034)…………<br>
+<br>
+　</p>
+<p>試位法的註1: 如果入錯x<sub>1</sub>及x<sub>2</sub>的次序，第一個近似值會正常產生，但計算第二近似值時會出現<br>
+Error 2，糾正方法是按 → 或 ←，再按 ALGB 重新輸入正確的x1及f(x1)的值即可，跟著會顯示正確的第二近似值。<br>
+<br>
+試位法的註2: 若果在計第3近似值或之後的近似值出現Error 2，表示並非單一定點，所以本<br>
+程式不能自動計算下去，但在Error 2之前產生的近似值依然是正確。<br>
+<br>
+試位法的註3: 由於計算這類問題，一般都要計算f(a)及f(b)的值，若果計算較複雜(不能心算)，<br>
+可以先打出用ANS為變數的方程，利用這個方程作函數計算，計算f(a)及f(b)後，該方程亦可直<br>
+接加於儲存的程式(按&agrave; RCL F1)，因此打一次函數方程(ANS)，除可以作函數計算外，亦可供程<br>
+式使用，所以可以使效率更高。<br>
+<br>
+試位法的註4:若果f(x1)的值很複雜(很多個位)，可以直接將計算數值存於B的記憶中(STO B)，使<br>
+得真正執行程式時不需要輸入一個很長的數值。<br>
+<br>
+正割法的註1:不斷按下=顯示近似值，最後會出現Error 2，表示已產生最&#20950;確的答案。<br>
+　</p>
+<p><a href="506Vmain.html">返回EL-506程式集主頁</a></p>
+
+
+<p>相關資料:</p>
+
+
+<p> 
+<a href="bisection1.html">半分法(I)</a>
+(Bisection method I)</p>
+
+
+<p> 
+<a href="bisection2.html">半分法(II)</a>
+(Bisection method II)</p>
+
+<p>
+<a href="false1.html">試位法(I)</a> (False
+position method I)</p>
+
+<p>
+<a href="False2.html">試位法(II)</a> (False Position method II)</p>
+
+<p>
+<a href="secant.html">正割法</a> (Secant
+method)</p>
+
+<p>
+<a href="newton.html"> 
+牛頓法(I)</a>
+(Newton method I)</p>
+
+<p>
+<a href="newton2.html">牛頓法(II)</a>
+(Newton method II)</p>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/secantFalse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:57 GMT -->
+</html>

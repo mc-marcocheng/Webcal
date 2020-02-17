@@ -1,0 +1,70 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/fraction2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:19 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>小數轉換分數</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center">
+
+<u><b>
+
+<font size="5">小數轉換分數(II)</font></b></u></p>
+<p>這個程式可以將一個小數轉換為一個分數，與fx-3650P或SC-185內置<a href="fraction.html">小數轉換分數(I)</a>功能比較，這個程式能夠容許較大的誤差，亦即是經過較多複雜計算後，內置小數轉換分數功能亦不能成功轉化為分數，但這個程
+式卻可以(成功率較高)，而且可以轉化為一個真正分數(內置分數功能只顯示分數形式，內部(Ans)依然為小數，繼續計算誤差有可能進一步增大)。另外這個程式可以直接計算循環小數轉換分數的問題(只要輸入十位的數值即可)。</p>
+<p>注意: 計數機預設分數的表示方法為帶分數，對於會考的朋友來說，假分數表示方法較為實用，因此建議將分數表示方法改為假分數<font color="#FF0000">(按 
+六次 Mode 1 2)</font>。</p>
+<p>　</p>
+<p>程式編寫日期: 2007年1月17日</p>
+<p>程式 (78 bytes)</p>
+<p>Mem clear: Ans→C: Ans→D: 1→X: Fix 0: Lbl 0:</p>
+<p>C: Rnd: Ans→M: C - M <font color="#FF0000">=&gt;</font> Ans<sup>-1</sup>→C: 
+YM + X→M:</p>
+<p>Y→X: M→Y: DY: Sci 9: Rnd: Ans→M: Fix 0: Rnd:</p>
+<p>M - Ans <font color="#FF0000">=&gt;</font> Goto 0: Norm 1: M┘Y</p>
+<p>　</p>
+<p>
+例題1: 
+將0.75化為分數。&nbsp;</p>
+<p>
+按 0.75 EXE 
+再按 Prog 1 (顯示3┘4，即是3/4)</p>
+<p>
+　</p>
+<p>例題2: 將 0.333.......轉化為分數。</p>
+<p>按 0.333 333 333 3 EXE (輸入十位數值，即是有十個3)</p>
+<p>再按 Prog 1 (顯示 1┘3，即是1/3)</p>
+<p>
+　</p>
+<p>例題3: 將 2.454545........化為分數</p>
+<p>
+按 2.45 454 545 4 (輸入十位數值)</p>
+<p>
+再按 Prog 1 (顯示 27┘11，即是27/11)</p>
+<p>
+　</p>
+<p>
+註1: 輸入的小數若果第9個位之後存在，程式會假定數值為循環小數。</p>
+<p>
+註2: 若果無法轉化為分數，表示式分數及分子的總長度太多，這時可以按 RCL M及RCL 
+Y顯示分子及分母的數值，但要注意當分子或分母是5位整數或大於5位整數時，分數的答案有可能會是一個近似值的答案(特別是無理數所產生的小數)。</p>
+<p>
+　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/fraction2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:19 GMT -->
+</html>

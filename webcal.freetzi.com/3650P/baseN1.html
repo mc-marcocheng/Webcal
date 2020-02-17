@@ -1,0 +1,81 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/baseN1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:26 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>n(2-9)進數與10進數間轉換(I)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">n(2-9)進數
+與10進數間轉換(I) </font></b></u></p>
+<p>程式將兩個舊版程式<a href="baseN1a.html">十進數轉n進數(2至9)(I)</a>及<a href="baseN2a.html">n進數(2至9)轉十進數(I)</a>合併為一。</p>
+<p>程式編寫日期: 2007年2月7日</p>
+<p>程式 (58 bytes)</p>
+<p>Mem clear: ?→A: ?→B: ?→C: Lbl 0:</p>
+<p>A÷C - . 5: Fix 0: Rnd: Norm 1: Ans→X:</p>
+<p>B^D(A - CX
+<font color="#FF0000">M+</font>: 1 + D→D: X→A <font color="#FF0000">=&gt;</font> 
+Goto 0: M</p>
+<p>　</p>
+<p>例題1: 將十進制 25 以二進制表示。</p>
+<p>
+按 Prog 1&nbsp; 
+再按 25 EXE 10 EXE 2 EXE (顯示答案為11001)</p>
+<p>所以 25<sub>10</sub> = 11001<sub>2</sub> </p>
+<p>　</p>
+<p>例題2: 將二進制 11001 以十進制表示。</p>
+<p>
+按 Prog 1&nbsp; 
+再按 11001 EXE 2 EXE 10 EXE (顯示答案為11001)</p>
+<p>所以 11001<sub>2</sub> =&nbsp; 25<sub>10</sub> </p>
+<p>　</p>
+<p>注意: 輸入的數值必須為正整數。</p>
+<p>附錄: 第二個程式(60 bytes，程式保留D記憶沒有使用)</p>
+<p>M<font color="#FF0000">M-</font>: 1→Y: ?→A: ?→B: ?→C: Lbl 0:</p>
+<p>A÷C - . 5: Fix 0: Rnd: Norm 1: Ans→X:</p>
+<p>Y(A - CX
+<font color="#FF0000">M+</font>: BY→Y: X→A <font color="#FF0000">=&gt;</font> 
+Goto 0: M</p>
+<p>　</p>
+<p>
+<a href="https://err.freewebhostingarea.com/404.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<p>　</p>
+<p>
+<font color="#0000FF">程式舊版:</font></p>
+<p>
+<a href="baseN1a.html">十進數轉n進數(2至9)(I)</a>&nbsp; (Conversion of 
+base 10 to base n(2-9) I)</p>
+<p>
+<a href="baseN3a.html">十進數轉n進數(2至16)(II)</a>&nbsp; 
+(Conversion of base 10 to base n(2-16) II)</p>
+<p>
+<a href="baseN2a.html">
+
+n進數(2至9)轉十進數(I)</a> 
+(Conversion of base n(2-9) to base 10 I)</p>
+<p>
+<a href="baseN4a.html">
+
+n進數(2至16)轉十進數(II)</a> 
+(Conversion of base n(2-16) to base 10 II)</p>
+<p>　</p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/baseN1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:28 GMT -->
+</html>

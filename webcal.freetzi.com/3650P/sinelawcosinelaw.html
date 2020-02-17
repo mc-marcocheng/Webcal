@@ -1,0 +1,317 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/sinelawcosinelaw.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:43 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>正弦及餘弦定律</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><b><u><font size="5">正弦及餘弦定律</font></u></b></p>
+<p><font color="#800080"><b>程式最新版 (舊版依然保留在網頁下方)</b></font></p>
+<p><b><font color="#FF0000">注意:</font></b> 新版的輸入方法與舊版不同，以0, 1, 2, 
+3來區分四個不同的情況，為方便記憶，<font color="#FF0000">餘弦定律</font>以輸入的邊數作為程式的編號，即是已知<font color="#FF0000">兩邊</font>及夾角用<font color="#FF0000">2</font>代表，已知<font color="#FF0000">三邊</font>用<font color="#FF0000">3</font>代表，<font color="#0000FF">正弦定律</font>則以<font color="#0000FF">0</font>及<font color="#0000FF">1</font>代表，<font color="#0000FF">0</font>代表最後輸入為角度 
+(0形似角度的單位<sup>o</sup>)，<font color="#0000FF">1</font>代表最後輸入的為邊長 
+(1形狀似邊)。若果大家較喜歡舊版的輸入方法，舊版依然保留在網頁下方。</p>
+<p>更新日期: 2011年4月13日</p>
+<p>這個程式會根據輸入來計算:</p>
+<p>
+(1) 已知兩角及一邊(2 angles and 1 side)，其餘兩邊及第三個角</p>
+<p>(2) 已知兩邊及一非夾角(2 
+sides and 1 non-included angle)，其餘二角及第三邊</p>
+<p>(3) 已知兩邊及夾角
+(2 sides and included angle)，求第三邊
+，其餘兩角及三角形面積</p>
+<p>
+(4) 已知三邊 (3 sides)，求三角及三角形的面積</p>
+<p><font color="#FF0000">注意:</font>
+<font color="#0000FF">π</font><font color="#0000FF"><sup>r</sup></font> 
+是按 Shift EXP Shift Ans 2，而 Pol( 是按 Shift + 。</p>
+<p>程式 (135 bytes，使用記憶為A, B ,C及D):</p>
+<p>?→D: ?→A: ?→B: ?→C:&nbsp;1≧D <font color="#FF0000">=&gt;</font> Goto 0:</p>
+<p>D=2 <font color="#FF0000">=&gt;</font> Pol( B - A cos C , A sinC→C◢</p>
+<p><font color="#FF0000">cos<sup>-1</sup></font> ( (B<sup>2</sup> + C<sup>2</sup> 
+- A<sup>2</sup> ) ÷ 2BC→D◢ </p>
+<p><font color="#FF0000">cos<sup>-1</sup></font> ( A<sup>-1</sup>( C - B cos D◢ <font color="#0000FF"><font face="Times New Roman">π</font><sup>r</sup></font> 
+- D - Ans◢ </p>
+<p>Lbl 0: D <font color="#FF0000">=&gt; sin</font><sup><font color="#FF0000">-1</font> </sup>(C 
+sin A ÷ B→C <font color="#FF0000">=&gt;</font> Goto 1:</p>
+<p>B sin C 
+÷ sin A: Lbl 1◢ 
+<font color="#0000FF">π</font><font color="#0000FF"><sup>r</sup></font>
+- A - C◢</p>
+<p>B sin Ans ÷ sin A◢ DC&gt;A <font color="#FF0000">=&gt;</font>
+
+<font color="#0000FF">π</font><font color="#0000FF"><sup>r</sup></font>
+- C→C <font color="#FF0000">=&gt;</font> Goto 1: Norm 1</p>
+<p>
+<font color="#FF0000">注意:</font> 只有計算正弦定律時才有機會有兩組解答。</p>
+<p>
+　</p>
+<p>
+例題1: 
+∠A = 40<sup>o</sup>，a 
+= 5，∠B 
+= 60<sup>o</sup>，求b，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1  
+再按 0 EXE (正弦定律最後輸入為角度所以用0) </p>
+<p>
+40 
+EXE 5 EXE 60 EXE (顯示b為6.7365)</p>
+<p>
+EXE (顯示∠C為 80<sup>o</sup>) EXE (顯示c為7.6604)</p>
+<p>
+EXE (顯示0及Norm 1表示計算已完結)</p>
+<p>　</p>
+<p>
+例題2: 
+∠A = 50<sup>o</sup>，a 
+= 10，b = 13，求∠B，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 1 EXE (正弦定律最後輸入為邊長所以用1) </p>
+<p>
+50 EXE 10 EXE 13 EXE 
+(顯示∠B為84.7832<sup>o</sup>)
+</p>
+<p>
+EXE (顯示∠C為 45.2168<sup>o</sup>) EXE (顯示c為9.2655)</p>
+<p>
+EXE (顯示另一個∠B的解為95.2168<sup>o</sup>)</p>
+<p>
+EXE (顯示另一可能∠C為 34.7832<sup>o</sup>) EXE (顯示另一可能c為7.44699)</p>
+<p>
+請按 AC 終止程式</p>
+<p>
+　</p>
+<p>
+例題3: 
+∠A = 
+150<sup>o</sup>，a 
+= 10，b = 6，求∠B，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 1 EXE (正弦定律最後輸入為邊長所以用1) </p>
+<p>
+150 EXE 10 EXE 6 EXE (顯示∠B為17.4576<sup>o</sup>)
+</p>
+<p>
+EXE (顯示∠C為 12.5424<sup>o</sup>) EXE (顯示c為4.3432)</p>
+<p>
+EXE (顯示0及Norm 1表示答案只有一組解答)</p>
+<p>　</p>
+<p>例題4: 
+a=4, b=5, ∠C=40<sup>o</sup>
+，求c及三角形面積。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按<font color="#FF0000"> </font>
+2 EXE (餘弦定律己知兩邊所以用2)</p>
+<p>
+4 EXE 5 EXE 40 EXE (顯示c=3.2184) 
+ 
+</p>
+<p>
+EXE (顯示∠A=53.024<sup>o</sup>)</p>
+<p>
+EXE (顯示∠B=86.976<sup>o</sup>)</p>
+<p>請按 AC 終止程式</p>
+<p>　</p>
+<p>例題5: 
+a=4, b=5, c=6，求∠C及三角形面積。</p>
+<p>注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 3 EXE 
+(餘弦定律己知三邊所以用3) </p>
+<p>
+4 EXE 5 EXE 
+6 EXE  (顯示∠A=41.410<sup>o</sup>)</p>
+<p>
+EXE (顯示∠B=55.771<sup>o</sup>)</p>
+<p>
+EXE (顯示∠C=82.8192<sup>o</sup>)</p>
+<p>請按 AC 終止程式</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<p>
+　</p>
+
+<hr><hr>
+
+<p>　</p>
+<p><font color="#0000FF"><b>程式舊版</b></font></p>
+<p>這個程式會根據輸入來計算:</p>
+<p>
+(1) 已知兩角及一邊(2 angles and 1 side)，其餘兩邊及第三個角</p>
+<p>(2) 已知兩邊及一非夾角(2 
+sides and 1 non-included angle)，其餘二角及第三邊</p>
+<p>(3) 已知兩邊及夾角
+(2 sides and included angle)，求第三邊
+，其餘兩角及三角形面積</p>
+<p>
+(4) 已知三邊 (3 sides)，求三角及三角形的面積</p>
+<p>　</p>
+<p>新版程式編寫日期: 2006年4月29日 <font color="#FF0000">(程式修改日期: 2006年4月29日)</font></p>
+<p><font color="#FF0000">注意:</font>
+<font color="#0000FF">π</font><font color="#0000FF"><sup>r</sup></font> 
+是按 Shift EXP Shift Ans 2</p>
+<p>程式 (146 bytes，使用記憶為A, B ,C及D):</p>
+<p>?→D: ?→A: ?→B: ?→C:&nbsp;D <font color="#FF0000">=&gt;</font> Goto 0:</p>
+<p>0&gt;C <font color="#FF0000">=&gt;</font> √(A<sup>2</sup> + B<sup>2</sup> 
+-&nbsp; 2AB cos C→C◢</p>
+<p><font color="#FF0000">cos<sup>-1</sup></font> ( (B<sup>2</sup> + C<sup>2</sup> 
+- A<sup>2</sup> ) ÷ 2BC→D ◢ </p>
+<p><font color="#FF0000">cos<sup>-1</sup></font> ( (A<sup>2</sup> + C<sup>2</sup> 
+- B<sup>2</sup> ) ÷ 2AC◢ <font color="#0000FF">π<sup>r</sup></font> 
+- D - Ans◢ </p>
+<p>Lbl 0: 0&gt;C <font color="#FF0000">=&gt;</font> - B sin C 
+÷ sin A <font color="#FF0000">=&gt;</font> Goto 1:</p>
+<p><font color="#FF0000">sin</font><sup><font color="#FF0000">-1</font> </sup>(C 
+sin A ÷ B→C: Lbl 1◢ 
+<font color="#0000FF">π</font><font color="#0000FF"><sup>r</sup></font>
+- A - √C<sup>2</sup>◢</p>
+<p>B sin Ans ÷ sin A◢ C&gt;A <font color="#FF0000">=&gt;</font>
+
+<font color="#0000FF">π</font><font color="#0000FF"><sup>r</sup></font>
+- C→C <font color="#FF0000">=&gt;</font> Goto 1: Norm 1</p>
+<p>
+注意: 只有計算正弦定律時才有機會有兩組解答。</p>
+<p>
+　</p>
+<p>
+例題1: 
+∠A = 40<sup>o</sup>，a 
+= 5，∠B 
+= 60<sup>o</sup>，求b，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 1 EXE (1代表正弦定律) 40 
+EXE 5 EXE&nbsp; <font color="#FF0000">-</font> 60 EXE </p>
+<p>
+(<font color="#FF0000">注意</font><font color="#FF0000">: 
+第三個</font>數值為<font color="#FF0000">負值</font>代表輸入的是<font color="#FF0000">角</font>，顯示b為6.7365)</p>
+<p>
+EXE (顯示∠C為 80<sup>o</sup>) EXE (顯示c為7.6604)</p>
+<p>
+EXE (顯示0及Norm 1表示計算已完結)</p>
+<p>　</p>
+<p>
+例題2: 
+∠A = 50<sup>o</sup>，a 
+= 10，b = 13，求∠B，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 1 EXE (1代表正弦定律) 再按 50 EXE 10 EXE 13 </p>
+<p>
+EXE 
+(顯示∠B為84.7832<sup>o</sup>)
+</p>
+<p>
+EXE (顯示∠C為 45.2168<sup>o</sup>) EXE (顯示c為9.2655)</p>
+<p>
+EXE (顯示另一個∠B的解為95.2168<sup>o</sup>)</p>
+<p>
+EXE (顯示另一可能∠C為 34.7832<sup>o</sup>) EXE (顯示另一可能c為7.44699)</p>
+<p>
+請按 AC 終止程式</p>
+<p>
+　</p>
+<p>
+例題3: 
+∠A = 
+150<sup>o</sup>，a 
+= 10，b = 6，求∠B，∠C及c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 1 EXE (1代表正弦定律) 150 EXE 10 EXE 6 
+ 
+</p>
+<p>
+EXE (顯示∠B為17.4576<sup>o</sup>)
+</p>
+<p>
+EXE (顯示∠C為 12.5424<sup>o</sup>) EXE (顯示c為4.3432)</p>
+<p>
+EXE (顯示0及Norm 1表示答案只有一組解答)</p>
+<p>　</p>
+<p>例題4: 
+a=4, b=5, ∠C=40<sup>o</sup>
+，求c及三角形面積。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按<font color="#FF0000"> </font>
+0 EXE (0代表餘弦定律) 4 EXE 5 EXE </p>
+<p>
+ <b>
+<font color="#FF0000">-</font></b> 40 EXE (<font color="#FF0000">注意</font><font color="#FF0000">負值</font>代表輸入的是<font color="#FF0000">角</font>，顯示c=3.2184) 
+ 
+</p>
+<p>
+EXE (顯示∠A=53.024<sup>o</sup>)</p>
+<p>
+EXE (顯示∠B=86.976<sup>o</sup>)</p>
+<p>請按 AC 終止程式</p>
+<p>　</p>
+<p>例題5: 
+a=4, b=5, c=6，求∠C及三角形面積。</p>
+<p>注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 0 EXE 
+(0代表餘弦定律) 4 EXE 5 EXE 
+6 EXE  (顯示∠A=41.410<sup>o</sup>)</p>
+<p>
+EXE (顯示∠B=55.771<sup>o</sup>)</p>
+<p>
+EXE (顯示∠C=82.8192<sup>o</sup>)</p>
+<p>請按 AC 終止程式</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<p>
+　</p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/sinelawcosinelaw.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:43 GMT -->
+</html>

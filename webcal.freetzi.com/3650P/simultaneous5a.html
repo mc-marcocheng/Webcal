@@ -1,0 +1,102 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/simultaneous5a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>聯立二元一為一次及一為二次方程(I)精簡版</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center">
+<u><b>
+<font size="5">聯立二元一為一次及一為二次方程(I)精簡版</font></b></u></p>
+<p>程式更新日期: 2010年7月16日</p>
+<p>精簡版主要是沒有記儲答案的功能，另外若方程只有一組解答時(例如: 解聯立二元一次方程時)，<font color="#FF0000">當顯示完第一組解答後</font>，有可能不會自動終止程式，出現 
+Math ERROR(代表只有一組解答)，這種情況不影響計算答案。</p>
+<p>　</p>
+<p>第一個程式精簡版 (128 bytes)</p>
+<p>?→A: ?→B: 
+A┘B→D: ?→A: A┘B→C: ?→M: ?→Y:</p>
+<p>?→X: ?→A: XD<sup>2</sup> 
+- DY<font color="#FF0000">M+</font>: ?→B: BD - CY + 2CDX - A→Y:</p>
+<p>?→A: XC<sup>2 </sup>+ BC - A→X: 
+2M <font color="#FF0000">=&gt;</font> (√(Y<sup>2</sup> - 4MX) + Y)┘Ans→A◢</p>
+<p>M=0
+<font color="#FF0000">=&gt;</font> X┘Y→A◢ C-DA◢ 
+Y┘M - A◢ C-DAns</p>
+<p>　</p>
+<p>第二個程式精簡版 (140 bytes)</p>
+<p>?→Y: ?→C: ?→D: ?→A: ?→X: ?→M:</p>
+<p>AC<sup>2</sup> - CXY + MY<sup>2</sup>→A: ?→B: CDX - 2MDY + 
+BC<sup>2</sup>:</p>
+<p>?→B: BCY - Ans→X: MD<sup>2</sup> + BCD→M: ?→B: </p>
+<p>BC<sup>2</sup><font color="#FF0000">M-</font>: 2A
+<font color="#FF0000">=&gt;</font> (√(X<sup>2</sup> - 4MA) + X)┘Ans→M◢</p>
+<p>A=0 <font color="#FF0000">=&gt;</font> M┘X→M◢ (D - MY)┘C◢
+</p>
+<p>X┘A - M◢ (D - AnsY)┘C</p>
+<p>第二個程式精簡版(答案不顯示分數) (137 bytes)</p>
+<p>?→Y: ?→C: ?→D: ?→A: ?→X: ?→M:</p>
+<p>AC<sup>2</sup> - CXY + MY<sup>2</sup>→A: ?→B: CDX - 2MDY + 
+BC<sup>2</sup>:</p>
+<p>?→B: BCY - Ans→X: MD<sup>2</sup> + BCD→M: ?→B: </p>
+<p>BC<sup>2</sup><font color="#FF0000">M-</font>: 2A
+<font color="#FF0000">=&gt;</font> Ans<sup>-1</sup>(√(X<sup>2</sup> - 4MA) + X→M◢</p>
+<p>A=0 <font color="#FF0000">=&gt;</font> M┘X→M◢ C<sup>-1</sup>(D 
+- MY◢ </p>
+<p>X┘A - M◢ C<sup>-1</sup>(D - AnsY</p>
+<p>　</p>
+<p>例題1: 解聯立方程:</p>
+<p><img border="0" src="Image87.gif" width="197" height="45"></p>
+<p>按 
+Prog 1&nbsp; 再按 3 EXE 5 EXE 8 EXE 3 EXE 4 
+EXE 5 EXE 3 EXE 5 EXE 20 </p>
+<p>EXE (顯示1) EXE 
+(顯示1，即第一組的解答為 x=1, y=1)</p>
+<p>EXE (顯示1/3) EXE (顯示7/5，即第一組的解答為 x=1/3, y=7/5)</p>
+<p>　</p>
+<p>例題2: 解以下聯立二元一次方程</p>
+<p>
+<img border="0" src="Image76.gif" width="65" height="45"></p>
+<p>按 
+Prog 1&nbsp; 再按 1 EXE 1 EXE 7 EXE 0 EXE 0 
+EXE 0 EXE </p>
+<p>1 
+EXE -1 EXE 1 EXE  (顯示4) 
+EXE (顯示3)</p>
+<p>
+因此解答為 x = 4 
+及 y = 3. </p>
+<p>　</p>
+<p>註1: <font color="#FF0000">第一個程式</font>限制為第二個輸入的係數不可以是0，否則會出現Math error。</p>
+<p>註2: 若果兩組的解相同，表示曲線與直線相切。</p>
+<p>註3: 現時不少同類程式，會無法計算下列方程的情況(出現 Math error)，這個程式沒有這方面的問題，其實這類程式<font color="#FF0000">必定</font>可以同時計算<font color="#FF0000">聯立二元一次方程</font>的問題，若果那個程式不能同時計算聯立二元一次方程，那麼很可能是設計欠嚴謹的程式，會得出錯
+誤的答案(誤以為無解)。</p>
+<p><img border="0" src="Image164.gif" width="187" height="45"></p>
+<p>按 
+Prog 1&nbsp; 再按 3 EXE 4 EXE 7 EXE 15 EXE 
+8 
+EXE - 16 EXE </p>
+<p>1 
+EXE  1 EXE 9 EXE  (顯示1) 
+EXE (顯示1)</p>
+<p>
+因此解答為 x = 1 
+及 y = 1. </p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P 程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/simultaneous5a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+</html>

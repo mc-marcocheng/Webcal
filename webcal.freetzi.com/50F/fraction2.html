@@ -1,0 +1,242 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/fraction2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:02 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>小數轉換分數</title>
+<style>
+<!--
+span.GramE
+	{}
+-->
+</style>
+<meta name="Microsoft Theme" content="cnpeach 011">
+<script src="webcal.js"></script></head>
+
+<body background="di5.gif" bgcolor="#EEFFF7" text="#000000" link="#008000" vlink="#808080" alink="#808000">
+
+<!--mstheme--><font face="新細明體">
+<p align="center">
+<span lang="EN-US" style="font-family: 新細明體; font-weight: 700; text-decoration: underline">
+<font size="5">小數轉換分數(II)</font></span></p>
+<p><b><font color="#800080">程式新版</font></b></p>
+<p>這個程式解決了小數轉換分數(I)程式計算大分母時速度很慢的問題，但程式較為長。</p>
+<p>程式編寫日期: 2006年9月9日</p>
+<p>程式第一部份<font color="#FF0000">(儲存於P1)</font>長度: 4步</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber1" bordercolorlight="#669900" bordercolordark="#669900">
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin 1<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin 3<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin 2<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">MODE .<!--mstheme--></font></td>
+  </tr>
+  </table>
+<!--mstheme--><font face="新細明體">
+<p>程式第二部份<font color="#FF0000">(儲存於P2)</font>長度: 25步</p>
+<p><font color="#FF0000">注意:</font>在輸入程式前請先按 1.1 SHIFT Kin 1 2 SHIFT Kin 2 MODE 1 DEC MODE 0確保程式能正確輸入。</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber3" bordercolorlight="#669900" bordercolordark="#669900">
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kout 1<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kout 2<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">÷ 1</span><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">X←→K1<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">MODE 1<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">MODE 0<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin 2<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">1/x<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Fix 0<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">RND<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Min<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kout 3<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">RND<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">NORM<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">Kin 6<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">x<sup>2</sup><!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">x &gt; 0<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">F<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">MODE .<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" align="center" style="border-width: 3">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p>　</p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+<span style="font-family: 新細明體">例題<span class="GramE">1</span><span lang="EN-US">: 
+將0.75化為分數。</span></span></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+<span style="font-family: 新細明體">按 </span>
+<span style="font-family: 新細明體">0.75 P1 再按 SHIFT P2 (顯示分子為3) RUN (顯示分母為4)</span><span lang="EN-US" style="font-family: 新細明體">&nbsp;</span></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+　</p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+註1: 若果小數為無理數時，程式會計算出的分子或分母會大於10位整數，這時只代表近似值的答案，而並非真確值。</p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+<span lang="en-us">註2: </span>程式不使用K4及K5的記憶，因此這個程式亦可以配合部份內置功能使用，例如<a href="quadratic1.html">內置一元二次方程</a>，求分數根(有理數)。</p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+　</p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+<span style="font-family: 新細明體">例題2</span><span lang="EN-US">: </span>
+<span style="font-family: 新細明體">解</span> <span lang="EN-US">21x<sup>2</sup>–10x 
++ 1 = 0</span></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+按 1 FMLA 21 RUN 10 +/- RUN 1 RUN (顯示0.33333) RUN (顯示0.14286)</p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+再按 P1 SHIFT P2 (顯示第二個根分子為1) RUN (顯示第二個根分母為7)</p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+再按 Kout 4 P1 SHIFT
+P2 (顯示第一個根分子為1) RUN (顯示第一個根分母為3)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<u><b><font size="4" color="#800080">利用這個程式求二次函數的因式分解</font></b></u></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體">
+解簡單的一元二次方程是可以用因式分解的方法，因此我們可以從二次方程的解(分數根)，估計到兩個一次式的因子 (即是因子為 &quot;<font color="#0000FF">(分母 
+x</font><font color="#FF0000"> - </font><font color="#0000FF">分子)</font>&quot;)，看看一些簡單的例子。 </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US" style="FONT-FAMILY: 新細明體">&nbsp;</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體">例題3<span lang="EN-US">: 因式分解</span></span><span lang="EN-US"> 
+x<sup>2</sup> + 2x–15 </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">假設使用一元二次方程(I)的程式</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> 1 FMLA </span><span style="font-family: 新細明體">再按</span><span lang="EN-US"> 1 </span>
+RUN<span lang="EN-US"> 2 RUN 15 +/- RUN (</span><span style="font-family: 新細明體">顯示</span><span lang="EN-US">3</span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">3=3/1，即因子為</span><span lang="EN-US">x–3) </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="en-us">RUN</span><span lang="EN-US"> (</span><span style="font-family: 新細明體">顯示</span><span lang="EN-US">-5</span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">即因子為</span><span lang="EN-US">x 
++ 5)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">因此</span><span style="FONT-FAMILY: 新細明體">，</span><span lang="EN-US"> 
+x<sup>2</sup> + 2x – 15 = (x–3)(x + 5)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+<span style="font-family: 新細明體">例題4</span><span lang="EN-US">: </span>
+<span style="font-family: 新細明體">因式分解</span> <span lang="EN-US">42x<sup>2</sup> - 
+20x + 2</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> 1 FMLA </span>
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> 42 RUN 20 +/- RUN 2 
+RUN (</span><span style="font-family: 新細明體">顯示</span><span lang="en-us"> 
+0.333333333</span><span lang="EN-US">) RUN (</span><span style="font-family: 新細明體">顯示<span lang="en-us">0.142857142</span></span><span lang="EN-US">) </span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="en-us">再按 </span>P1 SHIFT P2 (顯示1) RUN (顯示7，所以是1/7，亦即因子為 7x - 1)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="en-us">再按 </span>Kout 4 P1 SHIFT P2 (顯示1) RUN (顯示3，所以是1/3，亦即因子為 3x - 
+1)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">最後</span><span style="FONT-FAMILY: 新細明體">，別忘記看看有沒常數因子<span lang="EN-US">(= 
+42 </span></span><span lang="EN-US" style="font-family: Symbol">&cedil;</span><span lang="EN-US" style="FONT-FAMILY: 新細明體"> 
+3 </span><span lang="EN-US" style="font-family: Symbol">&cedil;</span><span lang="EN-US" style="FONT-FAMILY: 新細明體"> 
+7 = 2)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體">因此，</span><span lang="EN-US">42x<sup>2</sup>–20x + 2 = 2(3x–1)(7x–1)</span></p>
+<p>　</p>
+<p>例題5: 因式分解 9a<sup>2</sup> - 12ab + 4b<sup>2</sup></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> 1 FMLA </span>
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> 9 RUN 12 +/- RUN 16 
+RUN (</span>顯示0.666666666) RUN (顯示0.666666666)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="en-us">再按 </span>P1 SHIFT P2 (顯示2) RUN (顯示3，所以是2/3，亦即因子為 3a - 2b)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> Kout 4 </span>P1 
+SHIFT P2 (顯示2) RUN (顯示3，所以是2/3，亦即因子為 3a - 2b)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體">因此，</span><span lang="en-us">9</span><span lang="EN-US">a<sup>2</sup> 
+– 12ab + 4b<sup>2</sup> = (3a -&nbsp;2b)<sup>2 </sup></span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="en-us">例題6: </span>因式分解 18a<sup>2</sup> - 32b<sup>2</sup></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> 1 FMLA </span>
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> 18 RUN 0 RUN 32 +/- 
+RUN (</span>顯示1.333333333) RUN (顯示-1.333333333)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="en-us">再按 </span>P1 SHIFT P2 (顯示4) RUN (顯示 -3，所以是 - 4/3，亦即因子為 3a + 
+4b)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">再按</span><span lang="EN-US"> Kout 4 </span>P1 
+SHIFT P2 (顯示4) RUN (顯示3，所以是4/3，亦即因子為 3a - 4b)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">常數因子 = 18 </span><span lang="en">÷3 ÷ 3 = 2</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體">因此，</span><span lang="en-us">18</span><span lang="EN-US">a<sup>2</sup>–32</span>b<sup>2</sup><span lang="EN-US"> 
+= 2(3a–4b)(3a + 4b)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+　</p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<a href="index.html">返回 fx-50F專頁</a></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/fraction2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:02 GMT -->
+</html>

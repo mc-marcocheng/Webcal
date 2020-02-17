@@ -1,0 +1,122 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/cosinlaw1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:43 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>綜合餘弦定律</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b>
+餘弦定律</b></u></p>
+<p>這個程式會根據輸入來計算:</p>
+<p>
+(1) 已知三邊 (3 sides)，求第三邊的對角</p>
+<p>(2) 已知兩邊及夾角
+(2 sides and included angle)，求第三邊</p>
+<p>
+註1: 若果較習慣使用程式編號區分情況的朋友，可以使用網頁尾<a href="#Q1">附錄程式(有程式編號 
+的版本 52 或 48 bytes)</a>。</p>
+<p>　</p>
+<p>更新日期: 2011年4月3日</p>
+<p><font color="#0000FF">第一個程式</font> (52 bytes，使用記憶為A, B及C)</p>
+<p>?→A: ?→B: ?→C:  C&gt;0: </p>
+<p>Ans <font color="#FF0000">cos<sup>-1</sup></font> (Ans (A<sup>2</sup> + B<sup>2</sup> 
+- C<sup>2</sup> ) ÷ 2AB) + sin <font color="#FF0000">cos<sup>-1</sup></font> 
+Ans √(A<sup>2</sup> + B<sup>2</sup> - 2AB cosC</p>
+<p>　</p>
+<p><font color="#0000FF">第二個程式</font> (由網友<font color="#0000FF">八月</font>提供，43 bytes，使用記憶為A, 
+B, C, X及Y)</p>
+<p>?→A: ?→B: ?→C: C&gt;0 <font color="#FF0000">=&gt;</font> <font color="#FF0000">cos<sup>-1</sup></font> ( 
+(A<sup>2</sup> + B<sup>2</sup> - C<sup>2</sup> ) ÷ 2AB◢ Pol( B - AcosC , AsinC</p>
+<p>　</p>
+<p>例題1: 
+a=4, b=5, ∠C=40<sup>o</sup>
+，求c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按<font color="#FF0000"> </font>
+4 EXE 5 EXE <font color="#FF0000"> 
+<b>- </b> </font>40 EXE (<font color="#FF0000">注意負值</font>代表輸入的是<font color="#FF0000">角</font>，顯示答案為c=3.2184)</p>
+<p></p>
+<p>例題2: 
+a=4, b=5, c=6，求∠C。</p>
+<p>注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 4 EXE 5 EXE 6EXE (顯示答案為∠C=82.8192<sup>o</sup>)</p>
+<p>
+如果是<font color="#FF0000">第二個程式</font>，程式計算完成後，請按AC中止程式
+。</p>
+<p>
+　</p>
+<p>註2: 若果輸入的三邊不能構成三角形，程式會出現Math 
+ERROR。</p>
+<p>
+　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<p>
+　</p>
+
+<hr>
+
+
+<p><font color="#0000FF"><a name="Q1" id="Q1"></a>附錄: 有程式編號版本</font></p>
+<p>附錄程式一(52 bytes，使用記憶為A, B, C及D)</p>
+<p>?→D: ?→A: ?→B: ?→C:</p>
+<p>D <font color="#FF0000">cos<sup>-1</sup></font> (D (A<sup>2</sup> + B<sup>2</sup> 
+- C<sup>2</sup> ) ÷ 2AB) + sin <font color="#FF0000">cos<sup>-1</sup></font> 
+D √(A<sup>2</sup> + B<sup>2</sup> - 2AB cosC</p>
+<p>　</p>
+<p>附錄程式二(48 bytes，使用記憶為A, B, C及D)</p>
+<p>?→D: ?→A: ?→B: ?→C: D <font color="#FF0000">=&gt;cos<sup>-1</sup></font> ( 
+(A<sup>2</sup> + B<sup>2</sup> - C<sup>2</sup> ) ÷ 2AB◢ √(A<sup>2</sup> + B<sup>2</sup> - 2AB cosC</p>
+<p>　</p>
+<p><font color="#FF0000">附錄程式</font>例題1: 
+a=4, b=5, ∠C=40<sup>o</sup>
+，求c。</p>
+<p>
+注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 0 EXE (0代表最後輸入的數據為角度(0相似度數° ) 
+)</p>
+<p>
+4 EXE 5 EXE 
+40 EXE (顯示答案為c=3.2184)</p>
+<p></p>
+<p><font color="#FF0000">附錄程式</font>例題2: 
+a=4, b=5, c=6，求∠C。</p>
+<p>注意:要在DEG 
+Mode執行</p>
+<p>
+按 Prog 1 
+再按 1 EXE (1代表
+最後輸入的數據為邊長) </p>
+<p>
+4  EXE 5 EXE 
+6EXE (顯示答案為∠C=82.8192<sup>o</sup>)</p>
+<p></p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/cosinlaw1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:43 GMT -->
+</html>

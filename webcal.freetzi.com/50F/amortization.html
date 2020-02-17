@@ -1,0 +1,236 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/amortization.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:09 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>攤銷進度表</title>
+<meta name="Microsoft Theme" content="cnpeach 011">
+<script src="webcal.js"></script></head>
+
+<body background="di5.gif" bgcolor="#EEFFF7" text="#000000" link="#008000" vlink="#808080" alink="#808000">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><font size="5">攤銷進度表</font></b></u></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+程式編寫日期: 2006年7月22日</p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-size: 12.0pt; font-family: 新細明體">程式會計算攤銷</span><span lang="EN-US" style="font-size: 12.0pt; font-family: Times New Roman">進度表(Amortization 
+Schedule)</span>，<span lang="EN-US" style="font-size: 12.0pt; font-family: 新細明體">每一期的貸款利[息</span><span style="font-size: 12.0pt; font-family: 新細明體">(Loan 
+Interest)、償還貸款(Loan Repaid)及尚欠貸款(Outstanding Balance)。</span><span lang="EN-US" style="font-size: 12.0pt; font-family: 新細明體">程式假設利息每期結算、息率不變及每期供款不變</span><span style="font-size: 12.0pt; font-family: 新細明體"> 
+(</span><span lang="EN-US" style="font-size: 12.0pt; font-family: 新細明體">最後一期供款可以較少</span><span style="font-size: 12.0pt; font-family: 新細明體">)</span><span lang="EN-US" style="font-size: 12.0pt; font-family: 新細明體">。注意程式每一次計算準確至小數後兩位，與實際情況一樣。</span></p>
+<p>程式第一部份: 10步 (儲存於P1)</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse; " width="100%" id="AutoNumber1" bordercolorlight="#669900" bordercolordark="#669900">
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">A 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">B 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">C 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">× 2</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">0<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">0<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin <span lang="en">÷ 2</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">D<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MODE .<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+  </table>
+<!--mstheme--><font face="新細明體">
+<p>程式第二部份: 19步 (儲存於P2)</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse; " width="100%" id="AutoNumber2" bordercolorlight="#669900" bordercolordark="#669900">
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 2<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Fix 2<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">RND<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">NORM<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">HLT<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">-<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 4<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">X←→Y<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">HLT<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin - 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 1<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">HLT <!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">x &gt; 0<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin + 4<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 4<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MODE .<!--mstheme--></font></td>
+  </tr>
+  </table>
+<!--mstheme--><font face="新細明體">
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+注意: 最後一期的尚久貸款若為負數(不等於零)，表示最後一期的供款較少，這時最後一期尚欠貸款正確應為<font color="#FF0000">0</font>，而最後一期的償還貸款正確應為<font color="#FF0000">前一期的尚欠貸款</font>。</p>
+<p>例題: 某銀行提供私人貸款，年利率 15%，提供貸款當日起計之後的每月結算利息及供款。張先生銀行申請得 $ 40 000的私人貸款，並同意每月供款 
+$9000給銀行直至貸款全數清還(最後一個月的供款可以少於 $9000)，試完成以下攤銷進度表。</p>
+<!--mstheme--></font>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber3" bordercolorlight="#669900" bordercolordark="#669900">
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">月<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">貸款利息<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">償還貸款<!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">尚欠貸款<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">4<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p class="MsoNormal">按 <font color="#FF0000">P1</font> 40000 (貸款) RUN 15 RUN 
+(年利率) 1 RUN (一個月結算) 9000 RUN (每月供款)</p>
+<p class="MsoNormal">再按 <font color="#FF0000">P2 </font>(顯示第1個月的貸款利[息為 500) </p>
+<p class="MsoNormal">RUN (顯示第1個月的償還貸款為 8500)</p>
+<p class="MsoNormal">RUN (顯示第1個月的尚欠貸款為 31500)</p>
+<p class="MsoNormal">RUN (顯示第2個月的貸款利[息為 393.75) </p>
+<p class="MsoNormal">RUN (顯示第1個月的償還貸款為 8606.25)</p>
+<p class="MsoNormal">RUN (顯示第1個月的尚欠貸款為 22893.75)</p>
+<p class="MsoNormal">RUN (顯示 286.17) RUN (顯示 8713.83) RUN (顯示 14179.92)</p>
+<p class="MsoNormal">RUN (顯示 177.25) RUN (顯示 8822.75) RUN (顯示 
+<font color="#FF0000">5357.17</font>)</p>
+<p class="MsoNormal">RUN (顯示 66.96) RUN (顯示 <font color="#800080">8933.04</font>) 
+RUN (顯示 <font color="#800080">-3575.87</font>，負值表示最後一期，亦即是最後一期的償還貸款為 
+<font color="#FF0000">5357.17</font> 及尚欠貸款為 <font color="#FF0000">0</font>)</p>
+<p class="MsoNormal">RUN (程式執行完結，顯示最後一期的供款為 5424.13)</p>
+<p class="MsoNormal">所以答案為: </p>
+<!--mstheme--></font>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber3" bordercolorlight="#669900" bordercolordark="#669900">
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">月<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">貸款利息<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">償還貸款<!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">尚欠貸款<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">500<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">8500<!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">31500<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">393.75<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">8606.25<!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">22893.75<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">286.17<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">8713.83<!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">14179.92<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">4<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">177.25<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">8822.75<!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF0000">5357.17</font><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="center"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">66.96<!--mstheme--></font></td>
+    <td width="29%" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF0000">5357.17</font><!--mstheme--></font></td>
+    <td width="30%" align="center"><!--mstheme--><font face="新細明體">
+    <font color="#FF0000">0</font><!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p class="MsoNormal">　</p>
+<font face="新眷茤��?&gt;對應&lt;/font&gt;&lt;span lang=" EN-US>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<a href="index.html">返回 fx-50F專頁</a></p>
+</font>
+<p>　</p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/amortization.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:09 GMT -->
+</html>

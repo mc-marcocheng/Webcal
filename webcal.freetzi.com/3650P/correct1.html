@@ -1,0 +1,208 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/correct1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>加減自動修正為零</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">fx-3650P誤差修正問題</font></b></u></p>
+<p>大家都知道計數機的運算存有誤差，所以計數機 (SVPAM或DAL)都加入針對加減數運算答案應該為零的自動修正功能，不過有部份較舊版本的 
+fx-3650P完全欠缺了這種功能，對於某些計算或程式的使用會有多一點潛在的問題。最典型的例子是使用一元二次公式計算一元二次方程的重根問題(特別是係數為循環小數或無理數)，由於誤差原因，判別
+式的值不是0，而變成一個很小的負數，最後結果是使算式或程式出現錯誤 
+(Math error)，使用者很多時就會誤以為方程為無解，導致最後答案出錯。</p>
+<p>　</p>
+<p>這種自動修正功能對於新式 (SVPAM或DAL) 
+計數機較為重要，因為這類計數機將整個算式輸入後，才執行算式，計算的過程會被隱藏，因此較容易出現問題，所以這類操作方法的計數機都加入這種修正功能。若果你使用的是舊版的 
+fx-3650P，計算或使用程式時就要較小心會否出現上述的問題。</p>
+<p>　</p>
+<p>那麼如何可以知道有沒有這種修正功能呢？方法很簡單只要執行下列簡單的測試即可:</p>
+<p>按 1 ÷ 7 + 6 EXE Ans - 6 - 1 ÷ 7 EXE ，若果答案不是零表示
+完全沒有這種修正功能，亦即是早期舊版本的fx-3650P計算機。</p>
+<p>註: 舊款casio 計數機完全沒有這種修正功能 (e.g. fx-50F)，計算上述的測試答案不是零。</p>
+
+<p>　</p>
+
+<p><font color="#FF0000"><b>fx-3650P加減自動修正功能的缺陷</b></font> (現有較新版本的fx-3650P及MS系列計算機)</p>
+
+<p>
+雖然較新版的fx-3650P已補加回上述的自動修正功能，不過這個功能卻出現了設計上的缺陷，我猜測可能fx-3650P原先設計並沒有這種功能，後來補加會較為困難，最後
+就出現缺陷的問題，最典型例子是一些有關指數的計算 
+2^62 - 4^31 ，理論上答案應為0，但fx-3650P卻得答案為4000 0000，當然相對於2^61及4^31的數值，其實4000 
+0000是一個很少的值，但為何其它計算機(e.g. SHARP 
+EL-506V)會得出正確答案0，很多網友都誤以為是由於指數(次方)計算不準確，但其實這個不是主要原因，其它非指數計算一樣存在問題，大家可以看看以下的幾個計算例子，理論上答案都
+是0，但fx-3650P卻得出錯誤的答案。</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber1" bordercolorlight="#999900" bordercolordark="#666666">
+  <tr>
+    <td width="45%" align="center">例子</td>
+    <td width="23%" align="center">fx-3650P答案</td>
+    <td width="16%" align="center">SC-185答案</td>
+    <td width="16%" align="center">EL-506V答案</td>
+  </tr>
+  <tr>
+    <td width="45%" align="center">2^62 - 4^31</td>
+    <td width="23%" align="center">4000 0000</td>
+    <td width="16%" align="center">0</td>
+    <td width="16%" align="center">0</td>
+  </tr>
+  <tr>
+    <td width="45%" align="center">1E20 - (1E20)÷3 
+    - (1E20)÷3 - (1E20)÷3</td>
+    <td width="23%" align="center">1000 00000</td>
+    <td width="16%" align="center">0</td>
+    <td width="16%" align="center">0</td>
+  </tr>
+  <tr>
+    <td width="45%" align="center">√(8E30) - 
+    2√(2E30)</td>
+    <td width="23%" align="center">10000</td>
+    <td width="16%" align="center">0</td>
+    <td width="16%" align="center">0</td>
+  </tr>
+  <tr>
+    <td width="45%" align="center">1E15 - 
+    1E15(cos 10)<sup>2</sup> - 1E15(sin 10)<sup>2</sup></td>
+    <td width="23%" align="center">-100</td>
+    <td width="16%" align="center">0</td>
+    <td width="16%" align="center">0</td>
+  </tr>
+</table>
+<p>註1: 上述 sin 及 cos 計算是在DEG設定下執行，而E是按 EXP。</p>
+
+<p>
+其實計算機的位數是有限(fx-3650P內部有12位)，很多時都是以近似值，不是真確值，特別是無理數及循環小數，更加一定是近似值，使用近似值計算出現輕微的誤差是很正常的事，EL-506V及SC-185計算機同樣存在這種誤差，或者我用上述的第一個例子作詳細一點的說明:</p>
+
+<p>以下紅色的數字為內部隱藏的數值。</p>
+
+<p>fx-3650P 情況 (較新版fx-3650P及MS系列計算機)</p>
+
+<p>2^62 = 4.611686018<font color="#FF0000">39</font> × 10<sup>18</sup></p>
+
+<p>4^31 = 4.611686018<font color="#FF0000">35</font> × 10<sup>18</sup></p>
+
+<p>2^62 - 4^31 =&nbsp; 4.611686018<font color="#FF0000">39</font>
+× 10<sup>18</sup> - 4.611686018<font color="#FF0000">35</font>
+× 10<sup>18</sup> = 4000 0000</p>
+
+<p>很明顯相減的兩數只是最後第十二個位相差4，但由於沒有進行修正，所以2^62 - 4^31的答案為4000 0000。</p>
+
+<p>EL-506V情況:</p>
+
+<p>2^62 = 4.611686018<font color="#FF0000">36</font> × 10<sup>18</sup></p>
+
+<p>4^31 = 4.611686018<font color="#FF0000">40</font> × 10<sup>18</sup></p>
+<p>
+2^62 - 4^31 =&nbsp; 4.611686018<font color="#FF0000">36</font> × 
+10<sup>18</sup> - 4.611686018<font color="#FF0000">40</font>
+× 10<sup>18</sup> = - 4000 0000</p>
+
+<p>
+EL-506V同樣在第十二個位相差4，但由於有進行修正，所以2^62 - 4^31的答案最後變為0</p>
+
+<p>
+　</p>
+
+<p>
+較新版的fx-3650P其實有相關修正功能，為何會出現問題呢？大家再參考以下的兩個fx-3650P的情況:</p>
+
+<p>
+情況一: (有進行修正)</p>
+
+<p>
+√8 - 2√2 ，fx-3650P能正確計出答案0。</p>
+
+<p>
+√8 = 2.828427124<font color="#FF0000">75</font></p>
+
+<p>
+2√2 = 2.828427124<font color="#FF0000">74</font></p>
+
+<p>
+√8 - 2√2 = 2.828427124<font color="#FF0000">75</font> - 2.828427124<font color="#FF0000">74
+</font>= 1×10<sup>-11</sup></p>
+
+<p>
+理論上最後答應不是0，但由於有進行修正，最後答案變為0</p>
+
+<p>
+情況二: (沒有進行修正，E是按EXP)</p>
+
+<p>
+√(8E30) - 
+    2√(2E30)，fx-3650P計算錯誤答案10000</p>
+
+<p>
+√(8E30) = 2.828427124<font color="#FF0000">75</font> × 10<sup>15</sup></p>
+
+<p>
+2√(2E30) = 2.828427124<font color="#FF0000">74</font> × 10<sup>15</sup></p>
+
+<p>
+√(8E30) - 
+    2√(2E30) = 2.828427124<font color="#FF0000">75</font> × 10<sup>15</sup> 
+- 2.828427124<font color="#FF0000">74</font> × 10<sup>15 </sup>
+= 10000</p>
+
+<p>
+最後答案為10000，亦即沒有進行誤差修正。</p>
+
+<p>
+情況一及情況二的計算很相似，最後的減數運算，除了大小(10<sup>15</sup>)外，計算加減的數字亦相同，但情況二卻沒有進行修正，經過很多測試及研究，發現兩數進行加減時，<b>兩數的&#32118;對值若果大於 
+10<sup>12</sup></b>，fx-3650P的自動修正的功能將會消失，亦即是完全沒有進行修正，所以進行一些&#32118;對值很大的數值加減時(e.g. 
+2^62-4^31)，就不能修正為0，因此較容易出現誤差，亦即是說fx-3650P自動修正為0的功能出現缺陷，幸運地問題發生在很大的數值(&#32118;對值大於10<sup>12</sup>)，一般中學的數學計算較少計算這麼大的數值，所以相信這問題的影響較少。</p>
+
+<p>
+　</p>
+
+<p>
+<font color="#FF0000"><b>自動修正為零的利與弊:</b></font></p>
+
+<p>
+修正功能本身其實亦有一定的限制，對於誤差較大的問題，亦無能為力，不同型號的計算機自動修正功能的方法亦有不同，修正最大誤差的範圍亦不同，</p>
+
+<p>
+例如: 100÷3 - 33 - 1÷3 這個算式，fx-3650P(新版本)以不能成功修正為0，而得出錯誤的答案 
+-3.3 × 10<sup>-11</sup>，但Sharp EL-506V卻能得出正確答案 
+0。不過對誤差更大的算式EL-506V亦無能為力。</p>
+
+<p>
+例如: 1000÷3 - 333 - 1÷3，EL-506V亦出現錯誤答案 -3.33
+× 10<sup>-11</sup>。</p>
+
+<p>
+大家可能會覺得Sharp EL-506V會較好，但其實針無兩頭利，較大程度的修正同樣會產生新的問題，看看以下的例子:</p>
+
+<p>
+按 π + 1E-10 - π (亦即是計算 π + 1×10<sup>-10</sup> - π)，正確答案應為1×10<sup>-10</sup>，但EL-506V卻因為修正功能的關係得出錯誤的答案0，相反修正程度較少的fx-3650P卻得出正確答案1×10<sup>-10</sup>。 
+所以從專業的角度看，fx-3650P這方面並非一定較差。誤差修正的技術對計算機(特別是較新的SVPAM或DAL)肯定是重要，已是不爭的事實，現時CASIO較新型號的科學計算機都加入了(例如: 
+fx-50F PLUS及ES系列計算機)，並且沒有好像fx-3650P修正方面的問題，但對於修正程度方面，即修正多少才能獲得最佳的效果，就沒有一個定論。</p>
+
+<p>
+　</p>
+
+<p>
+各位網友若對上述內容有任何意見、補充或疑問，歡迎到<a href="http://webcal.forumcircle.com/viewforum.php?f=1">WebCal論壇</a>留言討論。</p>
+
+<p>
+　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<p>　</p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/correct1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+</html>

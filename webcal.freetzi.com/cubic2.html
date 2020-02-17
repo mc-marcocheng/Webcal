@@ -1,0 +1,196 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/cubic2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:57 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>一元三次方程式(II)(牛頓法)</title><script src="webcal.js"></script></head>
+
+<body bgcolor="#CCFFFF">
+
+
+<p align="center"><u><b><font size="5">一元三次方程式(II)(牛頓法)</font></b></u></p>
+
+
+<p align="left">程式編寫日期: 2011年4月11日</p>
+
+
+<p align="left">程式第一部份使用牛頓法計算一元三次方程式的其中一根，程式會自動執行(第一版需要手動找尋)直至找到答案時，會出現Error 2，這時只要按 → DEL DEL = 即可顯示答案。程式第二部份則用作計算餘下的二根。</p>
+
+
+<p align="left"><a href="Kmemory.html"><font color="#FF0000">如何在程式中加入K字元</font></a><br>
+<br>
+程式第一部份</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr align="center">
+    <td width="12%">0</td>
+    <td width="12%">+</td>
+    <td width="12%">(</td>
+    <td width="12%">K</td>
+    <td width="13%">-</td>
+    <td width="13%">(</td>
+    <td width="13%">A</td>
+    <td width="13%">K</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">y<sup>x</sup></td>
+    <td width="12%">3</td>
+    <td width="12%">+</td>
+    <td width="12%">B</td>
+    <td width="13%">K</td>
+    <td width="13%">x&sup2;</td>
+    <td width="13%">+</td>
+    <td width="13%">C</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">K</td>
+    <td width="12%">+</td>
+    <td width="12%">D</td>
+    <td width="12%">)</td>
+    <td width="13%">x<sup>-1</sup></td>
+    <td width="13%">x<sup>-1</sup></td>
+    <td width="13%">÷</td>
+    <td width="13%">(</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">3</td>
+    <td width="12%">A</td>
+    <td width="12%">K</td>
+    <td width="12%">x&sup2;</td>
+    <td width="12%">+</td>
+    <td width="12%">2</td>
+    <td width="13%">B</td>
+    <td width="13%">K</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">+</td>
+    <td width="12%">C</td>
+    <td width="76%" colspan="6">STO F1</td>
+  </tr>
+  </table>
+<p>程式第二部份</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr align="center">
+    <td width="12%">√</td>
+    <td width="12%">(</td>
+    <td width="12%">(</td>
+    <td width="12%">A</td>
+    <td width="13%">Ans</td>
+    <td width="13%">+</td>
+    <td width="13%">B</td>
+    <td width="13%">)</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">x&sup2;</td>
+    <td width="12%">-</td>
+    <td width="12%">4</td>
+    <td width="12%">A</td>
+    <td width="13%">(</td>
+    <td width="13%">C</td>
+    <td width="13%">+</td>
+    <td width="13%">B</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">Ans</td>
+    <td width="12%">+</td>
+    <td width="12%">A</td>
+    <td width="12%">Ans</td>
+    <td width="13%">x&sup2;</td>
+    <td width="13%">)</td>
+    <td width="13%">)</td>
+    <td width="13%">÷</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">A</td>
+    <td width="12%">+</td>
+    <td width="12%">(</td>
+    <td width="12%">+/-</td>
+    <td width="13%">B</td>
+    <td width="13%">-</td>
+    <td width="13%">A</td>
+    <td width="13%">Ans</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">-</td>
+    <td width="12%">√</td>
+    <td width="12%">(</td>
+    <td width="12%">(</td>
+    <td width="13%">A</td>
+    <td width="13%">Ans</td>
+    <td width="13%">+</td>
+    <td width="13%">B</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">)</td>
+    <td width="12%">x&sup2;</td>
+    <td width="12%">-</td>
+    <td width="12%">4</td>
+    <td width="13%">A</td>
+    <td width="13%">(</td>
+    <td width="13%">C</td>
+    <td width="13%">+</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">B</td>
+    <td width="12%">Ans</td>
+    <td width="12%">+</td>
+    <td width="12%">A</td>
+    <td width="13%">Ans</td>
+    <td width="13%">x&sup2;</td>
+    <td width="13%">)</td>
+    <td width="13%">)</td>
+  </tr>
+  <tr align="center">
+    <td width="12%">)</td>
+    <td width="12%">÷</td>
+    <td width="12%">2</td>
+    <td width="12%">A</td>
+    <td width="52%" colspan="4">STO F2</td>
+  </tr>
+</table>
+<p>　</p>
+<p>例題1: 解 2x&sup3; - x&sup2; 
+- 72x + 36 =0</p>
+<p>按 RCL F1 ALGB 2 = 1 +/- = 72 +/- = 36 =∫dx = = = 出現Error 2時</p>
+<p>再按 <font color="#FF0000">→ DEL DEL =</font> (顯示方程其中一根，可能出現答案數值為6, -6或0.5)</p>
+<p>再按 RCL F2 = (顯示第二個根) 再按 <font color="#FF0000">0</font> = (顯示第三個根) <br>
+<br>
+　</p>
+<p>例題2: 解 x&sup3; - 2x - 1 = 0</p>
+<p>按 RCL F1 ALGB 1 = 0 = 2 = 1 +/- =∫dx = = = 出現Error 2時</p>
+<p>再按 <font color="#FF0000">→ DEL DEL = </font>(顯示方程其中一根)</p>
+<p>再按 RCL F2 = (顯示第二個根) 再按 <font color="#FF0000">0</font> = (顯示第三個根) </p>
+<p>三個根的數為 -1, -0.618033988 及 1.68033989 <br>
+<br>
+　</p>
+<p>例題3: 解 3x&sup3; - 5x&sup2; 
++ x - 4 =0</p>
+<p>按 RCL F1 ALGB 3 = 5 +/- = 1 = 4 +/- =∫dx = = = 出現Error 2時</p>
+<p>再按 <font color="#FF0000">→ DEL DEL =</font> (顯示方程第一根為1.86977421)</p>
+<p>再按 RCL F2 = (顯示Error 2，表示餘下兩根無實解)<br>
+<br>
+　</p>
+<p>例題4: 解 x&sup2; - 7x + 12 = 0 <br>
+<br>
+按 2ndF DEL <font color="#FF0000">(必要)</font> 再按 RCL F2 ALGB 1 = 7 +/- = 12 = (顯示第一個根為4) </p>
+<p>再按 <font color="#FF0000">0</font> = (顯示第二個根為3)<br>
+<br>
+註1: 若果第二個根及第三個根為實數重根(特別是三重根情況)，執行程式第二部份有可能出現 Error 2，這是計算誤差造成。</p>
+<p>註2: 使用程式第一部份，可以設定牛頓法的起始值，方法是先按 ON/C + 數值 =，但這個步驟並非必要，不過萬一在計算第一個根時無法得出答案(Error 
+2)，就必需設定一個新的數值。</p>
+<p>註3: 若果第一個根為重根，誤差可能會較大。<br>
+　</p>
+<p>　</p>
+<p><a href="506Vmain.html">返回EL-506程式集主頁</a></p>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/cubic2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:57 GMT -->
+</html>

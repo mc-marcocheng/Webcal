@@ -1,0 +1,60 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/miller_rabin.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:00 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>米勒-拉賓檢驗</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">米勒-拉賓檢驗</font></b></u></p>
+<p align="left">程式編寫日期: 2008年3月19日</p>
+<p>程式 (176 bytes)</p>
+<p>Mem clear: ?→B: B-1→Y: ?→A: Fix0: </p>
+<p>Lbl 0: Y<span lang="en">÷2 - . 5: Rnd: Y=2Ans <font color="#FF0000">=&gt;</font> 
+X + 1→X <font color="#FF0000">=&gt;</font> Y÷2→Y <font color="#FF0000">=&gt;</font> 
+Goto 0:</span></p>
+<p>Lbl 1: 1→C: X - 1→X: 0&gt;X <font color="#FF0000">=&gt;</font> Goto 4: 2^XY→M:&nbsp; A→D: Lbl 2:</p>
+<p>D ÷ B - . 5: Rnd: D - BAns→D: M ÷ 2→M: Rnd:</p>
+<p>M=Ans <font color="#FF0000">=&gt;</font> Goto 3: DC <font color="#FF0000">=&gt;</font> 
+DC ÷ B - . 5 <font color="#FF0000">=&gt;</font> Rnd:</p>
+<p>DC - BAns→C: . 5<font color="#FF0000">M-</font>: Lbl 3: D<sup>2</sup>→D: M <font color="#FF0000">=&gt;</font> Goto 
+2: </p>
+<p>C≠B^(X≠0) <font color="#FF0000">=&gt;</font> C ≠ B - 1 <font color="#FF0000">=&gt;</font> 
+Goto 1: Lbl 4: Norm 1</p>
+
+<p align="left">　</p>
+<p>例題1: 試用米勒-拉賓檢驗，檢測 3127 是否質數。 </p>
+<p>按 Prog 1 再按 3127 EXE (輸入檢查的數值) 2 EXE (嘗試A=2進行檢測，顯示1為合成數)</p>
+<p>　</p>
+<p>例題2: 試用米勒-拉賓檢驗，檢測 37 是否質數。 </p>
+<p>按 Prog 1 再按 37 EXE (輸入檢查的數值) 2 EXE (嘗試A=2進行檢測，顯示0表示37可能為質數)</p>
+<p>　</p>
+<p>參考資料:</p>
+<p><a href="http://planetmath.org/encyclopedia/MillerRabinPrimeTest.html">
+http://planetmath.org/encyclopedia/MillerRabinPrimeTest.html</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Miller-Rabin_primality_test">
+http://en.wikipedia.org/wiki/Miller-Rabin_primality_test</a></p>
+<p>　</p>
+<p>
+
+<a href="3650.html">返回 fx-3650P及SC-185
+程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/miller_rabin.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:00 GMT -->
+</html>

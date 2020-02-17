@@ -1,0 +1,175 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/normalLine.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:52 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>直線的一般式轉換為法線式</title><script src="webcal.js"></script></head>
+
+<body bgcolor="#CCFFFF">
+
+
+<p align="center" ><u><b><font size="5">直線的一般式轉換為法線式</font></b></u></p>
+
+
+<p>形式: 將一般式Ax + By + C = 0 轉為法線式 x cosθ+ y sinθ – p = 0</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr align="center">
+    <td width="12%">(</td>
+    <td width="12%" >B</td>
+    <td width="12%" >10<sup>x</sup></td>
+    <td width="12%" >+/-</td>
+    <td width="13%" >8</td>
+    <td width="13%" >0</td>
+    <td width="13%" >-</td>
+    <td width="13%" >C</td>
+  </tr>
+  <tr align="center">
+    <td width="12%" >)</td>
+    <td width="12%" >A</td>
+    <td width="12%" >÷</font></td>
+    <td width="12%" >(</td>
+    <td width="13%" >A</td>
+    <td width="13%" >x&sup2;</font></td>
+    <td width="13%" >+</td>
+    <td width="13%" >B</td>
+  </tr>
+  <tr align="center">
+    <td width="12%" >x&sup2;</font></td>
+    <td width="12%" >)</td>
+    <td width="12%" >，</td>
+    <td width="12%" >(</td>
+    <td width="13%" >B</td>
+    <td width="13%" >10<sup>x</sup></td>
+    <td width="13%" >+/-</td>
+    <td width="13%" >8</td>
+  </tr>
+  <tr align="center">
+    <td width="12%" >0</td>
+    <td width="12%" >-</td>
+    <td width="12%" >C</td>
+    <td width="12%" >)</td>
+    <td width="13%" >B</td>
+    <td width="13%" >÷</font></td>
+    <td width="13%" >(</td>
+    <td width="13%" >A</td>
+  </tr>
+  <tr align="center">
+    <td width="12%" >x&sup2;</font></td>
+    <td width="12%" >+</td>
+    <td width="12%" >B</td>
+    <td width="12%" >x&sup2;</font></td>
+    <td width="13%" >)</td>
+    <td width="39%"  colspan="3">STO F1 或 F2</td>
+  </tr>
+  </table>
+<p>註: 若C=0時，程式會顯示出一個很少的p值(例如:10<sup>-80</sup>)，此時p實際上是等於零。<br>
+<br>
+例題1: 將 4x- 5y + 6 = 0 以法線方程式表示。<br>
+<br>
+按 4 STO A 5 +/- STO B 6 STO C RCL F1 MATH 1 (顯示r=0.937042571，即是p=0.937042571)<br>
+再按 2ndF Exp (顯示θ=128.6598083<font face="新細明體">&#730;</font>)</p>
+
+
+<p>所以法線方程為 x cos128.66<font face="新細明體">&#730;</font> + y sin128.66<font face="新細明體">&#730;</font> – 0.93704 = 0<br>
+　</p>
+
+
+<p>另一種輸入方法:</p>
+
+
+<p>按 RCL F1 ALGB 4 = 5 +/- =&nbsp; 6 = (這時會出現Error 1) 再按 <font face="新細明體">→
+</font>MATH 1 (顯示r=0.937042571，即是p=0.937042571)<br>
+再按 2ndF Exp (顯示θ=128.6598083<font face="新細明體">&#730;</font>)</p>
+
+
+<p>所以法線方程為 x cos128.66<font face="新細明體">&#730;</font> + y sin128.66<font face="新細明體">&#730;</font> – 0.93704 = 0<br>
+　</p>
+
+
+<p>註: 此例題是在DEG MODE之下執行。<br>
+<br>
+<br>
+例題2: 將 3x - 4y = 0以法線方程式表示。</p>
+
+
+<p>
+<br>
+按 3 STO A 4 +/- STO B 0 STO C RCL F1 MATH 1 (顯示r=8 x 10<sup>-81</sup>，即是p=0)<br>
+再按 2ndF Exp (顯示θ=126.8698976<font face="新細明體">&#730;</font>)<br>
+所以法線方程為 x cos126.87<font face="新細明體">&#730;</font> + y sin126.87<font face="新細明體">&#730;</font> = 0</p>
+
+
+<p>另一種輸入方法:</p>
+
+
+<p>按 RCL F1 ALGB 3= 4 +/- =&nbsp; 0 = (這時會出現Error 1) 再按 <font face="新細明體">→
+</font>MATH 1 (顯示r=8 x 10<sup>-81</sup>，即是p=0)<br>
+再按 2ndF Exp (顯示θ=126.8698976<font face="新細明體">&#730;</font>)</p>
+
+
+<p>所以法線方程為 x cos126.87<font face="新細明體">&#730;</font> + y sin126.87<font face="新細明體">&#730;</font> = 0</p>
+
+
+<p>
+<br>
+註: 此例題是在DEG MODE之下執行。<br>
+　</p>
+
+
+<p>　</p>
+
+
+<p><a href="506Vmain.html">返回EL-506程式集主頁</a></p>
+
+
+<p>相關資料:</p>
+
+
+<p>
+<a href="d2form1.html">兩點的距離、斜率及y截距(兩點式)(I)</a>
+(Distance, slope and y-intercept I)</p>
+
+<p>
+<a href="distanceslope.html">兩點的距離、斜率及y截距(兩點式)(II)
+</a>(Distance and slope and y-intercept II)</p>
+
+<p> 
+<a href="twopoint.html">直線方程 
+(兩點式) (應用內置線性回歸功能 )</a>
+ (Equation of straight
+line: Two points Form)</p>
+<p> 
+<a href="angle2lines.html">兩直線間夾角</a>
+(Angle between two lines)</p>
+
+<p>
+
+<a href="sectionformula3.html">分界點及直線方程
+ (應用內置線性回歸功能 
+)</a>  
+(Section formula and equation of straight line)</p>
+
+<p>
+<a href="sectionformula.html">分界點</a>
+(Section formula) </p>
+
+<p>
+<a href="distancePL.html">直線與點的距離</a> (Distance
+between line and point)</p>
+
+<p>
+<a href="sectionformula2.html">分界點及點與直線的距離</a>
+(Section formula and Distance between point and line)</p>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/normalLine.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:52 GMT -->
+</html>

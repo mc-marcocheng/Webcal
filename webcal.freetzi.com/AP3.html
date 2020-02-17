@@ -1,0 +1,46 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/AP3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:03 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>差數列(III)(應用內置二次回歸功能)</title><script src="webcal.js"></script></head>
+
+<body bgcolor="#CCFFFF">
+
+
+<p align="center"><u><b><font size="5">差數列(III)(應用內置二次回歸功能)</font></b></u></p>
+<p>編寫日期: 2006年3月22日</p>
+<p>等差數列的首n項的和為: S(n) = (n/2)[2a + (n – 1)d]，其實與線性回歸的方程 y = a + bx + cx2 
+是屬於同一類型方程。因此某些等差數列的問題，可以利用二次回歸功能計算答案，請參看以下例題。</p>
+<p>　</p>
+<p>例題1: 等差數列中，若S(3)=24 及 S(6)=54，求S(9)。</p>
+<p>按 2ndF MODE 3 2 <font color="#800080">(進入二次回歸模式)</font> <font color="#FF0000">
+0 (x,y) 0 DATA</font> <font color="#800080">(必要) </font></p>
+<p>3 (x,y) 24 DATA 6 (x,y) 54 DATA</p>
+<p>再按 9 2ndF y’ <font color="#800080">(顯示S(9)為90)</font> </p>
+<p>　</p>
+<p>例題2:  等比數列 1 + 3 + 5 + 7 + …….中需要取多少項，則其和等於100。</p>
+<p>按 2ndF MODE 3 2 <font color="#800080">(進入二次回歸模式)</font> <font color="#FF0000">
+0 (x,y) 0 DATA</font> <font color="#800080">(必要)</font></p>
+<p>1 (x,y) 1 DATA 2 (x,y) 4 DATA <font color="#800080">(4為首2項的和)</font></p>
+<p>再按 100 2ndF x’ <font color="#800080">(顯示項數為 10)</font> 再按 2ndF ←,→
+<font color="#800080">(顯示-10需要捨去)</font></p>
+<p>計算完結後，按 MODE 0 返回正常計算模式。</p>
+<p>註1: y’ 用於為計算首n項的和(S(n))，x’則用於計算項數(n)。</p>
+<p>註2: 若果你已在MODE 3 2的模式，重複計算相似問題，則可按2ndF CA代替再按2ndF MODE 3 2<br>
+　</p>
+<p>　</p>
+<p><a href="506Vmain.html">返回EL-506程式集主頁</a></p>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/AP3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:03 GMT -->
+</html>

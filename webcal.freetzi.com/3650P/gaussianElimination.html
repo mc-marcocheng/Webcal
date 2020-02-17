@@ -1,0 +1,179 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/gaussianElimination.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:14 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>聯立三元一次方程(高斯消去法)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">聯立三元一次方程(高斯消去法)</font></b></u></p>
+<p>更新日期: 2012年3月29日</p>
+<p>程式利用高斯消去法(Gaussian Elimination)，計算及簡化方程式組所代表的3×4增廣矩陣(3×4 
+augmented matrix)，透過這個矩陣可直接得出聯立三元一次方程的唯一解，或很容易決斷無解或求得無限解的通解。</p>
+<p>簡化增廣矩陣為:</p>
+<p><img border="0" src="Image20.gif" width="100" height="74"></p>
+<p>程式會計算出a, b, c, d, e, f, g, h及i的值。</p>
+<p>　</p>
+<p><font color="#FF0000">程式需要在 REG Quad 模式下執行，因此在輸入程式前請先按 Mode Mode 2 → 3 進入REG Quad模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數(<font color="#0000FF">Σx<sup>3</sup></font> 按 Shift 1 → → 
+1，<font color="#0000FF">Σy</font> 按 Shift 1 → 2)，而<font color="#FF0000"><sup>3</sup>√</font>是按shift 
+x<sup>3</sup>。</p>
+<p>程式(259 bytes)</p>
+<p>Stat clear: ?→M: ?→X: ?→Y:<sup> <font color="#FF0000">3</font></sup><font color="#FF0000">√</font>X┘M
+<font color="#FF0000">,</font> Y÷M <font color="#FF0000">DT</font>:
+</p>
+<p>?→A: A┘M→A: ?→M: ?→X: ?→Y: ?→D: X - M<font color="#0000FF">Σx<sup>3</sup></font>→B:</p>
+<p>Y - M<font color="#0000FF">Σy</font>→C: D - MA→D: ?→M: ?→X: ?→Y: X - M<font color="#0000FF">Σx<sup>3</sup></font>→X:</p>
+<p>Y - M<font color="#0000FF">Σy</font>→Y: M: ?→M: M - AnsA→M: B
+<font color="#FF0000">=&gt;</font> Goto 0:</p>
+<p>X→B: C + Y→C: D + M→D: Lbl 0: B <font color="#FF0000">=&gt;</font> Goto 1:</p>
+<p> <font color="#0000FF">Σx<sup>3</sup></font>◢ Y=0 <font color="#FF0000">=&gt;</font> 
+M + D→M: Y=0 <font color="#FF0000">=&gt; </font>C→Y: Goto 2:</p>
+<p>Lbl 1:  C┘B→C: D┘B→D: 1→B: Y - XC→Y: M - XD→M: 0◢</p>
+<p>Lbl 2: Y=0 <font color="#FF0000">=&gt;</font> Goto 3: M┘Y→M: 1→Y: D - CM→D: 
+0→C:</p>
+<p>Lbl 3: Ans<font color="#0000FF">Σy</font> - <font color="#0000FF">Σx<sup>3</sup></font>CB◢ A - <font color="#0000FF">Σx<sup>3</sup></font>DB - <font color="#0000FF">
+Σy</font>MY◢ B◢ C◢ </p>
+<p>D◢ 0◢ Y◢ M</p>
+<p>　</p>
+<p>例題1: 化簡下列方程組的增廣矩陣及因此解方程</p>
+<p><img border="0" src="Image75.gif" width="98" height="67"></p>
+<p>按 
+Prog 1&nbsp; 再按 1 EXE 1 EXE 1 EXE 6 EXE 1 EXE -1 EXE 2 EXE 5 EXE </p>
+<p>1 EXE 3 EXE 1 EXE 10 EXE (顯示0) EXE (顯示0) EXE (顯示1)</p>
+<p>EXE (顯示1) EXE (顯示0) EXE (顯示2)</p>
+<p>EXE (顯示0) EXE (顯示1) EXE (顯示3)</p>
+<p>即化簡增廣矩陣為:</p>
+<p><img border="0" src="Image28.gif" width="91" height="74"></p>
+<p>等價方程組為:</p>
+<p><img border="0" src="Image27.gif" width="109" height="74"></p>
+<p>所以方程式的解為 x=1, y=2 及 z=3</p>
+<p>　</p>
+<p>例題2: 化簡下列方程組的增廣矩陣及因此解方程</p>
+<p><img border="0" src="Image24.gif" width="115" height="74"></p>
+<p>按 
+Prog 1&nbsp; 再按 1 EXE 0 EXE 10 EXE 5 EXE 3 EXE 1 EXE - 4 EXE -1 EXE </p>
+<p>4 EXE 1 EXE 6 EXE 1 EXE (顯示0) EXE (顯示10) EXE (顯示5)</p>
+<p>EXE (顯示1) EXE (顯示 - 34) EXE (顯示 -16)</p>
+<p>EXE (顯示0) EXE (顯示0) EXE (顯示 -3)</p>
+<p>即化簡增廣矩陣為:</p>
+<p><img border="0" src="Image26.gif" width="130" height="74"></p>
+<p>等價方程組為:</p>
+<p><img border="0" src="Image25.gif" width="133" height="74"></p>
+<p>由於 0= - 3表示方程組出現矛盾，所以方程組無解。</p>
+<p>　</p>
+<p>例題3: 化簡下列方程組的增廣矩陣及因此解方程</p>
+<p><img border="0" src="Image21.gif" width="132" height="74"></p>
+<p>按 
+Prog 1&nbsp; 再按 1 EXE 2 EXE - 1 EXE 2 EXE 2 EXE 5 EXE 2 EXE -1 EXE </p>
+<p>7 EXE 17 EXE 5 EXE - 1 EXE (顯示0) EXE (顯示 -9) EXE (顯示12)</p>
+<p>EXE (顯示1) EXE (顯示 4) EXE (顯示 - 5)</p>
+<p>EXE (顯示0) EXE (顯示0) EXE (顯示 0)</p>
+<p>即化簡增廣矩陣為:</p>
+<p><img border="0" src="Image23.gif" width="110" height="74"></p>
+<p>等價方程組為:</p>
+<p><img border="0" src="Image22.gif" width="118" height="74"></p>
+<p>令 z=t，得通解為 x = 12 + 9t, y= - 5 - 4t 及 z = t (無限多組解)</p>
+<p>　</p>
+<p>例題4: 化簡下列方程組的增廣矩陣及因此解方程(以k表示)</p>
+<p><img border="0" src="Image188.gif" width="139" height="75"></p>
+<p>因常數項包含一個一次未知代數項，可以分兩次執行程式(沒有k及有k常數)求出答案，再將答案整合即可。方程可寫為:</p>
+<p><img border="0" src="Image191.gif" width="139" height="75"></p>
+<p>先計算沒有k常數</p>
+<p>按 
+Prog 1&nbsp; 再按 1 EXE 1 EXE 1 EXE 6 EXE 1 EXE -1 EXE 2 EXE 5 EXE </p>
+<p>1 EXE 3 EXE 1 EXE 10 EXE (顯示0) EXE (顯示0) EXE (顯示1)</p>
+<p>EXE (顯示1) EXE (顯示0) EXE (顯示2)</p>
+<p>EXE (顯示0) EXE (顯示1) EXE (顯示3)</p>
+<p>再計算有k常數</p>
+<p>按 
+Prog 1&nbsp; 再按 1 EXE 1 EXE 1 EXE 0 EXE 1 EXE -1 EXE 2 EXE 2 EXE </p>
+<p>1 EXE 3 EXE 1 EXE - 2 EXE (顯示0) EXE (顯示0) EXE (顯示1，亦即是 k )</p>
+<p>EXE (顯示1) EXE (顯示0) EXE (顯示-1，亦即是 - k )</p>
+<p>EXE (顯示0) EXE (顯示1) EXE (顯示0，亦即是 0k )</p>
+<p>即化簡增廣矩陣為:</p>
+<p><img border="0" src="Image192.gif" width="123" height="75"></p>
+<p>所以方程解為 x = 1 + k, y = 2 - k, z = 3</p>
+<p>　</p>
+<p>註1: 程式限制為第一個輸入數值不能等於0，否則會出現Math ERROR。</p>
+<p>註2: 第二及第三個數值不可以直接輸入分數，否則可能出現MATH ERROR，若要輸入分數，請用除號代替分號<font face="新細明體">，若果需要直接輸入分數，請使用網頁尾附錄的SD模式版本程式。</font></p>
+<p>註3: 例題4分兩次輸入的方法只適用於未知代數出現在常數項(最後的欄內)，若未知代數只出現在其它的欄內(例如: 
+z係數的欄)，方法未必適用，但依然可以將包含未知代數的欄調到取後變成最後的欄，以例題4的方法輸入化簡矩陣，但所求得的矩陣未必是完整解答。</p>
+
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+<p>
+　</p>
+<p>
+　</p>
+<hr><hr>
+<p><font color="#0000FF">舊版程式</font></p>
+<p>程式編寫日期: 2008年7月16日</p>
+<p>程式利用高斯消去法(Gaussian Elimination)，計算及簡化方程式組所代表的3×4增廣矩陣(3×4 
+augmented matrix)，透過這個矩陣可直接得出聯立三元一次方程的唯一解，或很容易決斷無解或求得無限解的通解。</p>
+<p>簡化增廣矩陣為:</p>
+<p><img border="0" src="Image20.gif" width="100" height="74"></p>
+<p>程式會計算出a, b, c, d, e, f, g, h及i的值。</p>
+<p>　</p>
+<p><font color="#FF0000">程式需要在 REG Quad 模式下執行，因此在輸入程式前請先按 Mode Mode 2 → 3 進入REG Quad模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數(<font color="#0000FF">Σx<sup>3</sup></font> 按 Shift 1 → → 
+1，<font color="#0000FF">Σy</font> 按 Shift 1 → 2)，而<font color="#FF0000"><sup>3</sup>√</font>是按shift 
+x<sup>3</sup>。</p>
+<p>程式(264 bytes)</p>
+<p>Stat clear: ?→M: ?→X: ?→Y:<sup> <font color="#FF0000">3</font></sup><font color="#FF0000">√</font>X┘M
+<font color="#FF0000">,</font> Y÷M <font color="#FF0000">DT</font>:
+</p>
+<p>?→A: A┘M→A: ?→M: ?→X: ?→Y: ?→D: X - M<font color="#0000FF">Σx<sup>3</sup></font>→B:</p>
+<p>Y - M<font color="#0000FF">Σy</font>→C: D - MA→D: ?→M: ?→X: ?→Y: X - M<font color="#0000FF">Σx<sup>3</sup></font>→X:</p>
+<p>Y - M<font color="#0000FF">Σy</font>→Y: M: ?→M: M - AnsA→M: B
+<font color="#FF0000">=&gt;</font> Goto 0:</p>
+<p>X→B: C + Y→C: D + M→D: Lbl 0: B=0 <font color="#FF0000">=&gt;</font> Goto 1:</p>
+<p>C┘B→C: D┘B→D: 1→B: Y - XC→Y: M - XD→M: 0→X◢</p>
+<p>Lbl 1: Ans <font color="#FF0000">=&gt;</font> <font color="#0000FF">Σx<sup>3</sup></font>◢ 
+Y<sup>2</sup> + B<sup>2</sup> <font color="#FF0000">=&gt;</font> Goto 2: C→Y: M + 
+D→M:</p>
+<p>Lbl 2: Y=0 <font color="#FF0000">=&gt;</font> Goto 3: M┘Y→M: 1→Y:D - CM→D: 0→C◢ </p>
+<p>Lbl 3: Ans <font color="#FF0000">=&gt;</font>
+<font color="#0000FF">Σy</font> - <font color="#0000FF">Σx<sup>3</sup></font>CB◢ A - <font color="#0000FF">Σx<sup>3</sup></font>DB - <font color="#0000FF">
+Σy</font>MY◢ B◢ C◢ </p>
+<p>D◢ X◢ Y◢ M</p>
+<p>　</p>
+<p><b><font color="#0000FF">附錄程式</font></b> ( 267 bytes，可直接輸入分數係數)</p>
+<p><font color="#FF0000">程式需要在 SD 模式下執行，因此在輸入程式前請先按 Mode Mode 1 進入SD模式。</font></p>
+<p><font color="#FF0000">注意</font> : 藍色的英文字為統計模式中的變數(<font color="#0000FF">Σx</font> 按 shift 1 
+2 ，<font color="#0000FF">n</font>&nbsp; shift 1 3)</p>
+<p>Stat clear: ?→M: ?→X: ?→Y: <font color="#FF0000">;</font> Y÷M - 1 <font color="#FF0000">DT</font>: 
+X<span lang="en">÷M <font color="#FF0000">DT</font>:</span></p>
+<p>?→A: A┘M→A: ?→M: ?→X: ?→Y: ?→D: X - M<font color="#0000FF">Σx</font>→B:</p>
+<p>Y - M<font color="#0000FF">n</font>→C: D - MA→D: ?→M: ?→X: ?→Y: X - M<font color="#0000FF">Σx</font>→X:</p>
+<p>Y - M<font color="#0000FF">n</font>→Y: M: ?→M: M - AnsA→M: B
+<font color="#FF0000">=&gt;</font> Goto 0:</p>
+<p>X→B: C + Y→C: D + M→D: Lbl 0: B=0 <font color="#FF0000">=&gt;</font> Goto 1:</p>
+<p>C┘B→C: D┘B→D: 1→B: Y - XC→Y: M - XD→M: 0→X◢</p>
+<p>Lbl 1: Ans <font color="#FF0000">=&gt;</font> <font color="#0000FF">Σx</font>◢ 
+Y<sup>2</sup> + B<sup>2</sup> <font color="#FF0000">=&gt;</font> Goto 2: C→Y: M + 
+D→M:</p>
+<p>Lbl 2: Y=0 <font color="#FF0000">=&gt;</font> Goto 3: M┘Y→M: 1→Y: D - CM→D: 0→C◢  </p>
+<p>Lbl 3: Ans <font color="#FF0000">=&gt;</font>
+<font color="#0000FF">n</font> - <font color="#0000FF">Σx</font>CB◢ A - <font color="#0000FF">Σx</font>DB - <font color="#0000FF">n</font>MY◢ 
+B◢ C◢ D◢ </p>
+<p>X◢ Y◢ M</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/gaussianElimination.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:17 GMT -->
+</html>

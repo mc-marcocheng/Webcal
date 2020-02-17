@@ -1,0 +1,63 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/primeFactor4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:58 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>質因子連乘式(III)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">質因子連乘式(IV)</font></b></u></p>
+
+<p>
+程式是由<font color="#FF0000">網友mike提供</font>，與<a href="primeFactor.html">質因子連乘式(I)</a>程式比較，這個版本的程式除了可以顯示質因子，還可以顯示質因子的冪數，所以較為方便。
+另外這個程式會較長，但速度會比<a href="primeFactor3.html">質因子連乘式(III)</a>快。</p>
+
+<p>
+網友提供程式日期: 2008年1月26日</p>
+<p>
+注意: 藍色程式碼 <font color="#0000FF">&#730;</font> 是按 <font color="#FF0000"> <sup>
+    o,,,</sup></font></p>
+<p>程式 (205 bytes)</p>
+<p>0→C: ?→A: 1→M: Fix 0: Lbl 0: M=5 <font color="#FF0000">=&gt;</font> Goto 1: 1<font color="#FF0000">M+</font>:</p>
+<p>A÷M: Rnd: A-MAns <font color="#FF0000">=&gt;</font> Goto 0: Lbl 9: C+1→C: A÷M→A:</p>
+<p>A÷M: Rnd: A=MAns <font color="#FF0000">=&gt;</font> Goto 9: M<sup>o</sup> 
++C÷60<sup>o</sup>◢ 0→C: </p>
+<p>Goto 0: Lbl 1: MM&gt;A <font color="#FF0000">=&gt;</font> Goto 7: 2<font color="#FF0000">M+</font>: 
+A÷M: Rnd:</p>
+<p>A=MAns <font color="#FF0000">=&gt;</font> Goto 2: 4<font color="#FF0000">M+</font>: 
+A÷M: Rnd: A-MAns <font color="#FF0000">=&gt;</font> Goto 1: </p>
+<p>Lbl 2: C+1→C: A÷M→A: A÷M: Rnd: AnsM=A <font color="#FF0000">=&gt;</font> Goto 2: </p>
+<p>M<sup>o</sup> +C÷60<sup>o</sup>◢ 
+0→C: M÷6 - . 5: Rnd: 6Ans-1→M: Goto 1: </p>
+<p>Lbl 7: A-1 <font color="#FF0000">=&gt;</font> A<sup>o</sup>1<sup>o</sup> : Norm 1 <br>
+　</p>
+<p>例題: 求 352的質因子連乘式。</p>
+<p>按  Prog 1 再按 352 EXE (顯示 2&#730;5&#730;0，即是質因子為2<sup>5</sup>) </p>
+<p>EXE (顯示 11&#730;1&#730;0及Norm 1，表示計算完結最後質因子為11)</p>
+<p>所以 352 = 2<sup>5</sup> ×  11</p>
+<p>　</p>
+<p>註1: 輸入的數值必須為正整數，否則計算會錯誤，程式計算的數值要小於 9999 9999 99。</p>
+<p>註2: 程式完結時會顯示Norm 1。</p>
+<p>註3: 程式會嘗試 2, 3 ,5 因子，之後每三個單數，只會嘗試二個單數(三倍數的單數不嘗試)，由於嘗試數目較少，所以速度較快(特別是大質因子的情況)</p>
+<p>　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/primeFactor4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:58 GMT -->
+</html>

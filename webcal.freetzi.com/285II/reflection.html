@@ -1,0 +1,80 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/285II/reflection.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:22 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>坐標轉換</title>
+<meta name="Microsoft Theme" content="cnlove 011">
+<script src="webcal.js"></script></head>
+
+<body background="di1.gif" bgcolor="#FFDEE0" text="#000000" link="#FF3399" vlink="#9933FF" alink="#CC0099">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><font size="5">坐標轉換-反射</font></b></u></p>
+<p>程式 (52字):</p>
+<p>2 ( A<sup>2</sup> + B<sup>2</sup> )<sup>-1</sup> ( ( CA + B<sup>2</sup>X - 
+ABY ) cos( sin<sup>-1</sup>( X<sub>1</sub> ) ) + X<sub>1</sub>CB - X<sub>1</sub>ABX 
++ X<sub>1</sub>A<sup>2</sup>Y ) </p>
+<p>- X cos( sin<sup>-1</sup>( X<sub>1</sub> ) ) - 
+YX<sub>1</sub> </p>
+<p align="left">SAVE PROG1 或 PROG2 <b><font color="#0000FF">(SRP-285II計數機)</font></b></p>
+<p align="left">STO EQN <b><font color="#0000FF">(HP 30S計數機)</font></b></p>
+<p><span style="font-family: 新細明體">註</span><span lang="EN-US">: </span>
+<span style="font-family: 新細明體">反射軸的直線方程為</span><span lang="EN-US">: AX + BY = C</span></p>
+<p><span lang="EN-US">&nbsp;</span></p>
+<p><span style="font-family: 新細明體">例題</span><span lang="EN-US">1: </span>
+<span style="font-family: 新細明體">求點</span><span lang="EN-US"> (5 , 6) </span>
+<span style="font-family: 新細明體">沿</span><span lang="EN-US"> x = 3 </span>
+<span style="font-family: 新細明體">反射的坐標。</span></p>
+<p>SRP-285II 按法:<span lang="EN-US">&nbsp;</span></p>
+<p>按&nbsp; <font color="#FF0000">2nd 
+CL-VAR</font>&nbsp; P/V RCL，再按  ← 選擇正確的PROG，再按 = = <span lang="EN-US">&nbsp;</span></p>
+<p> <span lang="EN-US">1 = = 3 = 5 = 6 = = (</span><span style="font-family: 新細明體">顯示</span><span lang="EN-US">x</span><span style="font-family: 新細明體">坐標為</span><span lang="EN-US">1) 
+↑1= (</span><span style="font-family: 新細明體">顯示</span><span lang="EN-US">y</span><span style="font-family: 新細明體">坐標為</span><span lang="EN-US">6)
+</span></p>
+<p align="left">　</p>
+<p align="left">HP 30S 按法:</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+按&nbsp; <font color="#FF0000">2nd 
+CL-VAR</font> VRCL，再按 ← = = <span lang="EN-US">1 = = 3 = 5 = 6 = = (</span><span style="font-family: 新細明體">顯示</span><span lang="EN-US">x</span><span style="font-family: 新細明體">坐標為</span><span lang="EN-US">1) 
+ 
+</span></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+<span lang="EN-US">↑1= (</span><span style="font-family: 新細明體">顯示</span><span lang="EN-US">y</span><span style="font-family: 新細明體">坐標為</span><span lang="EN-US">6)
+</span></p>
+<p> 　</p>
+<p><span style="font-family: 新細明體">例題</span><span lang="EN-US">2: </span>
+<span style="font-family: 新細明體">求點</span><span lang="EN-US"> (1, 2) </span>
+<span style="font-family: 新細明體">沿</span> <span style="font-family: 新細明體">直線</span><span lang="EN-US"> 
+3x + 4y = 5 </span><span style="font-family: 新細明體">反射的坐標。</span></p>
+<p>SRP-285II 按法:<span lang="EN-US">&nbsp;</span></p>
+<p>按&nbsp; <font color="#FF0000">2nd 
+CL-VAR</font>&nbsp; P/V RCL，再按  ← 選擇正確的PROG，再按 = = <span lang="EN-US">&nbsp;</span></p>
+<p> <span lang="EN-US">3 = 4 = 5 = 1 = 2 = = (</span>0表示計x坐標的值，<span style="font-family: 新細明體">顯示</span><span lang="EN-US">x</span><span style="font-family: 新細明體">坐標為</span><span lang="EN-US"> 
+-0.44)  </span></p>
+<p> <span lang="EN-US">↑1 = (</span>1表示計y坐標的值，<span style="font-family: 新細明體">顯示</span><span lang="EN-US">y</span><span style="font-family: 新細明體">坐標為</span><span lang="EN-US">0.08)</span></p>
+<p align="left">HP 30S 按法:</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+按&nbsp; <font color="#FF0000">2nd 
+CL-VAR</font> VRCL，再按 ← = = </p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+<span lang="EN-US">3 = 4 = 5 = 1 = 2 = = (</span>0表示計x坐標的值，<span style="font-family: 新細明體">顯示</span><span lang="EN-US">x</span><span style="font-family: 新細明體">坐標為</span><span lang="EN-US"> 
+-0.44)  </span></p>
+<p> <span lang="EN-US">↑1 = (</span>1表示計y坐標的值，<span style="font-family: 新細明體">顯示</span><span lang="EN-US">y</span><span style="font-family: 新細明體">坐標為</span><span lang="EN-US">0.08)</span></p>
+<p> 　</p>
+<p><a href="https://err.freewebhostingarea.com/404.html">返回SRP-285II及HP 30S程式集</a></p>
+<p>　</p>
+<p>　</p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/285II/reflection.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:23 GMT -->
+</html>

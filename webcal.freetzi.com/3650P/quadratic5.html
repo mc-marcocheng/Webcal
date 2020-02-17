@@ -1,0 +1,163 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quadratic5.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>一元二次方程特別版</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">一元二次方程特別版</font></b></u></p>
+<p>程式編日期:2005年12月26日 (更新日期: 2007年9月3日)</p>
+<p>
+第一版程式輸入係數為整數或分數準確度較高，若果輸入小數係數，準確度有可能會減少一點，所以求得的小數答案(循環小數)，有可能不能轉化為分數，而特別版可以解決這方面的問題。</p>
+<p>　</p>
+<p>註: 若果想測試你的一元二次方程程式的準確度是否很高，可以嘗試輸入以下有小數係數的一元二次方程，看看可否將0.333333333的答案轉化為(按 a 
+b/c)分數 1/3 
+.</p>
+<p>測試方程: 0.3x<sup>2</sup> - 3.1x + 1 = 0</p>
+<p>　</p>
+<p><b><font color="#FF0000">注意:若果你不用計複數根，為被免混淆及使用方便，建議在Comp Mode之下輸入程式(先按Mode 
+1)。若要計複數根，先進入複數模式(先按Mode 2)，然後輸入程式，當執行程式時，程式會自動進入複數模式。</font></b></p>
+<p>　</p>
+<p><font color="#FF0000">注意</font> : 若果不需要記存兩根，程式中<font color="#008000">綠色</font>部份可以不輸入。</p>
+<p><font color="#0000FF">第一個程式</font> (45 / <font color="#008000">41</font> 
+bytes，可求兩根及判別式)</p>
+<p>?→M: ?→B: ?→C: B<sup>2</sup> - 4MC→C: </p>
+<p>(√C - B) ÷ 2M<font color="#008000">→</font><font color="#008000">A</font>◢ (- √C - B) 
+÷ 2M<font color="#008000">→B</font></p>
+<p>　</p>
+<p><font color="#0000FF">第二個程式(分數版)</font> (46 /<font color="#008000">42</font> 
+bytes，可求兩根及判別式)</p>
+<p>?→M: ?→B: ?→C: B<sup>2</sup> - 4MC→C: </p>
+<p>1┘- 2M→M: M(B - √C<font color="#008000">→A</font>◢ 
+M(√C + B<font color="#008000">→B</font></p>
+<p>　</p>
+<p>
+例題1: 
+解 21x<sup>2</sup> - 11x 
+- 2 = 0 </p>
+<p>
+<font color="#FF0000">第一個程式的按法:</font></p>
+<p>
+按 Prog 1&nbsp; 
+再按 21 EXE 
+- 11 EXE - 2 EXE  
+</p>
+<p>
+ (顯示第一個根為0.666666666，若再按 
+a b/c，顯示 2/3) EXE</p>
+<p>
+(顯示第二個根為 -0.142857142，若再按 a b/c，顯示- 1/7)</p>
+<p>
+<font color="#FF0000">第二個程式的按法:</font></p>
+<p>
+按 Prog 1&nbsp; 
+再按 21 EXE 
+- 11 EXE - 2 EXE   (顯示第一個根為2/3)</p>
+<p>
+EXE (顯示第二個根為 -1/7)</p>
+<p>
+程式執行完，按 RCL C顯示判別式的值為289。</p>
+<p>　</p>
+<p>
+例題2: 
+解 x<sup>2</sup> + 6x + 
+25 = 0</p>
+<p>
+假設程式是在複數模式中輸入</p>
+<p>
+按 Prog 1&nbsp; 
+再按 1 EXE 6 EXE 25 EXE
+<strong><font color="#FF0000">( 此時計算機右上角出現R&lt;=&gt;I，表示為複數解)</font></strong></p>
+<p>
+(顯示第一個根的實數部為-3) 
+再按 Shift Re&lt;=&gt;Im (顯示第一個根虛數部為 
+4)</p>
+<p>
+EXE (顯示第二個根的實數部為-3) 
+再按 Shift Re&lt;=&gt;Im (顯示第二個根虛數部為 
+- 4)</p>
+<p>
+所以方程的解為 x = -3 
+± 4i</p>
+<p>
+程式執行完，按 RCL C顯示判別式的值為 - 64。</p>
+<p>註: 第一個及第二個程式的兩根及判別式分別記存在記憶A，B及C.</p>
+<p>　</p>
+<p><font color="#0000FF">第三個程式</font> (54 / <font color="#008000">50</font> 
+bytes，可求頂點，兩根及判別式)</p>
+<p>?→M: ?→B: ?→C: B<sup>2</sup> - 4MC→C: </p>
+<p>- 1÷2M→M: BM◢ 
+CM÷2◢</p>
+<p>M(B - √C<font color="#008000">→A</font>◢ 
+M(B + √C<font color="#008000">→B</font></p>
+<p>　</p>
+<p><font color="#0000FF">第四個程式(分數版)</font> (54 / <font color="#008000">50</font> 
+bytes，可求頂點，兩根及判別式)</p>
+<p>?→M: ?→B: ?→C: B<sup>2</sup> - 4MC→C: </p>
+<p>1┘- 2M→M: BM◢ CM┘2◢</p>
+<p>M(B - √C<font color="#008000">→A</font>◢ 
+M(B + √C<font color="#008000">→B</font></p>
+<p>
+　</p>
+<p>
+例題3: 
+解 21x<sup>2</sup> - 11x 
+- 2 = 0 </p>
+<p>
+<font color="#FF0000">第三個程式的按法:</font></p>
+<p>
+按 Prog 1&nbsp; 
+再按 21 EXE 
+- 11 EXE - 2 EXE  
+</p>
+<p>
+(顯示頂點的x座標為0.261904761，若要顯示分數
+再按 
+a b/c，顯示11/42)&nbsp; EXE</p>
+<p>
+(顯示頂點的y座標或二次函數的極小值為 
+3.44047619，若再按 a b/c，顯示-289/84)</p>
+<p>
+EXE (顯示第一個根為0.666666666，若再按 
+a b/c，顯示 2/3)</p>
+<p>
+EXE (顯示第二個根為 -0.142857142，若再按 a b/c，顯示- 1/7)</p>
+<p>
+<font color="#FF0000">第四個程式的按法:</font></p>
+<p>
+按 Prog 1&nbsp; 
+再按 21 EXE 
+- 11 EXE - 2 EXE (顯示頂點的x座標為11/42) </p>
+<p>
+EXE (顯示頂點的y座標或二次函數的極小值為 
+-289/84)</p>
+<p>
+EXE (顯示第一個根為2/3)</p>
+<p>
+EXE (顯示第二個根為 -1/7)</p>
+<p>
+程式執行完，按 RCL C顯示判別式的值為289。</p>
+<p>註: 第三個及第四個程式的兩根及判別式分別記存在記憶A，B及C.</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quadratic5.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+</html>

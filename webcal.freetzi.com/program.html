@@ -1,0 +1,134 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/program.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:09 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>EL</title>
+<meta name="Microsoft Theme" content="nature 011">
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<script src="webcal.js"></script></head>
+
+<body background="nabkgnd.jpg" bgcolor="#FFFFFF" text="#000000" link="#993333" vlink="#333399" alink="#006633">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><font size="6">EL-506V編寫程式小技巧</font></b></u></p>
+<p align="left">　</p>
+<p align="left"><font size="4">Sharp 
+EL-506V有公式的記存功能，因此可以用作編寫程式，不過公式通常只能得出一個答案，要令程式能夠顯示多過一個數值答案，就要用一些小技巧，較簡單及有效率的方法就是使用K記憶，以下簡介什麼是K記憶，K記憶的一些特性及幾個使用K記憶的方法。</font></p>
+<p align="left"><u><b><font size="4" color="#FF0000">什麼是K記憶?</font></b></u></p>
+<p align="left"><font size="4">K記憶原來用於計數機的常量運算功能，亦即是</font><span style="FONT-FAMILY: 新細明體"><font size="4">在常數計算中，加數，減數及除數作為一常數。對於乘數運算，被乘數作為一常數。看看以下例子:</font></span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<font color="#0000FF" size="4"><span lang="EN-US" style="font-family: 新細明體">計算 
+12 + 49, 34 + 49 及 99 + 49的值。</span><span lang="EN-US" style="FONT-FAMILY: 新細明體">&nbsp;</span></font></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<font color="#0000FF" size="4"><span style="FONT-FAMILY: 新細明體">按 
+<span lang="EN-US">12 + 49 = (顯示61) 34 = (顯示83) 99 = (顯示148)</span></span></font></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<font size="4">當執行 12 + 49 = 時，除了計算及顯示答案61外，計數還將49這個數值儲存在K記憶之中，當再按 34 = 
+時，計數機會顯示算式 34 + K = 並且顯示34 + 49的答案為83，算式中的K就是K記憶。</font></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<u><b><font size="4" color="#FF0000">K記憶的運作</font></b></u></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<font size="4"><span style="FONT-FAMILY: 新細明體">
+若果算式較為複雜，運算過程有很多加減乘除的操作，那麼K記憶是否會運作?那一個數值會儲存於K記憶之中呢? </span></font></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<font size="4">
+會否儲存一個新數值到K記憶中，要看執行的算式最後的一個操作，有沒有加減乘除的運算，若有這些運算，K的數值就會被更新，看看以下幾個情況:</font></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<font size="4">情況一:&nbsp; 2 + 3 = 這時K值變為3。</font></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<font size="4">情況二: ( 2 + 3 ) = 這時計數機先計算括號中的運算 2+3，最後執行括號的操作 
+(5)，由於最後的操作並無加減乘除的操作，所以K的數值不會被更新，常量運算的功能亦會消失。</font></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<font size="4">情況三: tan 45 + sin 45 <span lang="en">÷ 5 = </span>這時計數機會先計算 sin 
+45 <span lang="en">÷ 5 <font color="#0000FF">(0.141421356)</font></span>的數值，再計算這個數值及tan 
+45的和 ，由於最後計算的加數是0.141421356，所以最後K被更新為這一個數值。</font></p>
+<p align="left">　</p>
+<p align="left"><b><u><font size="4" color="#FF0000">輸入K字元的方法:</font></u></b></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體"><font size="4">因</font></span><font size="4"><span lang="EN-US">K</span><span style="font-family: 新細明體">記憶不能像其它記憶變數</span><span lang="EN-US">(</span><span style="font-family: 新細明體">例如</span><span lang="EN-US">:A)</span></font><span style="FONT-FAMILY: 新細明體"><font size="4">，可以直接按出，所以可依下列的步驟輸入程式</font><span lang="EN-US"><font size="4">:</font></span></span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US" style="FONT-FAMILY: 新細明體"><font size="4">1. 先按ON/C 0 + 0 = 0 
+= 答案除了顯示0外，還有顯示算式0 + K。</font></span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US" style="FONT-FAMILY: 新細明體"><font size="4">2. 按 </font></span>
+<font size="4"><span lang="EN-US" style="font-family: Wingdings">&agrave;</span></font><span lang="EN-US" style="FONT-FAMILY: 新細明體"><font size="4"> 
+DEL DEL 現在算式只餘下K。</font></span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US" style="FONT-FAMILY: 新細明體"><font size="4">3. 按 STO F1 (或 F2) 
+現在K字元已儲存在F1 (或 F2)。</font></span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US" style="FONT-FAMILY: 新細明體"><font size="4">4. 
+編寫含K字元的程式，當需要K字元時，按RCL F1 (或 F2)。</font></span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US" style="FONT-FAMILY: 新細明體"><font size="4">5. 編寫完程式後，按STO F1 (或 
+F2) 儲存程式。</font></span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體"><font size="4">總結，產生</font><span lang="EN-US"><font size="4">K及將K儲存於F1或F2的按鍵如下:</font></span></span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US" style="FONT-FAMILY: 新細明體"><font size="4">0 + 0 = 0 = </font>
+</span><font size="4"><span lang="EN-US" style="font-family: Wingdings">&agrave;</span></font><span lang="EN-US" style="FONT-FAMILY: 新細明體"><font size="4"> 
+DEL DEL STO F1 (或F2)</font></span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="FONT-FAMILY: 新細明體"><font size="4">若要取回</font><span lang="EN-US"><font size="4">K，按 
+RCL F1 (或F2)</font></span></span></p>
+<p align="left">　</p>
+<p align="left"><u><b><font size="4" color="#FF0000">使用K記憶編寫程式的建議方法:</font></b></u></p>
+<p align="left"><font size="4" color="#800080">建議方法一: (算式一) - (算式二) + (算式二)
+</font></p>
+<p align="left"><font size="4">執行這個方法的程式，很明顯會得到算式一的答案，不過算式二的答案亦會儲存於K記憶之中，所以再按 0 
+= 啟動常量運算功能計算 0 + K 就會顯示算式二的答案。</font></p>
+<p align="left"><font size="4">好處: 程式中不含K字元(K不能直出接按出)，另外執行程式前，亦不用按 2ndF DEL清除記憶。</font></p>
+<p align="left"><font size="4">弊處: 算式二要輸入兩次，程式會較為長，幸運地EL-506V每一個算式都有80字，不算太小，另外 
+(算式一) - (算式二)可以嘗試合併及化簡為一個算式，很多時都能化簡程式，節省程式空間。</font></p>
+<p align="left"><font size="4">參考程式: </font>
+<span lang="EN-US" style="font-family: 新細明體">
+<font size="4"><a href="quadratic1.html">一元二次方程式(I)</a> (Quadratic equations I)</font></span></p>
+<p align="left"><font size="4" color="#800080">建議方法二: (算式一)sin cos<sup>-1</sup>K 
++ (算式二)K - 1 + 1</font></p>
+<p align="left"><font size="4">執行這個方法的程式前，要先按 2ndF DEL ，令K的值最初為0。第一次執行程式(按 
+=)，由於K為0，sin cos<sup>-1</sup> K的值為1，所以只會顯示算式一的答案。當第二次執行程式(再按 = )，由於K變為1，sin cos<sup>-1</sup> 
+K的值為0，所以只會顯示算式二的答案。這個方法編寫程式的最大好處是算式二不需要輸入兩次，可以節省較多程式空間，因此可以編寫出複雜情度較高的程式。</font></p>
+<p align="left"><font size="4">參考程式: </font>
+<span lang="EN-US" style="font-family: 新細明體">
+<font size="4">
+<a style="text-decoration: underline; text-underline: single" href="quadratic2.html">一元二次方程式(II)</a> (Quadratic equations II)</font></span></p>
+<p align="left"><font size="4" color="#800080">建議方法三: (算式一)(K<sup>2</sup>-3K+2)<span lang="en">÷2 
++ (</span>算式二)K(2-K) + (算式三)K(K-1)<span lang="en">÷2 -K-1 + (K+1)</span></font></p>
+<p align="left"><font size="4">執行這個方法的程式前，同樣要先按 2ndF DEL 
+，令K的值最初為0，原理亦同方法二差不多。這個方法雖然可以顯示三個算式的答案，不過最大問題為程式空間不多，因此這個方法只能編寫一些較簡單的程式。</font></p>
+<p align="left"><font size="4">參考程式: </font>
+<span lang="EN-US" style="font-family: 新細明體">
+<font size="4"><a href="CentreRadius.html">圓形的圓心及半徑</a> (Centre and radius of a 
+circle)</font></span></p>
+<p align="left"><font size="4" color="#800080">多於三個數值答案的程式: (算式) - K - 1 + (K + 
+1)</font></p>
+<p align="left"><font size="4">這類程式一般都不能編寫，不過若果數值答案間有很緊密的關係，亦有機會可以成功編寫。</font></p>
+<p align="left"><font size="4">參考程式: </font></p>
+<p align="left"><span lang="EN-US" style="font-family: 新細明體">
+<font size="4"><a href="Binomial2.html">二項式定理</a> (Binomial Theorem)</font></span></p>
+<p align="left"><span lang="EN-US" style="font-family: 新細明體">
+<font size="4"><a href="quadraticfunction.html">二次函數極小/大點及一元二次方程</a> </font></span></p>
+<p align="left"><span lang="EN-US" style="font-family: 新細明體"><font size="4">
+(maximum/minimum point of quadratic function and quadratic equations)</font></span></p>
+<p align="left">　</p>
+<p align="left"><a href="main.html"><font size="4">返回EL-506V簡介</font></a></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/program.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:09 GMT -->
+</html>

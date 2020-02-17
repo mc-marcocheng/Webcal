@@ -1,0 +1,73 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/blackScholes.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:53 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>柏力克-舒爾斯期權定價(I)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">柏力克-舒爾斯期權定價(I)</font></b></u></p>
+<p>程式根據柏力克-舒爾斯期權定價模式計算認購期權及認沽期權的理論值。</p>
+<p>程式編寫日期:2006年7月19日</p>
+<p><font color="#FF0000">程式需要在 SD 模式下執行，因此在輸入程式前請先按 Mode Mode 1 進入SD模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數(<font color="#0000FF">n</font> 按 shift 1 3 ，<span style="text-decoration: overline"><font color="#0000FF">x</font></span>為平均x 
+按 shift 2 1)， <font color="#FF0000">e</font>是按shift 
+e<sup>x</sup>，<font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p>程式 (共307 bytes)</p>
+<p>Stat clear: 0→X: Lbl 0: ?→Y: ?→M: ?→D: M + 1→M:</p>
+<p>M≧4 <font color="#FF0000">=&gt;</font> Goto 1: Y - 1→Y: 12 + M→M:
+Lbl 1:  </p>
+<p>365.25Y - . 5: Fix 0: Rnd: Ans→C:
+30.6001M - . 5:  </p>
+<p>Rnd: Norm 1: C + Ans + D→C:
+X=0→X <font color="#FF0000">=&gt;</font> C→B <font color="#FF0000">=&gt;</font> Goto 
+0:  </p>
+<p>?→A: ( C - B) ÷ 365 <b><font color="#FF0000">;</font></b> A
+<font color="#FF0000">DT</font>: ?→B: ?→C: ?→D: C ÷
+<font color="#FF0000">10<sup>x</sup></font>2→C: </p>
+<p>D ÷ <font color="#FF0000">10<sup>x</sup></font>2→D: 
+( ln <font color="#0000FF">n</font>┘B + ( C + D<sup>2 </sup>÷ 2)
+<span style="text-decoration: overline"><font color="#0000FF">x</font></span> ) 
+÷ D√<span style="text-decoration: overline"><font color="#0000FF">x</font></span>→A:
+</p>
+<p>Ans - D√<span style="text-decoration: overline"><font color="#0000FF">x</font></span>→M: 
+Lbl 2: D→Y: 1 ÷ (1 + . 231642√A<sup>2</sup>: </p>
+<p>√<font color="#FF0000">e</font> 
+- A<sup>2</sup> <font color="#FF0000">10<sup>x</sup></font> - 7 ( 1274148Ans - 1422484Ans<sup>2</sup> + 7107069Ans<sup>3</sup> 
+- </p>
+<p>7265760Ans^4 + 5307027Ans^5→D: A&gt;0 <font color="#FF0000">=&gt;</font> 
+1 - D→D: M→A: </p>
+<p>X=0→X <font color="#FF0000">=&gt;</font> Goto 2:
+<font color="#0000FF">n</font>Y - BD<font color="#FF0000">e</font> - C<span style="text-decoration: overline"><font color="#0000FF">x</font></span>◢ 
+Ans - <font color="#0000FF">n</font> + B ÷ <font color="#FF0000">e</font>
+<span style="text-decoration: overline"><font color="#0000FF">x</font></span>C</p>
+<p>　</p>
+<p>例題: 
+若正股價為$50，期權產品的行使價為$45，無風險年利率為6%，波幅為44.72%，計算日為2006年7月1日，到期日為2006年10月1日，求認購期權及認沽期權的理論值。</p>
+<p>按 Prog 1&nbsp; 2006 EXE 7 EXE 1 EXE (計算日)</p>
+<p>2006 EXE 10 EXE 1 EXE (到期日)</p>
+<p>50 EXE (正股現價) 45 (行使價) 6 EXE (年利率)</p>
+<p>44.72 EXE (波幅，顯示認購期權值為 $7.6426)</p>
+<p>EXE (顯示認沽期權值為 $1.9672)</p>
+<p>　</p>
+
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<p>　</p>
+<p>　</p>
+<p>　</p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/blackScholes.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:53 GMT -->
+</html>

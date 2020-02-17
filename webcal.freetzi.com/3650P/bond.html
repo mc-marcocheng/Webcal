@@ -1,0 +1,98 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/bond.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:54 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>債券價值計算</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">債券價值計算</font></b></u></p>
+<p>程式使用 30/360 計日方法，計算債券的累計利息及購買價格。</p>
+<p>程式編寫日期: 2007年10月13日</p>
+<p><font color="#FF0000">程式需要在 SD 模式下執行，因此在輸入程式前請先按 Mode Mode 1 進入SD模式。</font></p>
+<p><font color="#FF0000">注意</font> : 藍色的英文字為統計模式中的變數(<font color="#0000FF">n</font> 按 shift 1 3 ，<span style="text-decoration: overline"><font color="#0000FF">x</font></span>為平均x 
+按 shift 2 1，而
+<span lang="en"><font size="1">E </font>是按</span> EXP)</p>
+<p>
+程式 (283 bytes)</p>
+<p>
+Stat Clear: ?→Y: ?→M: ?→D: ?→X: ?→A: ?→B: </p>
+<p>
+X - Y <font color="#FF0000"><b>;</b></font> X <font color="#FF0000">DT</font>: 
+?→X: Y - (A≧M→C: A≧M <font color="#FF0000">=&gt;</font> X=2 <font color="#FF0000">
+=&gt;</font> <font color="#0000FF">n</font>→C:</p>
+<p>C<span lang="en">÷4: Fix 0: Rnd: C - 4Ans: Ans(B=28) + (B=29:</span></p>
+<p><span lang="en-us">(B=31) + (A=2)Ans</span><span lang="en">
+<font color="#FF0000">=&gt;</font> 30→B: </span>D=31 <font color="#FF0000">=&gt;</font> 
+B=30 <font color="#FF0000">=&gt;</font> 30→D: </p>
+<p>360→C:
+C<span style="text-decoration: overline"><font color="#0000FF">x</font></span> + 30(A 
+- M) + B - D→A:
+<span lang="en">C÷X→D: A <font color="#FF0000">=&gt;</font> A÷D - . 5:  </span></p>
+<p>
+<span lang="en">Rnd: Norm 1: Ans→M: A - DM→B
+<font color="#FF0000">=&gt;</font> M+1→M: </span></p>
+<p><span lang="en-us">B=0 <font color="#FF0000">=&gt;</font> D→B: </span>
+<span lang="en">?→C: ?→A: ?→Y: C÷X→C: Y÷<font size="1"> E </font>2X→Y: </span>
+</p>
+<p>
+<span lang="en">B÷D→B: C(1-B→X◢ 1≧M <font color="#FF0000">=&gt;</font> - X + (A+C) 
+÷(1+BY◢ </span></p>
+<p>
+<span lang="en">1 + Y→Y: - X + AY^(1-M-B) + C(Y^-M-1)÷Y^B(Y<sup>-1</sup>-1 </span>
+</p>
+<p>
+　</p>
+<p>
+例題: 一債券每半年支付息票一次，1債券購買日期為2006年6月12日，償還日期為2007年12月31日，息票利率為 
+7%，每$100票面價值的&#36174;回價值為$100，年收益為8%，計算債券的累計利息及購買價格。</p>
+<p>
+按 
+Prog 1 再按 2006 EXE 6 EXE 12 EXE (購買日期)</p>
+<p>
+2007 EXE 12 EXE 31 EXE (償還日期)</p>
+<p>
+2 EXE (每年息票支付數，即1代表1年一次，2代表半年一次)</p>
+<p>
+7 EXE (息票利率)</p>
+<p>
+100 EXE (每$100票面價值的&#36174;回價值)</p>
+<p>
+8 EXE (年收益，顯示累計利息為 $ 3.15)</p>
+<p>
+EXE (顯示價格為 $ 98.56)</p>
+<p>
+　</p>
+<p>
+註: 程式計算範圍1901年至2099年</p>
+
+<p>
+　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+<p>　</p>
+
+<p>
+<a href="http://www.duke.edu/~charvey/Classes/ba350_1997/pricing/daycount.htm">http://www.duke.edu/~charvey/Classes/ba350_1997/pricing/daycount.htm</a></p>
+
+<p>　</p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/bond.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:54 GMT -->
+</html>

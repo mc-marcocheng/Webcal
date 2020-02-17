@@ -1,0 +1,120 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/binomialPoissonDist1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:51 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>二項分佈及泊松分佈(I)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><b><u><font size="5">二項分佈及泊松分佈(I)</font></u></b></p>
+<p>程式編寫日期: 2005年11月16日</p>
+<p>注意: 紅色的 <font color="#FF0000"></font><span lang="en"><font color="#FF0000">×
+</font>是乘號，<font color="#FF0000"><sub>n</sub>C<sub>r </sub></font>
+<span lang="en">是按 shift <span lang="en">÷，<font color="#FF0000">e</font>是按shift 
+e<sup>x</sup></p>
+<p>程式 (80 bytes)</p>
+<p>Mem Clear: ?→A: ?→B: B <font color="#FF0000">=&gt;</font> 1&gt;B<font color="#FF0000"> 
+=&gt;</font> B→D <font color="#FF0000">=&gt;</font> ?→B:</p>
+<p>?→C: Lbl 0: D <font color="#FF0000">=&gt;</font> A <font color="#FF0000"><sub>n</sub>C<sub>r</sub></font>
+B <span lang="en"><font color="#FF0000">×</font> D^B (1-D)^(A-B
+<font color="#FF0000">M+</font>:</p>
+<p><span lang="en">D=0 <font color="#FF0000">=&gt;</font> A^B ÷ B! ÷
+<font color="#FF0000">e</font>A <font color="#FF0000">M+</font>: 1+B→B: C≧B 
+<font color="#FF0000">=&gt;</font> Goto 0: M</p>
+<p>　</p>
+<p>另一個更簡短的程式，但要注意輸入數據先後次序及方法有不同。</p>
+<p>程式 (70 bytes)</p>
+<p>Mem Clear: ?→A: ?→B: ?→C: ?→D: </p>
+<p>Lbl 0: D <font color="#FF0000">=&gt;</font> A <font color="#FF0000"><sub>n</sub>C<sub>r</sub></font>
+B <span lang="en"><font color="#FF0000">×</font> D^B (1-D)^(A-B
+<font color="#FF0000">M+</font>:</p>
+<p><span lang="en">D=0 <font color="#FF0000">=&gt;</font> A^B ÷ B!
+<font color="#FF0000">e</font>A <font color="#FF0000">M+</font>: 1+B→B: C≧B 
+<font color="#FF0000">=&gt;</font> Goto 0: M</p>
+<p>　</p>
+<p>
+例題1: 
+若X ~ Bin(9,0.5)，求P(X=4)。</p>
+<p>
+<font color="#FF0000">第一個程式的按法:</font></p>
+<p>
+按 Prog 1 
+再按 9 EXE 0.5 EXE 4 EXE 
+EXE (不輸入最後的數值代表只計算一項，顯示答案為0.24609)</p>
+<p>
+<font color="#FF0000">第二個程式的按法:</font></p>
+<p>
+按 Prog 1 
+再按 9 EXE 4 EXE EXE 
+0.5 EXE (不輸入第三個數值代表只計算一項，顯示答案為0.24609)</p>
+<p>
+　</p>
+<p>
+例題2: 
+若X ~ Bin(9,0.5)，求P(4≦X≦6)。</p>
+<p>
+<font color="#FF0000">第一個程式的按法:</font></p>
+<p>
+按 Prog 1 
+再按 9 EXE 0.5 EXE 4 EXE 
+6 EXE (顯示答案為0.65625)</p>
+<p>
+<font color="#FF0000">第二個程式的按法:</font></p>
+<p>
+按 Prog 1 
+再按 9 EXE 4 EXE 6 EXE 
+0.5 EXE (顯示答案為0.65625)</p>
+<p>　</p>
+<p>
+例題3:
+若X ~ Po(5)，求P(X=4)。</p>
+<p>
+<font color="#FF0000">第一個程式的按法:</font></p>
+<p>
+按 Prog 1 
+再按 5 EXE 4 EXE EXE (不輸入最後的數值代表只計算一項，顯示答案為0.17547)</p>
+<p>
+<font color="#FF0000">第二個程式的按法:</font></p>
+<p>
+按 Prog 1 
+再按 5 EXE 4 EXE EXE 
+EXE(不輸入最後二個數值代表計算一項及計泊松分佈，顯示答案為0.17547)</p>
+<p>　</p>
+<p>
+例題4:
+若X ~ Po(5)，求P(4≦X≦6)。</p>
+<p>
+<font color="#FF0000">第一個程式的按法:</font></p>
+<p>
+按 Prog 1 
+再按 5 EXE 4 EXE 6 EXE (顯示P(4≦X≦6)為0.49716)</p>
+<p>
+<font color="#FF0000">第二個程式的按法:</font></p>
+<p>
+按 Prog 1 
+再按 5 EXE 4 EXE 6 EXE 
+EXE (不輸入最後數值代表計泊松分佈，顯示P(4≦X≦6)為0.49716)</p>
+<p>　</p>
+<p>
+
+<a href="3650.html">返回 fx-3650P及SC-185
+程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/binomialPoissonDist1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:51 GMT -->
+</html>

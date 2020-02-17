@@ -1,0 +1,184 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/mortgage2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:53 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>按揭計算</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><b><u>
+<font size="5">按揭計算(II)</font></u></b></p>
+<p>
+程式編寫日期: 2006年8月22日</p>
+<p>
+程式用作計算按揭問題，假定利息每月計算及息率固定不變，程式可以計算以下問題:</p>
+<p><font face="新細明體">˙</font>尚欠貸款Outstanding 
+balance ( 
+已知貸款、每月供款、貸款及年利率)</p>
+<p>
+˙貸款 Loan (已知尚欠貸款、每月供款、年利率及還款期數)</p>
+<p>
+˙年利率 (已知尚欠貸款、每月供款、貸款 
+及還款期數)</p>
+<p>
+˙還款期數 (已知尚欠貸款、每月供款、貸款及年利率)</p>
+<p>
+˙每月供款Monthly 
+instalments (已知貸款、年利率及還款期數(月為單位))</p>
+<p>　</p>
+<p>注意: <font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p>程式 (219 bytes)</p>
+<p>Mem clear: π→A: ?→A: ?→B: ?→C: ?→D: ?→X: 1200→M:</p>
+<p>1 + C ÷ M→Y: A=π
+<font color="#FF0000">=&gt;</font> BY^D - XMC<sup>-1</sup>(Y^D - 1◢</p>
+<p>B=0 <font color="#FF0000">=&gt;</font> (A + XMC<sup>-1</sup>(Y^D 
+- 1) ) ÷ Y^D◢</p>
+<p>X=0 <font color="#FF0000">=&gt;</font> C(BY^D 
+- A) ÷ M(Y^D - 1◢</p>
+<p>C <font color="#FF0000">=&gt;</font> log ( ( 
+AC - XM) ÷ (BC - XM) ) ÷ log Y◢</p>
+<p>6→Y: Lbl 0: Y→C: 1 + Y ÷ M:</p>
+<p>Y - M( BAns^D - XMY<sup>-1</sup>(Ans^D - 1) 
+-A ) ÷ ( XM<sup>2</sup>(Ans^D - 1) </p>
+<p>÷ Y<sup>2</sup> +Ans<sup>-1</sup>Ans^D( DB- DXM ÷ Y→Y:</p>
+<p>(Y - C)<sup>2</sup> ≧ 
+<font color="#FF0000">10<sup>x</sup></font> - 6&nbsp;
+<font color="#FF0000">=&gt;</font> Goto 0: Y</p>
+<p>參考公式:</p>
+<p><img border="0" src="Image145.gif" width="192" height="38"></p>
+<p>(A為尚欠貨款，Q為每月供款，M為貨款及 r 為每月利率 (即年利率÷12))</p>
+<p>
+　</p>
+<p>
+例題1: 
+貸款$100,0000，年利率為6%，每月還款額5995.51，求還款100期後的尚欠貸款。</p>
+<p>
+按 Prog 1 再按 EXE (不輸入數值代表計算尚欠貨款)
+</p>
+<p>
+100 0000 EXE (貸款) </p>
+<p>
+6 EXE (年利率)</p>
+<p>
+100 EXE (還款期)</p>
+<p>
+5995.51 EXE (每月還款，顯示尚欠貸款為 $871247.01)</p>
+<p>
+計算完結按AC終止程式</p>
+<p>
+　</p>
+<p>
+例題2: 
+貸款$100,0000，年利率為6%，貸款時間為360月，求每月還款額。</p>
+<p>
+按 Prog 1 再按 0 EXE (尚欠貸款為<font color="#FF0000">0</font>代表<font color="#FF0000">完全清還</font>)</p>
+<p>
+100 0000 EXE (貸款) </p>
+<p>
+6 EXE (年利率)</p>
+<p>
+360 EXE (還款期)</p>
+<p>
+EXE (不輸入數值代表計算每月還款額，顯示還款額為 $5995.51)</p>
+<p>
+&nbsp;計算完結按AC終止程式</p>
+<p>
+　</p>
+<p>
+例題3: 一項貸款，每月還款額為$5995.51，年利率為6%，還款期數為360月求貸款額。</p>
+<p>
+按 Prog 1 再按 0 EXE (尚欠貸款為<font color="#FF0000">0</font>代表<font color="#FF0000">完全清還</font>)</p>
+<p>
+EXE (不輸入數值代表計算貸款)
+</p>
+<p>
+6 EXE (年利率)</p>
+<p>
+360EXE (還款期)，顯示貸款額為 
+$100 0000) </p>
+<p>
+5995.51 EXE (每月還款額，顯示貸款額為 
+$100 0000) </p>
+<p>
+計算完結按AC終止程式</p>
+<p>　</p>
+<p>
+例題4:
+貸款$100,0000，年利率為6%，每月還款額為$5995.51，求還款期數。</p>
+<p>
+按 Prog 1 再按 0 EXE (尚欠貸款為<font color="#FF0000">0</font>代表<font color="#FF0000">完全清還</font>)</p>
+<p>
+100 0000 EXE (貸款) </p>
+<p>
+6 EXE (年利率)</p>
+<p>
+EXE (不輸入數值代表計算還款期 
+)</p>
+<p>
+5995.51 EXE (每月還款額
+，顯示還款期為360月)</p>
+<p>
+計算完結按AC終止程式</p>
+<p>
+</p>
+
+<p>
+例題5: 一項貸款，每月還款額為$5995.51，貸款$100,0000，還款100期後的尚欠貸款為$871247.01，求年利率。</p>
+
+<p>
+按 Prog 1 再按 
+871247.01 EXE (尚欠貸款)</p>
+<p>
+100 0000 EXE (貸款) </p>
+<p>
+EXE (不輸入數值代表計算年利率)</p>
+<p>
+100 EXE (還款期)</p>
+<p>
+5995.51 EXE (每月還款額，顯示年利率為 
+6%)
+</p>
+<p>
+計算完結按AC終止程式</p>
+<p>
+註: 計算利率時，由於需要重複計算，所以計算時間可能會較長。</p>
+
+<p>
+　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<p>Mem clear: π→A: ?→A: ?→B: ?→C: ?→D: ?→X: 1200→Y:</p>
+<p>1 + C ÷ Y→M: A=π =&gt; BM^D - XYC<sup>-1</sup>(M^D 
+- 1◢</p>
+<p>B=0 =&gt; (A + XYC<sup>-1</sup>(M^D - 1) ) 
+÷ M^D◢</p>
+<p>X=0 =&gt; C(BM^D - A) ÷ Y(M^D - 1◢</p>
+<p>D=0 =&gt; log ( ( ACY<sup>-1</sup> - X) 
+÷ (BCY<sup>-1</sup> - X) ) ÷ log M◢</p>
+<p>6<font color="#FF0000">M+</font>: Lbl 0: M→C: 1 + M÷Y:</p>
+<p>Y( BAns^D - XYM<sup>-1</sup>(Ans^D - 1) -A 
+) ÷ ( XY<sup>2</sup>(Ans^D - 1) ÷ M<sup>2</sup> +Ans<sup>-1</sup>Ans^D( 
+DB- DXY÷M<font color="#FF0000">M-</font>:</p>
+<p>(M - C)<sup>2</sup> ≧ 10<sup>x</sup> - 6&nbsp; 
+=&gt; Goto 0: M</p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/mortgage2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:53 GMT -->
+</html>

@@ -1,0 +1,123 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/InverseMatrix.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>三階逆矩陣及行列式</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">&nbsp;三階逆矩陣及行列式</font></b></u></p>
+<p>程式參考了網友<font color="#0000FF">roviury</font>意見進行修改。</p>
+<p>這個版本的程式可以計算三階行列式、逆矩陣。若果輸入的數值為整數，答案會以分數形式表示，建議將計數機預先設定為假分數形式表示(按六次 
+Mode，再按 1 2 EXE )。</p>
+<p><font color="#FF0000">程式需要在 REG Quad 模式下執行，因此在輸入程式前請先按 Mode Mode 2 → 3 進入REG Quad模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數(<font color="#0000FF">Σx<sup>3</sup></font> 按 Shift 1 → → 
+1，<font color="#0000FF">Σy</font> 按 Shift 1 → 2，<font color="#0000FF">Σxy</font> 
+Shift 1 →3)，而<font color="#FF0000"><sup>3</sup>√</font>是按shift 
+x<sup>3</sup>。</p>
+<p>第一個程式(可以顯示分數答案 158 bytes)</p>
+<p>Stat clear: ?→M: <font color="#FF0000"><sup>3</sup>√</font>(M - 1
+<font color="#FF0000">DT</font>: ?→M: 1 , M <font color="#FF0000">DT</font>: 
+?→M:</p>
+<p>0 , M - <font color="#0000FF">Σy</font> <font color="#FF0000">DT</font>: ?→A: 
+?→B: ?→C:  ?→X: ?→Y: ?→M:</p>
+<p><font color="#0000FF">Σx<sup>3</sup></font>BM + <font color="#0000FF">Σxy</font>CX 
++ <font color="#0000FF">Σy</font>YA - YC<font color="#0000FF">Σx<sup>3</sup></font> 
+- AM<font color="#0000FF">Σxy</font> - XB<font color="#0000FF">Σy</font>◢ 1┘Ans→D:</p>
+<p>D(BM - CY◢ D(Y<font color="#0000FF">Σy</font> - M<font color="#0000FF">Σxy</font>◢ 
+D(<font color="#0000FF">Σxy</font>C - <font color="#0000FF">Σy</font>B◢</p>
+<p>D(CX - MA◢ D(M<font color="#0000FF">Σx<sup>3</sup></font> -
+<font color="#0000FF">Σy</font>X◢ D(A<font color="#0000FF">Σy</font> - C<font color="#0000FF">Σx<sup>3</sup></font>◢</p>
+<p>D(YA - XB◢ D(<font color="#0000FF">Σxy</font>X - Y<font color="#0000FF">Σx<sup>3</sup></font>◢ 
+D(<font color="#0000FF">Σx<sup>3</sup></font>B - A<font color="#0000FF">Σxy</font></p>
+<p>　</p>
+<p>第二個程式(不顯示分數答案 157 bytes)</p>
+<p>Stat clear: ?→M: <font color="#FF0000"><sup>3</sup>√</font>(M - 1
+<font color="#FF0000">DT</font>: ?→M: 1 , M <font color="#FF0000">DT</font>: 
+?→M:</p>
+<p>0 , M - <font color="#0000FF">Σy</font> <font color="#FF0000">DT</font>: ?→A: 
+?→B: ?→C:  ?→X: ?→Y: ?→M:</p>
+<p><font color="#0000FF">Σx<sup>3</sup></font>BM + <font color="#0000FF">Σxy</font>CX 
++ <font color="#0000FF">Σy</font>YA - YC<font color="#0000FF">Σx<sup>3</sup></font> 
+- AM<font color="#0000FF">Σxy</font> - XB<font color="#0000FF">Σy</font>◢ Ans<sup>-1</sup>→D:</p>
+<p>D(BM - CY◢ D(Y<font color="#0000FF">Σy</font> - M<font color="#0000FF">Σxy</font>◢ 
+D(<font color="#0000FF">Σxy</font>C - <font color="#0000FF">Σy</font>B◢</p>
+<p>D(CX - MA◢ D(M<font color="#0000FF">Σx<sup>3</sup></font> -
+<font color="#0000FF">Σy</font>X◢ D(A<font color="#0000FF">Σy</font> - C<font color="#0000FF">Σx<sup>3</sup></font>◢</p>
+<p>D(YA - XB◢ D(<font color="#0000FF">Σxy</font>X - Y<font color="#0000FF">Σx<sup>3</sup></font>◢ 
+D(<font color="#0000FF">Σx<sup>3</sup></font>B - A<font color="#0000FF">Σxy</font></p>
+<p>　</p>
+<p>例題: 計算下列矩陣的逆矩陣。</p>
+<p><img border="0" src="Image77.gif" width="66" height="67"></p>
+<p>按 
+Prog 1&nbsp; 再按 2 EXE 1 EXE 3 EXE 7 EXE 4 
+EXE 6 EXE</p>
+<p>8 EXE 9 EXE 7 EXE
+(這時顯行列式的值 40) EXE</p>
+<p>(顯示 -13/20) EXE (顯示 1/2) EXE (顯示 -3/20) EXE </p>
+<p>(顯示 -1/40) EXE (顯示 -1/4) EXE (顯示 9/40) EXE </p>
+<p>(顯示 31/40) EXE (顯示 -1/4) EXE (顯示 1/40) </p>
+<p>因此，</p>
+<p><img border="0" src="Image128.gif" width="200" height="111"></p>
+<p>計算完結後，請按Mode 1返回正常模式。</p>
+<p>　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+</font>
+
+</font>
+
+<p>　</p>
+
+<p>　</p>
+
+<hr><hr>
+<p><b><font color="#0000FF">程式舊版</font></b></p>
+<p>第一個程式(172 bytes，顯示分數答案)</p>
+<p>Stat clear: ?→M: <font color="#FF0000"><sup>3</sup>√</font>(M - 1
+<font color="#FF0000">DT</font>: ?→M: 1 , M <font color="#FF0000">DT</font>: 
+?→M:</p>
+<p>0 , M - <font color="#0000FF">Σy</font> <font color="#FF0000">DT</font>: ?→A: 
+?→B: ?→C: ?→X: ?→Y: ?→M:</p>
+<p><font color="#0000FF">Σx<sup>3</sup></font>BM + <font color="#0000FF">Σxy</font>CX 
++ <font color="#0000FF">Σy</font>YA - YC<font color="#0000FF">Σx<sup>3</sup></font> 
+- AM<font color="#0000FF">Σxy</font> - XB<font color="#0000FF">Σy</font>→D◢</p>
+<p>(BM - CY)┘D◢ (Y<font color="#0000FF">Σy</font> - M<font color="#0000FF">Σxy</font>)┘D◢ 
+(<font color="#0000FF">Σxy</font>C - <font color="#0000FF">Σy</font>B)┘D◢</p>
+<p>(CX - MA)┘D◢ (M<font color="#0000FF">Σx<sup>3</sup></font> -
+<font color="#0000FF">Σy</font>X)┘D◢ (A<font color="#0000FF">Σy</font> - C<font color="#0000FF">Σx<sup>3</sup></font>)┘D◢</p>
+<p>(YA - XB)┘D◢ (<font color="#0000FF">Σxy</font>X - Y<font color="#0000FF">Σx<sup>3</sup></font>)┘D◢ 
+(<font color="#0000FF">Σx<sup>3</sup></font>B - A<font color="#0000FF">Σxy</font>)┘D</p>
+<p>　</p>
+<p>第二個程式(163 bytes，不顯示分數答案)</p>
+<p>Stat clear: ?→M: <font color="#FF0000"><sup>3</sup>√</font>(M - 1
+<font color="#FF0000">DT</font>: ?→M: 1 , M <font color="#FF0000">DT</font>: 
+?→M:</p>
+<p>0 , M - <font color="#0000FF">Σy</font> <font color="#FF0000">DT</font>: ?→A: 
+?→B: ?→C: ?→X: ?→Y: ?→M:</p>
+<p><font color="#0000FF">Σx<sup>3</sup></font>BM + <font color="#0000FF">Σxy</font>CX 
++ <font color="#0000FF">Σy</font>YA - YC<font color="#0000FF">Σx<sup>3</sup></font> 
+- AM<font color="#0000FF">Σxy</font> - XB<font color="#0000FF">Σy</font>→D◢</p>
+<p>D<sup>-1</sup>(BM - CY◢ D<sup>-1</sup>(Y<font color="#0000FF">Σy</font> - M<font color="#0000FF">Σxy</font>◢ 
+D<sup>-1</sup>(<font color="#0000FF">Σxy</font>C - <font color="#0000FF">Σy</font>B◢</p>
+<p>D<sup>-1</sup>(CX - MA◢ D<sup>-1</sup>(M<font color="#0000FF">Σx<sup>3</sup></font> 
+- <font color="#0000FF">Σy</font>X◢ D<sup>-1</sup>(A<font color="#0000FF">Σy</font> 
+- C<font color="#0000FF">Σx<sup>3</sup></font>◢</p>
+<p>D<sup>-1</sup>(YA - XB◢ D<sup>-1</sup>(<font color="#0000FF">Σxy</font>X - Y<font color="#0000FF">Σx<sup>3</sup></font>◢ 
+D<sup>-1</sup>(<font color="#0000FF">Σx<sup>3</sup></font>B - A<font color="#0000FF">Σxy</font></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/InverseMatrix.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+</html>

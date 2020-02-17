@@ -1,0 +1,66 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/trueCompass.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:45 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>真方位角與羅盤方位角轉換</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">真方位角與羅盤方位角轉換</font></b></u></p>
+<p>程式編寫日期: 2007年3月4日</p>
+<p><font color="#FF0000">注意:</font> π<sup>r</sup> 是按 SHIFT EXP SHIFT 
+Ans 2</p>
+<p>程式 (59 bytes，使用記憶A及B)</p>
+<p>?→A: ?→B: A <font color="#FF0000">=&gt;</font> Goto 0: B
+÷ 90 + . 5:</p>
+<p>Fix 0: Rnd: Norm 1◢ Lbl 0: </p>
+<p>180(Ans=4) - cos π<sup>r</sup>Ans(B - 180</p>
+<p>(Ans≠1) cosπ<sup>r </sup>AnsA</p>
+<p>註1: 
+輸入方向資料時，0表示沒有東南北方向資料，即輸入為真方位角，1代表東北(NE)，2代表東南(SE)，3代表西南(SW)，4代表西北(NW)。</p>
+<p>註2: 為方便記憶上述數字的意思，1, 2, 3, 
+4的編排可理解為順時針由右上角(1:NE)至右下角(2:SE)至左下角(3:SW)至左上角(4:NW)。</p>
+<p>　</p>
+<p>例題1: 將真方位角 130°轉換為羅盤方位角。</p>
+<p>按 Prog 1 再按 0 EXE (0代表沒有方向資料，即輸入為真方位角)</p>
+<p>130 EXE (顯示2，代表東南) EXE (顯示角度為50°)</p>
+<p>所以羅盤方位角為 S 50°E</p>
+<p>　</p>
+<p>例題2: 將真方位角 280°轉換為羅盤方位角。</p>
+<p>按 Prog 1 再按 0 EXE (0代表沒有方向資料，即輸入為真方位角)</p>
+<p>280 EXE (顯示4，代表西北) EXE (顯示角度為80°)</p>
+<p>所以羅盤方位角為 N 80°W</p>
+<p>　</p>
+<p>例題3: 將羅盤方位角S 50°E轉換為真方位角。</p>
+<p>按 Prog 1 再按 2 EXE (2代表東南SE)</p>
+<p>50 EXE (顯示角度為130°)</p>
+<p>所以真方位角為 130°</p>
+<p>　</p>
+<p>例題4: 將羅盤方位角N 80°W轉換為真方位角。</p>
+<p>按 Prog 1 再按 4 EXE (4代表西北NW)</p>
+<p>80 EXE (顯示角度為280°)</p>
+<p>所以真方位角為 280°</p>
+<p>　</p>
+<p>註3: 注意輸入的角度範圍，真方位角為0≦θ&lt;360°，羅盤方位角為0≦θ≦90°。</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/trueCompass.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:45 GMT -->
+</html>

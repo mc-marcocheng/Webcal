@@ -1,0 +1,61 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/matrixPower.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:34 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>二階矩陣正整數冪</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">二階矩陣整數冪(I)</font></b></u></p>
+<p>程式編寫日期: 2007年2月19日</p>
+<p>程式可以計算一個2×2正整數矩陣的正整數冪及其逆矩陣(負整數冪)。
+另外若果輸入數據為整數時，逆矩陣(負整數冪)答案會以分數形式表示，建議將計數機預先設定為假分數形式表示(按六次 Mode，再按 2 EXE )。</p>
+<p><font color="#FF0000">程式需要在 REG Quad 模式下執行，因此在輸入程式前請先按 Mode Mode 2 → 3 進入REG Quad模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數(<font color="#0000FF">Σx<sup>3</sup></font> 按 Shift 1 → → 
+1，<font color="#0000FF">Σy</font> 按 Shift 1 → 2，<font color="#0000FF">Σxy</font> 
+按 Shift 1 → 3)，而<font color="#FF0000" face="新細明體"><sup>3</sup>√</font>是按shift 
+x<sup>3</sup>，<font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p>程式 (142 bytes)</p>
+<p>Stat clear: ?→M: <font color="#FF0000"><sup>3</sup>√</font>(M - 1
+<font color="#FF0000">DT</font>: ?→M: 1 <b><font color="#FF0000">,</font></b> M
+<font color="#FF0000">DT</font>: </p>
+<p>?→M: 0 <b><font color="#FF0000">,</font></b> M - <font color="#0000FF">Σy</font>
+<font color="#FF0000">DT</font>: ?→Y: 1→A: 0→B: 0→C: 1→D:</p>
+<p>?→M: Lbl 0: <font color="#0000FF">Σx<sup>3</sup></font>A +
+<font color="#0000FF">Σxy</font>C→X: <font color="#0000FF">Σy</font>A + YC→C: 
+X→A:</p>
+<p><font color="#0000FF">Σx<sup>3</sup></font>B + <font color="#0000FF">Σxy</font>D→X:
+<font color="#0000FF">Σy</font>B + YD→D: X→B: </p>
+<p>M - 1→M <font color="#FF0000">=&gt;</font> Goto 0: A◢ B◢ C◢ D◢
+<font color="#000000">AD - BC→X:</font></p>
+<p><font color="#000000">D┘X◢ -B┘X◢ -C┘X◢ A┘X</font></p>
+<p>註: 程式使用重複計算方法，所以冪數越大，計算時間越長。</p>
+<p>　</p>
+<p>例題: 計算以下矩陣及其逆矩陣:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="Image178.gif" width="50" height="48"></p>
+<p>按 Prog 1 再按 1 EXE 2 EXE 3 EXE 4 EXE 3 EXE (顯示37)</p>
+<p>EXE (顯示54) EXE (顯示81) EXE (顯示118) EXE (顯示 -59/4)</p>
+<p>EXE (顯示 27/4) EXE (顯示 81/8) EXE (顯示 -37/8)</p>
+<p>所以</p>
+<p><img border="0" src="Image177.gif" width="128" height="48"></p>
+<p>
+<img border="0" src="Image179.gif" width="156" height="76"></p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185 程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/matrixPower.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:35 GMT -->
+</html>

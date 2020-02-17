@@ -1,0 +1,76 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/standardnormal3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>反查標準常態分佈概率</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b>
+
+<font size="5">反查</font><span lang="EN-US" style="font-family: 新細明體"><font size="5">標準常態分佈概率</font></span></b></u></p>
+<span lang="EN-US" style="font-family: 新細明體">
+<p>程式編寫日期: 2006年1月5日</p>
+<p>第一個程式較短，由於使用直接計算方法，速度很快，但準確度較低 (誤差小於4.5x10<sup>-4</sup>)。第二個程式則較長，而且使用牛頓法計算出答案的近似值，由於要重覆計算，程式的速度會較慢，但準確度卻很高。
+ 
+<font color="#FF0000"><b>注意</b></font>由於高考應用數學及高考數學與統計所用的方法是查表，所以準確度不及這些程式，若果希望與高
+考的標準答案完全一樣(包括正比例方法<span class="postbody"><font size="3">Linear 
+Interpolation</font>)，請使用<a href="standardnormal6.html">高考反查標準常態分佈準確版程式</a>。</p>
+
+<p>注意: <font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+
+<p><font color="#FF0000">第一個程式</font> (70 bytes，使用記憶為M)</p>
+
+<p>?→M: . 5<font color="#FF0000">M-</font>: √lnM<sup>2 -1</sup>: Ans - (2515517 + 
+802853Ans +</p>
+
+<p>10328Ans<sup>2</sup>) ÷ (<font color="#FF0000">10<sup>x</sup></font>6 
++ 1432788Ans + 189269Ans<sup>2</sup> +</p>
+
+<p>1308Ans<sup>3</sup> </p>
+
+　</p>
+<p><font color="#FF0000">第二個程式</font> (115 bytes)</p>
+<p>Mem clear: ?→A: Lbl 0: 1 ÷ (1 + . 2316419M:</p>
+<p>. 31938153Ans - . 356563782Ans<sup>2</sup> + 
+1.78147794Ans<sup>3</sup> -</p>
+<p>1.82125598Ans^4 + 1.33027443Ans^5 - √2π√<font color="#FF0000">e</font>M<sup>2</sup>(</p>
+<p>. 5 - A<font color="#FF0000">M+</font>: 
+<font color="#0000FF">B - M</font> <font color="#FF0000">=&gt;</font> 
+M→B <font color="#FF0000">=&gt;</font> Goto 0: M </p>
+<pre>
+</pre>
+</p>
+<p>註1: 兩個程式輸入概率範圍為 0≦ P&lt; 0.5，否則程式可能會出現Math error或不能正常運作。</p>
+<p>註2: 第二個程式若果想保留一些記憶用作儲存臨時數據，可將程式中&quot;Mem clear&quot;改為&quot;M<font color="#FF0000">M-</font>&quot;，而程式所使用的記憶為A，B及M。</p>
+<p>註3: 注意第二個程式可能需要較長時才可以計算出答案。另外，小部</span><span style="font-family: 新細明體">份</span><span lang="EN-US" style="font-family: 新細明體">款舊款 
+fx-3650P計數機因欠缺修正功能，因此使用第二個程式時一直無法顯示答案，若果發生這種情況，請將藍色的程式編
+<font color="#0000FF">B - M</font> 改為 B - M + 1 - 1 即可。</p>
+　</p>
+<p>例題: 若P(0≦ 
+Z≦x) 
+= 0.3，求 x 的值，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 0.3 EXE 
+(第一個程式顯示0.841456717，而第二個程式則顯示0.841621042)</p>
+<p>　</p>
+<p><a href="standardnormal6.html">高考反查標準常態分佈準確版程式</a></p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/standardnormal3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+</html>

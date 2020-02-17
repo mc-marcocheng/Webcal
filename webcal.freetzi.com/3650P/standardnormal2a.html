@@ -1,0 +1,76 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/standardnormal2a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>第二個程式高考精簡版</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><font size="5"><b>標</b></font><b><font size="5">準常分佈高考精簡版 </font></b>
+</u></p>
+<p><font color="#FF0000">最新更新日期: 2010年1月5日</font></p>
+<p>這個精簡程式只使用7個位的參考常數，準確度較低一點，但已可以確保與高考標準常態分佈查表的數值<font color="#FF0000">完全一樣(兩位小數查對應概率)</font>，因此建議可在高考中使用。
+查表方法不能直接求得的數值時(例如: 多過兩位小數)，高考則使用正比例的方法求出答案，若果希望與高考的標準答案全完一致，請使用<a href="standardnormal5.html">高考準確程式</a>。</p>
+<p>注意: <font color="#FF0000">e</font>是按shift 
+e<sup>x</sup>，<font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p>程式 (69 bytes / <font color="#008000">78 bytes</font>，使用記憶為A)</p>
+<p>?→A: 1<span lang="en"> ÷ (1 + . 23165√A<sup>2</sup>: . 5 - Ans√<font color="#FF0000">e</font> 
+- A<sup>2</sup> <font color="#FF0000">10<sup>x</sup></font> - 4 </span></p>
+<p>(1274 - 1422Ans + Ans<sup>2 </sup>(7107 - 7266Ans + 5307Ans<sup>2</sup>:  </p>
+<p>Fix 4: Rnd: Norm 1<font color="#008000">◢ <span lang="en">. 5 - Ans ◢ 1 - Ans</span></font></p>
+<p><font color="#008000">註:</font> 若果不想同時計算P(Z≧X)及P(Z≦X)，綠色的程式碼可以略去。</p>
+<p align="left">註: 精簡版若果不取小數四位，準確度亦接近7位小數，所以能確保與查表的結果完全一致。</p>
+<p align="left">　</p>
+<p>例題: 計算 <font face="Times New Roman, Times, serif">P(0</font><span lang="EN-US"><font face="Times New Roman, Times, serif"><font face="新細明體, 細明體">≦</font> 
+Z</font>≦<font face="Times New Roman, Times, serif">1)</font></span>、<font face="Times New Roman, Times, serif">P(</font><span lang="EN-US"><font face="Times New Roman, Times, serif">Z≧1)</font></span> 
+及 <font face="Times New Roman, Times, serif">P(</font><span lang="EN-US"><font face="Times New Roman, Times, serif">Z</font>≦<font face="Times New Roman, Times, serif">1)</font></span>，其中 
+<font face="Times New Roman, Times, serif">Z ~ N(0, 1)</font>。</p>
+<p>
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> Prog 1&nbsp; </span>
+<span style="font-family: 新細明體">再按 1 EXE (顯示</span><font face="Times New Roman, Times, serif">P(0</font><span lang="EN-US"><font face="Times New Roman, Times, serif"><font face="新細明體, 細明體">≦</font> 
+Z</font>≦<font face="Times New Roman, Times, serif">1)為</font></span><font face="Times New Roman, Times, serif">0.3413)</font></p>
+<p>
+<font face="Times New Roman, Times, serif">EXE </font>
+<span style="font-family: 新細明體">(顯示</span><font face="Times New Roman, Times, serif">P(</font><span lang="EN-US"><font face="Times New Roman, Times, serif">Z</font>≧<font face="Times New Roman, Times, serif">1)為</font></span><font face="Times New Roman, Times, serif">0.1587) 
+EXE </font>
+<span style="font-family: 新細明體">(顯示</span><font face="Times New Roman, Times, serif">P(</font><span lang="EN-US"><font face="Times New Roman, Times, serif">Z</font>≦<font face="Times New Roman, Times, serif">1)為</font></span><font face="Times New Roman, Times, serif">0.8413)</font></p>
+<p>　</p>
+<p>註: <span lang="EN-US">如果輸入的數</span><font face="Times New Roman, Times, serif">值<span lang="en-us">X</span></font><span lang="EN-US">
+</span>為<span lang="EN-US">負數，程式會計算<font face="Times New Roman, Times, serif">P(X<font face="新細明體, 細明體">≦</font> 
+Z</font>≦<font face="Times New Roman, Times, serif">0)</font>，然後</span>順序<span lang="EN-US">計算<font face="Times New Roman, Times, serif">P(Z
+</font>≦<font face="Times New Roman, Times, serif"> X)</font>及<font face="Times New Roman, Times, serif">P(Z 
+≧ X)</font>。</span></p>
+<p>　</p>
+<p>
+<font face="新細明體">
+<a href="3650.html"><span lang="en-us">返回</span> fx-3650P 
+程式集</a></font></p>
+<p>　</p>
+<hr><hr>
+<p><font color="#0000FF">程式舊版</font></p>
+<p>程式編寫日期:2005年12月9日 <font color="#0000FF">(更正日期:2005年12月9日)</font></p>
+<p>程式 (88 bytes / <font color="#008000">97 bytes</font>，使用記憶為A)</p>
+<p>?→A: 1<span lang="en"> ÷ (1 + . 231642√A<sup>2</sup>: . 5 - √<font color="#FF0000">e</font> 
+- A<sup>2</sup> <font color="#FF0000">10<sup>x</sup></font> - 7 (</span></p>
+<p><span lang="en">1274148Ans - 1422484Ans<sup>2</sup> + 7107069Ans<sup>3</sup> 
+-</span></p>
+<p><span lang="en">7265760Ans^4 + 5307027Ans^5 : </span>Fix 4: Rnd: </p>
+<p>Norm 1<font color="#008000">◢ <span lang="en">. 5 - Ans ◢ 1 - Ans</span></font></p>
+<p>　</p>
+<p>　</p>
+<p>　</p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/standardnormal2a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+</html>

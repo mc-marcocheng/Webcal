@@ -1,0 +1,177 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/info/statistics2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:24 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>回歸計算</title>
+<meta name="Microsoft Theme" content="nature 011">
+<script src="webcal.js"></script></head>
+
+<body background="nabkgnd.jpg" bgcolor="#FFFFFF" text="#000000" link="#993333" vlink="#333399" alink="#006633">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">
+回歸計算</font></b></u></p>
+<p><font color="#FF0000">按鍵說明:</font></p>
+<p><font color="#800080">(A) 回歸模的選擇</font></p>
+<p>MODE 3 1 (進入線性回歸模式: y= A + Bx)</p>
+<p>MODE 3 2 (進入對數回歸模式: y= A + B ln x)</p>
+<p>MODE 3 3 (進入指數回歸模式: y= A e<sup>Bx</sup>)</p>
+<p>MODE 3 → 1 (進入乘方回歸模式: y= A x<sup>B</sup>)</p>
+<p>MODE 3 → 2 (進入逆回歸模式: y= A + B/x)</p>
+<p>MODE 3 → 3 (進入二次回歸模式: y= A + Bx +Cx<sup>2</sup>)</p>
+<p><font color="#800080">(B) 回歸變數</font></p>
+<p>
+Alpha CLR 1 = (清除統計記憶)</p>
+<p>
+Shift S-SUM 1 = (顯示數據的平方總和<font color="#FF0000"> 
+Σx<sup>2</sup></font>)</p>
+<p>
+Shift S-SUM 2 = (顯示數據的總和<font color="#FF0000"> 
+Σx</font>)</p>
+<p>
+Shift S-SUM 3 = (顯示數據的數量<font color="#FF0000"> 
+n</font>)</p>
+<p>
+Shift S-SUM → 1 = (顯示數據的數量<font color="#FF0000"> 
+Σy<sup>2</sup></font>)</p>
+<p>
+Shift S-SUM → 2 = (顯示數據的數量<font color="#FF0000"> 
+Σy</font>)</p>
+<p>
+Shift S-SUM → 3 = (顯示數據的數量<font color="#FF0000"> 
+Σxy</font>)</p>
+<p>
+Shift S-SUM → → 1 = (只限二次回歸模式，顯示數據的數量<font color="#FF0000"> 
+Σx<sup>3</sup></font>)</p>
+<p>
+Shift S-SUM → → 2 = (只限二次回歸模式，顯示數據的數量<font color="#FF0000"> 
+Σx<sup>2</sup>y</font>)</p>
+<p>
+Shift S-SUM → → 3 = (只限二次回歸模式，顯示數據的數量<font color="#FF0000"> 
+Σx<sup>4</sup></font>)</p>
+<p>
+Shift S-VAR 1 = (顯示x數據的平均數 
+<span style="text-decoration: overline"><font color="#FF0000">x</font></span>)</p>
+<p>
+Shift S-VAR 2 = (顯示x數據的標準差 
+<font color="#FF0000">xσn</font>)</p>
+<p>
+Shift S_VAR 3 = (顯示x數據的樣本標準差<font color="#FF0000">xσn-1</font>)</p>
+<p>
+Shift S-VAR → 1 = (顯示y數據的平均數 <span style="text-decoration: overline">
+<font color="#FF0000">y</font></span>)</p>
+<p>
+Shift S-VAR → 2 = (顯示y數據的標準差 
+<font color="#FF0000">yσn</font>)</p>
+<p>
+Shift S_VAR → 3 = (顯示y數據的樣本標準差<font color="#FF0000">yσn-1</font>)</p>
+<p>
+Shift S_VAR → → 1 = (顯示回歸係數<font color="#FF0000">A</font>)</p>
+<p>
+Shift S_VAR → → 2 = (顯示回歸係數<font color="#FF0000">B</font>)</p>
+<p>
+Shift S_VAR → → 3 = (顯示回歸係數<font color="#FF0000"> 
+r </font>或 <font color="#FF0000">C</font>)</p>
+<p>
+Shift S-PTS 1 = (顯示數據X的最小值)</p>
+<p>
+Shift S-PTS 2 = (顯示數據X的最大值)</p>
+<p>
+Shift S-PTS → 1 = (顯示數據X的最小值)</p>
+<p>
+Shift S-PTS → 2 = (顯示數據X的最大值)</p>
+<p>
+　</p>
+<p>
+輸入數據的方法: <font color="#800080">[x數據]</font> , <font color="#800080">[y數據]</font> 
+Data 或&nbsp; <font color="#800080">[x數據]</font> 
+, <font color="#800080">[y數據]</font> ; <font color="#800080">[數量]</font> Data</p>
+<p>
+<b><font color="#FF0000">注意:</font></b> 當改變計數機模式(包括改變到相同的統計模式)，統計記憶會自動被清除。</p>
+<p>
+　</p>
+<p>
+例題: 
+利用線性回歸方法，找出下列數據的線性關係，估計當x=10，y的數值?估計當y=38，x的數值?</p>
+<!--mstheme--></font>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber1" align="left" bordercolorlight="#CC9966" bordercolordark="#996600">
+  <tr align="center">
+    <td width="12%">  <!--mstheme--><font face="新細明體">x<!--mstheme--></font></td>
+    <td width="12%"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="12%"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="12%"><!--mstheme--><font face="新細明體">13<!--mstheme--></font></td>
+    <td width="13%"><!--mstheme--><font face="新細明體">19<!--mstheme--></font></td>
+    <td width="13%"><!--mstheme--><font face="新細明體">19<!--mstheme--></font></td>
+    <td width="13%"><!--mstheme--><font face="新細明體">19<!--mstheme--></font></td>
+    <td width="13%"><!--mstheme--><font face="新細明體">15<!--mstheme--></font></td>
+  </tr>
+  <tr align="center">
+    <td width="12%"><!--mstheme--><font face="新細明體">y<!--mstheme--></font></td>
+    <td width="12%"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="12%"><!--mstheme--><font face="新細明體">5<!--mstheme--></font></td>
+    <td width="12%"><!--mstheme--><font face="新細明體">26<!--mstheme--></font></td>
+    <td width="13%"><!--mstheme--><font face="新細明體">40<!--mstheme--></font></td>
+    <td width="13%"><!--mstheme--><font face="新細明體">40<!--mstheme--></font></td>
+    <td width="13%"><!--mstheme--><font face="新細明體">40<!--mstheme--></font></td>
+    <td width="13%"><!--mstheme--><font face="新細明體">30<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p>
+　</p>
+<p>
+　</p>
+<p>
+按 MODE 3 1 (進入線回歸模式及清洗統計記憶)</p>
+<p>
+再按 2 , 5 Data Data 13 , 26 Data 19 , 40 
+Shift ; 3 Data 15 , 30 Data</p>
+<p>Shift S_VAR 
+→ → 1 = (顯示A為0.556992724)</p>
+<p>Shift S_VAR 
+→ → 2 = (顯示B為 
+2.046079224)</p>
+<p>Shift S_VAR → → 3 = </p>
+<p>
+(顯示 r為0.998615112，這個數值(correlation 
+coefficient)越近1或-1，代表越接近線性關係)</p>
+<p>
+10 Shift S_VAR → → → 2 =
+(顯示21.01778496)</p>
+<p>
+38 Shift S_VAR → → → 1 = 
+(顯示18.29988147)</p>
+<p>
+　</p>
+<p>
+因此直線關係為 y = 0.556992724 +&nbsp; 
+2.046079224 x </p>
+<p>
+當x=10，y 
+= 21.01778496</p>
+<p>
+當y=38，x 
+= 18.29988147</p>
+<p>
+完成計算後，按 MODE 1 
+返回正常模式。</p>
+<p>
+<font color="#FF0000">注意: </font>若計算新一組統計問題，請按Alpha CLR 1 = (清除統計記憶)</p>
+<p>
+　</p>
+<p><a href="f-715s.html">CANON F-715S內置功能及應用</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/info/statistics2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:24 GMT -->
+</html>

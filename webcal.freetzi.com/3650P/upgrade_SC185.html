@@ -1,0 +1,113 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/upgrade_SC185.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>提升Truly SC185程式容量秘技</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="7" color="#800080">WebCal 
+計數機網頁</font></b></u></p>
+<p align="center"><b><u><font size="6" color="#FF0000">提升Truly SC185 程式容量秘技</font></u></b></p>
+<p><font color="#0000FF" size="5">注意: 2007年4月推出的SC-185新版本(有會考准考印)已修正RCL問題，所以新版本暫時沒有方法提升程式容量。</font></p>
+<p>更新日期: 2011年6月26日</p>
+<p><b>秘技前言:</b></p>
+<p>雖然已發現新計數機 
+SC185有設計上的問題，這個問題有可能使程式出現各種異常，不過若果懂得正確運用這個缺點，是可以大大增加SC185的程式容量，將缺點變成優點。經過多個星期的不斷努力嘗試及測試，終於研究出確實可行的方法，程式容量可達 
+1144 bytes (甚至更多)，不過使用時亦要清楚知道方法本身的各種限制，否則會出現各種的計算問題。</p>
+<p><font color="#ff0000"><b><font size="+1">
+聲明：這項技術是使用計數機本身設計上的錯誤，雖然已經反覆對這個方法進行很多測試，但亦不能&#32118;對保證使用了這個方法，計數機不會出現任何異常或錯誤，對於使用這個方法而令計算機有任何損壞或計算出現錯誤，必須由閣下自己承擔風險，WebCal計數機網頁不會負責
+，亦不保證所有SC-185計數機都能提升程式容量。</font></b></font></p>
+<p>提升程容量只使用以下其中一個方法:</p>
+<p><b><font color="#800080">方法一:</font></b></p>
+<p>1. 先按 <font color="#0000FF">SHIFT MODE 3 EXE</font> 清除所程式的記憶。</p>
+<p>2. 輸入一個簡單的程式，程式編碼為 cos<sup>-1</sup> Ans，請按 <font color="#0000FF">MODE MODE 
+MODE 1 1 SHIFT cos Ans ON</font>。</p>
+<p>3. 執行這個程式，按 <font color="#0000FF">Prog 1</font>，這時會顯示90，</p>
+<p>再按 <font color="#0000FF">RCL A</font>，這時會顯示 Math ERROR，</p>
+<p>再按計數機的 REPLAY 向右鍵進入程式編輯模式，</p>
+<p>再按 <font color="#0000FF">DEL DEL DEL</font> ，這時會顯示A99，</p>
+<p>再按<font color="#0000FF"> 0 </font>，這時會顯示 600，</p>
+<p>再按 <font color="#0000FF">MODE MODE MODE 3 1</font> 刪除程式，這時會顯示程式總量為960，</p>
+<p>再按 <font color="#0000FF">ON</font> 離開及返回 comp 模式。</p>
+<p>4. 這時已提升了程式容量，容許輸入大量程式碼，不過若果所有程式的總長度小於 361 bytes時，轉換操作模式至統計模式(SD或REG)，系統會自動回復正常，就不能再輸入額外的程式碼，要防止這
+種情況出現，你可以先輸一個程式，程式的長度為 
+361 bytes的程式，程式碼無特別要求，只要程式總長度有 361 bytes就可以(例如: 輸入程式時按大量的0，直至有361 
+bytes)，輸入後即使轉換操作模式亦不會回復正常，等待輸入其它程式的總長度大於 360 bytes才刪除該程式。</p>
+<p>輸人這個程式你可以按 <font color="#0000FF">MODE MODE MODE 1 4</font></p>
+<p>再不斷按 <font color="#0000FF">0</font> 直至顯示 361 時才再按 <font color="#0000FF">ON</font>。 
+</p>
+<p>現在提升容量的程序已完成。</p>
+<p>　</p>
+<p><b><font color="#800080">方法二:</font></b></p>
+<p>1. 先按 <font color="#0000FF">SHIFT MODE 3 EXE</font> 清除所程式的記憶。</p>
+<p>2. 輸入一個簡單的程式，程式編碼為 cos<sup>-1</sup> Ans，請按 <font color="#0000FF">MODE MODE 
+MODE 1 1 SHIFT cos Ans ON</font>。</p>
+<p>3. 執行這個程式，按 <font color="#0000FF">Prog 1</font>，這時會顯示90，</p>
+<p>再按 <font color="#0000FF">RCL A</font>，這時會顯示 Math ERROR，</p>
+<p>再按計數機的 REPLAY 向右鍵進入程式編輯模式，</p>
+<p>再按 <font color="#0000FF">DEL DEL DEL</font> ，這時會顯示A99，</p>
+<p>再按 <font color="#0000FF">ON</font> 離開及返回 comp 模式。</p>
+<p>4. 這時只能增加 1 bytes的程式容量，若果轉換操作模式至統計模式(SD或REG)，系統會自動回復正常。請輸入一個程式用盡 361 bytes 
+的程式空間，程式碼無特別要求(例如: 輸入程式時按大量的0，直至有361 bytes)，</p>
+<p>輸人這個程式你可以按 <font color="#0000FF">MODE MODE MODE 1 4</font></p>
+<p>再不斷按 <font color="#0000FF">0</font> 直至顯示 361 時才再按 <font color="#0000FF">ON</font>。 
+</p>
+<p>5. 這時已用盡所有程式空間不能再輸入新的程式，不過只要轉換操作模式至統計模式(SD或REG)，就可以釋放出大量程式空間，</p>
+<p>所以請再按 <font color="#0000FF">MODE MODE 1 MODE 1</font></p>
+<p>此時即使再轉換至其它模式亦不會再有問題，要注意若果所有程式的總長度少於361 bytes時，有可能會回復正常的程式容量(360 
+bytes)，就不能再輸入額外的程式碼。</p>
+<p>現在提升容量的程序已完成。</p>
+<p>　</p>
+<p><b><font color="#800080">提升程式容量後的限制及注意事項:</font></b></p>
+<p>1. 以下的幾個情況會使計算機自動回復正常的程式總容量(360 bytes):</p>
+<p>(A) 執行 Reset ALL 的指令 (即是按 <font color="#0000FF">SHIFT MODE 3 EXE</font>)。</p>
+<p>(B) 所有的程式總長度少於361 bytes，由非統計模式轉換至統計模式(SD或REG)。</p>
+<p>(C) 所有的程式總長度少於361 bytes，由統計模式(SD或REG)轉換至其它模式(包括轉換至相同的模)。</p>
+<p>　</p>
+<p>2. 所有的程式總長度大於 360 
+bytes時，程式使用的空間實際上是與統計數據及其它計數機的運算有共用關係，特別是統計模式的計算，當所有的程式總長度大於 360 
+bytes時，在統計模式輸入數據是有可能會破壞或覆蓋原先記存的程式，至於會否有影響及影響的程度有多少，取決於兩個因素，第一個因素是輸入的程式總長度，第二個因素是在統計模式輸入的數據數目。因此輸入的程式的總長度越多，容許輸入統計數目就會越少(在不影響原來記存程式的情況下)，例如: 
+輸入程式的總長度為 936 bytes 時，在SD模式下不可輸入多過21組數據(無論頻數是否是1都是一樣)，在REG模式下則不可以輸入多過14組數據，否則會影響原來記存的程式碼。你可以使用下列的公式得知最多可以輸入數據的數目:</p>
+<p>計算公式:</p>
+<p>SD 模式下最多輸入數據的數目 = ( 1272 - 程式總長度 ) <span lang="en">÷ 16</span></p>
+<p>REG 模式下最多輸入數據的數目 = ( 1272 - 程式總長度 ) <span lang="en">÷ 24</span></p>
+<p>計算若得出小數，請將小數部份捨去就可以。</p>
+<p align="left">　</p>
+<p>3. 
+當輸入的統計數據過多，原先記存的程式碼會被破壞，最先影響的將會是P1，接著是P2、P3及P4，而原程式碼被覆蓋的次序，是會從程式的開始位置順序覆蓋。因此程式P1有較大的機會會被影響。另外若果輸入的程式有執行統計數據的輸入，而輸
+入的數據數量很大，需要相應地減少輸入程式的總長度。</p>
+<p>4. 經過測試的數據顯示，當輸入程式的總長度大於 1144 
+bytes時，即使不輸入統計數據，只執行一般計算，重現記憶(Replay memory)有可能會破壞原先輸入的程式，因此強烈建議程式總長度不能超過 1144 
+bytes。</p>
+<p>5. 若果有需要程式總長度大於1144 bytes，則要停止使用重現功能，亦即是將一般的計算在統計模式(SD 或 REG)中執行就可以。執行程式所顯示的答案是不會記存在重現記憶中，不過可能會改變計算模式，因此若果忘記轉回統計模式，再使用計數機進行一般的運算，就有可能會破壞原有程式，令計數機出異常及不穩定，因此為了減少這種情況出現的機會，強烈建議<font color="#FF0000">所有程式都應使用統計模式</font>，另外要注意是統計數據的輸入數目限制，因此除了一般統計功能可能不能使用外，程式亦可能不可以包含統計數據的輸入。</p>
+<p>6. 
+當進入編輯模式的選單時，顯示的剩餘程式容量數字是不正確，可以不理這個數值，但進入個別程式進行編輯時，能正確顯示個別程式所使用了的容量，不過長度到達1000時會返回0開始。</p>
+<p>　</p>
+<p>註1: 由於這部計數機是剛剛推出，不排除Truly公司會修正設計上的問題， 若果作出修正，那麼就再不能提升程式容量了。</p>
+<p>註2:  當程式總長度大於1552 bytes後，計數機的<font color="#FF0000">堆棧記憶</font> (Stack memory)有可能會改變及破壞原先輸入的程式，
+因此程式的總長度必須少於1552 bytes。當不斷增加總長度大約至 
+1800 bytes時，程式顯示數值會異常地增加，最後顯示屏會出現異常的閃動，只有按 ON 才可以終止，按 ON 後所有的程式亦會自動被清除。</p>
+<p>　</p>
+<p>各位網友若對上述升級方法有任何疑問或意見，歡迎到<a href="http://webcal.forumcircle.com/viewforum.php?f=1&amp;sid=38efe43740d62bbdee46bd132b7ea551">WebCal論壇</a>留言討論。</p>
+<p>　</p>
+<p style="line-height: 200%">
+<a href="SC185_3650.html">返回SC-185及3650P功能比較</a></p>
+
+<p style="line-height: 200%">
+<font face="Times New Roman, Times, serif"><a href="3650.html">返回fx-3650P及SC185程式集</a></font></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/upgrade_SC185.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+</html>

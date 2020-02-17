@@ -1,0 +1,117 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/binomialD1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:06 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>二項分佈</title>
+<meta name="Microsoft Theme" content="cnpeach 011">
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<script src="webcal.js"></script></head>
+
+<body background="di5.gif" bgcolor="#EEFFF7" text="#000000" link="#008000" vlink="#808080" alink="#808000">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><span lang="EN-US" style="font-family: 新細明體">
+<font size="5">二項分</font></span><span style="font-family: 新細明體"><font size="5">佈(I)</font></span></b></u></p>
+<p>程式編寫日期: 2006年2月4日</p>
+<p>程式長度: 16步 (注意: <font color="#FF0000">A</font>是按 FMLA a b/c，<font color="#FF0000">B</font>是按 FMLA&nbsp;
+<font face="新細明體, 細明體">。'''，<font color="#FF0000">C</font>是按 FMLA hyp</font>)</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse; " width="100%" id="AutoNumber1" bordercolorlight="#669900" bordercolordark="#669900">
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><font color="#FF0000">A</font> 2<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><sub>n</sub>C<sub>r</sub><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><font color="#FF0000">B</font> 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin - 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin 4<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><font color="#FF0000">C</font> 0<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin - 4<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">x<sup>y</sup><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 2<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 4<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">x<sup>y</sup><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 1<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">M+<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MODE .<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">　<!--mstheme--></font></td>
+  </tr>
+  </table>
+<!--mstheme--><font face="新細明體">
+<p><font color="#FF0000">注意:</font> 
+程式除了計算答案外，亦會將答案累加在獨立記憶(M)中，若果要計算多個概率的總和，請先清除記憶M的數值(按 AC SHIFT Min)</p>
+<p>　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">例題</span><span lang="EN-US">1: </span>
+<span style="font-family: 新細明體">若</span><span lang="EN-US">X ~ Bin(9,0.5)</span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">求</span><span lang="EN-US">P(X=4)</span><span style="FONT-FAMILY: 新細明體">。</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> P1&nbsp; 9 RUN 4 RUN 
+. 5 RUN (</span><span style="font-family: 新細明體">顯示答案為</span><span lang="EN-US">0.24609)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">例題</span><span lang="en-us">2</span><span lang="EN-US">:
+</span><span style="font-family: 新細明體">若</span><span lang="EN-US">X ~ Bin(9,0.5)</span><span style="FONT-FAMILY: 新細明體">，</span><span style="font-family: 新細明體">求</span><span lang="EN-US">P(X=4)</span><span style="FONT-FAMILY: 新細明體">，</span><span lang="EN-US">P(X=7)</span><span style="font-family: 新細明體">及</span><span lang="EN-US">P(X=4)+P(</span><span lang="EN-US">X</span>=<span lang="EN-US">7)</span><span style="FONT-FAMILY: 新細明體">。</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> AC SHIFT Min
+<font color="#FF0000">(</font></span><font color="#FF0000">必要)</font>
+<span lang="EN-US">P1&nbsp; 9 RUN 4 RUN . 5 RUN (</span><span style="font-family: 新細明體">顯示</span><span lang="EN-US">P(X=4)</span><span style="font-family: 新細明體">為</span><span lang="EN-US">0.24609)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="EN-US" style="FONT-FAMILY: 新細明體">P1&nbsp; 9 RUN 7 RUN RUN (</span><span style="font-family: 新細明體">顯示</span><span lang="EN-US">P(X=7)</span><span style="font-family: 新細明體">為</span><span lang="EN-US">0.07031)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span lang="en-us">MR</span><span lang="EN-US"> </span>
+<span lang="EN-US" style="FONT-FAMILY: 新細明體">(</span><span style="font-family: 新細明體">顯示</span><span lang="EN-US">P(X=4)+</span>P(<span lang="EN-US">X</span>=<span lang="EN-US">7)</span><span style="font-family: 新細明體">為</span><span lang="EN-US">0.31641)</span></p>
+<font face="新眷茤��?&gt;對應&lt;/font&gt;&lt;span lang=" EN-US>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<a href="index.html">返回 fx-50F專頁</a></p>
+</font>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">　</p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/binomialD1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:06 GMT -->
+</html>
+

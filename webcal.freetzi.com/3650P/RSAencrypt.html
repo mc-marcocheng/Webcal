@@ -1,0 +1,58 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/RSAencrypt.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:55 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>RSA加密及解密</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">RSA加密及解密</font></b></u></p>
+<p>程式可以利用RSA演算法對一些數值進行加密或解密。</p>
+<p>程式編寫日期: 2006年7月15日</p>
+<p><font color="#FF0000">程式需要在 BASE 模式下執行，因此在輸入程式前請先按 Mode Mode 3 進入BASE模式。</font></p>
+<p>程式 (80 bytes，使用記憶為A、B、C、D及M)</p>
+<p>Dec:&nbsp; ?→A: ?→B: Lbl 0: 1→M: A→D: ?→C: Lbl 1: </p>
+<p>C - C ÷ B × B→C: D - D ÷ 2 × 2 <font color="#FF0000">=&gt;</font> CM - 
+CM ÷ B 
+× B→M:  </p>
+<p>D ÷ 2→D <font color="#FF0000">=&gt;</font> 
+CC→C: D
+<font color="#FF0000">=&gt;</font> Goto 1: 
+M→C: Goto 0</p>
+<p>　</p>
+<p>例題: 已知RSA加密演算法的公鑰及私鑰分別為{5, 35}及{29, 35}，試將數值 12, 16, 22 及 5進加密及解密。</p>
+<p>加密:</p>
+<p>按 Prog 1 再按 5 EXE 35 EXE (輸入公鑰) </p>
+<p>12 EXE (顯示17) 16 EXE (顯示11) 22 EXE (顯示22) 5 EXE (顯示10)</p>
+<p>所以加密後的數值為 17, 11, 22, 10</p>
+<p>計算完結後按 AC 終止程式</p>
+<p>解密:</p>
+<p>按 Prog 1 再按 29 EXE 35 EXE (輸入私鑰) </p>
+<p>17 EXE (顯示12) 11 EXE (顯示16) 22 EXE (顯示22) 10 EXE (顯示5)</p>
+<p>所以解密後的數值為 12, 16, 22, 5</p>
+<p>計算完結後按 AC 終止程式及按MODE 1 返回正常計算模式</p>
+
+<p>
+　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/RSAencrypt.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:55 GMT -->
+</html>

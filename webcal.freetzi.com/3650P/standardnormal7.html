@@ -1,0 +1,347 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/standardnormal7.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>標準常態分佈及反標準常態分佈</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">標準常態分佈及反標準常態分佈</font></b></u></p>
+<p align="center"><u><b><font size="5">高考準確版 I</font></b></u></p>
+
+<p><b><font color="#FF0000">程式最新更新日期: 2010年1月5日</font></b></p>
+
+<p>程式都可以計算標準常態分佈或反標準常態分佈，程式針對高考數學與統計及應用數學設計，亦即是利用查表的數據及線性比例方法<font size="3">(Linear 
+Interpolation)計算答案，</font>因此<font color="#FF0000">能確保與高考標準答案相同<b>(包括順查及反查的情況)</b></font>。 </p>
+<p>注意: <font color="#FF0000">e</font>是按shift 
+e<sup>x</sup>，<font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p>程式一(208 bytes)</p>
+<p>Mem clear: ?→X: ?→C: X=0 <font color="#FF0000">=&gt;</font> √C<sup>2</sup>→C
+<font color="#FF0000">=&gt;</font> C - . 005 <font color="#FF0000">=&gt;</font> Goto 
+0:</p>
+<p>ln ( 1 - 4C<sup>2</sup>: √( - Ans - 8 + √( Ans<sup>2</sup> 
+- 9Ans + 64: Lbl 0: Fix 2: </p>
+<p>Rnd: Ans<font color="#FF0000">M+</font>:  Lbl 1: B→A: M<font face="新細明體">→Y: D
+<font color="#FF0000">=&gt;</font> . 01 - . 02(B</font>&gt;<font face="新細明體">C<font color="#FF0000">M+</font>:</font></p>
+<p>1 ÷ (1 + . 23165M: . 5 - Ans √<font color="#FF0000">e</font> 
+- M<sup>2</sup> <font color="#FF0000">10<sup>x</sup></font> - <span lang="en">4 </span>  </p>
+<p>(1274 - 1422Ans + Ans<sup>2 </sup>(7107 - 7266Ans + 5307Ans<sup>2</sup>:  </p>
+<p>Fix 4: Rnd: Ans→B: (D=0) + X(A=B→D <font color="#FF0000">=&gt; </font>Goto 1: 
+Norm 1:  </p>
+<p>(A - B) ÷ (Y - M→D: X <font color="#FF0000">=&gt;</font> Y + 
+D<sup>-1</sup>(C - A◢ A + D(C - Y</p>
+<p>　</p>
+<p>程式二(簡短版，200 bytes)</p>
+<p>Mem clear: ?→X: ?→C: X=0 <font color="#FF0000">=&gt;</font> √C<sup>2</sup>→C
+<font color="#FF0000">=&gt;</font> C - . 005 <font color="#FF0000">=&gt;</font> Goto 
+0:</p>
+<p>ln ( 1 - 4C<sup>2</sup>: √( - Ans - 8 + √( Ans<sup>2</sup> 
+- 9Ans + 64: Lbl 0: Fix 2: </p>
+<p>Rnd: Ans<font color="#FF0000">M+</font>:  Lbl 1: B→A: M<font face="新細明體">→Y: D
+<font color="#FF0000">=&gt;</font> . 01 - . 02(B</font>&gt;<font face="新細明體">C<font color="#FF0000">M+</font>:</font></p>
+<p>1 ÷ (1 + . 23165M: . 5 - Ans √<font color="#FF0000">e</font> 
+- M<sup>2</sup> <font color="#FF0000">10<sup>x</sup></font> - <span lang="en">4 </span>  </p>
+<p>(1274 - 1422Ans + Ans<sup>2 </sup>(7107 - 7266Ans + 5307Ans<sup>2</sup>:  </p>
+<p>Fix 4: Rnd: Ans→B:  D=0→D <font color="#FF0000">=&gt; </font>Goto 1: 
+Norm 1:  </p>
+<p>(A - B) ÷ (Y - M→D: X <font color="#FF0000">=&gt;</font> Y + 
+D<sup>-1</sup>(C - A◢ A + D(C - Y</p>
+<p>　</p>
+<p>註1: 反查計算時，輸入概率範圍為 0&lt; P&lt; 0.5，否則程式可能會出現Math error或不能正常運作。</p>
+<p>註2: 如果輸入的數值X為負數，程式會計算P(X≦ 
+Z≦0)。</p>
+<p>註3: 反查的概率P&gt;0.4973時，查表可能會出現多於一個答案，這時程式二可能會出現Math 
+ERROR(現時很多同類程式的限制)，程式一則解決了這方面問題，可以顯示其中一個正確答案。例如: 反查P=0.4990，查表可得的答案分別為 Z=3.08, 
+Z=3.09 或 Z=3.10，程式二會出現Math 
+ERROR，程式一則顯示答案為Z=3.08。其實若果使用程式二，而反查的P值是表有的(即P值不多於4位小數)，在Math ERROR後，可以自行按 AC RCL 
+M 或 RCL Y 顯示可能的答案。</p>
+<p>　</p>
+<p>例題1: 計算 P(0≦ 
+Z≦1)，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 <font color="#FF0000">EXE</font> 
+(不輸入數值或輸入0代表計算標準常態分佈)</p>
+<p>
+1 EXE (顯示P(0≦ 
+Z≦1)為0.3413)</p>
+<p>　</p>
+<p>例題2: 計算 P(0≦ 
+Z≦1.234)，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 <font color="#FF0000">EXE</font> 
+(不輸入數值或輸入0代表計算標準常態分佈)</p>
+<p>
+1.234 EXE (顯示P(0≦ 
+Z≦1.234)為0.39142)</p>
+<p>
+　</p>
+<p>註4: 輸入多於2位小數，程式會使線性比例方法(Linear 
+Interpolation)，程式執行完結後可以按 <font color="#0000FF">RCL A</font>及<font color="#0000FF">RCL 
+B</font>可以顯示查表時使用的兩個概率的數值，由於一般考試可能需要詳細步驟，你亦可以直接使用這兩個數值作為考試步驟的數據。</p>
+<p>　</p>
+<p>例題3: 若P(0≦ 
+Z≦x) 
+= 0.3907，求 x 的值，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 <font color="#FF0000">1 EXE</font> 
+(輸入1代表計算反標準常態分佈)</p>
+<p>
+0.3907 EXE (顯示答案為 1.23)</p>
+<p>
+計算完結後按 AC 終止程式</p>
+<p>
+註5: 得出的答案若果<font color="#FF0000">不多於兩位小數</font>(表的Z位數)，
+表示直接查表求得答案，因此不需要任何考試的計算步驟。</p>
+<p>
+　</p>
+<p>例題4: 若P(0≦ 
+Z≦x) 
+= 0.3，求 x 的值，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 <font color="#FF0000">1 EXE</font> 
+(輸入1代表計算反標準常態分佈)</p>
+<p>
+0.3 EXE (顯示答案為 0.841785714)</p>
+<p>
+計算完結後按 AC 終止程式</p>
+<p>
+註6: 答案<font color="#0000FF">多於兩位小數</font>，表示答案不能直接查表求得，要使用線性比例方法(Linear 
+Interpolation)求出答案， 按 <font color="#0000FF">RCL A</font> 及<font color="#0000FF">RCL B</font>可以顯示計算步驟所要的概率
+值(0.2995及0.3023)，再按 <font color="#0000FF">RCL Y</font>及<font color="#0000FF">RCL 
+M</font>則顯示兩個X值(0.84及0.85)，由於一般考試可能需要詳細步驟，你亦可以直接使用這些數值作為考試步驟的數據。</p>
+<p>
+註7: 現時很多這類<font color="#FF0000">高考版程式</font>在計算一些特別情況都均會出現錯誤(由於不是使用與高考計算時完全一致方法之故)，例如: 
+以下例題5及例題6，順查P(0≦Z≦0.77)會得錯誤答案0.2793，<font color="#FF0000">正確答案為0.2794</font>。反查P(0≦ 
+Z≦x)=0.48078會得出錯誤的答案 2.0695，<font color="#FF0000">正確答案為2.0696</font>，本程式沒有類似的計算問題。</p>
+<p>
+　</p>
+<p>例題5: 計算 P(0≦ 
+Z≦0.77)，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 <font color="#FF0000">EXE</font> 
+(不輸入數值或輸入0代表計算標準常態分佈)</p>
+<p>
+0.77 EXE (顯示P(0≦ 
+Z≦1)為0.2794)</p>
+<p>
+　</p>
+<p>例題6: 若P(0≦ 
+Z≦x) 
+= 0.48078，求 x 的值，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 1 EXE 0.48078 EXE (顯示答案為 2.0696)</p>
+<p>
+　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC185 程式集</a></p>
+
+<hr>
+
+
+<p>　</p>
+
+<p><b><font color="#0000FF">程式舊版</font></b></p>
+
+<p><font color="#FF0000">程式更新日期: 2009年11月19日</font></p>
+
+<p>程式都可以計算標準常態分佈或反標準常態分佈，程式針對高考數學與統計及應用數學設計，亦即是利用查表的數據及線性比例方法<font size="3">(Linear 
+Interpolation)計算答案，</font>因此<font color="#FF0000">能確保與高考標準答案相同<b>(包括順查及反查的情況)</b></font>。 </p>
+<p>注意: <font color="#FF0000">e</font>是按shift 
+e<sup>x</sup>，<font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p>程式 (224 bytes)</p>
+<p>Mem clear: ?→X: ?→C: X=0 <font color="#FF0000">=&gt;</font> √C<sup>2</sup>→C
+<font color="#FF0000">=&gt;</font> C - . 005 <font color="#FF0000">=&gt;</font> Goto 
+0:</p>
+<p>ln ( 1 - 4C<sup>2</sup>: √( - Ans - 8 + √( Ans<sup>2</sup> 
+- 9Ans + 64: Lbl 0: Fix 2: </p>
+<p>Rnd: Ans<font color="#FF0000">M+</font>:  Lbl 1: B→A: M<font face="新細明體">→Y: D
+<font color="#FF0000">=&gt;</font> . 01 - . 02(B&gt;C<font color="#FF0000">M+</font>:</font></p>
+<p>1 ÷ (1 + . 231642M: . 5 - Ans√<font color="#FF0000">e</font> 
+- M<sup>2</sup> <font color="#FF0000">10<sup>x</sup></font> - 7 (1274148 -  </p>
+<p>1422484Ans + Ans<sup>2</sup>(7107069 - 7265760Ans + 5307027Ans<sup>2</sup>:  </p>
+<p>Fix 4: Rnd: Ans→B: (D=0) + X(A=B→D <font color="#FF0000">=&gt; </font>Goto 1: 
+Norm 1:  </p>
+<p>(A - B) ÷ (Y - M→D: X <font color="#FF0000">=&gt;</font> Y + 
+D<sup>-1</sup>(C - A◢ A + D(C - Y</p>
+
+<p> 　</p>
+
+<p> <font color="#800080">編寫日期: 2007年1月5日 </font><b> 
+<font color="#FF0000">(更新日期: 2007年3月3日)</font></b></p>
+
+<p>這兩個程式都可以計算標準常態分佈或反標準常態分佈，程式針對高考數學與統計及應用數學而設計，亦即是利用查表的數據及正比例方法<font size="3">(Linear 
+Interpolation)計算答案，</font>因此<font color="#FF0000">能確保與高考標準答案相同<b>(包括順查及反查的情況)</b></font>。
+第一個程式雖然較短(，但由於計算反查時，使用了牛頓迭代法(重覆計算方法)，所以反查的速度比第二個程式慢很多。</p>
+<p>注意: <font color="#FF0000">e</font>是按shift 
+e<sup>x</sup>，<font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p>若果不想同時計算P(Z≧X)及P(Z≦X)，<font color="#008000">綠色</font>的程式碼可以略去。</p>
+<p><font color="#800080">第一個程式</font> (234 或 <font color="#008000">
+243</font> bytes)</p>
+<p>Mem clear: ?→X: ?→C: X=0 <font color="#FF0000">=&gt;</font> √C<sup>2</sup>→C
+<font color="#FF0000">=&gt;</font> C - . 005→M: </p>
+<p> Lbl 0: M: Fix 2: Rnd: Ans→M: 
+B→A: M→Y: Lbl 1:  </p>
+<p>1 ÷ (1 + . 231642M:. 5 - √<font color="#FF0000">e</font> - M<sup>2</sup> <font color="#FF0000">10<sup>x</sup></font> - 7 (1274148Ans  </p>
+<p>- 1422484Ans<sup>2</sup> + 7107069Ans<sup>3</sup> 
+-7265760Ans^4 + 5307027Ans^5→B:</p>
+<p>X=1 <font color="#FF0000">=&gt;</font> √2π√<font color="#FF0000">e</font>M<sup>2</sup>(B 
+- C<font color="#FF0000">M-</font>
+<font color="#FF0000">=&gt;</font> M→A <font color="#FF0000">=&gt;</font> Goto 
+1: X=1 <font color="#FF0000">=&gt;</font> 2→X <font color="#FF0000">=&gt;</font> Goto 0:</p>
+<p>Fix 4: B: Rnd: Ans→B: . 01 - . 02(B&gt;C<font color="#FF0000">M+</font>: D=0→D <font color="#FF0000">=&gt;</font> Goto 0: Norm 1:
+</p>
+<p>X
+<font color="#FF0000">=&gt;</font> M + (M - Y)(C - A) ÷ (A - 
+B◢ B - <font color="#FF0000">10<sup>x</sup></font>2(C - 
+Y)(A - B<font color="#008000">◢ . 5 - Ans ◢ 1 - 
+Ans</font></p>
+<p>　</p>
+<p><font color="#800080">第二個程式 </font>(262 或 <font color="#008000">
+271</font> bytes)</p>
+<p>Mem clear: ?→X: ?→C: X=0 <font color="#FF0000">=&gt;</font> √C<sup>2</sup>→C
+<font color="#FF0000">=&gt;</font> C - . 005 <font color="#FF0000">=&gt;</font> Goto 
+0: </p>
+<p>. 5 - C: √ln Ans<sup>2 -1</sup>: Ans - (2515517 + 
+802853Ans +10328Ans<sup>2</sup>) ÷ </p>
+<p>(<font color="#FF0000">10<sup>x</sup></font>6 
++ 1432788Ans + 189269Ans<sup>2</sup> +
+1308Ans<sup>3</sup>: Lbl 0: Fix 2: Rnd:  </p>
+<p>Ans→M: Lbl 1: B→A: M→Y: 1 ÷ (1 + . 231642M: . 5 - √<font color="#FF0000">e</font> 
+- M<sup>2</sup> <font color="#FF0000">10<sup>x</sup></font> - 7 (</p>
+<p>1274148Ans - 1422484Ans<sup>2</sup> + 7107069Ans<sup>3</sup> 
+- 7265760Ans^4 +   </p>
+<p>5307027Ans^5:   Fix 4: Rnd: Ans→B: . 01 - 
+. 02(B&gt;C<font color="#FF0000">M+</font>: </p>
+<p>D=0→D <font color="#FF0000">=&gt;</font> Goto 1: Norm 1: X <font color="#FF0000">=&gt;</font> M + (M - Y)(C - A) 
+÷ (A - B◢    </p>
+<p> 
+B - <font color="#FF0000">10<sup>x</sup></font>2(C - Y)(A - B<font color="#008000">◢ . 5 - 
+Ans ◢ 1 - Ans</font></p>
+<p>註1: 反查計算時，輸入概率範圍為 0&lt; P&lt; 0.5，否則程式可能會出現Math error或不能正常運作。</p>
+<p>註2: 如果有綠色程式碼及輸入的數值X為負數，程式會計算P(X≦ 
+Z>≦0)，然後順序計算P(Z
+≦ X)及P(Z 
+≧ X)。</p>
+<p>註3: 反查的概率P&gt;0.4973時，查表可能會出現多於一個答案，這時程式二可能會出現Math 
+ERROR(現時很多同類程式的限制)，程式一則解決了這方面問題，可以顯示其中一個正確答案。例如: 反查P=0.4990，查表可得的答案分別為 Z=3.08, 
+Z=3.09 或 Z=3.10，程式二會出現Math ERROR，程式一則顯示答案為Z=3.08。</p>
+<p>　</p>
+<p>例題1: 計算 P(0≦ 
+Z≦1)、P(Z≧1) 
+及 P(Z≦1)，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 <font color="#FF0000">EXE</font> 
+(不輸入數值或輸入0代表計算標準常態分佈)</p>
+<p>
+1 EXE (顯示P(0≦ 
+Z≦1)為0.3413) 
+<font color="#008000">EXE  
+
+(顯示P(Z≧1)為0.1587) 
+
+</font>
+</p>
+<p>
+<font color="#008000">
+EXE 
+(顯示P(Z≦1)為0.8413)</font></p>
+<p>　</p>
+<p>例題2: 計算 P(0≦ 
+Z≦1.234)、P(Z≧1.234) 
+及 P(Z≦1.234)，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 <font color="#FF0000">EXE</font> 
+(不輸入數值或輸入0代表計算標準常態分佈)</p>
+<p>
+1.234 EXE (顯示P(0≦ 
+Z≦1.234)為0.39142)<font color="#008000"> EXE
+(顯示P(Z≧1.234)為0.10858)
+</font> 
+</p>
+<p>
+<font color="#008000">
+EXE 
+(顯示P(Z≦1.234)為0.89142)</font></p>
+<p>註4: 輸入多於2位小數，程式會使正比例方法(Linear 
+Interpolation)，程式執行完結後可以按 <font color="#0000FF">RCL A</font>及<font color="#0000FF">RCL 
+B</font>可以顯示查表時使用的兩個概率的數值，由於一般考試可能需要詳細步驟，你亦可以直接使用這兩個數值作為考試步驟的數據。</p>
+<p>　</p>
+<p>例題3: 若P(0≦ 
+Z≦x) 
+= 0.3907，求 x 的值，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 <font color="#FF0000">1 EXE</font> 
+(輸入1代表計算反標準常態分佈)</p>
+<p>
+0.3907 EXE (顯示答案為 1.23)</p>
+<p>
+計算完結後按 AC 終止程式</p>
+<p>
+註5: 得出的答案若果<font color="#FF0000">不多於兩位小數</font>(表的Z位數)，
+表示直接查表求得答案，因此不需要任何考試的計算步驟。</p>
+<p>
+　</p>
+<p>例題4: 若P(0≦ 
+Z≦x) 
+= 0.3，求 x 的值，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 <font color="#FF0000">1 EXE</font> 
+(輸入1代表計算反標準常態分佈)</p>
+<p>
+0.3 EXE (顯示答案為 0.841785714)</p>
+<p>
+計算完結後按 AC 終止程式</p>
+<p>
+註6: 答案<font color="#0000FF">多於兩位小數</font>，表示答案不能直接查表求得，要使用正比例方法(Linear 
+Interpolation)求出答案， 按 <font color="#0000FF">RCL A</font> 及<font color="#0000FF">RCL B</font>可以顯示計算步驟所要的概率
+值(0.2995及0.3023)，再按 <font color="#0000FF">RCL M</font>及<font color="#0000FF">RCL 
+Y</font>則顯示兩個X值(0.84及0.85)，由於一般考試可能需要詳細步驟，你亦可以直接使用這些數值作為考試步驟的數據。</p>
+<p>
+註7: 現時很多這類<font color="#FF0000">高考版程式</font>在計算一些特別情況都均會出現錯誤(由於不是使用與高考計算時完全一致方法之故)，例如: 
+以下例題5反查P(0≦ 
+Z≦x)=0.48078會得出錯誤的答案 
+2.0695，這個程式沒有這方面的問題，<font color="#FF0000">能夠得出正確答案2.0696</font>。</p>
+<p>
+　</p>
+<p>例題5: 若P(0≦ 
+Z≦x) 
+= 0.48078，求 x 的值，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 1 EXE 0.48078 EXE (顯示答案為 2.0696)</p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/standardnormal7.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+</html>

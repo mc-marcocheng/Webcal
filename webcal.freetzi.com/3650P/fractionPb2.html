@@ -1,0 +1,79 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/fractionPb2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:24 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>CASIO fx-3650P 假分數預設顯示問題</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><b><u><font size="5" color="#FF0000">CASIO fx-3650P 假分數預設顯示問題</font></u></b></p>
+
+<p align="left">編寫日期: 2008年1月5日</p>
+<p align="left">Casio fx-3650P及fx-3950P已發現不少分數功能出現問題，除了最早期某些分數計算無法顯示外(Casio 
+已回收有問題舊計算機)，亦有<a href="fractionPb.html">分數正負號計算錯誤</a>及<a href="fractionProblem2.html">小數轉換分數問題</a>，最新還發現當使用預設假分數顯示時，執行程式會出現異常的Math 
+ERROR問題，這個問題是由WebCal論壇的網友 <font color="#FF0000">abcsonson</font> 
+首先發現，他正確輸入程式碼，執行程式卻不合理地出現Math 
+ERROR，我經過研究後，發現了與分數運算及預設假分數顯示有關，當選用了帶分數顯示後，問題就有可以解決，請參看以下的例子。</p>
+<p align="left">　</p>
+<p align="left">1. 先選用假分數顯示<font color="#FF0000">(必要條件)</font>，按 
+<font color="#800080">MODE MODE MODE MODE MODE MODE 1 2</font>。</p>
+<p align="left">2. 輸入以下程式碼的程式:</p>
+<p align="left"><font color="#0000FF">Mem clear: ?→A: - 4┘9 </font>
+<font color="#FF0000">M-</font><font color="#0000FF">: √M + A</font></p>
+<p align="left">3. 執行上述程式及輸入3作為A的數值，亦即是按 <font color="#800080">Prog 1</font> 再按 
+<font color="#800080">3 EXE</font> ，這時不合理地顯示 Math ERROR，再按 REPLAY 算右鍵 
+<font color="#800080">→ </font>，浮標在程式最後位置出現，表示出現問題語句為最後的 √M + A，再按 
+<font color="#800080">ON</font> 離開程式編輯模式(Edit Mode)，嘗試人手輸入問題算式√M + A計算，即是按 
+<font color="#800080">√ ALPHA M + ALPHA A EXE</font> 卻能得出正確答案 
+11/3，很明顯這個問題只發生在程式的運算，一般人手輸入計算沒有問題。</p>
+<p align="left">4. 重複執行程式，嘗試輸入不同的A值，發現有某些A值會出現Math ERROR，例如輸入A值為 3, 4, 3/2, 
+11/3等等，但某些A值卻沒有問題，例如輸入的A值為 0, 1, 2, 1/7及15/4，能夠正確顯示答案 2/3, 5/3, 8/3, 
+17/21及53/12，另外有趣的是如果輸入小數的A值，就完全沒有問題，看來問題只發生在分數運算。</p>
+<p align="left">5. 若果將步驟2中最後的程式碼 + A 刪除，亦即是程式變為<font color="#0000FF"> Mem clear: 
+?→A: - 4┘9 </font><font color="#FF0000">M-</font><font color="#0000FF">: √M
+</font>，那麼無論輸入任何A值亦不會出現Math ERROR，由此看來與 + A 這個加的運算有關，我亦嘗試過減(√M-A)、乘(A√M)及除(√M<span lang="en">÷7)</span>的情況，亦有相似的情況出現(Math 
+ERROR)。</p>
+<p align="left">6. 若果將步驟2程式中的平方根(√)改用N次方根(<sup>x</sup>√)，即程式變為:<font color="#0000FF">Mem 
+clear: ?→A: - 4┘9 </font><font color="#FF0000">M-</font><font color="#0000FF">: 
+2</font><font color="#FF0000"><sup>x</sup>√</font><font color="#0000FF">M + A</font>，那麼無論輸入任何A值亦不會出現Math 
+ERROR，但答案會以小數答案形式顯示，我相信由於fx-3650P的N次方根不支援分數顯示有關，計算N次方根會先得出小數，所以就沒有問題了，相反若果將平方根(√)改為支援分數顯示的N次方(^(1┘2))，即程式變為:
+<font color="#0000FF">Mem clear: ?→A: - 4┘9 </font><font color="#FF0000">M-</font><font color="#0000FF">: 
+M^(1┘2) + A</font>，重複測試的結果與步驟4中的結果完全相同。另外我亦測試過其它支援分數顯示的功能(平方x<sup>2</sup>及立方x<sup>3</sup>)，初步相信應該沒有Math 
+ERROR的問題。</p>
+<p align="left">7. 若果將步驟2程式收為 <font color="#0000FF">Mem clear: ?→A: - 4┘9 </font>
+<font color="#FF0000">M-</font><font color="#0000FF">: √M + A: Ans</font>，測試的結果基本上是相同，不同的是當Math 
+ERROR時，再按 REPLAY 算右鍵 <font color="#800080">→ </font>，浮標在程式最後位置出現，表示出現問題語句不是 √M + 
+A，而是最後語句 Ans，有趣的是問題由語句√M + A輸移至Ans語句。若果再將步驟2程式收為 <font color="#0000FF">Mem 
+clear: ?→A: - 4┘9 </font><font color="#FF0000">M-</font><font color="#0000FF">: 
+√M + A: Ans + 0</font>，那麼無論輸入任何A值亦不會出現Math ERROR，更有趣的是將Ans改為Ans+0後，問題竟然消失了，看來問題出現的條件並非簡單的條件。</p>
+<p align="left">8. 若果將步驟2程式中的 - 4┘9改為其它負數分數，而√M又能夠以分數形式顯示，例如將 - 4┘9 改為 - 
+1┘4，執行程式亦有相似的問題出現，但若√M的值為整數或無理數，那麼就沒有Math ERROR的問題了。</p>
+<p align="left">　</p>
+<p align="left">我認為fx-3650P有這種錯誤&#32118;對不能接受，會令執行程式的可靠性大大降低，我亦測試過有相似功能的Truly 
+SC-185及Casio fx-50F 
+PLUS，兩部計算機沒有這方面的問題。由於現時知道問題只在預定假分數顯示設定之下，執行程式才有機會出現上述問題，雖然一般非程式的運算沒有受到影響及預定假分數顯示設定會較為方便，但基於考慮計算可靠性的問題，我會<font color="#FF0000">建議大家改為使用帶分數預定顯示的設定</font>(按 
+<font color="#800080">MODE MODE MODE MODE MODE MODE 1 1</font>)，以減低潛在可能的問題。</p>
+<p align="left">　</p>
+
+<p align="left">各位網友若對上述內容有任何意見、補充或疑問，歡迎到<a href="http://webcal.forumcircle.com/viewforum.php?f=1">WebCal論壇</a>留言討論。</p>
+
+<p align="left">　</p>
+
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a>
+
+<p align="left">　</p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/fractionPb2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:24 GMT -->
+</html>

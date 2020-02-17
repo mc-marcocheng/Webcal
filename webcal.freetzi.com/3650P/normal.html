@@ -1,0 +1,103 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/normal.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>常態分佈概率</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center">
+
+<u><b>
+
+<font size="5">常態分佈概率</font></b></u></p>
+<p><font color="#0000FF"><b>程式新版</b></font> (舊版依然保留在網頁下方)</p>
+<p>新版程式編寫日期: 2006年1月14日</p>
+<p>程式 (63 bytes，使用記憶為A，B，C，X及Y)</p>
+<p>?→A: ?→B: ?→C: ?→X: B→Y: A=0 =&gt; ?→Y:</p>
+<p>. 5A + ∫( √e - X<sup>2 </sup>, C<sup>-1</sup>(X-B , C<sup>-1</sup>(Y-B 
+, <font color="#008000">5</font>) ÷ √2<font face="Times New Roman">π</font>◢ 
+1 - Ans</p>
+<p>註: <font color="#008000">綠色</font>的數字(1-9)會影響準確度，若果需要更高的準確度，可修改為較大的正整數(6-9)，</p>
+<p>不過速度會減慢。</p>
+<p>　</p>
+<p>
+例題1: 
+若<i>X</i> 
+~ N(2, 3&sup2;). 求 
+P(2 &#8804; <i>X</i> &#8804; 6) 及 P(X≦2 或 X≧6).</p>
+<p>
+按 Prog 1&nbsp; 
+再按 0 EXE (<font color="#FF0000">0</font>表示計算 
+<font color="#FF0000">P(a≦X≦b)</font> 及 <font color="#FF0000">P(X≦a 或 
+X≧b)</font>)</p>
+<p>
+2 EXE 3 EXE 2 EXE 6 EXE (顯示P(2 &#8804; <i>X</i> &#8804; 6)為0.408788973)</p>
+<p>
+EXE (顯示P(X≦2 或 X≧6)為 0.591211026)</p>
+<p>　</p>
+<p>
+例題2: 
+若<i>X</i> 
+~ N(2, 3&sup2;). 求 
+P(<i>X</i> ≧ 6) 及 P(X≦6).</p>
+<p>
+按 Prog 1&nbsp; 
+再按 1 EXE (<font color="#FF0000">1</font>表示計算 
+<font color="#FF0000">P(X≧a)</font> 及 <font color="#FF0000">P(X≦a)</font>)</p>
+<p>
+2 EXE 3 EXE 6 EXE (顯示P(<i>X</i> 
+≧ 6)為0.091211026)</p>
+<p>
+EXE (顯示P(X≦6)為 0.908788973)</p>
+<p>
+　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<!--msthemeseparator--><p align="center"><img src="alevrule.gif"></p>
+<!--msthemeseparator--><p align="center"><img src="alevrule.gif"></p>
+
+<p><font color="#0000FF">舊版程式</font></p>
+<p>程式編日期: 2005年12月15日</p>
+<p>這個簡短程式使用內置積分功能計算常態分佈概率。</p>
+<p>注意: <font color="#FF0000">e</font>是按shift 
+e<sup>x</sup>。</p>
+<p>程式 (43 bytes，使用記憶為A，B，X及M)</p>
+<p>?→A: ?→B: ?→X: ?→M: ∫( √e - X<sup>2 </sup>, B<sup>-1</sup>(X-A , B<sup>-1</sup>(M-A 
+, <font color="#008000">5</font>) ÷ √2<font face="Times New Roman">π</font></p>
+<p>　</p>
+<p>註: <font color="#008000">綠色</font>的數字(1-9)會影響準確度，若果需要更高的準確度，可修改為較大的正整數(6-9)，</p>
+<p>不過速度會減慢。</p>
+<p>　</p>
+<p>
+例題: 
+若<i>X</i> 
+~ N(2, 3&sup2;). 求 
+P(2 &#8804; <i>X</i> &#8804; 6).</p>
+<p>
+&nbsp;按 Prog 1&nbsp; 
+再按 2 EXE 3 EXE 2 EXE 6 EXE (顯示答案為0.408788973)</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/normal.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+</html>

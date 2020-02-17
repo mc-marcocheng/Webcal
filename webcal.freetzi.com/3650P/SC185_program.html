@@ -1,0 +1,72 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/SC185_program.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:02 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>Truly SC185模式交錯程式</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><b><u><font size="5">Truly SC185模式交錯程式</font></u></b></p>
+<p align="left"><font color="#0000FF" size="5">注意: 2007年4月推出的新版本(有會考准考印)已修正RCL問題，所以新版本暫時沒有方法提升程式容量及輸入模式交錯程式。</font></p>
+<p align="left"><font color="#FF0000"><b>模式交錯程式特點:</b></font></p>
+<p align="left">模式交錯程式意思在執行的程式中同時使用兩個模式的功能，例如: 正常情況下，複數模式是不能使記憶 D、X及Y，亦不能使 
+comp模式的座標轉換功能 <font color="#FF0000">Pol(</font> 及 <font color="#FF0000">Rec(</font> 
+，又例如: 正常情況下，基數模式是不能使用函數計算功能 (例如: 
+平方、次方、對數等等)，利用模式交錯程式則可以解決這方面的問題，不過使用另一個模式的獨有功能，這些功能不是全部都會正常運作，有一些功能會出現差異、錯誤或Math 
+ERROR，所以使用時要很小心及多作一些測試，例如: 在複數模式使用憶 D、X及Y是可以，不過這些記憶與其它記憶是有共用關係，使用時就有可能使計算出現錯誤，不過若放棄使記憶D，依然可以在複數模式下額外正確使用X及Y記憶。</p>
+<p align="left"><b><font color="#FF0000">注意:</font></b> 
+由於模式交錯程式輸入較難，而且較易出錯，因此若果情況許可下，應盡量被免使用這個方法編寫程式。</p>
+<p align="left">　</p>
+<p align="left"><b><font color="#FF0000">模式交錯程式運作方法:</font></b></p>
+<p align="left">交錯程式要使用兩個程式位置(最後可變回使用一個程式位置)，再利用 RCL 
+功能設計上錯誤這個特點，將分割兩個程式的隱藏位元刪除，因此執行完第一個程式將會繼續執行第二個模式，第一個程式所執行時的模式狀態會一直保留到第二個程式，因此另一個模式的獨特指令可以在第一個程式的模式之下執行。</p>
+<p align="left">　</p>
+<p align="left"><b><font color="#FF0000">模式交錯程式例子:</font></b></p>
+<p align="left">輸入複數模式下的程式碼: ?→X: Abs X</p>
+<p align="left">很明顯複數模下是不可能按出記憶X，要用特別的按法。</p>
+<p align="left">1. 先在 comp 模式，P1位置輸入程式碼: <font color="#FF0000">cos<sup>-1</sup> 
+Ans</font></p>
+<p align="left">2. 按 <font color="#0000FF">0 EXE</font> 再按 <font color="#0000FF">
+Prog 1</font> 執行程式，這時顯示90，</p>
+<p align="left">再按 <font color="#0000FF">RCL A </font>，這時顯示 Math ERROR，</p>
+<p align="left">再按 <font color="#0000FF">← DEL :</font> 清除隱藏程式位置分割位元，</p>
+<p align="left">再按 <font color="#0000FF">← ← ← DEL ON</font> 
+，這時P1只餘下1位元，但顯示的程式碼為 Ans:</p>
+<p align="left">3. 在 CMPLX 模式，P2位置輸入程式碼為 <font color="#FF0000">: ?→A: Abs A</font></p>
+<p align="left">4. 執行 P1的程式按 <font color="#0000FF">Prog 1</font>，這時顯示 Syntax 
+ERROR，</p>
+<p align="left">再按 <font color="#0000FF">← </font>
+這時進入P1的編輯模式，顯示程式長為1，接著用REPLAY將A覆蓋為X</p>
+<p align="left"><font color="#FF0000">注意:</font> 
+若果修改後程式長度不是1，P2的程式碼將會移位，若果P1的長度增加，P2原先開始的程式碼將會被移離 P2位置。</p>
+<p align="left">5. 執行P2再出現 Syntax ERROR，再按 <font color="#0000FF">← DEL ON</font> 
+修正問題，這時P2就是要求的程式，輸入亦完成。</p>
+<p>　</p>
+<p>註: 輸入完成後，可以按 <font color="#0000FF">MODE MODE MODE 3 1</font> 
+將P1程式刪除，亦可以輸入新的程式在位置P1，不過輸入時會同時顯示P2的程式碼，注意輸入新程式時不要覆蓋這些程式碼，否則P2的程式會被破壞，所以應使用<font color="#FF0000">插入形式</font>(按 
+<font color="#0000FF">SHIFT DEL</font>)輸入新程式，由於執行完P1會再執行P2，所以新程式在顯示完最後答案後，應寫一些錯誤語句(Syntax 
+ERROR)，使程式無法執行P2，當然不想出現ERROR，亦可以使用 GOTO 指令，直接跳至P2的結尾位置。</p>
+<p style="line-height: 200%">
+<a href="SC185_3650.html">返回SC-185及3650P功能比較</a></p>
+
+<p style="line-height: 200%">
+<font face="Times New Roman, Times, serif">
+<a href="https://err.freewebhostingarea.com/404.html">返回fx-3650P及SC185程式集</a></font></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/SC185_program.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:02 GMT -->
+</html>

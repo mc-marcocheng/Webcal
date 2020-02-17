@@ -1,0 +1,966 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/506Vmain.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:06:54 GMT -->
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=big5">
+<meta name=ProgId content=FrontPage.Editor.Document>
+<meta name=Generator content="Microsoft FrontPage 5.0">
+<meta name=Originator content="Microsoft Word 10">
+<title> Sharp EL-506V 程式集(中五會考數學科)</title>
+<meta name=keywords content="EL-506V,計數機程式集,會考計數機程式">
+<meta name=description content="有關EL-506V的程式,內置功能及計數機的應用實例,適合會考的朋友使用。">
+
+<script src="webcal.js"></script></head>
+
+<body bgcolor=yellow lang=ZH-TW link=blue vlink=purple style='tab-interval:
+24.0pt;text-justify-trim:punctuation'>
+
+
+<p align="center">
+<b><font color="#800080" size="7">WebCal計數機網頁</font></b><p align="center">
+<u><b><font size="5">Sharp EL-506V計數機程式集 </font></b></u>
+
+<p>程式集前言:</p>
+
+<p>Sharp EL-506V /EL-506R是一部很好用的會考計數機，不過很少人為這部計數機編寫程式
+(Programs)，事實上很多人認為這部計算機只能編寫一些很簡單的算式，其實只要用一點技巧就可以編寫出較複雜的程式，本網頁收集了一些這部計數機有用的程式，能夠應用於<font size="4">香港文憑試</font>，例如:
+一元二次方程、聯立二元一次方程、二項式定理等等供大家參考。</p>
+
+<p><b><font size="4"><font color="#0000FF">WebCal網站通告:</font> 為方便網友討論及解決計數機問題，新增<a href="http://webcal.forumcircle.com/viewforum.php?f=1&amp;sid=38efe43740d62bbdee46bd132b7ea551">WebCal論壇</a>，歡迎大家使用。
+為方便大家使用，發表及回覆文章亦可以不註冊為會員，不過註冊為會員後會有較完整討論版功能使用。</font></b></p>
+<p>
+<b>
+<a href="main.html">EL-506V簡介</a>&nbsp; 
+<a
+href="buyCalculator.html">選購計數機</a>&nbsp; 
+<a
+href="compare.html">計數機比較</a>&nbsp; <a href="directory.html">程式分類目錄</a>&nbsp; 
+<a
+href="suggestion.html">考試程式建議</a>&nbsp; 
+<a
+href="tech.html">計數機小技巧</a> 
+<a href="self_test.html">自我檢測</a>&nbsp;
+<a
+href="program.html">編程小技巧</a>&nbsp;
+<a
+href="question.html">常見問題</a>&nbsp; 
+<a
+href="key.html">網站索引</a> 
+<a href="contact.html">聯絡網主</a>&nbsp; <a
+href="http://webcal.forumcircle.com/viewforum.php?f=1&amp;sid=38efe43740d62bbdee46bd132b7ea551">論壇<font color="#FF0000">(新)</font></a><font color="#FF0000">&nbsp;
+</font>
+<a href="http://www.hkeaa.edu.hk/DocLibrary/HKDSE/Candidate_Handbook/14Annex_C.pdf">
+2014年文憑試準用計算機</a><font color="#FF0000">(新) </font>
+<a href="https://www.facebook.com/webcalDSE">
+WebCal文憑試計算機專頁</a><font color="#FF0000">(最新) </font>
+&nbsp;<a href="https://www.facebook.com/EMwave.health">WebCal危危電磁波專頁</a><font color="#FF0000">(最新)</font></b></p>
+
+<p><font color="#FF0000">*********** 現有EL506V資料一百五十三項*************</font></p>
+
+<p>
+<b>(A) 程式集 (程式中不含k字元)</b></p>
+
+<p>A1. <a href="3sidesarea.html">三邊求三角形面積</a>(3 sides to find the area of triangle)</p>
+
+<p>A2. <a href="4sidesArea.html">圓內接四邊形四邊求面積</a>
+(4 sides to find the area of cyclic quadrilateral)</p>
+
+<p>A3.
+<a
+href="4sidesArea1.html">四邊形面積(四邊及兩對角)</a> (Area of
+quadrilateral (4 sides and 2 angles))</p>
+
+<p>
+A4. <a href="3pointsarea.html"> 
+三點求三角形面積</a>
+(3 points to find the area of triangle)</p>
+
+<p>
+A5. <a href="4pointsarea.html"> 
+四點求四邊形面積</a>
+(4 points to find the area of quadrilateral)</p>
+
+<p>
+A6. <a href="combincoslaw.html"> 
+綜合餘弦定律</a>
+(Combined cosine laws)</p>
+
+<p>
+A7. <a href="sinelaws.html"> 
+綜合正弦定律(I)</a>
+(Combined sine laws I)</p>
+
+<p>
+A8. 
+
+<a href="coslaw.html">綜合餘弦定律及三角形面積 (三合一)</a> (Combined
+cosine laws and area of triangle)</p>
+
+<p>
+A9. 
+<a href="combincoslaw1.html">綜合餘弦定律及三角形面積(I)</a>
+(Combined cosine laws and area of triangle I) 
+</p>
+
+<p>
+A10. 
+<a href="quadratic1.html">一元二次方程式(I)</a>
+(Quadratic equations I) </p>
+
+<p>
+A11. 
+<a href="quadratic6.html">一元二次方程式(VI)</a>
+(Quadratic equations VI)</p>
+
+<p>
+A12. <a href="cubic.html">一元三次方程式(I)</a>
+&nbsp; (Cubic Equations
+I)</p>
+
+<p>
+A13. 
+<a href="simultaneous1.html">聯立二元一次方程式(I)</a>
+(Simultaneous Linear Equations in 2 unknowns I)</p>
+
+<p>
+A14. <a href="AP.html">等差數列(I)</a>
+&nbsp; (Arithmetic sequence I)</p>
+
+<p>
+A15. <a href="GP.html">等比數列</a> (Geometric
+sequence)</p>
+
+<p>
+A16. 
+<a href="d2form1.html">兩點的距離、斜率及y截距(兩點式)(I)</a>
+(Distance, slope and y-intercept I)</p>
+
+<p>
+A17. 
+<a href="angle2lines.html">兩直線間夾角</a>
+(Angle between two lines)</p>
+
+<p>
+A18. 
+<a href="sectionformula.html">分界點</a>
+(Section formula) </p>
+
+<p>
+A19. 
+<a href="normalLine.html">直線的一般式轉換為法線式</a>
+(Conversion of General Form into Normal Form of a straight line) </p>
+
+<p>
+A20. 
+<a href="distancePL.html">直線與點的距離</a> (Distance
+between line and point)</p>
+
+<p>
+A21. 
+<a href="complex1.html">複數的整數指數 </a>(Integer
+power of complex number)</p>
+
+<p>A22. <a href="binomialC.html">正整數冪二項式係數</a> (Coefficient of binomial theorem 
+(Positive integer power))</p>
+
+<p>
+A23. 
+<a href="meanStandard.html">整合平均值及總體標準差</a>
+(Combined mean and population standard deviation)</p>
+
+<p>
+A24. <a href="geometicDistribution.html">幾何分佈</a> (Geometric distribution)</p>
+
+<p>
+A25. 
+<a href="poisson.html">二項分佈及泊松分佈(I)</a>
+(Poisson distribution and binomial distribution I) </p>
+
+<p>
+A26. 
+<a href="normal1.html">標準常態分佈(應用置積分功能)</a>
+(Standard normal distribution)</p>
+
+<p>
+A27. 
+<a href="normal2.html">常態分佈(應用內置積分功能)</a>
+(Normal distribution)</p>
+
+<p>
+A28. 
+<a href="normal3.html">標準常態分佈概率(II)</a>
+(Normal Probability Calculation II)</p>
+
+<p>
+A29. 
+<a href="inverseNormalD1.html">反查標準常態分佈概率(I)</a>
+ (Inverse Standard Normal Probability Calculation I)
+</p>
+
+<p>
+A30. <a href="compound.html">複利率計算</a> (Compound interest)</p>
+
+<p>
+A31. 
+<a href="targetSavings.html">零存整付計算</a>
+(Target savings calculations)</p>
+
+<p>
+A32. 
+<a href="mortgage.html">按揭計算</a>
+ (Mortgage
+calculations)</p>
+
+<p>
+A33. 
+<a href="EffectiveInterest.html">實際年利率及年利率轉換</a>
+(Conversion between effective annual interest rate and annual interest rate) </p>
+
+<p>
+A34. 
+<a href="JulinDate.html">修正儒略日</a>
+(Modified Julian Date)</p>
+
+<p>
+A35. 
+<a href="TwoDate.html">兩日期間的日數</a>
+(Number of days between two dates)</p>
+
+<p>
+A36. 
+<a href="dayofweek.html">星期天的計算</a>
+(Day of week from date)</p>
+
+<p>
+A37. <a href="false1.html">試位法(I)</a> (False
+position method I)</p>
+
+<p>
+A38. <a href="gamma1.html">伽瑪函數(I)</a>
+(Gamma Function I)</p>
+
+<p>
+A39. <a href="gamma2.html">伽瑪函數(II)</a>
+(Gamma Function II)</p>
+
+<p>A40. <a href="errorfunction.html">誤差函數</a> (Error function)</p>
+<p>A41. <a href="Inverse_error.html">逆誤差函數</a> (Inverse Error function)</p>
+
+<p>
+A42. 
+<a href="fibonacci.html">斐波那契數列</a>
+(Fibonacci sequence)</p>
+
+<p>
+A43. 
+<a
+href="recurringFraction.html"> 
+循環小數轉換分數</a>
+(Conversion of recurring decimal to fraction)</p>
+
+<p>
+A44. <a href="continedFraction.html"> 
+連續分式</a>
+(Continued fraction)</p>
+
+<p>
+A45. 
+<a
+href="LRC.html">LRC串聯/並聯電路阻抗</a> (Impedance in LRC
+series / parallel circuit)</p>
+
+<p>
+A46. 
+<a href="collision.html">彈性碰撞</a>
+(Elastic collision)</p>
+
+<p>
+A47. 
+<a
+href="lensFormula.html">透鏡公式/球面鏡公式</a> (Lens formula /
+Mirror formula)</p>
+
+<p>
+A48. <a href="actEnergy.html">化學反應活化能</a> (Activation energy of a chemical reaction)</p>
+
+<p>
+A49. 
+<a href="arithmetic24.html">合24遊戲</a>
+(Arithmetic 24)</p>
+
+<p>
+ <b>(B) 程式集 (程式中含k字元，執行程式要先按2ndF
+DEL)</b></p>
+
+<p><b><a href="Kmemory.html"><font color="#FF0000">如何在程式中加入K字元</font></a><font color="#FF0000">
+</font></b>
+ </p>
+
+<p>
+B1. 
+<a href="quadratic2.html">一元二次方程式(II)</a>
+(Quadratic equations II) </p>
+
+<p>
+B2. 
+<a href="quadratic3.html">一元二次方程式(III)</a>
+(Quadratic equations III)</p>
+
+<p>
+B3. 
+<a href="quadratic4.html">一元二次方程式(IV)</a>
+(Quadratic equations IV)</p>
+
+<p>
+B4. 
+<a href="quadratic5.html">一元二次方程式(V)</a>
+(Quadratic equations V)</p>
+
+<p>
+B5. 
+<a href="quadratic7.html">一元二次方程式(VII)</a>
+(Quadratic equations VII)</p>
+
+<p>
+B6. 
+<a href="simultaneous2.html">聯立二元一次方程式(II)</a>
+(Simultaneous Linear Equations in 2 unknowns II)</p>
+
+<p>
+B7. <a href="simultaneous2a.html">聯立二元一次方程式(III)</a>
+(Simultaneous Linear Equations in 2 unknowns III)</p>
+
+<p>
+B8. 
+<a href="quadraticfunction.html">二次函數極小/大點及一元二次方程</a>
+(maximum/minimum point of quadratic function and quadratic equations)</p>
+
+<p>
+B9. 
+<a href="quadratic11.html">判別式及一元二次方程</a>
+(Discriminant and quadratic equations) </p>
+
+<p>
+B10. <a href="quadraticSimultaneous.html">一元二次方程及聯立二元一次方程</a> (Quadratic 
+equations and simultaneous linear equations in 2 unknowns)</p>
+
+<p>
+B11. <a href="cubic2.html">一元三次方程式(II)</a>
+&nbsp; (Cubic Equations
+II)</p>
+
+<p>
+B12. 
+<a href="Binomial1.html">正整數冪二項式定理</a>
+(Binomial Theorem (Positive integer power))</p>
+
+<p>
+B13. 
+<a href="Binomial2.html">二項式定理</a>
+(Binomial Theorem)</p>
+
+<p>
+B14. 
+<a href="binomialquaratic.html">二項式定理及一元二次方程</a>
+(Binomial Theorem and Quadratic equation)</p>
+
+<p>
+B15. 
+<a href="distanceslope.html">兩點的距離、斜率及y截距(兩點式)(II)
+</a>(Distance and slope and y-intercept II)</p>
+
+<p>
+B16. 
+<a href="sectionformula2.html">分界點及點與直線的距離</a>
+(Section formula and Distance between point and line)</p>
+
+<p>
+B17. 
+<a href="CentreRadius.html">圓形的圓心及半徑</a>
+(Centre and radius of a circle)</p>
+
+<p>
+B18. 
+<a href="circleEquation.html">圓心及半徑求圓方程</a>
+(Equation of circle by centre and radius)</p>
+
+<p>
+B19. 
+<a href="circleDiameter.html">直徑兩點求圓方程</a>
+(Equation of circle by 2 end-point of diameter)</p>
+
+<p>
+B20. 
+<a href="tangentCircle.html">已知斜率求圓的切線</a>
+(Tangent to Circle with given slope)
+</p>
+
+<p>
+B21. 
+<a href="extTangent.html">外點至圓的切線斜率</a>
+(Slope of tangent to circle from external point)</p>
+
+<p>
+B22. 
+<a href="circlelineintersect.html">直線與圓形的交點</a>
+(Intersection points of line and circle)</p>
+
+<p>
+B23. 
+<a href="reflection.html">坐標變換-反射</a>
+(Transformation on coordinates-Reflection)</p>
+
+<p>
+B24. 
+<a href="bisection1.html">半分法(I)</a>
+(Bisection method I)</p>
+
+<p>
+B25. 
+<a href="bisection2.html">半分法(II)</a>
+(Bisection method II)</p>
+
+<p>
+B26. <a href="False2.html">試位法(II)</a>
+(False Position method II)</p>
+
+<p>
+B27. <a href="secant.html">正割法</a> (Secant
+method)</p>
+
+<p>
+B28. 
+<a href="secantFalse.html">正割法及試位法</a>
+(Secant method and False Position method)</p>
+
+<p>
+B29. 
+<a href="newton2.html">牛頓法(II)</a>
+(Newton method II)</p>
+
+<p>
+B30. 
+<a href="vectorProduct.html">向量積</a>
+(Vector Product)</p>
+
+<p>
+B31. 
+<a href="complex2.html">複數的N次方根</a> (N<sup>th</sup>
+roots of complex number)</p>
+
+<p>
+B32. 
+<a href="polynomial.html">多項式乘法</a>
+(Polynomial Multiplication)</p>
+
+<p>
+B33. 
+<a href="polynomialD1.html">多項式除法(I)</a>
+(Polynomial Division I)</p>
+
+<p>
+B34. 
+<a href="polynomialD2.html">多項式除法(II)</a>
+(Polynomial Division II)</p>
+
+<p>
+B35. <a href="APGP.html">等差及等比數列</a>
+(Arithmetic and Geometric sequence)</p>
+
+<p>
+B36. 
+<a href="sinelaws2.html">綜合正弦定律(II)</a>
+(Combined sine laws II)</p>
+
+<p>
+B37. 
+<a href="combincoslaw2.html">綜合餘弦定律及三角形面積(II)</a>
+(Combined cosine laws and area of triangle II)</p>
+
+<p>
+B38. 
+<a href="binDist.html">二項分佈</a>
+(Binomial distribution)</p>
+
+<p>
+B39. 
+<a href="poisson2.html">二項分佈及泊松分佈(II)</a>
+(Poisson distribution and binomial distribution II)</p>
+
+<p>
+B40. 
+<a href="poisson3.html">二項分佈及泊松分佈(III)</a>
+(Poisson distribution and binomial distribution III)</p>
+
+<p>
+B41. 
+<a href="inverseNormalD.html">反查標準常態分佈概率(II)</a>
+ (Inverse Standard Normal Probability Calculation II)
+</p>
+
+<p>
+B42. 
+<a href="integration4.html">中點法則定積分計算</a>
+(Numerical integration (Mid-point Rule))</p>
+
+<p>
+B43. 
+<a href="integration5.html">梯形法則定積分計算</a>
+(Numerical integration (Trapezoidal Rule))</p>
+
+<p>
+B44. 
+<a href="integration6.html">梯形及中點法則定積分計算</a>
+(Numerical integration (Trapezoidal Rule and Mid-point
+Rule))</p>
+
+<p>
+B45. <a href="integration7.html"> 
+梯形法則及二項式定理</a>
+(Numerical integration (Trapezoidal Rule) and Binomial Theorem)</p>
+
+<p>
+B46. 
+<a href="integration8.html">梯形法則及二項分佈</a>
+(Numerical integration (Trapezoidal Rule) and Binomial
+Distribution)</p>
+
+<p>
+B47. <a href="SUM.html">數列的總和(I)</a> (Sum of
+a sequence I)</p>
+
+<p>
+B48. <a href="SUM1.html">數列的總和(II)</a> (Sum
+of a sequence II)</p>
+
+<p>
+B49. 
+<a href="productofsequ.html">數列的乘積</a>
+(Product of a sequence)</p>
+
+<p>
+B50. 
+<a href="MATRIX2.html">二階逆矩陣的計算</a>
+ ( 2×2 inverse
+matrix)</p>
+
+<p>
+B51. <a href="matrix21.html"> 
+二階矩陣特徵多項式</a>
+( Characteristic polynomial of
+2×2 matrix)</p>
+
+<p>
+B52. 
+<a
+href="matrix22.html"> 二階矩陣特徵值</a>
+ (Eigenvalues of 2×2 matrix)</p>
+
+<p>
+B53. <a href="matrix2x2.html">二階矩陣乘法</a> 
+
+(Multiplication of 
+2×2 matrix)</p>
+
+<p>
+B54. 
+<a
+href="guessAnumber.html"> 
+估數字</a>
+ (Guess a number) </p>
+
+<p>
+B55. <a href="squareRoot.html">平方根化簡</a> (Simplification of square roots)</p>
+
+<p>
+B56. <a href="NthRoot.html">N次方根化簡</a> (Simplification of n<sup>th</sup> roots)</p>
+
+<p>
+B57. <a href="DCF.html">貼現現金流</a> (Discounted cash flow DCF)</p>
+
+<p>
+B58. <a href="inverseCal.html">並聯電阻/串聯電容</a> (Resistor in 
+parallel/capacitor in series)</p>
+
+<p>
+B59. <a href="temp_mix.html">混合物&#28201;度</a> (Temperature of mixture)</p>
+
+<p>
+B60. <a href="prime.html">質數測試</a> (Prime number test)</p>
+
+<p>
+B61. <a href="sphere.html">球體計算</a> (Sphere calculation)</p>
+
+<p>
+　</p>
+
+<p>
+
+<p>
+<b>(C) 
+其它計算應用 </b> 
+</p>
+
+<p>
+C1. 
+<a href="HCF.html">最小公倍數及最大公因數 
+ (應用內置分數功能)</a> (H.C.F and L.C.M)</p>
+
+<p>
+C2. 
+<a href="factorize.html">二次因式分解 (應用一元二次方程)</a>  
+(Factorization of Quadratic Function)  
+</p>
+
+<p>
+C3. <u>
+<a href="quadratic10.html">一元二次方程
+ (應用內置二次回歸功能)</a></u> 
+ (Quadratic equations)</p>
+
+<p>
+C4. 
+<a
+href="distanceAngle.html">  兩點之距離及x
+ 軸夾角 ( 
+應用內置坐標轉換功能)</a> (Distance and Angle
+Between the x-axis of 2 Points)</p>
+
+<p>
+C5. 
+<a href="twopoint.html">直線方程 
+(兩點式) (應用內置線性回歸功能 )</a>
+ (Equation of straight
+line: Two points Form)</p>
+
+<p>
+C6. 
+
+<a href="sectionformula3.html">分界點及直線方程
+ (應用內置線性回歸功能 
+)</a>  
+(Section formula and equation of straight line)</p>
+
+<p>
+C7. 
+
+<a href="partialvariation.html">部分變
+(部分為常數 
+) (應用內置線性/倒數回歸功能 )</a>
+ (Partial
+variation(partly constant))</p>
+
+<p>
+C8. 
+<a href="centroid.html">三角形重心 
+ (應用內置線性回歸功能)</a>&nbsp; (Centroid of triangle) </p>
+
+<p>
+C9. 
+
+<a href="circle3points.html">三點求圓方程
+ (應用內置聯立三元一次方程 
+)</a>  
+(Equation of circle from three points) </p>
+
+<p>
+C10. 
+<a href="rotation.html">坐標變換 
+-旋轉  
+ (應用內置坐標變功能 )</a>
+ (Transformation on
+coordinates-Rotation) </p>
+
+<p>
+C11. 
+
+<a href="inversematrix.html"> 
+3x3逆矩陣的計算  
+ (應用內置聯立三元一次方程 )</a>
+ (3
+×  3 Inverse matrix)</p>
+
+<p>
+C12.  
+<a href="adjmatrix.html"> 
+3x3伴隨矩陣計算  
+ (應用內置聯立三元一次方程 )</a>
+ (3
+× 3 Adjoint Matrix)</p>
+
+<p>
+C13.  
+<a href="inverseMatrixMult.html"> 
+3x3逆矩陣乘法  
+ (應用內置聯立三元一次方程 )</a>
+ (3 
+× 3
+Inverse matrix multiplication)</p>
+
+<p>
+C14. 
+<a href="Lagrange.html">  
+3點拉格朗日插值多項式 (應用內置二次回歸功能 )</a> (Lagrange Interpolating Polynomial for 3 points)</p>
+
+<p>
+C15. <a href="iteration.html"> 
+迭代法</a>
+(Iteration method)</p>
+
+<p>
+C16. <a href="newton.html"> 
+牛頓法</a>
+(Newton's method)</p>
+
+<p>
+C17. 
+<a
+href="AP2.html">等差數列(II) (應用內置線性回歸功能)</a> (Arithmetic sequence II)</p>
+
+<p>
+C18. 
+<a
+href="AP3.html">等差數列(III) (應用內置二次回歸功能)</a> (Arithmetic sequence III)<span
+
+<p> </span></p>
+
+<p>
+<span
+
+<p>
+C19. 
+<a href="halfLife.html">半衰期計算(應用內置指數回歸功能)</a>
+(Half life calculation)</p>
+
+<p>
+C20. 
+<a
+href="simultaneous7.html">聯立三元一次方程通解 (應用聯立二元一次方程)</a>
+(General
+solutions of Simultaneous Linear
+Equations in 3 unknown)</p>
+
+<p>
+ <b>(D) 內置功能</b></p>
+
+<p>
+D1. 
+<a href="decimalFraction.html">小數轉換分數</a>
+(Conversion of decimal into fraction)</p>
+
+<p>
+D2. 
+<a href="simulation.html">置換運算</a>
+(Simulation calculation)</p>
+
+<p>
+D3. 
+<a href="differentiation.html">微分函數</a>
+(Differential Function)</p>
+
+<p>
+D4.
+<a href="integration.html">積分函數
+(辛卜生/森遜法則)</a>
+ (Integral Function (  
+Simpson's Rule))</p>
+
+<p>
+D5. 
+<a href="coordinate.html">坐標轉換</a>
+(Co-ordinate Conversions)</p>
+
+<p>
+D6. <a href="complex.html">複數計算</a> (Complex
+Number Calculation)</p>
+
+<p>
+D7. <a href="Normal.html">標準常態分佈概率(I)</a>
+&nbsp; (Normal Probability Calculation I)</p>
+
+<p>
+D8. 
+<a href="simultaneous3.html">聯立二元一次方程 (應用內置聯立三元一次方程)</a>
+(Simultaneous Linear Equations in 2 unknown)</p>
+
+<p>
+D9. 
+<a href="determinant.html">三階矩陣行列式 (應用內置聯立三元一次方程)</a>
+(3x3 Determinant) </p>
+
+<p>
+D10. 
+<a href="simultaneous4.html">聯立三元一次方程</a>
+(Simultaneous Linear Equations in 3 unknowns)</p>
+
+<p>
+D11. 
+<a href="physicalConstant.html">物理常數</a>
+(Physical constants)</p>
+
+<p>
+D12. <a href="unit.html">單位轉換</a> (Metric
+conversions)</p>
+
+<p>
+D13. <a href="angle.html">角度單位轉換</a> (Angular
+Unit Conversions)</p>
+
+<p>
+D14. 
+<a href="constantcal.html">常量運算</a>
+(Constant calculation)</p>
+
+<p>
+D15. 
+<a href="independentM.html">獨立及答案記憶</a>
+(Independent and answer memory)</p>
+
+<p>
+D16. 
+<a href="percentage.html">百分率運算</a>
+(Percentage calculation)</p>
+
+<p>
+D17. <a href="time.html">時間,十進制和六十進制運算</a>
+(Time, decimal and sexagesimal calculations)</p>
+
+<p>
+D18. <a href="Nbase.html">基數運算</a> (N-base
+calculation)</p>
+
+<p>
+D19. 
+<a href="fixSciEng.html">小數位、有效數字及工程記數法的設定</a>
+(decimal places, significant figures and engineering notation)</p>
+
+<p>
+D20. 
+<a href="statistics1.html">普通統計</a>
+(Ordinary statistics)</p>
+
+<p>
+D21. 
+<a href="statistics2.html">線性回歸</a>
+(Linear regression)</p>
+
+<p>
+D22. <a href="error.html">錯誤找尋</a> (Error
+Locator)</p>
+
+<p>
+D23. 
+<a href="playback.html">多行重現功能</a>
+(Multi-line Playback)</p>
+
+<p>　</p>
+
+<p>
+<b>(E) 其它計數機資料及程式集 </b></p>
+
+<p>
+1. 
+<a href="285II/fx-992S.html">Casio
+fx-992S 內置功能及應用</a></p>
+
+<p>
+2. 
+<a href="285II/509vmain.html">Sharp
+EL-509V / EL-531VH內置功能及應用</a></p>
+
+<p>
+3. 
+<a href="285II/285II.html">CITIZEN
+SRP-285II及HP 30S程式集</a></p>
+
+<p>
+4. 
+<a href="50F/index.html">Casio fx-50F專頁</a></p>
+
+<p>
+5. 
+<a href="fx-3900PV/index.html">Casio
+fx-3900PV程式集</a></p>
+
+<p>
+6. 
+<a href="3650P/3650.html">Casio
+fx-3650P/3950P及Truly SC185程式集</a></p>
+
+<p>
+7. <a href="casio.fx-50FH/fx-50F_Plus.html">Casio 
+fx-50FH 及 fx-50F PLUS 程式集</a></p>
+
+<p>
+8. 
+<a href="285II/casio_fx-992S.html">Casio
+fx-992S簡介</a></p>
+
+<p>
+9. 
+<a href="285II/EL509V.html">Sharp
+EL509V/EL531VH及BLT SC-183/SC-118B簡介</a></p>
+
+<p>
+10. 
+<a href="50F/introduction.html">fx-50F簡介</a></p>
+
+<p>
+11. 
+<a href="285II/index.html">CITIZEN
+SRP-285II簡介</a></p>
+
+<p>
+12.<a href="3650P/introduction.html"> Casio
+fx-3650P/3950P及Truly SC185簡介</a></p>
+
+<p>
+13. 
+<a href="285II/hp30s.html">HP 30S簡介</a></p>
+
+<p>
+14. <a href="casio.fx-50FH/50F_Plus_introduction.html">Casio fx-50FH及fx-50F PLUS簡介</a></p>
+
+<p>
+15. <a href="casio.fx-50FH/fx-50FH_information.html">CASIO fx-50FH及fx-3650P功能比較</a></p>
+
+<p>
+16. 
+<a href="3650P/SC185_3650.html">SC185及fx-3650P功能比較</a></p>
+
+<p>
+17. 
+<a href="3650P/disappear.html">fx-3650P程式自動消失問題</a></p>
+
+<p>
+18. 
+<a href="3650P/disappear2.html">應付fx-3650程式自動消失的方法</a></p>
+
+<p>
+19. 
+<a href="3650P/upgrade_SC185.html">提升Truly
+SC185 程式容量秘技</a></p>
+
+<p>
+20.
+<a
+href="3650P/upgrade.html">提升fx-3650P程式容量秘技</a></p>
+
+<p>
+　</p>
+
+<p>如程式有任何錯誤或問題請聯絡 David Cheuk:
+<a href="mailto:kl2cheuk@gmail.com">kl2cheuk@gmail.com</a></p>
+
+<p>
+<span
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/506Vmain.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:07:50 GMT -->
+</html>

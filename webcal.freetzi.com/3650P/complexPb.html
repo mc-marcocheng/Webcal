@@ -1,0 +1,109 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/complexPb.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:25 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>Truly SC185複數計算問題</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="7" color="#800080">WebCal 
+計數機網頁</font></p>
+</b></u>
+
+<p align="center"><u><font size="5"><b>Truly SC-185複數計算問題</b></font></u></p>
+<p><b><font color="#800000">2007年8月推出的新版本已修正複數計算問題</font></b></p>
+<p>編寫日期: 2007年5月30日 更新日期: 2007年6月1日, 6月12日, 6月17日</p>
+<p>Truly SC-185計算機發現在使用10冪數功能( 10<sup>x</sup> ) 或自然數冪功能 ( e<sup>x</sup> 
+)出現計算錯誤的問題，而錯誤是否發生與之前的複數計算有關，大家可以試試以下的按法:</p>
+<p>　</p>
+<p>步驟1: 先按 <font color="#0000FF">MODE 2</font> 進入複數模式，執行一個簡單複數計算，按 
+<font color="#0000FF">2 <span lang="en">i EXE</span></font>，計數機能正確顯示答案 2 i。</p>
+<p>步驟2: 再使用10冪數功能計算 10<sup>-1</sup>，亦即是再按 <font color="#0000FF">SHIFT&nbsp; log 
+- 1 EXE</font>，這時計算機顯示 0.1及右上角出現細字R&lt;=&gt;I，表示這是一個複數，再按 <font color="#0000FF">SHIFT 
+EXE</font> 顯示虛數部的數值為 0.1 i ，很明顯這是一個錯誤，10<sup>-1</sup> 等於實數 0.1 ，而不是複數 0.1 + 0.1 i。</p>
+<p>若果將步驟1 改為按 <font color="#0000FF">1 + i EXE</font>，那麼步驟2就能得出正確實數答案 
+0.1，由此可見，計算錯誤與之前的計算有關，暫稱為問題因子，經過一些測試，發現與一些複數功能運算有關，而自然數冪功能 ( e<sup>x</sup> )亦有相似的問題。我認為這個錯誤不能接受，比無故出現 Math ERROR嚴重得多，因為是計算答案出現錯誤，希望 Truly 公司可以盡快修正問題。</p>
+<p>　</p>
+<p>經過一些測試及研究，發現這個問題有以下的規律及出現條件。</p>
+<p>1. 十冪數及自然數冪數功能的<b><u>冪為負數(</u>分數除外)</b>才會出現問題，相反若為正數，例如: 步驟2中計算 10<sup>5</sup>，由於冪為正數5，問題就不會出現。</p>
+<p>2. 以下複數計算很大可能會產生問題因子(之前複數計算)，使10的冪數功能出現錯誤。</p>
+<p>a. 一般複數(包括虛數，但不包括實數)計算，例如: 加、減、乘、除、倒數、平方、開方及三次方。</p>
+<p>b. 輸入一個複數，除了按 i 、 <span lang="en">±i </span>及 <font color="#FF0000">實數 
+<span lang="en">± 實數 </span>i</font> (例如: 2 + 3i) 三種較特別情況外， 其它包含 i 的輸入都會產生問題因子。</p>
+<p>注意以下例子在複數模式中進行，若果不是，請先按 <font color="#FF0000">MODE 2</font>。</p>
+<p>以下是<font color="#FF0000">會出現</font>問題的例子:</p>
+<p>例1: 按&nbsp; <font color="#FF0000">3i + 2 EXE</font> 再按 <font color="#FF0000">
+SHIFT log - 1 EXE </font></p>
+<p>例2: 按 <font color="#FF0000">2i EXE</font>再按 <font color="#FF0000">SHIFT log - 
+1 EXE</font></p>
+<p>以下是不會出現問題的例子:</p>
+<p>例3: 按 <font color="#FF0000">2 + 3i EXE</font> 再按 <font color="#FF0000">SHIFT 
+log - 1 EXE </font></p>
+<p>註: 2 + 3i EXE 不但不會產生問題因子，更可以將之前存在的問題因子修正過來，有趣的是例1中 3i + 2與例3中的 2 + 
+3i只是輸入次序上不同，但例1會出現問題，例3卻沒有出現問題。</p>
+<p>例4: 按 <font color="#FF0000">SHIFT MODE 3 EXE MODE 2</font> 再按<font color="#FF0000"> 
+i EXE</font> 再按 <font color="#FF0000">SHIFT log - 1 EXE</font></p>
+<p>這個例子証明了輸入 i 不會產生問題因子。不過若改為 按 <font color="#FF0000">2i EXE</font> 再按<font color="#FF0000"> 
+i EXE </font>再按 <font color="#FF0000">SHIFT log - 1 EXE</font>，那麼就會出現問題，由此可見，猜測當執行 
+2i 時已產生問題因子，再輸入 i 雖然不會產生問題因子，但亦沒有修正問題的作用。</p>
+<p>&nbsp;3. 經測試後發現所有純實數的運算都不會產生問題因子，<font color="#FF0000">純實數</font>運算的加、減、乘、除、倒數、
+分數、平方、三次方、三次方根、N次方及N次方根功能更可<font color="#0000FF">修正問題因子</font>，使問題不會出現。</p>
+<p>例5: 按 <font color="#FF0000">3i EXE</font> 再按 <font color="#FF0000">1 + 1 EXE</font> 
+再按 <font color="#FF0000">SHIFT log - 1 EXE</font>，不會出現問題。</p>
+<p>註: 不會修正問題的純實數計算，例如: 平方根、sin、cos、tan、log等等。</p>
+<p>例6: 按 <font color="#FF0000">3i EXE</font> 再按 <font color="#FF0000">sin 30 EXE</font> 
+再按 <font color="#FF0000">SHIFT log - 1 EXE</font>，這時問題就會出現，由此可見，執行實數運算 sin 30不能將 
+3i 所產生的問題因子修正，所以問題可以延後出現。</p>
+<p>　</p>
+<p><b>問題影響評估:</b></p>
+<p>這個問題是一很明顯的錯誤，對於大家可能亦有一定程度影響，特別是有修讀有關複數的課程，例如: 
+附加數學，那麼好有可能會使用一元二次方程程式計算複數根，當使用程式時，計數機自然會進入及保持在複數模式，而複數模式差不多有齊基本計算功能，所以較大機會可以不返回正常計算用的 
+COMP 模式，因而會增加計算數學問題的風險。特別我知道有些朋友會用10冪數功能 (10<sup>x</sup>)輸入一些細數值，例如: 2×10<sup>-7</sup>(最常見是科學計算，例如:物理科)，理論上最好是用 
+EXP 功能輸入，但可能有些朋友無看說明書習慣，自行摸索，我見過有朋友習慣地用10<sup>x</sup>功能輸入，即是上面例子會按 2 shift log - 
+7輸入計算，當然亦有些朋友會 ^ 功能。對於習慣使用10<sup>x</sup>的朋友，潛在風險會進一步增加，至於自然數冪數功能(e<sup>x</sup>)，一般中四中五的朋友大概不會用到這個功能，但中六中七課都有機會使用e<sup>x</sup> 
+功能，對於修讀與電學有關學科朋友，例如: 電子或電機，由於很多時會用複數計算電路上應用問題，遇上問題的機會率相信就會更高。所以或多或少，Truly 
+SC185的複數問題會構成潛在計算問題或風險，若果大家真是使用這部計數機，就要多點留意及小心使用才可以。 </p>
+<p><b>對程式影響:</b></p>
+<p>現有不少朋友編寫程式亦習慣使用<font color="#FF0000">10<sup>x</sup></font>指令(其實可以不用這個指令亦不會增程式長度)，當程式在複數模式中執行，除了要小心有可能計算錯誤外，亦有可能會令程式執行時出現 
+Math ERROR，特別是使用 arg 功能時，大家都知道計算機不能處理零的情況( arg 0 )，有些網友習慣用<font color="#FF0000">10<sup>x</sup></font>指令加上一個很細少的數值以防止錯誤的出現(Math 
+ERROR)，例如: 我在網上見過一個可以計算複數係數的一元三次方程就有這個問題，大家亦可以試試以下程式在SC185計執行時，就會發現出現Math ERROR。</p>
+<p><font color="#FF0000">i: Ans + 1 + 10<sup>x</sup> - 99: arg Ans</font></p>
+<p>要解決這個問題很簡單，只要將<font color="#FF0000">10<sup>x</sup></font>指令改為 
+<font color="#FF0000">E</font> 指令(按 EXP)即可，程式的長度除了沒增加外，輸入程式時還方便一點(因為<font color="#FF0000">10<sup>x</sup></font> 
+要按 SHIFT log 二個按&#38190;)，為何不直接使用 EXP 功能呢？相信使用10<sup>x</sup>指令的習慣已有一定的普遍性。</p>
+<p>　</p>
+<p><b><font size="4">建議:</font></b></p>
+<p>由於問題只會出現在複數模式，因此建議若果在複數模式計算問題時，使用N次方功能( ^ )直接代替使10的冪數(10<sup>x</sup>)及自然數的冪數(e<sup>x</sup>)功能，例如: 
+計算 10<sup>-1</sup>，可以直接按 <font color="#FF0000">10 ^ - 1 EXE</font> 取代按 
+<font color="#FF0000">SHIFT log - 1 EXE</font>。若果10的冪數為整數，亦更可用 EXP 功能直接取代，例如10<sup>-1</sup>，亦可以按 
+<font color="#FF0000">EXP - 1</font>。</p>
+<p>　</p>
+<p>這個問題無論是舊版本SC185還是2007年4月推出的新版本都存在，由於SC185不斷有新問題被發現，實在令人擔心會否有其它的嚴重問題未被發現，若果大家未購買這部計數機，可以觀望一段時間，看看Truly 
+公司會否完全修正所有問題，才決定是否購買這部計數機。</p>
+<p>　</p>
+<p><b>
+若對這個問題有任何疑問、補充或意見，歡迎在<a href="http://webcal.forumcircle.com/viewtopic.php?t=9&amp;sid=98fbc58cc62564396c27d692b6ea6814">WebCal論壇</a>留言討論。</b></p>
+
+<p>　</p>
+
+<p><a href="SC185_3650.html">fx-3650P及SC-185功能比較</a></p>
+
+<p><a href="SC185_problem.html">SC-185程式自動消失問題</a></p>
+<p><a href="TrulySC185.html">SC-185用後報告及評價</a></p>
+<p>
+<a href="3650.html"><span lang="en-us">返回</span> fx-3650P及SC185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/complexPb.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:25 GMT -->
+</html>

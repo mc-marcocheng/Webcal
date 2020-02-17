@@ -1,0 +1,184 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/meanDeviation.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:06 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>整合平均值及標準差</title>
+<meta name="Microsoft Theme" content="cnpeach 011">
+<script src="webcal.js"></script></head>
+
+<body background="di5.gif" bgcolor="#EEFFF7" text="#000000" link="#008000" vlink="#808080" alink="#808000">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><b><u><font size="5">整合平均值及標準差</font></u></b></p>
+<p>程式可以將多組已知平均值及標準差數據與計數機中的統計數據整合。輸入的標準差可以是樣本標準差或正常標準差。</p>
+<p>程式編寫日期: 2006年3月26日</p>
+<p>程式長度: 19步 </p>
+<p>注意: 輸入程式前，請先按 MODE 3</p>
+<!--mstheme--></font>
+<table border="3" cellpadding="0" cellspacing="0" style="border-collapse: collapse; " width="100%" id="AutoNumber1" bordercolorlight="#669900" bordercolordark="#669900">
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Min<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">D<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin + 3<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">E<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin + 2<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 5<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">+<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">F<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">x<sup>2</sup><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en">×</span><!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin - 4<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kout 4<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">=<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">Kin + 1<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MR<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">x ≦ M<!--mstheme--></font></td>
+    <td width="20%" style="border-width: 3" align="center">
+    <!--mstheme--><font face="新細明體">MODE .<!--mstheme--></font></td>
+  </tr>
+  </table>
+<!--mstheme--><font face="新細明體">
+<p>註: 若果為全新數據，請先按 SHIFT KAC清除統計記憶。</p>
+<p>　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">例題</span><span lang="EN-US">: </span>
+<span style="font-family: 新細明體">將下列的兩組數據整合為一組</span><span style="FONT-FAMILY: 新細明體">。</span></p>
+<!--mstheme--></font>
+<table class="MsoTableGrid" style="border-collapse: collapse; border: medium none" cellSpacing="0" cellPadding="0" border="1" bordercolorlight="#669900" bordercolordark="#669900">
+  <tr>
+    <td style="width: 76.4pt; border: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span style="font-family: 新細明體">組別</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: 1pt solid windowtext; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span style="font-family: 新細明體">數量</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: 1pt solid windowtext; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span style="font-family: 新細明體">平均值</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: 1pt solid windowtext; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span style="font-family: 新細明體">總體標&#20950;差</span><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td style="width: 76.4pt; border-left: 1pt solid windowtext; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span lang="EN-US">1</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span lang="EN-US">30</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span lang="EN-US">80</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span lang="EN-US">15</span><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td style="width: 76.4pt; border-left: 1pt solid windowtext; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span lang="EN-US">2</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span lang="EN-US">40</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span lang="EN-US">70</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102">
+    <!--mstheme--><font face="新細明體">
+    <p class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+    <span lang="EN-US">10</span><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td style="width: 76.4pt; border-left: 1pt solid windowtext; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en-us">3</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en-us">50</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en-us">60</span><!--mstheme--></font></td>
+    <td style="width: 76.4pt; border-left: medium none; border-right: 1pt solid windowtext; border-top: medium none; border-bottom: 1pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" vAlign="top" width="102" align="center">
+    <!--mstheme--><font face="新細明體"><span lang="en-us">8</span><!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<font color="#FF0000">若使用的是正常標準差:</font></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US">&nbsp; 0 P1&nbsp; </span>
+<span style="font-family: 新細明體">(0表示使用正常標準差)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+30 RUN 80 RUN 15 RUN 40 RUN 70 RUN 10 RUN 50 RUN 60 RUN 8 RUN</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+再按 SHIFT <span style="text-decoration: overline"><font color="#FF0000">x</font></span> 
+(顯示平均值為68.33333333)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+SHIFT <font color="#FF0000">xσ<sub>n</sub></font> (顯示正常標準差為13.42158295)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<font color="#FF0000">若使用的是樣本標準差:</font></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> 1 P1&nbsp;</span><span style="font-family: 新細明體">(1表示使用樣本標準差)</span></p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+30 RUN 80 RUN 15 RUN 40 RUN 70 RUN 10 RUN 50 RUN 60 RUN 8 RUN</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+再按 SHIFT <span style="text-decoration: overline"><font color="#FF0000">x</font></span> 
+(顯示平均值為68.33333333)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+SHIFT <font color="#FF0000">xσ<sub>n-1</sub></font> (顯示正常標準差為13.35603809)</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<a href="index.html">返回 fx-50F專頁</a></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/50F/meanDeviation.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:06 GMT -->
+</html>
+

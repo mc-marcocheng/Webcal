@@ -1,0 +1,61 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/randomCalculation.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:01 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>隨機數計算</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">隨機數計算</font></b></u></p>
+<p>程式更新日期: 2011年4月30日</p>
+<p>若已知現時隨機數的數列(大約五個隨機數)，程式可以計算出CASIO fx-3650P 或 fx-3950P之後將會出現隨機數的數值。</p>
+<p><font color="#FF0000">注意</font> :&nbsp;
+<font size="1">E </font>是按 EXP</p>
+<p>程式 (147 bytes)</p>
+<p>Mem clear: ?→A: A +  <span lang="en-us"><font size="1">E </font>- 3</span>→B: Lbl 0:</p>
+<p>?→C: 1<font color="#FF0000">M+</font>: C <font color="#FF0000">=&gt;</font> 23C 
+- . 5: Fix 0: Rnd:</p>
+<p>Ans - <font size="1">E</font>- 8→D: (A+D) ÷ 23: Fix 8: Rnd:
+</p>
+<p>Ans→A: (B+D) ÷ 23: Rnd: Norm 1: </p>
+<p><span lang="en-us">Ans→B: B≧1 <font color="#FF0000">=&gt;</font> log 0:&nbsp; B 
+- A <font color="#FF0000">=&gt;</font> Goto 0:</p>
+<p>Lbl 1: 23A + <font size="1">E</font>- 8→A: Ans
+<font color="#FF0000">=&gt;</font> Ans - . 5:</p>
+<p>Fix 0: Rnd: A - Ans→A: Ans <font color="#FF0000">=&gt; </font>
+Ans - 5<font size="1">E </font>- 4:</p>
+<p>Fix 3: Rnd: Norm 1: Ans→D: 0≧M <font color="#FF0000">=&gt;</font> 
+D◢</p>
+<p>1<font color="#FF0000">M-</font>: Goto 1</p>
+<p>　</p>
+<p>注意: 操作時，先用紙記下六至七個隨機數，輸入隨機數時，要從<font color="#FF0000">最後一個</font>已知隨機數<font color="#FF0000">逆序</font>輸入數值，直至計算數沒有問號?提示，表示輸入的隨數數目已經足夠，這時顯示的數值為接下來 
+fx-3650P將會產生的隨機數的數值。</p>
+<p>　</p>
+<p>例題: 若已知fx-3650P隨機計算功能所產生的隨機數順序如下:</p>
+<p>0.225, 0.19, 0.375, 0.641, 0.756, 0.408, 0.406，預測隨後三個隨機數。</p>
+<p>按 Prog 1 再按 0.406 EXE (從最後一個數值逆</span>序<span lang="en-us">輸入)</p>
+<p>0.408 EXE 0.756 EXE 0.641 EXE </p>
+<p>0.375 EXE (輸入後沒有問號提示，顯示後第一個隨機數為0.345)</p>
+<p>EXE (顯示隨後第二個隨隨機數為0.952)</p>
+<p>EXE (顯示隨後第三個隨隨機數為0.904)</p>
+<p>　</p>
+<p>計算完結後，按 AC 終止程式</p>
+<p>　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/randomCalculation.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:01 GMT -->
+</html>

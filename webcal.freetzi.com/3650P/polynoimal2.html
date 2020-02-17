@@ -1,0 +1,78 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/polynoimal2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:17 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>多項式乘法(II)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">多項式乘法(II)</font></b></u></p>
+<p>程式編寫日期: 2008年2月22日</p>
+<p>程式可以計算一個二次或一次多項式乘以一個 n次多項式。</p>
+<p><font color="#FF0000">程式需要在 REG Lin 模式下執行，因此在輸入程式前請先按 Mode Mode 2 1 進入REG Lin模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數<font color="#0000FF">Σy</font> 按 Shift 1 → 2。</p>
+<p>程式(73 bytes)</p>
+
+<p>Stat clear: ?→A: <font color="#FF0000">,</font> A <font color="#FF0000">DT</font>: ?→B: ?→C: ?→M:</p>
+<p>Lbl 0: CD+BX+<font color="#0000FF">Σy</font>Y→A: X→D: Y→X: A→Y: </p>
+<p>?→Y: M-1→M: M+2 <font color="#FF0000">=&gt;</font> Goto 0: CD + BX◢ 
+CX</p>
+<p>　</p>
+<p>例題1: 展開且化簡 (x<sup>2</sup> 
+- 2 x + 3)(x<sup>3</sup> + 3x<sup>2</sup> 
++ 2x + 1)。</p>
+<p>按 
+Prog 1&nbsp; 再按 1 EXE - 2 EXE 3 EXE 
+(注意必須先輸入二次式)</p>
+<p>再按 3 EXE (另一多項式最高次數)</p>
+<p>1 EXE (顯示x<sup>5</sup>的係數為1) 
+ 
+3 EXE (顯示x<sup>4</sup> 
+的係數為 1) </p>
+<p>2 EXE (顯示x<sup>3</sup>
+的係數為 -1)  1 EXE 
+(顯示x<sup>2</sup>
+的係數為 6)</p>
+<p>EXE (顯示x
+的係數為 4) EXE (顯示常數為 3)</p>
+<p>　</p>
+<p>例題2: 展開且化簡 (2 x + 3)(x<sup>3</sup> 
++ 3x<sup>2</sup> 
++ 2x + 1)。</p>
+<p>按 
+Prog 1&nbsp; 再按 <font color="#FF0000">0</font> EXE 2 EXE 3 EXE (必須先輸入一次式，第一個輸入<font color="#FF0000">0</font>表示沒有x<sup>2</sup>係數)</p>
+<p>再按 3 EXE (另一多項式最高次數)</p>
+<p>1 EXE (顯示x<sup>5</sup>的係數為0) 
+ 
+3 EXE (顯示x<sup>4</sup> 
+的係數為 2)</p>
+<p>2 EXE (顯示x<sup>3</sup>
+的係數為 9)  1 EXE 
+(顯示x<sup>2</sup>
+的係數為 13)</p>
+<p>EXE (顯示x
+的係數為 8) EXE (顯示常數為 3)</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC185 
+程式集</a><br>
+　</p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/polynoimal2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:17 GMT -->
+</html>

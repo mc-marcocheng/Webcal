@@ -1,0 +1,64 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/baseN2a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>n進數轉十進數</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><b>
+<font size="5">
+<span lang="EN-US" style="font-family: 新細明體; text-decoration: underline">
+n進數(2</span><span style="font-family: 新細明體; text-decoration: underline">至9)</span><span lang="EN-US" style="font-family: 新細明體; text-decoration: underline">轉十進數(I)</span></font></b></p>
+<p>第二個程式較長，但速度較快。</p>
+<p>程式編寫日期: 2006年4月17日</p>
+<p class="MsoNormal">第一個程式 (48 bytes)</p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: 新細明體">Mem clear: 
+?→M: ?→A: </span>
+<span lang="EN-US" style="font-size: 12.0pt; font-family: 新細明體">Lbl 0:</span></p>
+<p class="MsoNormal">
+<span lang="EN-US" style="font-size: 12.0pt; font-family: 新細明體">log M- . 5: Fix 
+0: Rnd: Norm 1: 10<sup>x</sup>Ans <font color="#FF0000">M-</font>: </span></p>
+<p class="MsoNormal"><span lang="en-us">B + A</span><span lang="EN-US" style="font-size: 12.0pt; font-family: 新細明體">^log 
+Ans→B: M&gt;1 <font color="#FF0000">=&gt;</font> Goto 0: M+B</span></p>
+<p>　</p>
+<p>第二個程式 (57 bytes)</p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: 新細明體">Mem clear: 1→</span><span style="font-family: 新細明體">Y:
+</span><span lang="EN-US" style="font-family: 新細明體">?→A: ?→B: Lbl 0:</span></p>
+<p><span lang="en-us">A<span style="">÷10 </span></span>
+<span lang="EN-US" style="font-size: 12.0pt; font-family: 新細明體">- . 5: Fix 0: 
+Rnd: Norm 1: Ans→X:</span></p>
+<p><span lang="en-us">Y(A - 10X</span><span lang="EN-US" style="font-size: 12.0pt; font-family: 新細明體"><font color="#FF0000">M+</font>: 
+BY→Y: X→A <font color="#FF0000">=&gt;</font> Goto 0: M</span></p>
+<p>　</p>
+<p>註: 若果想保留一些記憶用作儲存臨時數據，可將程式中&quot;Mem clear&quot;改為&quot;M<font color="#FF0000">M-</font>&quot;，而
+第一個程式所使用的記憶為A、B及M，第二個程式使用的記憶為A、B、X、Y及M。</p>
+<p>　</p>
+<p>例題: 將二進制 11001 以十進制表示。</p>
+<p>
+<span style="font-family: 新細明體">按</span><span lang="EN-US"> Prog 1&nbsp; </span>
+<span style="font-family: 新細明體">再按 11001 EXE 2 EXE (顯示答案為11001)</span></p>
+<p>所以 11001<sub>2</sub> =&nbsp; 25<sub>10</sub> </p>
+<p>　</p>
+<p>注意: 輸入的數值必須為正整數。</p>
+<p>　</p>
+<p class="MsoNormal" style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify">
+<a href="https://err.freewebhostingarea.com/404.html"><span lang="en-us">返回</span> fx-3650P 程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/baseN2a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+</html>

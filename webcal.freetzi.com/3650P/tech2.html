@@ -1,0 +1,71 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/tech2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:25 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>程式的誤差問題</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b>
+<font size="5">程式的誤差問題</font></b></u></p>
+<p><font size="4">
+計算機運算過程出現誤差，是一件很正常的事，輕微的誤差除了令到答案出現準確度不足的問題，更可能令到程式出現錯誤(ERROR)，甚至所得的答案完全錯誤，例如:二次方程的判別式若果正確的數值為零，但卻得出一個很細小的負數，就有可能令到計數機的程式誤以為無實數解等等。所在編寫程式一定要小心誤差可能帶來的問題，減少出錯的機會。</p>
+<p>　</p>
+<p><font color="#800080">1. 了解函數的特點:</font></p>
+<p>不同的數學函數有不同的特點，例如: f(x)=tan X，當X較接近90<sup>o</sup>時X些微的改變，函數 tan 
+X就有巨大的改變，誤差亦可能會大大增加等等。</p>
+<p>　</p>
+<p><font color="#800080">2. 誤差累積擴大的特性:</font></p>
+<p>當經過很多運算(複雜的函數運算)，誤差有可能會累積並且增大。</p>
+<p>　</p>
+<p><font color="#800080">3. 加減運算的誤差問題:</font></p>
+<p>
+這個誤差的問題，很多人都會忽略，其實加減數所造成的誤差很多時都比乘除數及複雜的函數運算還要大，看看以下例子了解誤差形成的原因。</p>
+<p>算式1:&nbsp; 31 ÷ 3 - 1 ÷ 
+3 - 10</p>
+<p>算式2:&nbsp; 31
+÷ 3 - 10 - 1 ÷ 3</p>
+<p>算式1及算式2在數學上的意義是相同，但在計數機上執行，結果就不同，前者為0，後者為 -3.3x10<sup>-11</sup>。原因在於計數機儲存數值的方法，31
+÷ 3 產生10.3333333333 (共12位數值)，當減去10後，只餘下0.3333333333 
+(10位數值)，所以再減 1 ÷ 3 (0.333333333333，12位數值)就出現誤差了。現在再考慮算式1，31
+÷ 3產生10.3333333333 (共12位數值)，先減 1 ÷ 3
+
+(12位數值)，由於1/3的數值比31/3的數值小，運算時1/3最後的兩個數值會被忽略，所以先產生10的結果，當再減10，就會變成零，所以計算的先後次序不同就有不同的結果。</p>
+<p>　</p>
+<p><font color="#800080">4. 計數機自動修正功能:</font></p>
+<p>先看以下算式:</p>
+<p>1 ÷ 3 + 1÷ 3 + 1 ÷ 3</p>
+<p>答案很明顯為1，但實際上計數機將三個12位的 
+0.333333333333相加，答案應該為12位的0.999999999999，但最後案卻變為1，這就是計數機的自動修正功能。所以如果你計算下列式:</p>
+<p>1 ÷ 3 + 1÷ 3 + 1 ÷ 3 + 1 
+÷ 3 + 1÷ 3 ............</p>
+<p>由於過程中會產生整數(自動修正)，所以即使加很多次誤差不會增加，不過某些情況(例如無理數)計數機的自動修正功能會失效，例如: 
+計算過程不能產生整數部份，看看以下的算式:</p>
+<p>1 ÷ 7 + 1 ÷ 3 + 1 ÷ 3 + 
+1÷ 3 + 1 ÷ 3 + 1 ÷ 3 + ........</p>
+<p>由於計算過程不能產生整數，自動修正功能將會失效，不斷加 
+1/3 誤差就會增加。</p>
+<p>　</p>
+<p><a href="technics.html">返回編寫程式小技巧</a></p>
+<p><a href="https://err.freewebhostingarea.com/404.html">返回主頁</a></font></p>
+
+<p>　</p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/tech2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:26 GMT -->
+</html>

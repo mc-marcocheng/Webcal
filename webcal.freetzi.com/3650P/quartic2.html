@@ -1,0 +1,137 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quartic2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>一元四次方程精簡版</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">
+一元四次方程精簡版</font></b></u></p>
+<p>精簡版較簡短，但要注意方程的形式為 <font color="#FF0000">x<sup>4</sup> + ax<sup>3</sup> 
++ bx<sup>2</sup> + cx + d = 0</font>，與之前的版本的輸入方法不同。</p>
+<p>更新日期: 2010年11月4日 </p>
+<p>程式一 (256 bytes，有記存答案)</p>
+<p><font color="#FF0000">程式需要在 CMPLX 模式下執行，因此在輸入程式前請先按 Mode 2。</font></p>
+<p>?→B: -B┘4→B: ?→C:&nbsp; ?→A: ?→M:</p>
+<p>3B<sup>2 2</sup> - CB<sup>2</sup> - AB<font color="#FF0000">M-</font>:  CB┘2 - 2B<sup>3</sup> + A┘4→A: B<sup>2</sup> - C┘6→C: </p>
+<p>A <font color="#FF0000">=&gt;</font> Goto 0: 3C + √( 9C<sup>2</sup> - 
+M→A: M<font color="#FF0000">M-</font>: Goto 1:</p>
+<p>Lbl 0: C<sup>3</sup> - CM - A<sup>2</sup>: Ans - √(Ans<sup>2</sup> - (M┘3 + C<sup>2</sup>)<sup>3</sup>:</p>
+<p>iAns <font color="#FF0000">=&gt;</font> 2<font color="#FF0000"><sup>&nbsp; 3</sup>√</font>Abs 
+Ans cos (arg iAns÷3) <font color="#FF0000">=&gt;</font> Goto 
+2:</p>
+<p><font color="#FF0000"><sup>3</sup>√</font>iAns + <font color="#FF0000"><sup>3</sup>√</font>(2A<sup>2 </sup> 
++ 2CM - 2C<sup>3</sup> - iAns: Lbl 2: √(Ans┘2 + C→M:</p>
+<p>3C - M<sup>2</sup> + A÷M→A: Lbl 1: 6C - A - 2M<sup>2</sup>→C: </p>
+<p>Abs A <font color="#FF0000">=&gt;</font> √Ans∠ . 5arg A: Ans - M + B→A◢</p>
+<p>Abs C <font color="#FF0000">=&gt;</font> √Ans∠ . 5arg C: Ans + M + B→C◢</p>
+<p>2B - 2M - A→M◢ 4B - A - Ans - C→B&nbsp; </p>
+<p>　</p>
+<p>程式二 (239 bytes，沒有記存答案)</p>
+<p><font color="#FF0000">程式需要在 CMPLX 模式下執行，因此在輸入程式前請先按 Mode 2。</font></p>
+<p>?→B: -B┘4→B: ?→C:&nbsp; ?→A: ?→M:</p>
+<p>3B<sup>2 2</sup> - CB<sup>2</sup> - AB<font color="#FF0000">M-</font>:  CB┘2 - 2B<sup>3</sup> + A┘4→A: B<sup>2</sup> - C┘6→C: </p>
+<p>A <font color="#FF0000">=&gt;</font> Goto 0: 3C + √( 9C<sup>2</sup> - 
+M→A: M<font color="#FF0000">M-</font>: Goto 1:</p>
+<p>Lbl 0: C<sup>3</sup> - CM - A<sup>2</sup>: Ans - √(Ans<sup>2</sup> - (M┘3 + C<sup>2</sup>)<sup>3</sup>:</p>
+<p>iAns <font color="#FF0000">=&gt;</font> 2<font color="#FF0000"><sup>&nbsp; 3</sup>√</font>Abs 
+Ans cos (arg iAns÷3) <font color="#FF0000">=&gt;</font> Goto 
+2:</p>
+<p><font color="#FF0000"><sup>3</sup>√</font>iAns + <font color="#FF0000"><sup>3</sup>√</font>(2A<sup>2 </sup> 
++ 2CM - 2C<sup>3</sup> - iAns: Lbl 2: √(Ans┘2 + C→M:</p>
+<p>3C - M<sup>2</sup> + A÷M→A: Lbl 1: 6C - A - 2M<sup>2</sup>→C: </p>
+<p>Abs A <font color="#FF0000">=&gt;</font> √Ans∠ . 5arg A: Ans - M + B◢</p>
+<p>2B - 2M - Ans◢ Abs C <font color="#FF0000">=&gt;</font> √Ans∠ . 5arg C<font color="#FF0000">M-</font>: </p>
+<p>2Ans + M + B◢ M + B</p>
+<p>　</p>
+<p>例題1: 解 x<sup>4</sup> + 2x<sup>3</sup> - 13x<sup>2</sup> - 14x + 24 = 0 </p>
+<p><font color="#FF0000">程式一</font></p>
+<p>按Prog 1&nbsp; 
+再按2 EXE - 13 EXE - 14 
+EXE 24 EXE (顯示第一個根為 3)</p>
+<p>EXE (顯示第二個根為 1) EXE (顯示第三個根為 
+- 4) EXE (顯示第四個根為 - 2)</p>
+<p><font color="#FF0000">程式二</font></p>
+<p>按Prog 1&nbsp; 
+再按2 EXE - 13 EXE - 14 
+EXE 24 EXE (顯示第一個根為 3)</p>
+<p>EXE (顯示第二個根為 - 4) EXE (顯示第三個根為 
+1) EXE (顯示第四個根為 - 2)</p>
+<p>　</p>
+<p>例題2: 解 3x<sup>4</sup> - 5x<sup>3</sup> + x<sup>2</sup> - 4x =0</p>
+<p><font color="#FF0000">程式一</font></p>
+<p>
+按Prog 1&nbsp; 
+再按- 5 
+<b>ab/c</b> 3EXE 1 <b>ab/c</b> 3EXE 
+- 4 <b>ab/c</b> 3 EXE 
+</p>
+<p>
+0 EXE 
+(顯示第一個根實數部為 - 
+0.101554) </p>
+<p>
+Shift Re&lt;=&gt;Im (顯示第
+一個根虛數部為0.838323 i)</p>
+<p>
+EXE (顯示第二個根為1.869774)</p>
+<p>
+EXE (顯示第三個根的實數部為 
+- 0.101554)</p>
+<p>
+Shift Re&lt;=&gt;Im (顯示第
+三個根虛數部為
+- 0.838323 i)</p>
+<p>
+EXE (顯示第四個根為 0)</p>
+<p><font color="#FF0000">程式二</font></p>
+<p>
+按Prog 1&nbsp; 
+再按- 5 
+<b>ab/c</b> 3EXE 1 <b>ab/c</b> 3EXE 
+- 4 <b>ab/c</b> 3 EXE 
+</p>
+<p>
+0 EXE 
+(顯示第一個根實數部為 - 
+0.101554) </p>
+<p>
+Shift Re&lt;=&gt;Im (顯示第
+一個根虛數部為0.838323 i)</p>
+<p>
+EXE (顯示第二個根的實數部為 
+- 0.101554)</p>
+<p>
+Shift Re&lt;=&gt;Im (顯示第二個根虛數部為
+- 0.838323 i)</p>
+<p>
+EXE (顯示第三個根為1.869774)</p>
+<p>
+EXE (顯示第四個根為 0)</p>
+<p>　</p>
+
+<p>程式一執行完成後，按 
+RCL A 、RCL B、RCL C及RCL M分別顯示四根的數值。</p>
+<p>註: 輸入的係數為整數或分數較為理想，若果輸入的係數為小數，準確度有可能會減少一點。</p>
+
+<p>
+　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P 程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quartic2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+</html>

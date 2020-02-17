@@ -1,0 +1,620 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/fx-3900PV/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:10:43 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>WebCal 計數機網頁 Casio fx-3900PV程式集</title>
+<meta name="Microsoft Theme" content="china 011">
+
+<script src="webcal.js"></script></head>
+
+<body background="../285II/di1.gif" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#FF9933" alink="#FF3300">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="7" color="#800080">WebCal 
+計數機網頁</font></b></u></p>
+<p align="center"><u><font size="6" color="#FF0000"><b>C</b></font><b><font size="6" color="#FF0000">asio 
+fx-3900PV程式集</font></b></u></p>
+
+<p><font size="4"><b>程</b></font><b><font size="4">式集前言:&nbsp; </font></b></p>
+<p><font size="4">Casio 
+fx-3900PV是一部很好用的會考計數機，
+程式容量較大(300步)，可以編寫出較多及複雜的程式，這裡收集了一些中學會考及高考有用的程式，希望可以幫助大家應付考試。由於有編輯模式，容許修改程式及輸入時查看翻程式碼，並可以核對程式碼的位置，較同類計數機(fx-3800P及fx-3600PV)方便得多，建議大家使用編輯模式(MODE 
+. )輸入程式，這裡的程式除了程式碼外，還有程式步編號(不須輸入)可供大家<b>核對</b>程式，減少輸入程式錯誤的機會。另外程式若果較短，亦適合fx-3800P(小於135步)及fx-3600PV(小於38步)使用，為方便這兩部計數機的朋友，亦加入了學習模式(LRN)的輸入方法，至於fx-50F程式，建議參考 
+<a href="../50F/index.html">fx-50專頁中的程式</a>。</font></p>
+<p><b><font size="4"><font color="#0000FF">WebCal網站通告:</font> 為方便網友討論及解決計數機問題，新增<a href="http://webcal.forumcircle.com/viewforum.php?f=1&amp;sid=38efe43740d62bbdee46bd132b7ea551">WebCal論壇</a>，歡迎大家使用。
+為方便大家使用，發表及回覆文章亦可以不註冊為會員，不過註冊為會員後會有較完整討論版功能使用。</font></b></p>
+<p><font size="4"><a href="introduce3900.html">fx-3900PV簡介</a>&nbsp;&nbsp;<a href="suggestion.html">文憑試攻略</a>&nbsp;
+<a href="fx-3600PV.html">fx-3600PV程式集</a>&nbsp; <a href="fx-3800P.html">
+fx-3800P程式集</a>&nbsp; <a href="../contact.html">
+聯絡網主</a> </font><a href="../key.html">網站索引</a>&nbsp; <b><a href="http://webcal.forumcircle.com/viewforum.php?f=1&amp;sid=38efe43740d62bbdee46bd132b7ea551">論壇</a><font color="#FF0000">(新) </font>
+<a href="http://www.hkeaa.edu.hk/DocLibrary/HKDSE/Candidate_Handbook/14Annex_C.pdf">
+2014年文憑試準用計算機</a><font color="#FF0000">(新) </font>
+<a href="https://www.facebook.com/pages/Webcal������閰西��蝞�璈�/1386049388333337">
+WebCal文憑試計算機專頁</a><font color="#FF0000">(最新) </font>
+&nbsp;<a href="https://www.facebook.com/EMwave.health">WebCal危危電磁波專頁</a><font color="#FF0000">(最新)</font></b></p>
+<p>********** 現有項目一百五十七項 ***************&nbsp;&nbsp; </p>
+<p>分類: <a href="#Q1">解方程</a>&nbsp; <a href="#Q2">代數</a>&nbsp; <a href="#Q3">矩陣及向量</a>&nbsp; <a href="#Q4">幾何</a>&nbsp; <a href="#Q5">坐標幾何</a>&nbsp; <a href="#Q6">數值法</a>&nbsp; 
+<a href="#Q7">統計</a>&nbsp; <a href="#Q8">財務</a>&nbsp; <a href="#Q9">數論</a>&nbsp; <a href="#Q10">其它</a>&nbsp; <a href="#Q11">改機</a>&nbsp; <a href="#Q12">內置</a></p>
+<p><b><font size="4" color="#FF0000"><a name="Q1" id="Q1"></a>(A) Casio fx-3900PV 解方程類程式 
+(Solving equation program)</font></b></p>
+<p>A1. <a href="quadratic1.html">一元二次方程(I)</a>
+(Quadratic 
+equations  
+I) </p>
+<p>A2. <a href="quadratic2.html">一元二次方程(II)</a>
+(Quadratic 
+equations  
+II)</p>
+<p>A3. <a href="quadratic3.html">
+一元二次方程(III)</a>
+(Quadratic 
+equations  
+III)</p>
+<p>A4. <a href="quadratic4.html">
+一元二次方程(IV)</a>
+(Quadratic 
+equations  
+IV)</p>
+<p>A5. <a href="quadratic5.html">二次函數因式分解及一元二次方程</a> (Factorization of 
+quadratic function and quadratic equations)</p>
+<p>A6. <a href="cubic.html">一元三次方程(I)</a>
+(Cubic Equations I)</p>
+<p>A7. <a href="cubic2.html">一元三次方程(II)</a>
+(Cubic Equations II)</p>
+<p>A8. <a href="simultaneous1.html">
+
+聯立二元一次方程式</a> 
+(Simultaneous Linear Equations in 2 unknowns)</p>
+<p>A9. <a href="simultaneous5.html">聯立二元一次及二次方程</a> (Simultaneous 
+Linear and Quadratic equations)</p>
+<p>A10. <a href="simultaneous2.html">聯立三元一次方程及行列式</a> 
+(Simultaneous 
+Linear Equations in 3 unknowns 
+and 
+Determinant)</p>
+<p>A11. <a href="simultaneous3.html">聯立二/三元一次方程及行列式</a> 
+(Simultaneous Linear Equation in 2/3 unknowns and Determinant)
+</p>
+<p>A12. <a href="simultaneous4.html">聯立二/三元一次方程及行列式(包括聯立三元一次通解)(I)</a> 
+(Simultaneous Linear Equation in 2/3 unknowns (include general solution) and 
+Determinant I) </p>
+<p>A13. <a href="simultaneous7.html">聯立二/三元一次方程及行列式(包括聯立三元一次通解)(II)</a> 
+(Simultaneous Linear Equation in 2/3 unknowns (include general solution) and 
+Determinant II) </p>
+<p><b><font size="4" color="#FF0000"><a name="Q2" id="Q2"></a>(B) Casio fx-3900PV 代數類程式 
+(Algebra program)</font></b></p>
+<p>B1. <a href="fraction1.html">
+
+小數轉換分數(I)</a>
+(Conversion of decimal into fraction I)</p>
+<p>B2. <a href="fraction2.html">
+
+小數轉換分數(II)</a>
+(Conversion of decimal into fraction II)</p>
+<p>B3. <a href="fraction3.html">
+
+小數轉換分數(III)</a>
+(Conversion of decimal into fraction III)</p>
+<p>B4. 
+<a href="binomial1.html">正整數冪二項式定理(I)</a><font color="#000000">
+</font>(Binomial 
+Theorem I (Positive integer power))</p>
+<p>B5. 
+<a href="binomial2.html">正整數冪二項式定理(II)</a><font color="#000000">
+</font>(Binomial 
+Theorem II (Positive integer power))</p>
+<p>B6. <a href="binomialC.html">正整數冪二項式係數</a> (Coefficient of binomial theorem 
+(Positive integer power))</p>
+<p>B7. 
+<a href="binomial3.html">二項式定理(I)</a> (Binomial 
+Theorem I)</p>
+<p>B8. 
+<a href="binomial4.html">二項式定理(II)</a> (Binomial 
+Theorem II)</p>
+<p>
+B9. <a href="partialFraction.html">部份分式(I)</a> (Partial 
+fraction I)</p>
+<p>
+B10. <a href="partialFraction2.html">部份分式(II)</a> (Partial fraction II)</p>
+<p>
+B11. <a href="function.html">函數計算</a> 
+(Function calculation)</p>
+<p>
+B12. <a href="square_root.html">平方根化簡(I)</a> (Simplification of square roots I)</p>
+<p>
+B13. <a href="square_root2.html">平方根化簡(II)</a> (Simplification of square roots II)</p>
+<p>B14. <a href="polynimial1.html">
+多項式乘法(I)</a> 
+(Polynomial Multiplication I)</p>
+<p>B15. 
+<a href="polynimial2.html">
+多項式乘法(II)</a> 
+(Polynomial Multiplication II)</p>
+<p>B16. <a href="polynimial3.html">
+多項式乘法(III)</a> 
+(Polynomial Multiplication III)</p>
+<p>B17. 
+
+<a href="division1.html">多項式除法(I)</a> (Polynomial Division I)</p>
+<p>B18. 
+
+<a href="division2.html">多項式除法(II)</a> (Polynomial Division II)</p>
+<p>B19. 
+
+<a href="division3.html">多項式除法(III)</a> (Polynomial Division III)</p>
+<p>
+B20.  
+<a href="complex1.html">複數的整數指數 </a>(Integer power of complex number)</p>
+
+<p>B21. 
+
+<a href="n_root.html">複數的N次方根</a> (N<sup>th</sup> roots of complex number)</p>
+
+<p>B22. <a href="complex3.html">複數計算</a> 
+(Complex number calculation)</p>
+<p>B23. 
+<a href="AP.html">
+
+等差數列</a>
+(Arithmetic sequence)</p>
+<p>B24. 
+
+<a href="GP.html">等比數列</a> (Geometric sequence)</p>
+<p>B25. <a href="APGP.html">等差及等比數列</a> 
+(Arithmetic and Geometric sequence)</p>
+<p>B26. <a href="sequence.html">數列計算</a> (Sequence calculation)</p>
+
+<p>B27. <a href="nBase1.html">n進數(2-9)轉化為10進數</a> (Conversion of base n(2-9) to 
+base 10)</p>
+
+<p>B28. <a href="nBase2.html">10進數轉化為n進數(2-9)</a> (Conversion of 
+base 10 to base n(2-9))</p>
+
+<p>B29. <a href="nBase3.html">n(2-9)進數與10進數間轉換</a> (Conversions between base 
+n(2-9) and base 10)</p>
+<p>B30. <a href="nBase4.html">n進數轉化為 n進數</a> (Conversion of base n to base n)</p>
+<p>B31. <a href="nBase5.html">十進數小數與n(2-9)進數間轉換</a> (Conversion between decimal 
+number to base n(2-9))</p>
+<p>
+B32. <a href="nestRadical.html">巢狀平方根數化簡</a> 
+(Simplify a nested radical number)</p>
+<p><b><font size="4" color="#FF0000"><a name="Q3" id="Q3"></a>(C) Casio fx-3900PV 矩陣及向量類程式 
+(Matrix and Vector program)</font></b></p>
+<p>C1. <a href="determinant2.html">二階伴逆矩陣</a> 
+(2×2 Inverse matrix)</p>
+<p>C2. <a href="matrix2.html">二階矩陣乘法</a> (2×2 
+matrix multiplication)</p>
+<p>C3. <a href="determinant.html">
+
+三階矩陣行列式</a> 
+(3x3 Determinant)</p>
+<p>C4.
+<a href="matrix1.html">三階矩陣乘法(I)</a> (3×3 
+matrix multiplication I)</p>
+<p>C5.
+<a href="matrix3.html">三階矩陣乘法(II)</a> (3×3 
+matrix multiplication II)</p>
+<p>C5. <a href="abjoint.html">三階伴隨矩陣/逆矩陣及行列式(I)</a> (Adjoint / Inverse of 3<font face="Times New Roman, Times, serif">×</font>3 
+matrix and Determinant I)</p>
+<p>C6. <a href="abjoint2.html">三階伴隨矩陣/逆矩陣及行列式(II)</a> (Adjoint / Inverse of 3<font face="Times New Roman, Times, serif">×</font>3 
+matrix and Determinant II)</p>
+<p>C7. <a href="inverseMatrix.html">逆矩陣及行列式</a> (Inverse of 3<font face="Times New Roman, Times, serif">×</font>3 
+matrix and Determinant)</p>
+<p>C8.
+<a href="matrixA.html">三階矩陣特徵多項式</a> (Characteristic polynomial of a 3x3
+matrix )</p>
+<p>
+C9. <a href="LU.html">三階矩陣LU分解</a> (LU decomposition of a 3×3 
+matrix)</p>
+
+<p>C10. <a href="matrix4.html">四階矩陣行列式</a> (4×4 
+Determinant)</p>
+
+<p>
+C11. <a href="vectorProduct.html">向量積</a> (Vector product)</p>
+<p>
+(向量積程式重複使用亦可計算三階行列式、伴隨矩陣、逆矩陣、聯立二元及三元一次方程)</p>
+<p><b><font size="4" color="#FF0000"><a name="Q4" id="Q4"></a>(D) Casio fx-3900PV 幾何類程式 
+(Geometry program)</font></b></p>
+<p>D1. <a href="areaOfTriangle.html">三角形面積(包括希羅公式)</a> 
+(Area of triangle(include Heron's 
+Formula))</p>
+<p>D2. <a href="cosLaws.html">餘弦定律</a> (Cosine laws)</p>
+<p>D3. <a href="cosLawsArea.html">餘弦定律及三角形面積</a> 
+(Cosine laws and area of triangle)</p>
+<p>D4. <a href="sineLaw1.html">正弦定律(I)</a> (Sine 
+laws I)</p>
+<p>D5. <a href="sineLaw2.html">正弦定律(II)</a> (Sine 
+laws II)</p>
+<p>D6. 
+
+<a href="Area4Sides.html">圓內接四邊形四邊求面積</a> 
+(Area of cyclic quadrilateral by four sides)</p>
+<p>D7. <a href="Area4Sides2.html">
+四邊形面積</a> (Area of quadrilateral)</p>
+<p>D8. <a href="sector.html">扇形計算</a> (Sector calculation)</p>
+<p><b><font size="4" color="#FF0000"><a name="Q5" id="Q5"></a>(E) Casio fx-3900PV 坐標幾何類程式 
+(Coordinate Geometry program)</font></b></p>
+<p>
+E1. 
+
+<a href="distanceSlope.html">兩點的距離、斜率及y截距(兩點式)</a> (Distance, slope and 
+y-intercept)</p>
+<p>
+E2. <a href="distanceSlopeSection.html">
+距離、斜率及分界點</a> 
+(Distance, slope and section formula)</p>
+<p>E3. <a href="centre_radius.html">圓形的圓心及半徑</a> (Centre and radius of a circle)</p>
+<p>E4. 
+
+<a href="diameter.html">直徑兩端點求圓方程</a> 
+(Equation of 
+circle by 2 end-point of diameter)</p>
+<p>E5. <a href="3pointCircleEq.html"> 
+三點求圓方程</a>
+(Equation of circle from three points) </p>
+<p>E6. 
+<a href="3pointCircle.html">三點求圓</a> (Circle from three points) </p>
+<p>E7.
+
+<a href="tangentCircle.html">已知斜率求圓的切線</a> (Tangent 
+to Circle with given slope)</p>
+<p>E8. 
+<a href="tangentCircle2.html">圓形的圓心、半徑及已知斜率求圓切線</a> 
+(Centre, radius of a circle and tangent to circle)</p>
+<p>E9. 
+<a href="extTangent.html">外點至圓的切線 
+</a>(Tangent to circle from external point)</p>
+
+<p>
+E10. 
+<a href="Area3pts.html">三點求三角形面積</a> (Area 
+of triangle by three points)</p>
+<p>E11. 
+<a href="Area4pts.html">四點求四邊形面積</a> (Area 
+of quadrilateral
+by four
+points)</p>
+<p>E12. <a href="AreaNpts.html">多點求多邊形面積</a>
+(Area 
+of polygon
+by many
+points)</p>
+<p>E13. <a href="rotation.html">坐標變換-旋轉</a> 
+(Transformation 
+on coordinates-Rotation)</p>
+
+<p>E14. 
+<a href="angles2lines.html">兩直線間夾角</a> (Angle 
+between two lines)</p>
+<p>E15.
+<a href="distanceLine.html">直線與點的距離</a> 
+(Distance 
+between line and point)</p>
+<p>E16. <a href="reflection.html">
+
+點與直線的距離及反射</a>
+(Reflection and 
+
+Distance between point and line)</p>
+<p><b><font size="4" color="#FF0000"><a name="Q6" id="Q6"></a>(F) Casio fx-3900PV 數值法類程式 
+(Numerical Method program)</font></b></p>
+<p>F1. <a href="bisection1.html">半分法(I)</a> (Bisection method I)</p>
+<p>F2. <a href="bisection2.html">半分法(II)</a> (Bisection method II)</p>
+<p>
+F3. 
+<a href="secant1.html">正割法(I)</a> 
+(Secant method I)</p>
+<p>
+F4. 
+<a href="secant2.html">正割法(II)</a> 
+(Secant method II)</p>
+<p>
+F5. 
+
+<a href="falsePosition1.html">試位法(I)</a> (False Position method I)</p>
+<p>
+F6. 
+
+<a href="falsePosition2.html">試位法(II)</a> (False Position method II)</p>
+<p>
+F7. 
+<a href="secantFalse.html">正割法及試位法</a> 
+(Secant method 
+and False Position method)</p>
+<p>
+F8. 
+
+<a href="secantFalseBisection.html">正割法、試位法及半分法</a> 
+(Secant, 
+False Position and Bisection method)</p>
+<p>
+F9. <a href="newton.html">牛頓法</a> (Newton method)</p>
+<p>
+F10.
+
+<a href="iteration.html">迭代法</a> 
+(Iteration method)</p>
+<p>F11. <a href="differentiation.html">微分計算</a> 
+(Numerical differentiation) </p>
+<p>
+F12. <a href="integration1.html">
+梯形法則定積分計算</a> (Numerical integration (Trapezoidal 
+Rule))</p>
+
+<p>
+F13. 
+<a href="integration2.html">
+辛卜生(森遜)法則定積分計算</a> 
+(Numerical integration 
+(Simpson's Rule))</p>
+
+<p>
+F14. <a href="integration3.html">
+梯形及辛卜生(森遜)法則定積分計算</a> 
+(Numerical integration 
+(Trapezoidal and 
+
+Simpson's Rule))</p>
+
+<p>
+F15. <a href="lagrange.html"> 
+3點拉格朗日插值多項式</a> 
+(Lagrange Interpolating Polynomial for 3 points)</p>
+
+<p>
+<b><font size="4" color="#FF0000"><a name="Q7" id="Q7"></a>(G) Casio fx-3900PV 統計類程式 (Statistics program)</font></b></p>
+
+<p>G1. 
+
+<a href="standard1.html">標準常態分佈概率(I)</a> (Standard Normal Probability Calculation I)</p>
+<p>G2. 
+
+<a href="standard2.html">標準常態分佈概率(II)</a> (Standard Normal Probability Calculation II)</p>
+<p>G3. 
+
+<a href="standard3.html">標準常態分佈概率(III)</a> (Standard Normal Probability 
+Calculation III)</p>
+<p>G4. 
+
+<a href="standard4.html">標準常態分佈概率(IV)(高考版)</a>
+(Standard Normal Probability 
+Calculation IV)</p>
+<p>G5. <a href="inverseStandard.html">
+
+反查標準常態分佈概率(I)</a> (Inverse 
+Standard 
+Normal 
+Probability Calculation I)</p>
+<p>G6. <a href="inverseStandard2.html">
+
+反查標準常態分佈概率(II)(高考版)</a> (Inverse 
+Standard 
+Normal 
+Probability Calculation II)</p>
+<p>G7. 
+
+<a href="poisson1.html">泊松分佈(I)</a> (Poisson distribution I)</p>
+<p>G8. 
+
+<a href="poisson2.html">泊松分佈(II)</a> (Poisson distribution II)</p>
+<p>G9.<a href="poisson3.html"> </a> 
+
+<a href="poisson3.html">泊松分佈(III)</a> (Poisson distribution III)</p>
+<p>G10. 
+<a href="binomialD1.html">
+二項分佈(I)</a> 
+(Binomial distribution I)</p>
+<p>G11. 
+<a href="binomialD2.html">
+二項分佈(II)</a> 
+(Binomial distribution II)</p>
+<p>G12. <a href="geometricDr.html">幾何分佈</a> (Geometric distribution)</p>
+<p>G13. <a href="poissonBinomial1.html">
+二項分佈及泊松分佈 </a>(Binomial 
+distribution)</p>
+<p>G14. <a href="combineMean.html">整合平均值及標準差</a> 
+(Combined mean and Standard deviation)</p>
+<p>G15. <a href="error.html">誤差函數</a> (Error function)</p>
+<p>G16. <a href="InverseError.html">逆誤差函數</a> 
+(Inverse Error function)</p>
+<p><b><font size="4" color="#FF0000"><a name="Q8" id="Q8"></a>(H) Casio fx-3900PV 財務類程式 
+(Financial program)</font></b></p>
+<p>
+H1. <a href="effRate.html">實際年利率及年利率轉換</a> 
+(Conversion between effective annual interest rate and annual interest rate) </p>
+<p>
+H2. <a href="amortization.html">攤銷進度表</a> 
+(Amortization Schedule)</p>
+<p>
+H3. <a href="compound.html">複利率計算(I)</a> (Compound interest I)</p>
+<p>
+H4. <a href="compound1.html">複利率計算(II)</a> (Compound interest II)</p>
+<p>
+H5. <a href="mortgage.html">按揭計算</a>
+(Mortgage calculations)</p>
+<p>
+H6. <a href="savings.html">零存整付計算</a> 
+(Target savings calculations)</p>
+<p><b><font size="4" color="#FF0000"><a name="Q9" id="Q9"></a>(I) Casio fx-3900PV 數論類程式 
+(Number Theory program)</font></b></p>
+<p>I1. <a href="HCHLCMF.html">最大公因數，最小公倍數及分數約簡</a> 
+(HCF, LCM and Simplify Fraction)</p>
+<p>I2. <a href="primeFactor.html">質因子連乘式</a> 
+(Prime factorization of a positive integer)</p>
+<p>I3. <a href="remainder.html">商及餘數</a>
+(Quotient and remainder)</p>
+
+<p>I4. <a href="continuedFraction.html">連續分式</a> (Continued 
+fraction)</p>
+
+<p>
+I5. <a href="continuedF.html">平方根連續分式</a> (Continued fraction for 
+square root)</p>
+
+<p>
+I6. <a href="congruences.html">孫子定理</a> (Chinese remainder theorem)</p>
+<p><b><font size="4" color="#FF0000"><a name="Q10" id="Q10"></a>(J) Casio fx-3900PV 其它類程式 
+(Others program)</font></b></p>
+
+<p>
+J1. 
+<a href="fibonacci.html">斐波那契數列</a> (Fibonacci 
+sequence)</p>
+<p>J2. 
+
+<a href="gamma.html">伽瑪函數</a> (Gamma Function)</p>
+<p>
+J3. <a href="lambert.html">朗伯W函數</a> 
+(Lambert W Function)</p>
+<p>J4 <a href="agm.html">算術幾何平均</a> 
+(Arithmetic-Geometric Mean)</p>
+<p>
+J5. <a href="elastic.html">彈性碰撞</a> (Elastic 
+collision)</p>
+<p>
+J6.
+<a href="lensFormula.html">透鏡公式/球面鏡公式</a> 
+(Lens formula / Mirror formula)</p>
+<p>
+J7. <a href="refractionLaw.html">折射定律</a> (Laws of 
+refraction)</p>
+<p>
+J8. <a href="julian.html">儒略日計算</a> 
+(Julian Day)</p>
+<p>
+J9. <a href="dayWeek.html">星期天的計算</a> 
+(Day of week from date)</p>
+<p>
+J10. <a href="numDay.html">兩日期間的日數</a> 
+(Number of days between two dates)</p>
+<p>
+J11. <a href="easter.html">復活節日期</a> (Date of Easter)</p>
+<p>
+J12. <a href="arithmetic24.html">合24遊戲</a> (Arithmetic 24)</p>
+<p>
+J13. <a href="guessAnumber.html">估數字</a> (Guess a number) </p>
+<p>
+<b><font color="#FF0000" size="4"><a name="Q11" id="Q11"></a>(K) 大型綜合程式&nbsp; 
+(特別適合改機後使用)</font></b></p>
+<p>
+-------------------------------------------------------------------------------------------------------</p>
+<p>
+fx-3900PV較特別之處是有方法可以大大提升程式的容量至大約1200步，因此可以輸入很多程式，大大增加程式所帶來的好處，以下網址為WaiYuen計數機網站的有關增大fx-3900PV程式容量的方法，大家可以試試。</p>
+<p><a href="http://waiyuen.mikekong.net/change.htm">改機秘技</a></p>
+<p><a href="http://waiyuen.mikekong.net/change.htm">
+http://waiyuen.mikekong.net/change.htm</a></p>
+<p>
+另外，以下網址為香港計數機科技協會N合一程，能夠將多個小程式合併為一，很適合改機後使用。</p>
+<p>
+<a href="http://hk.geocities.com/hkact/download/Nin1.html">N合一程式產生網頁</a></p>
+<p>
+<a href="http://hk.geocities.com/hkact/download/Nin1.html">
+http://hk.geocities.com/hkact/download/Nin1.html</a></p>
+<p>
+雖然N合一可以很方便將一些程式合併起來，但是N合一程式中的都是一些較小及簡單的程式，不一定是大家最想要的，為了方便大家，改機程式(建設中.....)將會將一些複雜程式合併在一起，希望大家能夠在會考(高考)中使用，盡量發
+揮這部計數機的優點。<font color="#FF0000">另外強烈建議改機後，每一個應用程式要小於或等於300步，否則程式有可能無法正常運作(出現錯誤)，亦有可能會覆蓋另一個程式，造成其它問題。</font></p>
+<p>
+-----------------------------------------------------------------------------------------------------------</p>
+<p>
+K1. <a href="n_in_1.html">香港計數機科技協會N合一程式使用方法</a></p>
+<p>
+K2. <a href="program1.html">綜合程式一 (Program 1)</a></p>
+<p>
+(程式可以計算 小數化分數/一元二次方程/聯立二元一次方程/聯立二元一次及二次方程/兩直線間夾角/點與直線的距離 Conversion of decimal into fraction / quadratic equation / 
+Simultaneous Linear Equations in 2 unknowns / Simultaneous Linear and 
+Quadratic equations /
+Angle between two lines / 
+Distance between 
+line and point )</p>
+<p>
+K3. <a href="program2.html">綜合程式二 (Program 2)</a></p>
+<p>
+(程式可以計算 n進數轉換n進數/餘弦定律/三角形面積/一元三次方程(實數根) Conversion of base n to base n / Cosine 
+laws / Area of triangle /
+Cubic Equations (real roots)) </p>
+<p>
+K4. <a href="NormalAndInverse.html">標準常態分佈及反標準常態分佈(高考準碓版)</a>( 
+(Standard normal and Inverse standard distribution)</p>
+<p>
+K5. <a href="program3.html">三階伴隨矩陣/逆矩陣/行列式及矩陣乘法</a> (3×3
+matrix multiplication / Adjoint / Inverse matrix and determinant)</p>
+<p>
+　</p>
+<p>
+<b><font size="4" color="#FF0000"><a name="Q12" id="Q12"></a>(L) fx-3900PV內置功能</font></b></p>
+<p>L1. 
+
+<a href="../50F/coordConv.html">坐標轉換</a> (Co-ordinate Conversions)</p>
+<p>L2. <a href="statistics1.html">普通統計(I)</a>
+(Ordinary 
+statistics I)</p>
+<p>L3. <a href="statistics12.html">普通統計(II)</a>
+(Ordinary 
+statistics II)</p>
+<p>L4.
+<a href="../50F/statistics2.html"> 
+線性回歸計算</a> 
+(Linear regression  
+calculation)</p>
+<p>L5. <a href="../50F/statistics2a.html">其它回歸計算</a> 
+(Other regression  
+calculation)</p>
+<p>L6.
+<a href="../50F/TwoPointForm.html">
+
+直線方程(兩點式)(I)</a> 
+(Equation of straight line: Two points Form 
+I)</p>
+<p>L7.
+
+<a href="sectionFormula1.html">分界點及直線方程</a> 
+(Section formula and equation of straight line)</p>
+<p>L8.
+
+<a href="../50F/centroid.html">三角形重心</a> (Centroid of triangle)</p>
+<p>L9.
+
+<a href="../50F/partialVariation.html">部分變(部分為常數)</a> (Partial variation(partly 
+constant))</p>
+<p>L10. <a href="../50F/simultaneous3.html">
+
+聯立二元一次方程式(III)</a> 
+(Simultaneous Linear Equations in 2 unknowns III)</p>
+<p>L11. <a href="../50F/AP2.html">
+
+等差數列(II)</a> 
+(Arithmetic sequence II)</p>
+<p>L12. 
+<a href="../50F/dec_sig.html">
+小數位及有效數字設定</a> 
+(decimal places and 
+significant figures)</p>
+<p>L13. 
+<a href="../50F/time.html">時間、十進制和六十進制運算</a> 
+(Time, decimal and sexagesimal calculations)</p>
+<p>L14. <a href="../50F/memory.html">記憶計算</a> (Memory calculations)</p>
+<p>L15. <a href="../50F/constantCal.html">常量計算</a> (Constant 
+calculations)</p>
+<p>L16. <a href="../50F/percentage.html">百分率計算</a> (Percentage 
+claculations)</p>
+<p>L17. <a href="../50F/engineering.html">工程符號計算</a> (Engineering 
+Notation calculations)</p>
+<p>
+　</p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/fx-3900PV/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:13:07 GMT -->
+</html>

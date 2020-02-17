@@ -1,0 +1,46 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/guessAposition.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:00 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>估位置</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><font size="5">估位置</font></b></u></p>
+<p>程式編寫日期: 2007年3月31日</p>
+<p>程式會隨機&#29987;生一個座標(x, y)，其中 -500≦x≦499及-500≦y≦499，遊戲的目的是要找出這個位置，每次估位置的座標時，若果
+答案不正確會顯示估計座標與正確正確座標的距離作為參，直至估的位置座標正確，會顯示所用的總次數(六十進數的值)。</p>
+<p>注意: <font color="#FF0000">10<sup>x</sup></font>是按shift log，M<sup>o</sup> 是按 
+ALPHA <font color="#FF0000">M+</font>&nbsp; <font color="#0000FF"> <sup>
+    o,,,</sup></font></p>
+<p>程式 (64 bytes)</p>
+<p>Mem clear: <font color="#0000FF">Ran#</font> <font color="#FF0000">10<sup>x</sup></font>3 
+- 500→A: <font color="#0000FF">Ran#</font> <font color="#FF0000">10<sup>x</sup></font>3 
+- 500→B:</p>
+<p>Lbl 0: ?→X: ?→Y: √( (A - X)<sup>2</sup> + (B - Y)<sup>2</sup>→X : 1 + M→M:</p>
+<p>X <font color="#FF0000">=&gt;</font> Goto 0: M<sup>o</sup> </p>
+<p>　</p>
+<p>操作方法:</p>
+<p>1. 先按 Prog 1 執行程式</p>
+<p>2. 再輸入估計座標，例如估計座標為 (0, 0)，按 0 EXE 0 EXE 這時會顯示?X及一個數值，這個數值就是估計點與正確點的距離。</p>
+<p>3. 若果未估中位置，再按 EXE ，再重返步驟2，直至估中數值為止。若果估中位置，會顯示所使用的總次數(六十進數數值)，而程式亦終結。</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC185程式集</a></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/guessAposition.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:00 GMT -->
+</html>

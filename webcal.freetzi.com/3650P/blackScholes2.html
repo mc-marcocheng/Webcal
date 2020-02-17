@@ -1,0 +1,79 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/blackScholes2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:53 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>柏力克-舒爾斯期權定價(II)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">柏力克-舒爾斯期權定價(II)</font></b></u></p>
+<p>程式參考了網友<font color="#0000FF">roviury</font>意見進行修改。</p>
+
+<p>更新日期: 2010年5月1日</p>
+
+<p>程式會依照下列公式，輸入S, K, σ(%), r(%), T, δ(%)，計算Δ<sub>call</sub>, Δ<sub>put</sub>, 
+C 及 P。</p>
+
+<p><img border="0" src="bs.jpg" width="768" height="335"></p>
+
+<p><font color="#FF0000">程式需要在 REG Quad 模式下執行，因此在輸入程式前請先按 Mode Mode 2 → 3 進入REG Quad模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數(<font color="#0000FF">Σx<sup>3</sup></font> 按 Shift 1 → → 
+1，<font color="#0000FF">Σy</font> 按 Shift 1 → 2，<font color="#0000FF">Σxy</font> 
+Shift 1 →3)，而<font color="#FF0000"><sup>3</sup>√</font>是按shift 
+x<sup>3</sup>， <font color="#FF0000">e</font>是按shift 
+e<sup>x</sup>。</p>
+<p>程式 (245 bytes)</p>
+<p>Stat clear: ?→M: <font color="#FF0000"><sup>3</sup>√</font>(M - 1
+<font color="#FF0000">DT</font>: ?→M: 1 , M <font color="#FF0000">DT</font>: 
+?→M: ?→D:</p>
+<p>0 , <font size="1">E</font> - 2D - <font color="#0000FF">Σy</font> <font color="#FF0000">DT</font>: <font size="1">E</font> 
+-2M→M: ?→X: ?→Y: <font size="1">E</font> -2Y→Y: </p>
+<p>( ln <font color="#0000FF">Σx<sup>3</sup></font>┘<font color="#0000FF">Σxy</font> + ( 
+<font color="#0000FF">Σy</font> - Y 
++ M<sup>2 </sup>÷ 2) X ) ÷ M√X→A:
+</p>
+<p>Ans - M√X→C: 
+0→B: Lbl 2: M→D: 1 ÷ (1 + . 231642 √A<sup>2</sup>: </p>
+<p><font size="1">E</font> - 7 √<font color="#FF0000">e</font> 
+- A<sup>2</sup> ( 1274148Ans - 1422484Ans<sup>2</sup> + 7107069Ans<sup>3</sup> 
+- </p>
+<p>7265760Ans^4 + 5307027Ans^5→M: A&gt;0 <font color="#FF0000">=&gt;</font> 
+1 - M→M: C→A: </p>
+<p>B=0→B <font color="#FF0000">=&gt;</font> Goto 2: D<font color="#FF0000">e </font>
+- YX→A◢ Ans - 
+<font color="#FF0000">e</font> - YX◢
+</p>
+<p><font color="#0000FF">Σx<sup>3</sup></font>A - <font color="#0000FF">Σxy</font>M<font color="#FF0000">e</font> - 
+<font color="#0000FF">Σy</font> X◢ 
+Ans - <font color="#0000FF">Σx<sup>3</sup></font><font color="#FF0000"> e </font>
+-YX + <font color="#0000FF">Σxy</font> ÷ <font color="#FF0000">e </font>X 
+<font color="#0000FF">Σy</font></p>
+　<p>例題: S=50, K=40, σ=30%, r=8%, T=1, δ=10%, 求Δ<sub>call</sub>, Δ<sub>put</sub>, 
+C 及 P。</p>
+<p>按 Prog 1 再按 50 EXE 40 EXE 30 EXE 8 EXE 1 EXE 10 EXE (顯示Δ<sub>call</sub>為0.720180647)</p>
+<p>EXE (顯示Δ<sub>put</sub>為 - 0.18465677) EXE (顯示C為10.1265606) EXE 
+(顯示P為1.809343554) </p>
+<p>　</p>
+<p>
+
+<a href="3650.html">返回 fx-3650P及SM-185程式集</a></p>
+</p>
+
+<p>　</p>
+<p>　</p>
+<p>　</p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/blackScholes2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:54 GMT -->
+</html>

@@ -1,0 +1,121 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/matrix1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:38 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>三階矩陣乘法</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">三階矩陣乘法</font></b></u></p>
+<p>程式編寫日期: 2006年3月17日 修改日期: 2008年1月3日</p>
+<p>第一個程式可以計算一個 3 × 3 <b>
+<font color="#FF0000">整數</font></b>矩陣及另一個 
+3 × n矩陣的乘積，其中 
+n是正整數。
+第二個及第三個程式<b><font color="#FF0000">沒有整數的限制</font></b>，第二個程式較短，但準確度低一點，第三個程式準確度很高，但程式較長一點。</p>
+<p><font color="#FF0000">程式需要在 REG Quad 模式下執行，因此在輸入程式前請先按 Mode Mode 2 → 3 進入REG Quad模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數(<font color="#0000FF">Σx&sup3;</font> 按 Shift 1 → → 
+1，<font color="#0000FF">Σy</font> 按 Shift 1 → 2，<font color="#0000FF">Σxy</font> 
+按 Shift 1 → 3)，而<font color="#FF0000"> &sup3;√</font>是按shift 
+x&sup3;，<font color="#FF0000">10<sup>x</sup></font>是按shift log。</p>
+<p>　</p>
+<p><b><font color="#008000">第一個程式(整數版，128 byes)</font></b></p>
+<p>Stat clear: ?→M: <font color="#FF0000">&sup3;√</font>(M-1 <font color="#FF0000">DT</font>: 
+?→X: ?→Y: 1 , X + Y<font color="#FF0000">10<sup>x</sup></font>-6
+<font color="#FF0000">DT</font>: </p>
+<p>?→M: 0 , M - <font color="#0000FF">Σy</font> <font color="#FF0000">DT</font>: 
+?→A: ?→B: ?→C: ?→D: ?→M: M <font color="#FF0000">;</font> 0
+<font color="#FF0000">DT</font>:</p>
+<p>Lbl 0: ?→X: ?→Y: ?→M: Fix 0: <font color="#0000FF">Σxy</font>: Rnd: Norm 1:</p>
+<p>X<font color="#0000FF">Σx&sup3;</font> + YAns + M<font color="#FF0000">10<sup>x</sup></font>6(<font color="#0000FF">Σxy</font> 
+- Ans◢ X<font color="#0000FF">Σy</font> + YA + MB◢ <font color="#FF0000">;</font> 
+0 <font color="#FF0000">DT</font>:</p>
+<p>XC + YD + MAns◢ Goto 0</p>
+<p>程式限制:<b><font color="#FF0000"> 第一個矩陣第二及第三個輸入的數據，&#32118;對值必須為小於100000的整數。</font></b></p>
+<p>　</p>
+<p><b><font color="#008000">第二個程式(小數精簡版，137 byes)</font></b></p>
+
+<p>Stat clear: ?→M: <font color="#FF0000">&sup3;√</font>(M-1 <font color="#FF0000">DT</font>: 
+?→M: 1 , M <font color="#FF0000">DT</font>: ?→M:</p>
+<p>?→A: 0 , A - <font color="#0000FF">Σy</font> <font color="#FF0000">DT</font>: ?→B: ?→C: ?→D: ?→X: ?→A:  </p>
+<p> <font color="#FF0000">&sup3;√</font>M , X <font color="#FF0000">; </font>0 
+<font color="#FF0000">DT</font>: Lbl 0: ?→X:  ?→Y:  ?→M:</p>
+<p>X<font color="#0000FF">Σx&sup3;</font> + Y<font color="#0000FF">Σxy</font> 
++ MAns&sup3;◢ X<font color="#0000FF">Σy</font> + YB + MC◢</p>
+<p>DX + MA→X: <font color="#0000FF">Σy</font>→M: <font color="#FF0000">;</font> 
+1 <font color="#FF0000">DT</font>: <font color="#0000FF">Σy</font> - M→M:
+<font color="#FF0000">;</font> -1 <font color="#FF0000">DT</font>:</p>
+<p>MY + X◢&nbsp; <font color="#FF0000">;</font> 0
+<font color="#FF0000">DT</font>:  Goto 0</p>
+
+<p>程式限制: <b><font color="#FF0000">
+程式雖然可以接受小數，但可能存在計算誤差，為了被免誤差出現，所以輸入的數值的&#32118;對值不宜太大或太小，建議最大的&#32118;對值小於10<sup>6</sup>，
+除了輸入0外，最小的位值為10<sup>-5</sup>。</font></b></p>
+<p>　</p>
+<p><b><font color="#008000">第三個程式(小數及有效數字準確版，156 byes)</font></b></p>
+<p>Stat clear: -1 <font color="#FF0000">DT</font>: ?→M: 1 , M
+<font color="#FF0000">DT</font>: ?→M: <font color="#FF0000">&sup3;√</font>M 
+, 0 <font color="#FF0000">DT</font>: 
+ 
+?→M:</p>
+<p>0 , M -<font color="#0000FF"> Σy</font> <font color="#FF0000">DT</font>: ?→A:  ?→B:  ?→M:  ?→X:  ?→C:  ?→D: 
+D<font color="#FF0000">10<sup>x</sup></font>60→D:</p>
+<p>M<font color="#FF0000">10<sup>x</sup></font>-60 , X
+<font color="#FF0000">; </font>0 <font color="#FF0000">DT</font>: Lbl 0: ?→X:  ?→Y:  ?→M:</p>
+<p>X<font color="#0000FF">Σxy</font> + Y<font color="#0000FF">Σx&sup3;</font> 
++M<font color="#0000FF">Σy</font>◢ <font color="#FF0000">;</font> 0
+<font color="#FF0000">DT</font>: XA + YB + AnsM<font color="#FF0000">10<sup>x</sup></font>60◢</p>
+<p>YC + DM<font color="#FF0000">10<sup>x</sup></font>-60→Y: <font color="#0000FF">Σy</font>→M: <font color="#FF0000">;</font> 
+1 <font color="#FF0000">DT</font>: <font color="#0000FF">Σy</font> - M→M: </p>
+<p>MX +Y◢ 
+<font color="#FF0000">;</font> -1 <font color="#FF0000">DT</font>: Goto 0 </p>
+<p>程式限制: 無特別限制。</p>
+<p>　</p>
+<p>例題: 計算下列矩陣的乘積:</p>
+<p><img border="0" src="Image82.gif" width="128" height="67"></p>
+<p>按 
+Prog 1&nbsp; 再按 1 EXE 2 EXE 3 EXE 3 EXE 2 
+EXE 1 EXE 4 EXE 5 EXE 6 EXE</p>
+<p>(第一個矩陣，由左至右，上至下輸入) </p>
+<p>1 EXE 3 EXE 2 EXE (輸入第二個矩陣，第一欄的數據)</p>
+<p>(顯示13) EXE (顯示11) EXE (顯示31，這三個數值為答案的第一欄) </p>
+<p>EXE 2 EXE 1 EXE 1 EXE (輸入第二個矩陣，第二欄的數據)</p>
+<p>(顯示7) EXE (顯示9) EXE (顯示19，這三個數值為答案的第二欄)</p>
+<p>EXE 1 EXE 3 EXE 3 EXE (輸入第二個矩陣，第三欄的數據)</p>
+<p>(顯示16) EXE (顯示12) EXE (顯示37，這三個數值為答案的第三欄)</p>
+<p>所以:</p>
+<p><img border="0" src="Image83.gif" width="224" height="67"></p>
+
+<p>
+　</p>
+
+<p>
+註1: 若果輸入的乘數矩陣大於或等於 3<span lang="en">×4 </span>矩陣時，執行程式<span lang="en">有可能出現</span>&quot;Data 
+Full&quot;，只要再按 <font color="#FF0000">AC 1</font> (即選用Edit OFF)<span lang="en">，程式可回復正常執行</span>。</p>
+
+<p>
+註2:<span lang="en-us"> </span><span lang="en">第二個程式輸入第四個數值時，不可以直接輸入分數，否則會出現</span>Math 
+ERROR，若要輸入分數請以除號代替分號輸入即可。</p>
+
+<p>
+<span lang="en">&nbsp;</span></p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/matrix1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:38 GMT -->
+</html>

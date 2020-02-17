@@ -1,0 +1,61 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/casio.fx-50FH/standardnormal_2a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:15 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>標準常態分佈概率</title>
+<meta name="Microsoft Theme" content="indust 011">
+<script src="webcal.js"></script></head>
+
+<body background="indtextb.jpg" bgcolor="#FFFFFF" text="#000000" link="#3366CC" vlink="#666666" alink="#996600">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">標準常態分佈概率(II)</font></b></u></p>
+<p>程式編寫日期: 2014年10月7日</p>
+<p><font color="#FF0000">注意: 程式只適用於fx-3650P II。</font></p>
+<p>這個程式是利用內置積分功能計算標準常態分佈概率，程式很短，但速度較慢。</p>
+<p>注意: 紅色的<font color="#FF0000">e^(</font>是按shift 
+e<sup>x</sup></p>
+<p>第一個程式 (共20 bytes，使用記憶為X ):</p>
+<p>?→X: √(2π)<sup>-1</sup>∫( √( <font color="#FF0000">e^(</font> 
+- X<sup>2 </sup>, 0, Abs(X</p>
+<p>　</p>
+<p>第二個程式 (共33 bytes，使用記憶為X ):</p>
+<p>?→X: √(2π)<sup>-1</sup>∫( √( <font color="#FF0000">e^(</font> 
+- X<sup>2 </sup>, 0, X→X: 
+ 
+</p>
+<p>Abs(X◢ . 5 - X◢ 1 - Ans</p>
+<p>　</p>
+<p>註1: 程式會根據輸入數值 X 計算答案，正數計算P(0≦Z≦X)，負數計算P(X≦Z≦0)。</p>
+<p>註2: 第二個程式計算先後次序為: P(0≦Z≦X)或P(X≦Z≦0)，P(Z≧X)，P(Z≦X)。</p>
+<p>　</p>
+<p>例題: 計算 P(0≦ 
+Z≦1)、P(Z≧1) 
+及 P(Z≦1)，其中 
+Z ~ N(0, 1)。</p>
+<p>
+按 Prog 1 
+再按 1 EXE (顯示P(0≦ 
+Z≦1)為0.341344746)</p>
+<p>若使用第二個程式，再按 EXE 
+(顯示P(Z≧為0.158655253) 
+EXE 
+(顯示P(Z≦為0.841344746)</p>
+<p>　</p>
+<p><a href="fx-50F_Plus.html">返回 CASIO fx-50FH、fx-3650P II、fx-50FH II及fx-50F PLUS 程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/casio.fx-50FH/standardnormal_2a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:16:15 GMT -->
+</html>

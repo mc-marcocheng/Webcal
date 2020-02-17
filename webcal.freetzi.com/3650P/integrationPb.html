@@ -1,0 +1,62 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/integrationPb.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:24 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>積分計算問題</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><font size="5" color="#FF0000">積分計算問題</font></b></u></p>
+<p>fx-3650P/fx-3950P有較特別的內置積分計算功能，這個內置功能使用辛卜生法則計算定積分的近似值，不過這個功能存有一些不合理的問題及缺點。</p>
+<p>　</p>
+<p>問題一: 計算定積分時，若使用最低準確(取n=1)，很多時出會無法得出答案，計數機只會顯示Math ERROR。</p>
+<p><font color="#FF0000">注意:</font> 以下測試的計數機為 fx-3650P，計數機自我檢測的版本為 24 OK 
+13，不同的版本可能會存在小許差異。</p>
+<p>　</p>
+<p>例1: 按∫( X<sup>2</sup> , 0, 1, 1) EXE 出現Math ERROR。</p>
+<p>例2: 按 ∫( 1<span lang="en">÷</span>X<sup>3</sup> , 1, 2, 1) EXE 出現Math ERROR。</p>
+<p>　</p>
+<p>問題二: 計算定積分時，若果答案為零或很接近零，計數機很多時無法顯示答案(Math ERROR)。</p>
+<p>例3: 按∫(X^4 - 0.2, 0, 1 ) EXE 出現Math ERROR，這個計算由計數機自行決定合適的n值。</p>
+<p>例4: 按∫(X^4 - 0.2, 0, 1, 5 ) EXE 出現Math ERROR，嘗試改變不同的n值，最後結果相同。</p>
+<p>　</p>
+<p>另一些測試發現用不同的n值有不同的結果:</p>
+<p>例5: 按∫(X<sup>3</sup> - 0.25, 0, 1 ) EXE 能夠正確顯示答案零。</p>
+<p>例6: 按∫(X<sup>3</sup> - 0.25, 0, 1, 1 ) EXE 出現 Math ERROR。</p>
+<p>例7: 按∫(X<sup>3</sup> - 0.25, 0, 1, 2 ) EXE 能夠正確顯示答案零，這個測試使用了n=2，改變n值為3, 4 
+及5所得的結果相同。</p>
+<p>例8: 按∫(X<sup>3</sup> - 0.25, 0, 1, 6 ) EXE 顯示答案為 - 4 <span lang="en">× 10<sup>-14</sup></span>，用了較高的準確度，但卻有些少誤差。</p>
+<p>例9: 按∫(X<sup>3</sup> - 0.25, 0, 1, 7 ) EXE 出現 Math ERROR，再增加準確度，但無法得出答案。</p>
+<p>例10: 按∫(X<sup>3</sup> - 0.25, 0, 1, 8 ) EXE 顯示答案為 2 <span lang="en">× 10<sup>-13</sup></span>，有少許誤差。</p>
+<p>例11: 按∫(X<sup>3</sup> - 0.25, 0, 1, 9 ) EXE 出現 Math 
+ERROR，這個測試用了最高準確度，但無法得出答案。</p>
+<p>上述例5至例6的測試使了計數機三次方(<font color="#FF0000">x<sup>3</sup></font>)的內置功能，若果改用計數機的N次方(<font color="#FF0000">^</font>)功能，所得的結果亦不同:</p>
+<p>例12: 按∫(X^3 - 0.25, 0, 1 ) EXE 出現Math ERROR。</p>
+<p>例13: 按∫(X^3- 0.25, 0, 1, 1 ) EXE 出現 Math ERROR。</p>
+<p>例14: 按∫(X^3 - 0.25, 0, 1, 2 ) EXE 能夠正確顯示答案零，這個測試使用了n=2。</p>
+<p>例15: 按∫(X^3- 0.25, 0, 1, 3 ) EXE 顯示答案為 - 3 <span lang="en">× 10<sup>-13</sup></span>，用了較高的準確度，但卻有些少誤差，n值由3改為4有相似的結果。</p>
+<p>例16: 按∫(X^3 - 0.25, 0, 1, 5 ) EXE 出現 Math 
+ERROR，再增加準確度，但無法得出答案，將n值改為6, 7, 8, 9所得的結果亦相同。</p>
+<p>　</p>
+<p>由上述的測試發現，內置積分計算功能存有設計上的問題，這類錯誤是不能接受。</p>
+<p align="left">　</p>
+<p>
+<a href="https://err.freewebhostingarea.com/404.html"><span lang="en-us">返回</span> fx-3650P 程式集</a></p>
+<p align="left">　</p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/integrationPb.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:25 GMT -->
+</html>

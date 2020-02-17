@@ -1,0 +1,52 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/guessAnumberII.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:00 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>估數字(I)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">估數字(II)</font></b></u></p>
+<p>網友提供程式日期: 2008年5月31日</p>
+
+<p>程式由網友 <a href="http://webcal.forumcircle.com/viewtopic.php?t=1490">提供</a>，
+計算機會隨機產生一個1-1000的整數，遊戲的目的是要找出這個數字，每次估數字前會顯示該數值的可能範圍(以小數形式表示)，若果估的數字正確，會顯示所用的總次(六十進數的值)。</p>
+<p>注意: <font size="1">E</font> 是按 EXP，而 M<sup>o</sup> 是按 ALPHA M+&nbsp; <font color="#0000FF"> <sup>
+    o,,,</sup></font></p>
+<p>程式 (67 bytes)</p>
+<p>Mem clear: Fix 4: 1+<font size="1">E</font>3
+<font color="#FF0000">Ran#</font>→B: 1→X:<font size="1"> E</font>3→Y: </p>
+<p>Lbl 0: 1<font color="#FF0000">M+</font>: X+Y÷<font size="1">E</font>4→A: ?→A: 
+A&gt;B <font color="#FF0000">=&gt;</font>A→Y: </p>
+<p>B&gt;A <font color="#FF0000">=&gt;</font> A→X: A-B <font color="#FF0000">=&gt;</font> Goto 0: Norm 1: M<sup>o</sup><br>
+　</p>
+<p>操作示範(假定要估的數值是924):</p>
+<p>按 Prog 1 (顯示1.1000表示答案為1-1000的整數) </p>
+<p>777 EXE (假設估777，顯示777.1000表示答案為777-1000的整數)</p>
+<p>950 EXE (假設估950，顯示888.0950表示答案為888-950的整數)</p>
+<p>924 EXE (假設估924，顯示4<sup>o</sup>0<sup>o</sup>0，表示4次估中答案)</p>
+
+<p>　</p>
+
+<p>註: 執行程式後，若未能估中答案，中途按 AC 或 ON 雖可終止程式，但計算機會保留在Fix 4(小數四位的設定)，請自行按SHIFT MODE 3 1 
+(Norm 1) 取消小數四位的設定。</p>
+
+<p>　</p>
+<p>
+
+<a href="3650.html">返回 fx-3650P及SC185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/guessAnumberII.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:00 GMT -->
+</html>

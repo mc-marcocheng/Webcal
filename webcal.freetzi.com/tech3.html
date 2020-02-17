@@ -1,0 +1,87 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/tech3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:25 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>Sharp EL</title>
+<meta name="Microsoft Theme" content="nature 011">
+<script src="webcal.js"></script></head>
+
+<body background="info/nabkgnd.jpg" bgcolor="#FFFFFF" text="#000000" link="#993333" vlink="#333399" alink="#006633">
+
+<!--mstheme--><font face="新細明體">
+
+<p class="MsoNormal" style="text-align:center;">
+<u><font size="6" color="#FF0000">Sharp EL-506V/R / 509V / 531VH</font></u></p>
+
+<p align="center"><u><b><font size="5">計算先後次序</font></b></u></p>
+<p>有些朋友用了新款的DAL計數機後，有時會發現有些不是預期的答案出現。是不是計數機壞了？當然不是。其實原因是計數機計算先後次序問題。若果大家能夠正確辨別計算先後次序，問題就不會發生，這亦都是每個DAL計數機使用者一定要知到的知識，因為可以避免不必要的計算錯誤，同時亦可避免加太多不必要的括號，增加效率、算式簡潔及易讀性等等。506V的計算先後次序如下
+，而509V則沒1、10及11。</p>
+<p>1. ∠</p>
+<p>2. 帶有前置變量的函數 (例如: X<sup>2</sup>, X<sup>-1</sup>, n! 等等)</p>
+<p>3. Y<sup>x</sup>,&nbsp; <sup>x</sup>√</p>
+<p>4. 存儲值的&#38560;藏的乘積 (例如: 3A, BC 等等)</p>
+<p>5. 帶有後置變量的函數 (例如: sin, cos 等等)</p>
+<p>6. 函數的&#38560;藏的乘積 (例如: 5tan30 等等)</p>
+<p>7. <sub>n</sub>C<sub>r</sub> , <sub>n</sub>P<sub>r</sub></p>
+<p>8. <span lang="en">× , ÷</span></p>
+<p><span lang="en">9. + , -</span></p>
+<p><span lang="en">10. </span>AND</p>
+<p>11. OR, XOR, XNOR</p>
+<p>12. =, M+, M- =&gt;M, &gt;DEG, &gt;RAD, &gt;GRAD, DATA, CD, --&gt;rθ, --&gt;xy及其它結束計算指令。</p>
+<p>其實一般計算較重要的次序是 2, 3, 4, 5, 6, 8和9，另外要注意分數並無計算的先後次序，分數與小數及整數都只會作為一個數值處理。</p>
+<p>　</p>
+<p>以下計算三角函數是在DEG模式下執行。</p>
+<p>例題1: 計算&nbsp; 3<sup>(2/3)</sup></p>
+<p>按 3 y<sup>x</sup> 2&nbsp; ab/c 3 = <font color="#0000FF">(顯示2.08)</font></p>
+<p>例題2: 計算 (3<sup>2</sup>)/ 2</p>
+<p>按 3 y<sup>x</sup> 2 <span lang="en">÷ 2 =&nbsp; <font color="#0000FF">(</font></span><font color="#0000FF">顯示4.5)</font></p>
+<p>例題3: 計算 cos(30/2)</p>
+<p>按 cos 30 ab/c 2 = <font color="#0000FF">(顯示0.9659)</font></p>
+<p>例題4: 計算 cos(30) / 2</p>
+<p>按 cos 30 <span lang="en">÷ 2 = <font color="#0000FF">(</font></span><font color="#0000FF">顯示0.4330)</font></p>
+<p>例題5: 計算 tan<sup>2</sup> 30</p>
+<p>按 tan 30 ) x<sup>2</sup> = <font color="#0000FF">(顯示0.3333)</font> 或者按 tan 30 
+= x<sup>2</sup> = <font color="#0000FF">(顯示0.3333)</font></p>
+<p>例題6: 計算 tan(30<sup>2</sup>)</p>
+<p>按 tan 30 x<sup>2</sup> = <font color="#0000FF">(顯示0)</font></p>
+<p>例題7: 計算 (3<sup>2</sup>) cos30</p>
+<p>按 3 y<sup>x</sup> 2 cos 30 = <font color="#0000FF">(顯示7.794)</font></p>
+<p>例題8: 計算 3<sup>(2cos30)</sup> </p>
+<p>按 3 y<sup>x</sup> ( 2 cos 30 = <font color="#0000FF">(顯示6.705)</font></p>
+<p>例題9: 計算 (cos30)A</p>
+<p>按 cos 30 ) 2ndF ALPHA A = 或者按 cos 30 <span lang="en">× RCL A =</span></p>
+<p>例題10: 計算 cos (30A)</p>
+<p>按 cos 30 2ndF ALPHA A = 或者按 cos ( 30 <span lang="en">× RCL A =</span></p>
+<p>例題11: 計算 3<sup>(3A)</sup></p>
+<p>按 3 y<sup>x</sup> ( 3 2ndF ALPHA A =&nbsp; 或者按 3 y<sup>x</sup> ( 3
+<span lang="en">× </span>RCL A =&nbsp; </p>
+<p>例題12: 計算 (3<sup>3</sup>)A</p>
+<p>按 3 y<sup>x</sup> 3 2ndF ALPHA A =&nbsp; 或者按 3 y<sup>x</sup> 3
+<span lang="en">× </span>RCL A =&nbsp; </p>
+<p>例題13: 計算 (log 3)(sin 60)</p>
+<p>按 log 3 sin 60 = <font color="#0000FF">(顯示0.4132)</font></p>
+<p>希望上述的例題可以幫助大家認識計數機運算的先後次序問題，若果大家在計算時不太肯定先後次序，就應該加括號或用連鎖計算方法，確保最後答案正確。</p>
+<p>　</p>
+<p>
+<a href="tech.html">返回計數機小技巧</a></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">
+<a href="506Vmain.html">返回程式集</a></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p>　</p>
+<p>　</p>
+<p>　</p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/tech3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:25 GMT -->
+</html>

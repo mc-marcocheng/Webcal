@@ -1,0 +1,177 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/285II/stat2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:22 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>線性回歸計算</title>
+<style>
+<!--
+table.MsoTableGrid
+	{border:1.0pt solid windowtext;
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+<meta name="Microsoft Theme" content="china 011">
+<script src="webcal.js"></script></head>
+
+<body background="di1.gif" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#FF9933" alink="#FF3300">
+
+<!--mstheme--><font face="新細明體">
+<p align="center">
+<font size="5">
+<span lang="EN-US" style="font-family: 新細明體; font-weight: 700; text-decoration: underline">
+線性回歸</span><span style="font-family: 新細明體; font-weight: 700; text-decoration: underline">計算</span></font></p>
+<p style="text-align: justify; text-justify: inter-ideograph">按鍵說明:</p>
+<p style="text-align: justify; text-justify: inter-ideograph">MODE 3: 
+設定回歸統計(LR)模式，同時會清除統計變數記憶，因此這時不可以不按 SHIFT ScI。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT ScI: 
+清除原先的統計變數記憶。</p>
+<p style="text-align: justify; text-justify: inter-ideograph">RCL 1: 顯示數值x平方總和 
+(Σx<sup>2</sup>)</p>
+<p style="text-align: justify; text-justify: inter-ideograph">RCL 2: 顯示數值x總和 (Σx)</p>
+<p style="text-align: justify; text-justify: inter-ideograph">RCL 3: 顯示數據數量(n)</p>
+<p style="text-align: justify; text-justify: inter-ideograph">RCL 4: 顯示數值y平方總和 
+(Σy<sup>2</sup>)</p>
+<p style="text-align: justify; text-justify: inter-ideograph">RCL 5: 顯示數值y總和 (Σy)</p>
+<p style="text-align: justify; text-justify: inter-ideograph">RCL 6: 顯示數值xy總和 (Σxy)</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT
+<span style="text-decoration: overline"><font color="#FF0000">x</font></span>: 
+顯示x算術平均值(<span style="text-decoration: overline">x</span>)</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT
+<font color="#FF0000">xσ<sub>n</sub></font>: 顯示x標準差</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT
+<font color="#FF0000">xσ<sub>n-1</sub></font>: 顯示x樣本標準差</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT
+<span style="text-decoration: overline"><font color="#FF0000">y</font></span>: 
+顯示y算術平均值(<span style="text-decoration: overline">y</span>)</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT
+<font color="#FF0000">yσ<sub>n</sub></font>: 顯示y標準差</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT
+<font color="#FF0000">yσ<sub>n-1</sub></font>: 顯示y樣本標準差</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT
+<font color="#FF0000">A</font> 或 SHIFT 7: 顯示常數項</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT
+<font color="#FF0000">B</font> 或 SHIFT 8: 顯示回歸係數</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT
+<font color="#FF0000">r</font> 或 SHIFT 9: 顯示相關係數</p>
+<p style="text-align: justify; text-justify: inter-ideograph">---)] : y估算值</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT ---)] : x估算值</p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT<font color="#FF0000"> 
+DEL</font>: 取消輸入的數值</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+　</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+<span style="font-family: 新細明體">例題</span><span lang="EN-US">: </span>
+<span style="font-family: 新細明體">利用線性回歸方法，找出下列數據的線性關係，估計當</span><span lang="EN-US">y=38</span><span style="font-family: 新細明體">，<span lang="EN-US">x的數值?</span></span></p>
+<!--mstheme--></font>
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: medium none" bordercolorlight="#1445A1" bordercolordark="#1445A1">
+  <tr>
+    <td width="70" valign="top" style="width: 52.25pt; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center">
+    <span lang="EN-US" style="font-family: 新細明體">x</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center">
+    <span lang="EN-US" style="font-family: 新細明體">2</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center"><span lang="en-us">4</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center">
+    <span lang="EN-US" style="font-family: 新細明體">13</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center">
+    <span lang="EN-US" style="font-family: 新細明體">10</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center"><span lang="en-us">20</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.3pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center">
+    <span lang="EN-US" style="font-family: 新細明體">19</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.3pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center">
+    <span lang="EN-US" style="font-family: 新細明體">15</span><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="70" valign="top" style="width: 52.25pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center">
+    <span lang="EN-US" style="font-family: 新細明體">y</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center">
+    <span lang="EN-US" style="font-family: 新細明體">5</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center"><span lang="en-us">8</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center">
+    <span lang="EN-US" style="font-family: 新細明體">26</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center"><span lang="en-us">21</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center"><span lang="en-us">39</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.3pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center">
+    <span lang="EN-US" style="font-family: 新細明體">40</span><!--mstheme--></font></td>
+    <td width="70" valign="top" style="width: 52.3pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <!--mstheme--><font face="新細明體">
+    <p align="center" style="text-align: center">
+    <span lang="EN-US" style="font-family: 新細明體">30</span><!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p style="text-align: justify; text-justify: inter-ideograph">　</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+按 MODE 3 進入線性回歸模式</p>
+<p style="text-align: justify; text-justify: inter-ideograph">&nbsp;2 <span lang="EN-US" style="font-family: 新細明體">
+<font color="#0000FF">X<sub>D</sub>Y<sub>D</sub></font></span>
+5 DATA 4 <span lang="EN-US" style="font-family: 新細明體"><font color="#0000FF">X<sub>D</sub>Y<sub>D</sub></font></span>
+8 DATA 13 <span lang="EN-US" style="font-family: 新細明體"><font color="#0000FF">X<sub>D</sub>Y<sub>D</sub></font></span>
+26 DATA 10 <span lang="EN-US" style="font-family: 新細明體"><font color="#0000FF">X<sub>D</sub>Y<sub>D</sub></font></span>
+21 DATA  </p>
+<p style="text-align: justify; text-justify: inter-ideograph">20 <span lang="EN-US" style="font-family: 新細明體">
+<font color="#0000FF">X<sub>D</sub>Y<sub>D</sub></font></span>
+39 DATA 19 <span lang="EN-US" style="font-family: 新細明體"><font color="#0000FF">X<sub>D</sub>Y<sub>D</sub></font></span>
+40 DATA 15 <span lang="EN-US" style="font-family: 新細明體"><font color="#0000FF">X<sub>D</sub>Y<sub>D</sub></font></span>
+30 DATA  </p>
+<p style="text-align: justify; text-justify: inter-ideograph">再按&nbsp; 
+SHIFT 7&nbsp; <font color="#800080">(顯示A為0.6557)</font> SHIFT 8&nbsp;
+<font color="#800080">(顯示B為1.9808)</font> </p>
+<p style="text-align: justify; text-justify: inter-ideograph">SHIFT 9
+<font color="#800080">(顯示 r為0.9976)</font> 38 SHIFT <b>)]</b> <font color="#800080">(顯示x為18.853)</font></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+<span style="font-family: 新細明體">因此直線關係為<span lang="EN-US"> y = 0.6557 +&nbsp; 1.9808 
+x </span></span></p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+<span style="font-family: 新細明體">當</span><span lang="EN-US">y=38</span><span style="font-family: 新細明體">，<span lang="EN-US">x 
+= 18.853</span></span></p>
+<p style="text-align: justify; text-justify: inter-ideograph">計<span style="FONT-FAMILY: 新細明體">算完結後，按<span lang="en-us"> </span>
+<span lang="EN-US">MODE 1 返回正常計算模式</span></span><span lang="EN-US" style="font-family: 新細明體">。</span></p>
+<p style="text-align: justify; text-justify: inter-ideograph">　</p>
+<p style="text-align: justify; text-justify: inter-ideograph">
+<a href="fx-992S.html">返回fx-992S內置功能</a></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/285II/stat2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:22 GMT -->
+</html>
+

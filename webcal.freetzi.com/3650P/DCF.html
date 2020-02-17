@@ -1,0 +1,68 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/DCF.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:54 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>貼現現金流(I)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">貼現現金流(I)</font></b></u></p>
+<p>程式可以計算貼現現金流 (Discounted cash flow: DCF) 問題，輸入的現金流可以不依時間順序，輸入錯誤現金流
+，只要輸入相反正負號的現金流即可刪除。</p>
+<p>程式編寫日期: 2007年8月11日</p>
+<p>程式 (45 bytes)</p>
+<p>Mem clear: ?→A: ?→B: </p>
+<p>1+B÷100A→B: Lbl 0: ?→C: </p>
+<p>?→A: C÷B^A<font color="#FF0000">M+</font>: M→C: Goto 0</p>
+<p>　</p>
+<p>註: 若果想保留一些記憶用作儲存臨時數據，可將程式中&quot;Mem clear&quot;改為&quot;M<font color="#FF0000">M-</font>&quot;，而程式所使用的記憶為A，B，C及M。</p>
+<p>　</p>
+<p>例題: 一公司以$20000購買一機器，以下為每年年結時可以節省的金額:</p>
+<!--mstheme--></font>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" id="AutoNumber1" bordercolorlight="#999900" bordercolordark="#666666">
+  <tr>
+    <td width="20%" align="center"><!--mstheme--><font face="新細明體">年<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="新細明體">1<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="新細明體">2<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="新細明體">3<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="新細明體">4<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><!--mstheme--><font face="新細明體">金額<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="新細明體">$5000<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="新細明體">$7500<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="新細明體">$9000<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="新細明體">$11000<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p>假設年折現率 (Discount rate)為10%，試計算凈現值。</p>
+<p>按 Prog 1 再按 1 EXE (每年複利計算期數) 10 EXE (年折現率)</p>
+<p>- 20000 EXE (負數代表支出) 0 EXE (期數0代表現時)</p>
+<p>5000 EXE (正數代表收入) 1 EXE (期數)</p>
+<p>7500 EXE 2 EXE 9000 EXE 3 EXE 11000 EXE 4 EXE (顯示凈現值為 $5018.78)</p>
+<p>計算完結後按 AC 終止程式</p>
+<p>
+　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC185程式集</a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/DCF.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:54 GMT -->
+</html>

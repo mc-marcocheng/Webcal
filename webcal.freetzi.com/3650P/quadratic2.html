@@ -1,0 +1,127 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quadratic2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:08 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>一元二次方程式(II)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">一元二次方程(II)</font></b></u></p>
+<p><b><font color="#0000FF">程式新版</font></b></p>
+<p>程式修改日期: 2006年1月7日 (更新日期: 2008年9月19日)</p>
+<p><font color="#FF0000">這兩個程式可解一元二次方程(實根)、亦可計頂點的(x,y)座標及判別式的值。</font>第二個程式採用了較快計算平方根化簡程式，所以程式較長一點。另外若果輸入數據為整數或分數及方程的根為有理數時，<font color="#FF0000">根會以分數形式表示</font>，建議將計數機預先設定為假分數形式表示(按六次 Mode，再按 
+1 2  )，若為無理數，<font color="#FF0000">根亦可用根號形式表示</font>。</p>
+<p>　</p>
+<p>第一個程式 (共84 bytes，使用記憶為A, B, C及M )</p>
+<p>?→A: ?→B: ?→M:  B┘- 2A→B◢ AB<sup>2</sup> <font color="#FF0000">M-</font>: </p>
+<p>- 4AM→C: M<font color="#FF0000">M-</font>◢ B + √-Ans┘A◢&nbsp; 2B - Ans◢ B◢</p>
+<p>Sci 5: Lbl 0: 1<font color="#FF0000">M+</font>: √(C÷M→B: Rnd: 
+Ans≠B <font color="#FF0000">=&gt;</font> Goto 0: </p>
+<p>Norm 1: B┘(2A ◢ M </p>
+<p>　</p>
+<p>第二個程式 (共102 bytes，使用記憶為A, B, C及M )</p>
+<p>?→A: ?→B: ?→M:  B┘- 2A→B◢ AB<sup>2</sup> <font color="#FF0000">M-</font>: </p>
+<p>- 4AM→C: M◢ B + √-Ans┘A◢&nbsp; 2B - Ans◢ B◢</p>
+<p>1: Fix 0: Lbl 0: Rnd: √C Ans<sup>-1</sup> - . 5: Rnd:
+</p>
+<p>Ans→B: C ÷ B<sup>2</sup>→M: Rnd: M - Ans <font color="#FF0000">
+=&gt;</font> M + . 5 </p>
+<p> <font color="#FF0000">=&gt;</font> Goto 0: Norm 1: B┘(2A◢ M</p>
+<p>　</p>
+<p>
+<a href="factorize1.html">如何用這個程式計二次函數的因式分解</a></p>
+<p>
+<a href="completeS.html">頂點功能求配方法算式</a></p>
+<p>
+<a href="quadratic8.html">程式精簡版本</a> </p>
+<p>
+　</p>
+<p>
+例題1: 
+解 21x<sup>2</sup> - 11x 
+- 2 = 0 </p>
+<p>
+按 Prog 1&nbsp; 
+再按 21 EXE 
+- 11 EXE - 2 EXE (顯示頂點的x座標為11/42) </p>
+<p>
+EXE (顯示頂點的y座標或二次函數的極小值為 
+-289/84)</p>
+<p>
+EXE (顯示第一個根為2/3)</p>
+<p>
+EXE (顯示第二個根為 -1/7)</p>
+<p>
+(<font color="#FF0000">注意</font>: 若果無需要以根式表示或根為整數/分數(有理數)，可以直接按AC終止程式)</p>
+<p>
+　</p>
+<p>
+例題2: 
+解 x<sup>2</sup> - 8x + 
+3 = 0</p>
+<p>
+按 Prog 1&nbsp; 
+再按 1 EXE - 8 EXE 3 EXE 
+(顯示頂點的x座標為  
+<font color="#FF0000">4</font>) </p>
+<p>
+EXE (顯示頂點的y座標或二次函數的極小值為 
+- 13)</p>
+<p>
+EXE (顯示第一個根為7.60555)</p>
+<p>
+EXE (顯示第二個根為 0.394449)</p>
+<p>
+EXE 
+(顯示4) </p>
+<p>
+EXE (顯示1)</p>
+<p>
+EXE (顯示13)</p>
+<p>
+所以方程的根為&nbsp; 4 ±1√13</p>
+<p>程式執行完成後，按 
+RCL C顯示判別式的值。</p>
+<p>　</p>
+<p>註1: 第一個程式若要應用計算複數根及複數根式的表示式，請將程式近最後的&quot;B┘(2A&quot;改為&quot;1┘(2A)B&quot;，並在複數模中輸入程式。</p>
+<p>註2: 若兩根為整數或分數，表示為有理數，亦即沒有必要計算根式表示式，請直接AC終止程式。</p>
+<p>註3: 第一個程式輸入的係數必須為<font color="#FF0000">整數、分數及有限小數</font>，否則計算<font color="#ff0000">根式表示式的結果</font>可能不成立。另外輸入分數係數則可能要計算較多分數平方根問題，計算<font color="#FF0000">根式表示式</font>的速度可能會較慢，特別是fx-3650P計算分數平方根時會較明顯變慢。Truly 
+SC185速度較快，表現會較為理想。</p>
+<p>註4: 第二個程式輸入的係數必須為<font color="#FF0000">整數</font>，否則計算<font color="#ff0000">根式表示式的結果</font>可能不成立。</p>
+<p>註5: 第二個程式使用了較快計算平方根化簡程式，能夠有效處理各種不同情況下整數平方根化簡。</p>
+<p>　</p>
+<p><font color="#0000FF"><b>附錄 (兩根儲存在Ｘ及Ｙ中)</b></font></p>
+<p>第一個程式有記存兩根版本 (共88 bytes，使用記憶為A, B, C, X, Y及M )</p>
+<p>?→A: ?→B: ?→M:  B┘- 2A→B◢ AB<sup>2</sup> <font color="#FF0000">M-</font>: </p>
+<p>- 4AM→C: M<font color="#FF0000">M-</font>◢ B + √-Ans┘A→X◢&nbsp;  </p>
+<p>2B - Ans→Y◢ B◢ Sci 5: Lbl 0: 1<font color="#FF0000">M+</font>:  </p>
+<p>√(C÷M→B: Rnd: 
+Ans≠B <font color="#FF0000">=&gt;</font> Goto 0: </p>
+<p>Norm 1: B┘(2A ◢ M </p>
+<p>　</p>
+<p>第二個程式有記存兩根版本 (共106 bytes，使用記憶為A, B, C, X, Y及M )</p>
+<p>?→A: ?→B: ?→M:  B┘- 2A→B◢ AB<sup>2</sup> <font color="#FF0000">M-</font>: </p>
+<p>- 4AM→C: M◢ B + √-Ans┘A→X◢&nbsp;  </p>
+<p>2B - Ans→Y◢ B◢1: Fix 0: Lbl 0: Rnd:  </p>
+<p>√C Ans<sup>-1</sup> - . 5: Rnd: Ans→B: C ÷ B<sup>2</sup>→M:  </p>
+<p>Rnd: M - Ans <font color="#FF0000">
+=&gt;</font> M + . 5 <font color="#FF0000">=&gt;</font> Goto 0: Norm 1: </p>
+<p>B┘(2A◢ M</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quadratic2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:09 GMT -->
+</html>

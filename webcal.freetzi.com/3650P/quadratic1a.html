@@ -1,0 +1,120 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quadratic1a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>一元二次方程(未簡化根式版本)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">一元二次方程(I)可顯示未化簡根式</font></b></u></p>
+<p>更新日期: 2010年3月8日</p>
+<p>程式可以(1)解一元二次方程(包括複數根)。(2)計算二次函數的最大/最小值及其對應的x值。(3)若果輸入數據為整數(或分數)及答案為有理數時，答案會以分數形式表示，建議將計數機預先設定為假分數形式表示(按六次 Mode，再按 
+1 2 )。(4)若答案為無理數，亦可以顯示未化簡根式( 
+C ± √D )。 </p>
+<p><b><font color="#FF0000">注意:若果你不用計複數根，為被免混淆及使用方便，建議在Comp Mode之下輸入程式(先按Mode 
+1)。若要計複數根，先進入複數模式(先按Mode 2)，然後輸入程式，當執行程式時，程式會自動進入複數模式。</font></b></p>
+<p>程式 (42 bytes，使用記憶A、B、C及M)</p>
+<p>?→A: ?→B: ?→M:  B┘- 2A→B: - AB<sup>2</sup><font color="#FF0000">M+</font>: 
+ 
+</p>
+
+<p>-M┘A→C: B + √C◢ B - √C</p>
+
+<p>　</p>
+
+<p>
+例題1: 
+解 x<sup>2</sup> - 7x + 
+12 = 0 </p>
+<p>
+按 Prog 1&nbsp; 
+再按 1 EXE 
+- 7 EXE 12 EXE (顯示第一個實數根為4) 
+EXE (顯示第二個實數根為3)</p>
+<p>
+∴ x = 4 
+或 x = 3</p>
+<p>
+&nbsp;&nbsp;</p>
+<p>
+例題2: 
+解 x<sup>2</sup> + 6x + 
+25 = 0</p>
+<p>
+假設程式是在複數模式中輸入</p>
+<p>
+按 Prog 1&nbsp; 
+再按 1 EXE 6 EXE 25 EXE
+<strong><font color="#FF0000">( 此時計算機右上角出現R&lt;=&gt;I，表示為複數解)</font></strong></p>
+<p>
+(顯示第一個根的實數部為-3) 
+再按 Shift Re&lt;=&gt;Im (顯示第一個根虛數部為 
+4)</p>
+<p>
+EXE (顯示第二個根的實數部為-3) 
+再按 Shift Re&lt;=&gt;Im (顯示第二個根虛數部為 
+- 4)</p>
+<p>
+所以方程的解為 x = -3 
+± 4i</p>
+<p>
+　</p>
+<p>
+例題3: 解 x<sup>2</sup> - 6x + 4 = 0</p>
+<p>
+按 Prog 1&nbsp; 
+再按 1 EXE 
+- 6 EXE 4 EXE (顯示第一個實數根為5.236067977) </p>
+<p>
+EXE (顯示第二個實數根為0.763932022)</p>
+<p>
+由於根為無理數，解答為 B ± √ C，按 RCL B及RCL C分別顯示3及5，所以根式為 3±√5，但要<font color="#FF0000">注意</font>√C可能未經化簡，有可能要化簡及有理化。</p>
+<p>
+
+按 RCL B、RCL 
+M分別會顯示頂點 
+x、y (最大/最小點)座標的數值。</p>
+
+<p>
+<font color="#FF0000">注意:</font> 若果程式在comp Mode之下輸入，根又是複數(非實數根)，計數機會出現Math 
+error，不過</p>
+<p>
+頂點的坐標依然會被儲存在記憶C及M之中。</p>
+<p>
+　</p>
+<p>
+<font color="#FF0000">附錄程式</font>(由網友roviury提供)</p>
+<p>
+程式可以顯示兩根，記存判別式(D)，記存頂點坐標(X及Y)，若答案為無理數，亦記存未化簡根式( X ± √M )。 另外程式不會改輸入A, B, 
+C係數的數值，但程式會較長及使用較多數字記憶。</p>
+<p>
+程式 (51 bytes)</p>
+<p>
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">
+<span class="Apple-style-span" style="font-family: 新細明體">?→A: ?→B: ?→C: B┘-2A→X:
+</span></span></p>
+<p>
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">
+<span class="Apple-style-span" style="font-family: 新細明體">C-AX<sup>2</sup>→Y: 
+-Y┘A→M:-4AY→D: </span></span></p>
+<p>
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">
+<span class="Apple-style-span" style="font-family: 新細明體">X- √M◢ X+ √M<span class="Apple-converted-space">&nbsp;</span></span></span></p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quadratic1a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+</html>

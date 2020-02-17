@@ -1,0 +1,81 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/285II/citizen_srp_285ii.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>CITIZEN SRP</title>
+<meta name="Microsoft Theme" content="china 011">
+<script src="webcal.js"></script></head>
+
+<body background="di1.gif" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#FF9933" alink="#FF3300">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><font size="5"><b>CITIZEN SRP-285II分數計算問題</b></font></u></p>
+<p>CITIZEN SRP-285II被發現某些分數四則運算，答案無法以分數形式顯示，甚至有些情況再使用內置小數轉換分數功能亦無法轉化為分數(由WebCal論壇網友發現及提出討論)，主要有以下幾個情況:</p>
+<p>注意: 紅色的字體代表SRP-285II顯示的算式，紅色的<font color="#FF0000"> / </font>代表285II的除號，亦即是按 
+<span lang="en">÷，而紅色的 <font color="#FF0000">┘</font>代表285</span>II的<span lang="en">分號，亦即是按 </span>Ab/c。</p>
+<p>　</p>
+<p><font color="#0000FF"><b>(A) 兩分數的加、減及乘的運算。</b></font></p>
+<p>例1: 兩分數相加&nbsp; <font color="#FF0000">2┘27 + 5┘54</font></p>
+<p>例2: 兩分數相減 <font color="#FF0000">5┘12 - 1┘4</font></p>
+<p>例3: 兩分數相乘 <font color="#FF0000">4┘9*3┘8</font></p>
+<p>以上三個例子答案都顯示小數 0.16666 
+66667，不能顯示分數1/6，而且再使用F&lt;&gt;D功能亦無法得出分數1/6的答案。測試發現不是所有兩分數間的加、減及乘都會出現問題，看來是某數值的特別組合。</p>
+<p>　</p>
+<p><font color="#0000FF"><b>(B) 兩數間的除數運算，包括整數除以分數、分數除以整數及分數除以分數三個情況。</b></font></p>
+<p>例4: 整數除以分數 <font color="#FF0000">2 / 4┘7</font> 答案顯示小數3.5</p>
+<p>例5: 分數除以整數 <font color="#FF0000">1┘3 / 3</font> 答案顯示小數 0.1111 11111</p>
+<p>例6: 分數除以分數 <font color="#FF0000">1┘2 / 3┘2</font> 答案顯示小數 0.3333 33333</p>
+<p>以上三個例子雖然不能直接以分數形式顯示答案，但再使用F&lt;&gt;D功能卻能正確得出分數答案。</p>
+<p>　</p>
+<p><font color="#0000FF"><b>(C) 計算過程中，整數除數運算曾經出現小數。</b></font></p>
+<p>例7: <font color="#FF0000">2 / 4 * 4 - 3┘2</font> 
+答案顯示小數0.5，但再使用F&lt;&gt;D功能卻能正確得出分數答案。</p>
+<p>例8: <font color="#FF0000">4 / 4 * 2 - 3┘2</font> 答案能夠顯示分數1/2</p>
+<p>例7及例8的分別只是乘除的先後次序不同，例7是先計 <font color="#FF0000">2 / 4</font> 內部會得出0.5，但例8是先計<font color="#FF0000">4 
+/ 4</font>內部會得出1，因此整個計算過程沒有出現過小數，而 <font color="#FF0000">4 / 4 * 2</font> 
+又是整數，所以再減3┘2就能得出分數答案1/2。</p>
+<p>　</p>
+<p>以上情況(A)、(B)及(C)運算不能以分數形式顯示答案，但在其它有分數功能的會考計算機卻不存在問題，例如: CASIO fx-3650P、CASIO 
+fx-50F及SHARP EL-506V，甚至是HP-30S 
+(與285II使用相同chipset的計算機)亦沒有問題，看來是由於SRP-285II內部設計出現了錯誤。</p>
+<p>　</p>
+<p>
+至造成問題的原因，暫時還不太清楚，但以似乎與計算機的誤差無太大關係，理由是SRP-285內部使用24位進行運算，準確度相當高，就以例3的答案為例，經測試發現</p>
+<p>3┘8 * 4┘9 內部的數值為&nbsp; 0. 16666 66666 66666 66666 666 .......</p>
+<p>亦即是運算的答案準確至第24個位，即是285II使用內置F&lt;&gt;D功能將小數轉化為分數，亦容許較大的誤差下可成功轉化為分數，以下是兩個例子:</p>
+<p>例9(比真確值1/6小的數值):</p>
+<p><font color="#FF0000">0. 16666 66661</font> 再使用F&lt;&gt;D功能可轉化為分數 1/6 </p>
+<p>例10(比真確值1/6大的數值):</p>
+<p>注意: SRP-285直接最多輸入13位有效數字，更多位數要使用加減的方法，而E是按EXP。</p>
+<p><font color="#FF0000">0. 16666 66666 666 + 8E-14</font> 再使用F&lt;&gt;D功能可轉化為1/6 <br>
+亦即是 0. 16666 66666 6668可以轉化為分數1/6 <br>
+<br>
+　</p>
+<p>不過意外地發現<font color="#FF0000">3┘8 * 4┘9</font>在24位後還有很多數值，相信可能是計算機內部運算時使用，不同的算式會出現不同數字，未知是否因為這些數值使計算機不正常運作(不能轉化為分數)</p>
+<p>　</p>
+<p>例11: <font color="#FF0000">4┘9 * 3┘8 - 0. 16666 66666 666 - 6.6666 66666 6 
+E-14</font></p>
+<p>答案為 1.100706273 <span lang="en">× 10</span><sup>-24</sup></p>
+<p>亦即是4┘9 * 3┘8 = 0. 16666 66666 66666 66666 66671 00706273</p>
+<p>例12: <font color="#FF0000">4┘9 * 3┘8 - 0. 16666 66666 66 - 6.6666 66666 66 
+E-13</font></p>
+<p>答案為 8.711596625 <span lang="en">× 10</span><sup>-25</sup></p>
+<p>亦即是4┘9 * 3┘8 = 0. 16666 66666 66666 66666 66668 711596626</p>
+<p>&nbsp; </p>
+<p><a href="285II.html">CITIZEN SRP-285II及HP-30S 程式集</a></p>
+<p><a href="index.html">CITIZEN SRP-285II 簡介</a></p>
+<p>　</p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/285II/citizen_srp_285ii.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+</html>

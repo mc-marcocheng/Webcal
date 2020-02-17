@@ -1,0 +1,79 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/anova.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>單因子變異分析 (One way analysis of variance (ANOVA))</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">單因子變異分析 (One way analysis of variance 
+(ANOVA))</font></b></u></p>
+<p>程式可以計算單因子變異分析中的處理平方和 Sum of square for treatments (SST)、誤差平方和 Sum of square 
+for Errors (SSE)、處理平均方 Mean square for treatments (MST)、誤差平均方 Mean square for 
+Errors (MSE)及 F 值。</p>
+<p>程式編寫日期: 2008年5月7日</p>
+<p><font color="#FF0000">程式需要在 SD 模式下執行，因此在輸入程式前請先按 Mode Mode 1 進入SD模式。</font></p>
+<p>注意: 藍色的英文字為統計模式中的變數(<font color="#0000FF">Σx<sup>2</sup></font> 按 Shift 1 1，<font color="#0000FF">Σx</font> 
+按 Shift 1 2，<font color="#0000FF">n</font> 按 shift 1 3 ，<font color="#0000FF">xσ<sub>n</sub></font> 
+按 shift 2 2)</p>
+<p>程式 (120 bytes)</p>
+<p>0→A: 0→B: 0→M: <font color="#FF0000">Rec(</font> 0 , 0: ?→C: Lbl 0: </p>
+<p>Stat clear: Lbl 1: ?→D: D <font color="#FF0000">DT</font>: C-<font color="#0000FF">n</font>
+<font color="#FF0000">=&gt;</font> Goto 1: </p>
+<p>A + <font color="#0000FF">Σx<sup>2</sup></font>→A: X + <font color="#0000FF">
+Σx</font>→X: B + <font color="#0000FF">n xσ<sub>n</sub></font><sup>2</sup>→B:
+</p>
+<p>M + C→M: Y + 1→Y: ?→C: C <font color="#FF0000">=&gt;</font> Goto 0:</p>
+<p>A - X<sup>2</sup> ÷ M - B→A◢ B◢ A ÷ (Y - 1→C◢</p>
+<p>B ÷ (M - Y→D◢ C ÷ D→X</p>
+<p>　</p>
+<p>例題: 試計算下列數據的處理平方和(SST)、誤差平方和(SSE)、處理平均方(MST)、誤差平均方(MSE)及F值。</p>
+<!--mstheme--></font>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="28%" id="AutoNumber1" bordercolorlight="#999900" bordercolordark="#666666">
+  <tr>
+    <td width="34%" align="center"><!--mstheme--><font face="新細明體">第一組<!--mstheme--></font></td>
+    <td width="66%" align="center"><!--mstheme--><font face="新細明體">1, 2, 3<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="34%" align="center"><!--mstheme--><font face="新細明體">第二組<!--mstheme--></font></td>
+    <td width="66%" align="center"><!--mstheme--><font face="新細明體">2, 3, 4, 5<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="34%" align="center"><!--mstheme--><font face="新細明體">第三組<!--mstheme--></font></td>
+    <td width="66%" align="center"><!--mstheme--><font face="新細明體">1, 3, 5<!--mstheme--></font></td>
+  </tr>
+</table>
+<!--mstheme--><font face="新細明體">
+<p>按 Prog 1 再按 3 EXE (第一組數據的數目) 1 EXE 2 EXE 3 EXE (第一組數據)</p>
+<p>4 EXE (第二組數據的數目) 2 EXE 3 EXE 4 EXE 5 EXE (第二組數據)</p>
+<p>3 EXE (第三組數據的數目) 1 EXE 3 EXE 5 EXE (第三組數據)</p>
+<p>0 EXE (第四組數據的數目輸入0表示沒有其它數據輸入，顯示SST為3.9)</p>
+<p>EXE (顯示SSE為15) EXE (顯示MST為1.95) EXE (顯示MSE為2.142857143)</p>
+<p>EXE (顯示F值為0.91)</p>
+<p>　</p>
+<p>註: 程式執行完結後可以按 RCL A, RCL B, RCL C, RCL D, RCL X分別顯示 SST, SSE, MST, MSE及F值。</p>
+<p>　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185
+程式集</a></p>
+
+
+<!--mstheme--></font>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/anova.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:52 GMT -->
+</html>

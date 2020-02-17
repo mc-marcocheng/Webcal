@@ -1,0 +1,87 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/order.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:25 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>Sharp EL</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p class="MsoNormal" style="text-align:center;">
+<u><font size="6" color="#FF0000">fx-3650P</font><b><font size="6" color="#FF0000">計算先後次序</font></b></u></p>
+
+<p>有些朋友用了新款的SVPAM計數機後，有時會發現有些不是預期的答案出現。是不是計數機壞了？當然不是。其實原因是計數機計算先後次序問題。若果大家能夠正確辨別計算先後次序，問題就不會發生，這亦都是每個SVPAM計數機使用者一定要知到的知識，因為可以避免不必要的計算錯誤，同時亦可避免加太多不必要的括號，增加效率、算式簡潔及易讀性等等。fx-3650P的計算先後次序如下:</p>
+<p>1. 座標變換: Pol(x, y), Rec(r, θ), 微分 d/dx 及積分 ∫dx</p>
+<p>2. A型函數: 對於此函數，須先輸入數值再按函數鍵。例如: x<sup>3</sup>, x<sup>2</sup>, x<sup>-1</sup>, 
+x!等等</p>
+<p>3. 乘方及乘方根: ^, <sup>x</sup>√</p>
+<p>4. 分數 a b/c</p>
+<p>5. 在<font face="Times New Roman">π, e (自然對數的底)、記憶器名或變量名稱之前的簡化乘法形式: 2π, 5A, πA等等</font></p>
+<p>6. B型函數: 對於此函數，須先按函數鍵輸入數值。例如: √, <sup>3</sup>√, log, cos, tan<sup>-1</sup>等等</p>
+<p>7. 在B型函數前的簡化乘法形式: 2√3, A log2 等等</p>
+<p>8. <span lang="en-us">∠ </span>及 <span lang="en-us">排列與組合: </span><sub>n</sub>P<sub>r</sub> 
+, <sub>n</sub>C<sub>r</sub> </p>
+<p>9. <span lang="en">× , ÷</span></p>
+<p><span lang="en-us">10</span><span lang="en">. + , -</span></p>
+<p><span lang="en">11. </span>&gt; , ≧</p>
+<p>12. = , ≠</p>
+<p>13. and</p>
+<p>14 xnor, xor, or</p>
+<p>若果包括完結指令，fx-3650P一共有15個先後序的位置，比sharp EL-506V還要複雜不少，因此使用上亦較容易出錯。其實一般計算較重要的次序是 2, 3, 4, 5, 6, 
+7, 9和10，另外要特別注意分數與除號的先後分別，這個分別與習慣的用法有明顯的不同，要較小心使用，防止不必要的錯誤出現。</p>
+<p>大家可以參考以下的例子及建議的按法。</p>
+<p>　</p>
+<p>注意: 以下計算三角函數是在DEG模式下執行。</p>
+<p>例題1: 計算&nbsp; 3<sup>(2/3)</sup></p>
+<p>按 3 ^ ( 2&nbsp; ab/c 3 EXE <font color="#0000FF">(顯示2.08)</font></p>
+<p>例題2: 計算 (3<sup>2</sup>)/ 2</p>
+<p>按 3 ^ 2 <span lang="en">÷ 2 EXE&nbsp; <font color="#0000FF">(</font></span><font color="#0000FF">顯示4.5) </font>
+或 按 3 ^ 2 ab/c 2 EXE <font color="#0000FF">(顯示 9┘2)</font></p>
+<p>例題3: 計算 cos(30/2)</p>
+<p>按 cos 30 ab/c 2 EXE <font color="#0000FF">(顯示0.9659)</font></p>
+<p>例題4: 計算 cos(30) / 2</p>
+<p>按 cos 30 <span lang="en">÷ 2 EXE <font color="#0000FF">(</font></span><font color="#0000FF">顯示0.4330)</font></p>
+<p>例題5: 計算 tan<sup>2</sup> 30</p>
+<p>按 (tan 30)&nbsp; x<sup>2</sup>&nbsp; EXE <font color="#0000FF">(顯示0.3333)</font> 或者按 tan 30 
+EXE x<sup>2</sup> EXE <font color="#0000FF">(顯示0.3333)</font></p>
+<p>例題6: 計算 tan(30<sup>2</sup>)</p>
+<p>按 tan 30 x<sup>2</sup> EXE <font color="#0000FF">(顯示0)</font></p>
+<p>例題7: 計算 (3<sup>2</sup>) cos30</p>
+<p>按 3 ^ 2 cos 30 EXE <font color="#0000FF">(顯示7.794)</font></p>
+<p>例題8: 計算 3<sup>(2cos30)</sup> </p>
+<p>按 3 ^ ( 2 cos 30 EXE <font color="#0000FF">(顯示6.705)</font></p>
+<p>例題9: 計算 (cos30)A</p>
+<p>按 (cos 30) ALPHA A EXE 或者按 ALPHA<span lang="en"> A cos 30 EXE</span></p>
+<p>例題10: 計算 cos (30A)</p>
+<p>按 cos 30 ALPHA A EXE </p>
+<p>例題11: 計算 3<sup>(3A)</sup></p>
+<p>按 3 ^ ( 3  ALPHA A EXE&nbsp; 或者按 3 ALPHA A EXE 3 ^ Ans EXE</p>
+<p>例題12: 計算 (3<sup>3</sup>)A</p>
+<p>按 3 ^ 3 ALPHA A EXE&nbsp; </p>
+<p>例題13: 計算 (log 3)(sin 60)</p>
+<p>按 log 3 sin 60 = <font color="#0000FF">(顯示0.4132)</font></p>
+<p>希望上述的例題可以幫助大家認識計數機運算的先後次序問題，若果大家在計算時不太肯定先後次序，就應該加括號或用連鎖計算方法，確保最後答案正確。</p>
+<p align="left">　</p>
+<p>
+<a href="https://err.freewebhostingarea.com/404.html"><span lang="en-us">返回</span> fx-3650P 程式集</a></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; text-align: justify">　</p>
+<p>　</p>
+<p>　</p>
+<p>　</p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/order.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:25 GMT -->
+</html>

@@ -1,0 +1,137 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/casio.fx-50FH/quadratic_10.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>一元二次方程(可顯示已簡化根式)</title>
+<meta name="Microsoft Theme" content="indust 011">
+<script src="webcal.js"></script></head>
+
+<body background="indtextb.jpg" bgcolor="#FFFFFF" text="#000000" link="#3366CC" vlink="#666666" alink="#996600">
+
+<p align="center"><u><b><font size="5">一元二次方程(可顯示已簡化根式複數版)</font></b></u></p>
+<p>更新日期: 2010年3月23日</p>
+
+<p>程式可以計算一元二次方程的實根，另外若果輸入數據為整數(或分數)及答案為有理數時，答案會以分數形式表示，建議將計數機預先設定為假分數形式表示(按 
+<font color="#FF0000">SHIFT SETUP → → 2</font>&nbsp; )。若為無理數，<font color="#FF0000">根亦可用根號形式表示</font>。 </p>
+
+<p>　</p>
+
+<p><font color="#FF0000">程式需要在 CMPLX 模式下執行，因此在選擇新程式位置後，按 2 選用CMPLX模式。</font></p>
+<p><font color="#FF0000">注意</font> : 若果不用記存兩根，程式中<font color="#008000">綠色</font>部份可以不輸入。</p>
+<p>第一個程式 (79 / <font color="#008000">83</font> bytes，使用記憶為A, B, C及M，<font color="#008000">若記存兩根，X及Y亦被使用</font>)</p>
+<p>M<font color="#FF0000">M-</font>: ?→A: ?→B: ?→C: B<sup>2</sup> - 4AC→C:</p>
+<p>(√( C ) - B)┘(2A<font color="#008000">→X</font>◢ -B┘A - Ans<font color="#008000">→Y</font>◢  - B┘(2A◢</p>
+<p>
+<font face="新細明體">π: </font>Sci 8: While Ans≠Rnd( Ans<font color="#FF0000">M+</font>: √(C÷M: WhileEnd: </p>
+<p>Norm 1: Ans┘(2A◢ M</p>
+<p>　</p>
+<p>第二個程式 (111 / <font color="#008000">115</font> bytes，使用記憶為A, B, C及M，<font color="#008000">若記存兩根，X及Y亦被使用</font>)</p>
+<p>?→A: ?→B: ?→C: B<sup>2</sup> - 4AC→C:</p>
+<p>(√( C ) - B)┘(2A<font color="#008000">→X</font>◢ -B┘A - Ans<font color="#008000">→Y</font>◢ </p>
+<p>Abs( C→M: - B┘(2A◢ √( C÷M)┘(2A→A: </p>
+<p>1: Fix 0: While Ans: Rnd(√( M ÷ Ans ) - . 5→B:&nbsp; 
+</p>
+<p>M ÷ B<sup>2</sup>→C: Ans - Rnd(Ans <font color="#FF0000">
+=&gt;</font> Rnd( C + . 5: WhileEnd:
+</p>
+<p>Norm 1: AB◢ C</p>
+
+<p>　</p>
+<p>
+<a href="factorize_1.html">如何用這個程式計二次函數的因式分解</a></p>
+<p>
+　</p>
+<p>
+例題1: 
+解 21x<sup>2</sup> - 11x 
+- 2 = 0 </p>
+<p>
+按 Prog 1&nbsp; 
+再按 21 EXE 
+- 11 EXE - 2 EXE  
+(顯示第一個根為2/3)</p>
+<p>
+EXE (顯示第二個根為 -1/7)</p>
+<p>
+(<font color="#FF0000">注意</font>: 若果無需要以根式表示或根為整數/分數(有理數)，可以直接按AC終止程式)</p>
+<p>
+　</p>
+<p>
+例題2: 
+解 x<sup>2</sup> - 8x + 
+3 = 0</p>
+<p>
+按 Prog 1&nbsp; 
+再按 1 EXE - 8 EXE 3 EXE&nbsp; (顯示第一個根為7.60555)</p>
+<p>
+EXE (顯示第二個根為 0.394449)</p>
+<p>
+EXE 
+(顯示4) </p>
+<p>
+EXE (顯示1)</p>
+<p>
+EXE (顯示13)</p>
+<p>
+所以方程的根為&nbsp; 4 ±1√13</p>
+<p>
+　</p>
+
+<p>
+例題3:
+ x<sup>2</sup> + 7x + 15 = 0</p>
+
+<p>
+按 Prog 1&nbsp; 
+再按 1 EXE 7 EXE 15 EXE
+<strong><font color="#FF0000">( 此時計算機右上角出現R&lt;=&gt;I，表示為複數解)</font></strong></p>
+<p>
+(顯示第一個根的實數部為 -7/2) 
+再按 Shift Re&lt;=&gt;Im (顯示第一個根虛數部為 
+1.6658)</p>
+<p>
+EXE (顯示第二個根的實數部為 -7/2) 
+再按 Shift Re&lt;=&gt;Im (顯示第二個根虛數部為 
+- 1.658)</p>
+<p>
+EXE
+(顯示頂點的x座標為 
+<font color="#FF0000">-7/2</font>) </p>
+<p>
+EXE (顯示 1/2
+<font color="#FF0000">
+i</font>)</p>
+<p>
+EXE (顯示 11)</p>
+<p>
+
+所以方程的解為 x = -7/2 
+±
+
+
+(1/2)√11i</p>
+<p>　</p>
+<p>程式執行完成後，第一個程式按 RCL C顯示判別式的值。</p>
+<p>註1: 若兩根為整數或分數，表示為有理數，亦即沒有必要計算根式表示式，請直接AC終止程式。</p>
+<p>註2: 第一個程式輸入的係數必須為<font color="#FF0000">整數及有限小數</font>，否則計算<font color="#ff0000">根式表示式的結果</font>可能不成立。</p>
+<p>註3: 第二個程式輸入的係數必須為<font color="#FF0000">整數</font>，否則計算<font color="#ff0000">根式表示式的結果</font>可能不成立。</p>
+<p>註4: 第二個程式使用了較快計算平方根化簡程式，能夠有效處理各種不同情況下整數平方根化簡。</p>
+
+<p>　</p>
+
+<p><a href="fx-50F_Plus.html">返回 CASIO fx-50FH、fx-3650P II、fx-50FH II及fx-50F PLUS 程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/casio.fx-50FH/quadratic_10.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+</html>
+
+

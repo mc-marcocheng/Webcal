@@ -1,0 +1,123 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quadratic11.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>一元二次方程(有判別版本)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="5">非標準形式一元二次方程</font></b></u></p>
+<p>程式由 <font color="#0000FF">tony200910041</font> 提供。</p>
+<p>更新日期: 2011年9月25日</p>
+<p>這個程式可以計算非標準形式的一元次方程，例如普通的是ax<sup>2</sup>+bx+c=0,但有時並非這個形式，例如: a(x-h)<sup>2</sup>+k=0, 
+(px-q)(rx-s)=0等等，但使用時要進入程式編輯模式中修改函數部份的程式。</p>
+<p>　</p>
+<p><font color="#FF0000">程式需要在 REG Quad 模式下執行，因此在輸入程式前請先按 Mode Mode 2 → 3 進入REG Quad模式。</font></p>
+<p>
+藍色的英文字為統計模式中的變數(<font color="#0000FF">x<sub>1</sub> </font>按 Shift 
+2 → → → 1，<font color="#0000FF" face="新細明體">x<sub>2</sub></font> 按 Shift 2 → → → 
+2。</p>
+<p>
+程式一 (23 bytes，不包括綠色的函數方程)</p>
+<p>
+Stat clear: Lbl 0: C: C , <font color="#008000">Ans<sup>2</sup> - 7Ans + 12</font>
+<font color="#FF0000">DT</font>: 4&gt;C <font color="#FF0000">=&gt;</font> Goto 0: 0
+<font color="#0000FF">x<sub>1</sub></font><font face="新細明體">◢ 0
+<font color="#0000FF">x<sub>2</sub></font> </font> </p>
+<p>
+　</p>
+<p>
+程式二 (29 bytes，不包括綠色的函數方程)</p>
+<p>
+Stat clear: <font size="1">E</font> 2<font face="新細明體">: </font>Lbl 0: Ans ,
+<font color="#008000">Ans<sup>2</sup> - 7Ans + 12</font>
+<font color="#FF0000">DT</font>: </p>
+<p>
+4&gt;C <font color="#FF0000">=&gt;</font> <font size="1">E</font> 2 + C
+<font color="#FF0000">=&gt;</font> Goto 0: 0
+<font color="#0000FF">x<sub>1</sub></font><font face="新細明體">◢ 0
+<font color="#0000FF">x<sub>2</sub></font> </font> </p>
+<p>
+　</p>
+<p>
+註1: 一元二次方程形式必須為 f(x)<font color="#800000">= 0</font>的形式，其中 f(x)為一元二次方程式的函數部份。</p>
+<p>
+註2: 綠色的<font color="#008000">Ans<sup>2</sup> - 7Ans + 12 </font>是二次函數方程的函數部份(變數是Ans)，若果想計算其它
+一元二次方程，只要修改綠色的部份。</p>
+<p>
+註3: 這個版本程式計算出的答案準確度可能比它版本低一點。</p>
+<p>
+註4: 程式二的函數方程可以包括較普通的除項。</p>
+<p>
+註5: 二次方程式係數儲存在統計記憶C, B 及A中。</p>
+<p>
+　</p>
+<p>
+例題1: 
+解 x<sup>2</sup> - 7x + 
+12 = 0 </p>
+<p>
+先修改程式綠色函數部份為 <font color="#008000">Ans<sup>2</sup> - 7Ans + 12</font></p>
+<p>
+再
+按 Prog 1&nbsp; (顯示第一個實數根為4) EXE (顯示第二個實數根為3)</p>
+<p>
+∴ x = 4 
+或 x = 3</p>
+<p>
+&nbsp;&nbsp;</p>
+<p>
+例題2: 
+解 x<sup>2</sup> + 6x + 
+25 = 0</p>
+<p>
+先修改程式綠色函數部份為 <font color="#008000">Ans<sup>2</sup> + 6Ans + 25</font></p>
+<p>
+再
+按 Prog 1 (顯示Math ERROR表示無實數解)</p>
+<p>
+　</p>
+<p>
+例題3: 解 (x - 3)(x - 4) = 0 </p>
+<p>
+先修改程式綠色函數部份為 <font color="#008000">(Ans - 3)(Ans - 4)</font></p>
+<p>
+再
+按 Prog 1&nbsp; (顯示第一個實數根為4) EXE (顯示第二個實數根為3)</p>
+<p>
+∴ x = 4 
+或 x = 3</p>
+<p>
+　</p>
+<p>
+例題4: 解 (x<sup>3</sup> - 2x<sup>2</sup> - x + 2) /&nbsp; (x - 1) = 0
+<font color="#FF0000">(只限程式二)</font></p>
+<p>
+先修改程式綠色函數部份為 <font color="#008000">(Ans<sup>3</sup> - 2Ans<sup>2</sup> - Ans + 
+2) /&nbsp; (Ans - 1)</font></p>
+<p>
+再
+按 Prog 1&nbsp; (顯示第一個實數根為2) EXE (顯示第二個實數根為-1)</p>
+<p>
+∴ x = 2 或 x = - 1</p>
+<p>
+　</p>
+<p>
+　</p>
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/quadratic11.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:29 GMT -->
+</html>

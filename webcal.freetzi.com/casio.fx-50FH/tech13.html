@@ -1,0 +1,128 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/casio.fx-50FH/tech13.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:28 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>多於三個額外數字記憶的使用</title>
+<meta name="Microsoft Theme" content="indust 011">
+<script src="webcal.js"></script></head>
+
+<body background="indtextb.jpg" bgcolor="#FFFFFF" text="#000000" link="#3366CC" vlink="#666666" alink="#996600">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><font size="5"><b>多於三個額外數字記憶的使用</font></b></u></p>
+<font size="4">
+<p>
+　</p>
+<p>
+使用統計模式最多可以有九個額外數字記憶使用，而使用複數模式最多可以有七個額外數字記憶使用，不過要用較多的程式空間才可以，另外的問題是在儲存記憶數值時，較容易出現誤差，特別是輸入的數值是無理數或者是循環小數(分數會自動變為小數)，而當儲存數值後，在統計變數方法也不能作出修改。所以若果無必要及確保計算有高準確度，請盡量使用複數方法或用少於三個統計變數額外數字記憶。以下方案可以作為參考。</p>
+<p>
+注意: E 是按 EXP</p>
+<p>　</p>
+<p><font color="#FF0000">(1) 四個額外記憶</font></p>
+<p><b><font color="#800080">REG Lin 模式 (41 bytes)</font></b></p>
+<p>FreqOn: ?→A: ?<font face="新細明體">→B: ?→C: </font>?<font face="新細明體">→D: ; A - 
+3 DT:</font></p>
+<p>B - 1 DT: 1 , C DT:&nbsp; 0 , D - C DT:</p>
+<p>四個儲存數值的統計記憶分別為<font color="#0000FF">n</font>、<font color="#0000FF">Σx</font>、<font color="#0000FF">Σxy</font>及<font color="#0000FF">Σy</font>。</p>
+<p>　</p>
+<p><font color="#FF0000">(2) 五個額外記憶</font></p>
+<p><font color="#FF0000">方法一:</font></p>
+<p><b><font color="#800080">REG Lin 模式 (66 bytes)</font></b></p>
+<p>FreqOn: ?→A: ?<font face="新細明體">→B: ?→C: </font>?<font face="新細明體">→D: ?→X:</font></p>
+<p><font face="新細明體">1 ; A - 1 DT: E-50 ; E50(B - A DT: 1 , C DT: </font></p>
+<p><font face="新細明體">0 , D - C DT: </font>, 0 ; -<font color="#0000FF">n</font> 
+DT: ; X DT:</p>
+<p>五個儲存數值的統計記憶分別為<font color="#0000FF">Σx<sup>2</sup> </font>、<font color="#0000FF">Σx</font>、<font color="#0000FF">Σxy</font>、<font color="#0000FF">Σy</font>及<font color="#0000FF">n</font>。</p>
+<p>　</p>
+<p><font color="#FF0000">方法二:</font></p>
+<p><b><font color="#800080">REG Lin 模式 (67 bytes)</font></b></p>
+<p>FreqOn: ?→A: ?<font face="新細明體">→B: ?→C: </font>?<font face="新細明體">→D: ?→X:</font></p>
+<p>1 ; 2<sup>-1</sup>(A - 2 + B 
+DT: -1 ; 2<sup>-1</sup>(A - B DT:</p>
+<p>1 , C DT: 0 , D - C DT: , 0 ; X - A - 1 DT:</p>
+<p>五個儲存數值的統計記憶分別為<font color="#0000FF">Σx<sup>2</sup> </font>、<font color="#0000FF">Σx</font>、<font color="#0000FF">Σxy</font>、<font color="#0000FF">Σy</font>及<font color="#0000FF">n</font>。</p>
+<p>　</p>
+<p><font color="#FF0000">(3) 六個額外記憶</font></p>
+<p><b><font color="#800080">REG Lin 模式 (87 bytes)</font></b></p>
+<p>FreqOn: ?→A: ?<font face="新細明體">→B: ?→C: </font>?<font face="新細明體">→D: ?→X: 
+?→Y:</font></p>
+<p><font face="新細明體">1 ; A - Y DT: E-50 ; E50(B - A DT: 1 , 1 ; Y DT: </font></p>
+<p><font face="新細明體">0 ; D - Y DT: </font>, E-50 ; E50(X - D DT: </p>
+<p>, 0 ; -<font color="#0000FF">n</font> DT: ; C DT:</p>
+<p>五個儲存數值的統計記憶分別為<font color="#0000FF">Σx<sup>2</sup> </font>、<font color="#0000FF">Σx</font>、<font color="#0000FF">n</font>、<font color="#0000FF">Σy<sup>2</sup></font>、<font color="#0000FF">Σy</font>及<font color="#0000FF">Σxy</font>。</p>
+<p>　</p>
+<p><font color="#FF0000">(4) 七個額外記憶</font></p>
+<p><b><font color="#800080">REG Lin 模式 (115 bytes)</font></b></p>
+<p>FreqOn: ?→A: ?→B: ?→C: 1 ; 2<sup>-1</sup>(A+B-2C DT: </p>
+<p>- 1 ; 2<sup>-1</sup>(A-B DT:<font face="新細明體"> 1 , 1 ; C DT: </font>?<font face="新細明體">→D:  </font></p>
+<p><font face="新細明體">E-50 , 1 ; E50(D-C DT: ?→X: 0 , 1 ; - <font color="#0000FF">
+Σy</font> DT: ?→Y: </font></p>
+<p><font face="新細明體">; Y DT: , E-50 ; E50(X - Y DT: ?→A: ,</font> 0 ; -<font color="#0000FF">n</font> 
+DT: ; A DT:</p>
+<p>七個儲存數值的統計記憶分別為<font color="#0000FF">Σx<sup>4</sup> </font>、<font color="#0000FF">Σx<sup>3</sup></font>、<font color="#0000FF">Σx<sup>2</sup>y</font>、<font color="#0000FF">Σxy</font>、<font color="#0000FF">Σy</font>、<font color="#0000FF">Σy<sup>2</sup></font>及<font color="#0000FF">n</font>。</p>
+<p>　</p>
+<p><font color="#FF0000">(6) 八個額外記憶</font></p>
+<p><b><font color="#800080">REG Lin 模式 (134 bytes)</font></b></p>
+<p>FreqOn: ?→A: ?→B: ?→C: 1 ; 2<sup>-1</sup>(A+B-2C DT: </p>
+<p>- 1 ; 2<sup>-1</sup>(A-B DT:<font face="新細明體"> 1 , 1 ; C DT: </font>?<font face="新細明體">→D:  </font></p>
+<p><font face="新細明體">E-50 , 1 ; E50(D-C DT: ?→X: 0 , 1 ; - <font color="#0000FF">
+Σy</font> DT: ?→Y: </font></p>
+<p><font face="新細明體">; Y DT: , E-50 ; E50(X - Y DT: ?→A: ?→B: </font></p>
+<p>E-50 , 0 ; E50(B-<font color="#0000FF">Σx</font> DT: 0 ; -<font color="#0000FF">n</font> 
+DT: ; A DT:</p>
+<p>八個儲存數值的統計記憶分別為<font color="#0000FF">Σx<sup>4</sup> </font>、<font color="#0000FF">Σx<sup>3</sup></font>、<font color="#0000FF">Σx<sup>2</sup>y</font>、<font color="#0000FF">Σxy</font>、<font color="#0000FF">Σy</font>、<font color="#0000FF">Σy<sup>2</sup></font>、<font color="#0000FF">n</font>及<font color="#0000FF">Σx</font>。</p>
+<p>　</p>
+<p><font color="#FF0000">(6) 九個額外記憶</font></p>
+<p><b><font color="#800080">REG Lin 模式 (157 bytes)</font></b></p>
+<p>FreqOn: ?→A: ?→B: ?→C: 1 ; 2<sup>-1</sup>(A+B-2C DT: </p>
+<p>- 1 ; 2<sup>-1</sup>(A-B DT:<font face="新細明體"> 1 , 1 ; C DT: </font>?<font face="新細明體">→D:  </font></p>
+<p><font face="新細明體">E-50 , 1 ; E50(D-C DT: ?→X: 0 , 1 ; - <font color="#0000FF">
+Σy</font> DT: ?→Y: </font></p>
+<p><font face="新細明體">; Y DT: , E-50 ; E50(X - Y DT: ?→A: ?→B: ?→C:</font></p>
+<p>E-34 , 0 ; E68(C-<font color="#0000FF">Σx<sup>2</sup></font> DT: E-50 ; - E50<font color="#0000FF">Σx</font> 
+DT: </p>
+<p>; E50B DT: 0 ; -<font color="#0000FF">n</font> DT: ; A DT:</p>
+<p>九個儲存數值的統計記憶分別為<font color="#0000FF">Σx<sup>4</sup> </font>、<font color="#0000FF">Σx<sup>3</sup></font>、<font color="#0000FF">Σx<sup>2</sup>y</font>、<font color="#0000FF">Σxy</font>、<font color="#0000FF">Σy</font>、<font color="#0000FF">Σy<sup>2</sup></font>、<font color="#0000FF">n</font>、<font color="#0000FF">Σx</font>及<font color="#0000FF">Σx<sup>2</sup></font>。</p>
+<p>　</p>
+<p><font color="#FF0000">(7) 使用複數方法(最多可額外增加7個記憶)</font></p>
+<p><font color="#800080">CMPLX 模式</font></p>
+<p>方法是使用複數模式，將兩個要儲存實數以複數形式分別儲存在記憶的實數及虛數部中，這樣一個記憶就能儲存兩個實數。</p>
+<p>例如:</p>
+<p>?→A: ?→B: A + iB→A:</p>
+<p>提取數值可以使用下列方法:</p>
+<p>實數部提取: . 5(A + Conjg(A 或 Abs(A) cos( arg(A</p>
+<p>虛數部提取: . 5 i (Conjg(A) - A 或 Abs(A) sin( arg(A</p>
+<p>這種方法另一優點是可以保留分數，不過最大缺點是提取數字記憶的程式碼會較為長,以下方案可以作為參考:<br>
+<br>
+實數部提取: (A + Conjg(A))┘2<br>
+<br>
+虛數部提取: (i (Conjg(A) - A)┘2<br>
+<br>
+修改數據:(以A數據作為例子)<br>
+<br>
+實數部修改: ?→B: B + (i (Conjg(A) - A)┘2→A<br>
+<br>
+虛數部修改: ?→B: Bi + (A + Conjg(A))┘2→A</p>
+<p>　</p>
+<p>註: 使用Abs(A) cos( arg(A及Abs(A) sin( arg(A提取數值時，A不可以等於0。</p>
+<p>
+　</p>
+
+<p>
+<a href="fx-50F_Plus.html">返回 CASIO fx-50FH、fx-3650P II、fx-50FH II及fx-50F PLUS 程式集</a></font></a></p>
+
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/casio.fx-50FH/tech13.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:28 GMT -->
+</html>

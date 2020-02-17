@@ -1,0 +1,58 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/fractionPb.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>分數計算問題</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><font size="5">分數計算問題</font></b></u></p>
+<p>fx-3650P/fx-3950P有不錯的分數功能，分數顯示形式還可以預設為假分數形式，使用上較為方便，不過這個功能亦存在計算錯誤的問題，請參看以下例子:</p>
+<p>　</p>
+<p>例1: 按&nbsp; 1 ┘ ( - 1 E9) EXE 錯誤顯示答案為正值 1 <span lang="en">× 10<sup>-9</sup></span>，正確答案為負數 
+- 1 <span lang="en">× 10<sup>-9</sup></span>。</p>
+<p>例2: 按&nbsp; 1 <span lang="en">÷</span> ( - 1 E9) EXE 使用除號代替分號，答案正碓顯示 1
+<span lang="en">× 10<sup>-9</sup></span>。</p>
+<p>例3: 按&nbsp; 1 ┘( - 123456789) EXE 同樣錯誤得出正數的答案 8.1 <span lang="en">× 10<sup>-9</sup></span></p>
+<p>例4: 按 100 ┘(-1 000 000 000) EXE 所得的答案正確&nbsp; -1┘100 000 00</p>
+<p>例5: 按 10 ┘(-1 000 000 000) EXE 錯誤顯示答案為正值的 1 <span lang="en">× 10<sup>-8</sup></span>，正確答案為負數 
+- 1 <span lang="en">× 10<sup>-8</sup></span>。</p>
+<p>例6: 按 1┘(<font face="Times New Roman"> -π </font><span lang="en">× 1 E9) EXE
+</span>錯誤顯示答案為正數</p>
+<p>例7: 按 1.2┘(<font face="Times New Roman"> -π </font><span lang="en">× 1 E9) 
+EXE </span>能夠正確顯示負數答案</p>
+<p>　</p>
+<p>從測試的結果顯示出現計算錯誤要符合以下三個條件為:</p>
+<p>(1) 分子必為整數</p>
+<p>(2) 分母的大小 (Order of magnitude) 為 <span lang="en">10<sup>9</sup>，</span>大小為<span lang="en-us">
+</span>10<sup>8</sup> 亦可以，不過直接顯示分母必須為整數。</p>
+<p>(3) 最後答案不能以分數形式顯示</p>
+<p>　</p>
+<p><u><b><font color="#FF0000">對一般計算的影響</font></b></u></p>
+<p>由於一般數學計算 (例如:中五會考數學科) 較少會計算很大的數值，因此出現問題的機會率不算很大，不過若果是科學的計算 (例如:物理學、化學或工程學等等) 
+，計算較大級數的數值機會率會較高，影響將會較大，現在計算時只有盡量避免上述三個出現錯誤的條件，建議不必要使用分號的情況下(例如答案肯定會是小數或不需使用分數答案時)，盡量使用除號代替分號計算。</p>
+<p>　</p>
+<p><u><b><font color="#FF0000">對程式的影響</font></b></u></p>
+<p>
+現時不少的程式都利用分數的特點，提升準確度及防止很多可能出現的問題。即使輸入程式的數值很細，程式執行的過程，會經過複雜的運算，運算過程可能會產生符合分數問題的條件，因
+此對那些使用分數運算的程式，肯定會有潛在計算錯誤的風險。</p>
+<p align="left">　</p>
+<p>
+<a href="https://err.freewebhostingarea.com/404.html"><span lang="en-us">返回</span> fx-3650P 程式集</a></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/fractionPb.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+</html>

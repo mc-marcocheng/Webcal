@@ -1,0 +1,47 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/AP2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:03 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>等差數列(II) (應用內置線性回歸功能)</title><script src="webcal.js"></script></head>
+
+<body bgcolor="#CCFFFF">
+
+
+<p align="center"><u><b><font size="5">等差數列(II) (應用內置線性回歸功能)</font></b></u></p>
+<p>編寫日期: 2006年3月14日</p>
+<p>等差數列的通項為: T(n) = a + (n-1)d，其實與線性回歸的方程 y = a +bx 
+是屬於同一類型方程。因此某些等差數列的問題，可以利用線性回歸功能計算答案，請參看以下例題。</p>
+<p>例題1: 等差數列中，若T(7)=3 及 T(24)= - 48，求首項、第100項、公差及通項T(n)。</p>
+<p>按 2ndF MODE 3 1 <font color="#800080">(進入線性回歸模式)</font> 7
+<font color="#FF0000">(x,y)</font> 3 DATA 24 <font color="#FF0000">(x,y)</font> 
+-48 DATA</p>
+<p>再按 1 2ndF y’ <font color="#800080">(顯示首項為21)</font> 100 2ndF y’<font color="#800080"> 
+(顯示第100項為 -276)</font> </p>
+<p>RCL b <font color="#800080">(顯示公差為 -3)</font> RCL a <font color="#800080">
+(顯示常數為24)</font></p>
+<p>所以通T(n)項為 24 - 3n</p>
+<p>　</p>
+<p>例題2: 求等差數列 58, 55, 52, ……., -8的項數。</p>
+<p>按 2ndF MODE 3 1 <font color="#800080">(進入線性回歸模式)</font> 1
+<font color="#FF0000">(x,y)</font> 58 DATA 2 <font color="#FF0000">(x,y)</font> 
+55 DATA</p>
+<p>再按 -8 2ndF x’ <font color="#800080">(顯示項數為 24)</font></p>
+<p>計算完結後，按 MODE 0 返回正常計算模式。</p>
+<p>註1: y’ 用於為計算某項的數值(T(n))，x’用於計算某數值是項數(n)，b 顯示公項的數值。</p>
+<p>註2: 若果你已在MODE 31的模式，重複計算相似問題，則可按2ndF CA代替再按2ndF MODE 31</p>
+<p>　</p>
+<p><a href="506Vmain.html">返回EL-506程式集主頁</a></p>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/AP2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:03 GMT -->
+</html>

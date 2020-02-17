@@ -1,0 +1,68 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/primeFactor.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:58 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>質因子連乘式(I)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+
+<p align="center"><u><b><font size="5">質因子連乘式(I)</font></b></u></p>
+<p><font color="#0000FF"><b>程式新版</b></font> </p>
+<p>第一個程式在comp模之執行，使用上較方便，計算範圍亦較大，但程式較長，第二個程式較短，但需要在BASE 模式下執行，一般計算完結後要按 MODE 1返回 
+comp模式。</p>
+<p>程式編寫日期: 2006年6月9日&nbsp; 最新修改日期: 2007年12月14日</p>
+<p>第一個程式 (64 bytes，使用記憶為A及M)</p>
+<p>?→A: 2→M Lbl 0:  </p>
+<p>M=4 <font color="#FF0000">=&gt;</font> 
+1<font color="#FF0000">M-</font>: MM&gt;A <font color="#FF0000">=&gt;</font> 
+A→M: </p>
+<p>A ÷ M: Fix 0: Rnd: Norm 1:</p>
+<p>A - M Ans <font color="#FF0000">=&gt;</font> 2<font color="#FF0000">M+ =&gt;</font> Goto 0: M◢</p>
+<p>A ÷ M→A: A - 1 <font color="#FF0000">=&gt;</font> Goto 0: A</p>
+<p>　</p>
+<p>第二個程式 (59 bytes，使用記憶為A及M)</p>
+<p><font color="#FF0000">程式需要在 BASE 模式下執行，因此在輸入程式前請先按 Mode Mode 3 進入BASE模式。</font></p>
+<p>Dec: ?→A: 2→M: Lbl 0:  </p>
+<p>M=4 <font color="#FF0000">=&gt;</font> 1<font color="#FF0000">M-</font>: MM&gt;A <font color="#FF0000">=&gt;</font> 
+A→M: </p>
+<p>A - A ÷ M × M  <font color="#FF0000">=&gt;</font> 2<font color="#FF0000">M+ 
+=&gt;</font>Goto 0: M◢</p>
+<p>A ÷ M→A: A - 1 <font color="#FF0000">=&gt;</font> Goto 0: A</p>
+<p>　</p>
+<p>註: 輸入的數值必須為正整數，否則計算會錯誤。第一個程式計算的數值要小於 9999 9999 99，第二個程式計算的數值要小於 2147 4836 47</p>
+
+
+
+<p>　</p>
+<p>例題: 求 110的質因子連乘式。</p>
+<p>按  Prog 1&nbsp; 110 EXE (顯示2) EXE (顯示5) EXE (顯示11) EXE (顯示1，表示計算完結)</p>
+<p>所以 110 = 2 × 5 × 11</p>
+<p>若果是第二個程式請按 MODE 1 返回正常計算模式</p>
+<p>　</p>
+
+<p>
+<a href="3650.html">返回 fx-3650P及SC-185程式集</a></p>
+
+<p>
+　</p>
+
+
+<!--mstheme--></font>
+
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/primeFactor.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:17:58 GMT -->
+</html>

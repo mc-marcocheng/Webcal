@@ -1,0 +1,123 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/remainder4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>正整數冪餘數</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<!--mstheme--><font face="新細明體">
+<p align="center"><u><b><font size="5">正整數冪餘數(II)</font></b></u></p>
+<p><b><font color="#0000FF">程式新版</font></b></p>
+<p>新版共有二個程式，程式可以計算一個<font color="#FF0000">整數</font>的正整數冪的餘數 (X<sup>a</sup> mod b，其中X，a及b為正整數)，程式較第一版能計算
+更多的情況(包括<font color="#FF0000">負數</font>的被除數<font color="#FF0000">底</font>及<font color="#FF0000">負數的除數</font>，第一個程式需要在BASE模式下執行，程式較簡潔。第二個程式則在 
+COMP 模式下執行，程式較長，計算的情況略為比第一個程式情況多，不過要特留意輸入的<font color="#FF0000">限制條件</font>，違反限制，第二個程式有可能會出現錯誤的數值答案(第一個程式無法得出正確答案則會出現Math 
+ERROR)，亦即是第二個程式沒有防錯誤功能。</p>
+<p>程式編寫日期: 2006年6月7日 (修改日期: 2006年8月4日)</p>
+<p><font color="#FF0000">程式需要在 BASE 模式下執行，因此在輸入程式前請先按 Mode Mode 3 進入BASE模式。</font></p>
+<p>第一個程式 (72 bytes，使用記憶為A、B、C及M)</p>
+<p>Dec: 1→C: ?→M: ?→A: ?→B: Lbl 0: M <span lang="en">÷ B × B<font color="#FF0000">M-</font>: </span></p>
+<p>A - A <span lang="en">÷ 2 × 2 <font color="#FF0000">=&gt;</font> CM - 
+CM ÷ B 
+× B→C: </span></p>
+<p><span lang="en">A ÷ 2→A <font color="#FF0000">=&gt;</font> </span>
+<span lang="en-us">MM</span><span lang="en">→M: A
+<font color="#FF0000">=&gt;</font> Goto 0: </span>C + B(0&gt;CB</p>
+<p>　</p>
+<p>第二個程式 (<font color="#FF0000">COMP模式</font>，93bytes，使用記憶為A、B、C及M)</p>
+<p>1→C: ?→A: ?→M: ?→B: Fix 0: Lbl 0:</p>
+<p>A<span lang="en"> ÷ B - . 5: Rnd: A - BAns</span>→A: M<span lang="en"> ÷ 2</span>→M: 
+Rnd:</p>
+<p>M=Ans <font color="#FF0000">=&gt;</font> Goto 1: AC <font color="#FF0000">=&gt;</font> 
+AC <span lang="en">÷ B - . 5 <font color="#FF0000">=&gt;</font> Rnd:</span></p>
+<p><span lang="en">AC - BAns</span>→C: . 5<font color="#FF0000">M-</font>: Lbl 
+1: A<sup>2</sup>→A: M <font color="#FF0000">=&gt;</font> Goto 0: Norm 1: C</p>
+<p>　</p>
+<p>註1: 若果計算X<sup>a</sup> mod b，<font color="#FF0000">第一個程式的限制條件</font>為 
+-2147483647≦X ≦ 2147483647，0≦a ≦ 2147483647 及 - 46341&lt;b ≦46341，若果 b &gt; 46341或b&lt;- 
+46541時，亦可以嘗試輸入計算，因為有可能可以計算出答案，若果無法計算得到答案會顯示Math ERROR。<font color="#FF0000">第二個程式的限制條件</font>為 
+-99999 99999≦X≦99999 99999，0≦a≦99999 99999，-316227≦b≦316227，若果b&gt;999 999或b&lt;-999 
+999時，出現錯誤答案的機會率會隨b值的增大明顯增加。</p>
+<p>註2: 第一個程式當計算冪為1或0時，b值的限制變為 -2147483647≦b ≦ 2147483647</p>
+<p>　</p>
+<p>例題1: 計算 3<sup>10</sup> mod 9的值 (即 3<sup>10</sup> <span lang="en">÷ 9</span>的餘數)</p>
+<p>按 Prog 1&nbsp; 3 EXE 10 EXE 9 EXE (顯示餘數為0)</p>
+<p>若果是第一個程式，計算完結後按 MODE 1 返回正常計算模式。</p>
+<p>　</p>
+<p>例題2: 計算 60001<sup>3</sup> mod 45001的值 (即 60001<sup>3</sup> <span lang="en">÷ 
+45001</span>的餘數)</p>
+<p>按 Prog 1&nbsp; 60001 EXE 3 EXE 45001 EXE (顯示餘數為16667)</p>
+<p>若果是第一個程式，計算完結後按 MODE 1 返回正常計算模式。</p>
+<p>　</p>
+<p>例題3: 計算 (-231)<sup>300</sup> mod 45的值 (即 (-231)<sup>300</sup> <span lang="en">
+÷ 45</span>的餘數)</p>
+<p><font color="#FF0000">注意:</font> 第一個程式使用BASE模式，所以無法使用負號，輸入負數時要用減號代替負號</p>
+<p>按 Prog 1&nbsp; - 231 EXE 300 EXE 45 EXE (顯示餘數為36)</p>
+<p>若果是第一個程式，計算完結後按 MODE 1 返回正常計算模式。</p>
+<p>　</p>
+<p><font color="#800080">程式設計小貼士: </font></p>
+<p>計算機程式若只取整數部份(小數位捨去不要)，直接的方法可以使用基數模式，或使用計算機中四捨五入的功能。</p>
+<p>使用的指令為Fix 0及Rnd，例如: Fix 0: A - . 5: Rnd:</p>
+<p>但要注意A為負數及0時，這方法是不成立，這亦是最多初寫程式的朋友最易錯的地方，所以上述程式用了一個特別方法處理這個問題，否則計算3<sup>10</sup> 
+mod 9時就會出現錯誤答案，試試找找這個方法。</p>
+<p>　</p>
+<p>
+<font face="新細明體">
+<a href="3650.html"><span lang="en-us">返回</span> fx-3650P 
+程式集</a></font></p>
+<p>　</p>
+<!--msthemeseparator--><p align="center"><img src="alevrule.gif"></p>
+<!--msthemeseparator--><p align="center"><img src="alevrule.gif"></p>
+<p><font color="#0000FF">程式舊版</font></p>
+<p>這個程式可以一個正整數的正整數冪的餘數 (X<sup>a</sup> mod b，其中X，a及b為正整數)，程式較第一版能計算更大數值的除數及被除數，例如: 
+60001<sup>3</sup> mod 45001 第一版的程式就無法計算得到答案。</p>
+<p>程式編寫日期: 2006年6月7日</p>
+<p><font color="#FF0000">程式需要在 BASE 模式下執行，因此在輸入程式前請先按 Mode Mode 3 進入BASE模式。</font></p>
+<p>第一個程式 (70 bytes，使用記憶為A、B、C及M)</p>
+<p>Dec: 1→C: ?→M: ?→A: ?→B: M <span lang="en">÷ B × B<font color="#FF0000">M-</font>: </span></p>
+<p>Lbl 0: A - A <span lang="en">÷ 2 × 2 <font color="#FF0000">=&gt;</font> CM - 
+CM ÷ B 
+× B→C: </span></p>
+<p><span lang="en-us">MM</span><span lang="en"> - MM ÷ B × B→M: A ÷ 2→A <font color="#FF0000">=&gt;</font> Goto 0: </span>
+C</p>
+<p>註1:  程式沒有防錯誤功能，因此未執行程式前，若記憶A、B及C儲存的數值大於基數模式的接受範圍，執行程式及輸入數值時會出現Math 
+ERROR，這時只要再按 SHIFT MODE 1清除記憶，再執行程式即可，若果不想這樣做，可在程式最前加入編碼 &quot;<font color="#0000FF">Mem 
+clear:</font>&quot;，程式長度則多 2 bytes。</p>
+<p>註2: 若果計算X<sup>a</sup> mod b，程式的限制條件為 X ≦ 2147483647，a ≦ 2147483647 及 b ≦46341，若果 b &gt; 46341時，亦可以嘗試輸入計算，因為有可能可以計算出答案。</p>
+<p>　</p>
+<p>例題: 計算 60001<sup>3</sup> mod 45001的值 (即 60001<sup>3</sup> <span lang="en">÷ 
+45001</span>的餘數)</p>
+<p>按 Prog 1&nbsp; 60001 EXE 3 EXE 45001 EXE (顯示餘數為16667)</p>
+<p>計算完結後按 MODE 1 返回正常計算模式。</p>
+<p>　</p>
+<p>註4: 程式一計算簡單餘數問題 (冪為1時，即計算 X mod b)，限制條件不變，因此不少簡單餘數問題不能計算得到，例如: 99988 mod 
+50000， 為了能同時應用程式計算更大數值的<font color="#FF0000">簡單餘數問題</font>，可以使用以下的改良版本，而程式長度會增加 2 bytes。</p>
+<p>第二個程式 (72 bytes，使用記憶為A、B、C及M)</p>
+<p>Dec: 1→C: ?→M: ?→A: ?→B: M <span lang="en">÷ B × B<font color="#FF0000">M-</font>: </span></p>
+<p>Lbl 0: A - A <span lang="en">÷ 2 × 2 <font color="#FF0000">=&gt;</font> CM - 
+CM ÷ B 
+× B→C: </span></p>
+<p><span lang="en">A ÷ 2→A <font color="#FF0000">=&gt;</font> </span>
+<span lang="en-us">MM</span><span lang="en"> - MM ÷ B × B→M: A
+<font color="#FF0000">=&gt;</font> Goto 0: </span>C</p>
+<p>　</p>
+<p>
+<font face="新細明體">
+<a href="3650.html"><span lang="en-us">返回</span> fx-3650P 
+程式集</a></font></p>
+<!--mstheme--></font>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/remainder4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:18:30 GMT -->
+</html>

@@ -1,0 +1,104 @@
+<html>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/upgrade.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>提升程式容量秘技(Casio fx-3650P/Truly SC-185)</title>
+<meta name="Microsoft Theme" content="mstheme18438 011">
+<script src="webcal.js"></script></head>
+
+<body background="levbkg2.gif" bgcolor="#FFFFFF" text="#000000" link="#336633" vlink="#800080" alink="#999933">
+
+<p align="center"><u><b><font size="7" color="#800080">WebCal 
+計數機網頁</font></b></u></p>
+<p align="center"><b><u><font size="6" color="#FF0000">提升Casio fx-3650P程式容量秘技</font></u></b></p>
+<p>編寫日期2006年11月30日</p>
+<p><font color="#ff0000"><b><font size="+1">
+聲明：提升fx-3650P程式容量的方法並非正常使用計數機，因此使用這個方法存在一定的風險，對於使用了這個方法令計算機有任何損壞或計算出現錯誤，必須由閣下自己承擔風險，WebCal計數機網頁不會負責
+，亦不保證所有fx-3650P計數機都能提升程式容量。</font></b></font></p>
+<p>提升Casio 
+fx-3650P程式容量的方法雖然存在，但由於有很多問題存在(不可靠)，因此不少朋友認為fx-3650P計數機是提升程式容量方法是不可行，本人就升級的方法進行不少的測試及研究，測試
+用的fx3650P計數機自我檢測版本為 
+24&nbsp; OK  (不同的計機版本可能存有差異)，測試結果發現是可以提升容量，除了升級較困難外(與SC-185比較)，有更多的限制條件及注意事項，而且提升的容量亦比SC185少很多，所以在未提升容量前，請清楚了解各種的限制，作出合適的取捨，才決定是否
+有需要增加程式容量。以下是提升容量後，計數機的各種特性、問題及限制:</p>
+<p><font color="#FF0000">注意:</font> 當程式總長度到達361 bytes時(不包括有亂碼的程式位置)，請將有亂碼的程式刪除。</p>
+<p><font color="#800080"><b>A</b></font><b><font color="#800080">. 程式總長度為 361 - 
+374 bytes:</font></b></p>
+<p>這個範圍的程式總長度，計數機能正常運作，基本上沒有任何異常，但最可惜增加的程式容量很少 (14 bytes)，當程式容量多於 374 
+bytes時，一般的計算機運算(重現記憶 REPLAY 
+memory)，就有可能會破壞及影響原先輸入的程式，而且一旦出現影響後，即使將程式總容量降至安全水平，計算機亦可能會出現異常及不穩定。</p>
+<p>註: 
+重現記憶會破壞或覆蓋原先記存的程式，至於會否有影響及影響的情度有多少，取決於兩個因素，第一個因素是輸入的程式總長度，第二個因素是實際上使用了多少重現記憶。而原程式碼被破壞的次序，是會從程式最後位置(P4)及程式碼的尾部順序破壞。</p>
+<p><font color="#800080"><b>B</b></font><b><font color="#800080">. 程式總長度為 375 - 
+616 bytes:</font></b></p>
+<p>由於程式總長度多於374 bytes，重現記憶有可能會破壞原先輸入的程式，因此要停止使用重現功能，所以只要將一般的計算在統計模式(SD 或 REG)中執行就可以。執行程式所顯示的答案是不會記存在重現記憶中，不過可能會改變計算模式，因此若果忘記轉回統計模式，再使用計數機進行一般的運算，就有可能會破壞原有程式，令計數機出
+現異常及不穩定，因此為了減少這種情況出現的機會，強烈建議<font color="#FF0000">所有程式都應使用統計模式</font>。</p>
+<p>有趣的是 616 bytes = 360 bytes + 256 bytes，當程式總長度為608 bytes時，計數機能保留一個SD模式的數據 (8 
+bytes)，再輸入統計數據會出現 DATA FULL，要按 1 (EditOFF) 才可以繼續輸入。若果程式總長度 609 - 616 
+bytes時，輸入統計數據會立即出 DATA FULL。由以上的結果推測，程式增加容量可能是使用了保留統計數據的256 
+bytes記憶，而在非統計模式中的重現功能記憶，亦有可能是使用了部份256 bytes保留統計數據記憶。</p>
+<p>還有一個有趣的特點，當程式總長度在512 bytes - 616 bytes 時離開程式編輯模式(Edit Mode)，計數機會自動限制程式總容量變為 
+616 bytes，即無法輸入多過 616 bytes。若果程式總長度在 361 bytes - 511 
+bytes時離開程式編輯模式，再輸入程式，程式總長度則可以多於 616 bytes。 </p>
+<p>376 - 616 bytes 的限制條件:</p>
+<p>1. 放棄使用重現功能 及 非統計模式計算功能 (例如: 內置微積分功能)，即所有一般計算都在統計模式中執行</p>
+<p>2. 獨立保存統計數據的數目減少，但統計功能依然可以使用</p>
+<p>3. 所有程式需要使用統計模式 <font color="#FF0000">(強烈建議)</font></p>
+<p><b><font color="#800080">(C). 程式總長度為 617 - 628 bytes:</font></b></p>
+<p>與上述 B 中情況不同之處是輸入統計數據不會立即出現 DATA FULL，而且原有的程式會被破壞原先輸入的程式(註: 617 - 622 
+bytes容許輸入1個SD數據(8 bytes)，多於1個數據會破壞原先輸入程式，623 - 628 bytes，輸入1個數據亦會破壞原先輸入的程式)。</p>
+<p>617 - 628 bytes 的限制條件:</p>
+<p>1. 放棄使用重現功能 及 非統計模式計算功能 (例如: 內置微積分功能)，即所有一般計算都在統計模式中執行</p>
+<p>2. 不能使用統計功能(不能輸入統計數據)，否則程式會被破壞。</p>
+<p>3. 所有程式需要使用統計模式 <font color="#FF0000">(強烈建議)</font></p>
+<p>4. 程式不可以包含統計數據輸入(程式不含 <font color="#FF0000">DT</font> 指令)</p>
+<p>相比於 (B)的情況，程式總容量只增加 12 
+bytes，但卻不能使用統計功能作一般及程式計算，同時亦增加程式被意外破壞的機會，因此<font color="#FF0000">建議程式總長度不應在這個範圍</font>。</p>
+<p><font color="#800080"><b>(D)</b></font><b><font color="#800080">. 程式總長度大於 628 
+bytes:</font></b></p>
+<p>將會出現更多不同類型的異常及不穩定，即使執行程式亦會破壞原有輸入的程式，因此<b><font color="#FF0000">不適宜使用</font></b>。</p>
+<p>　</p>
+<p><font color="#800080"><b>提升fx3650P程式容量的步驟:</b></font></p>
+<p>1. 移除計數機中的電池，只使用光能運作 (注意要有足夠光線使計數機正常運算)。</p>
+<p>2. 在程式位置<b><font color="#FF0000"> P4</font></b> (建議使用) 輸入程式碼:
+<font color="#FF0000">Lbl 0: Goto 0</font></p>
+<p>註: 可以輸入其它程式位置，不過不建議使用 P1的位置，因為在測試中發現，會出現一些異常，例如: 在位置 P1重新輸入新程式異常緩慢等等。</p>
+<p>3. 執行程式，按 <font color="#0000FF">Prog 4</font></p>
+<p>4. 用手遮蓋計數機的太陽能板，直至計數最顯示屏最上端的細字(例如: P4)消失，放開遮蓋太陽能板的手(會重現細字)，重複這個步驟直至計數機出現 
+(Syntax ERROR 或 Math ERROR 或 Go ERROR)。</p>
+<p>註: 步驟4的過程可能令程式自動消失或其它異常情況，若果程式消失，請重新輸入及執行程式。</p>
+<p>5. 出現ERROR後，按 REPLAY 向右鍵 <font color="#0000FF">→</font> 進入程式編輯模式 (Edit 
+Mode)查看程式碼，若果發現很多異常的程式碼，不斷按 <font color="#0000FF">DEL</font> 直至程式大小變為 999 時，再按 
+<font color="#0000FF">ON</font> 離開程式編輯模式，這時已完成提升程式容量的最重要步驟，可以繼續步驟 
+6，若果沒有很多異常的程式碼，則按 <font color="#0000FF">ON Prog 4</font> 重新執行程式，再重複步驟 4。</p>
+<p>注意: 有很低機會在上述按 <font color="#0000FF">DEL</font> 時，出現反應非常緩慢的情況(異常情況)，這時當按 
+<font color="#0000FF">ON</font> 
+時，可能由於計數機內部不太穩定，出現程式自動消失的情況(Reset)，以確保計數機能正常運作，若果出現這種情況，請重返步驟 2。</p>
+<p>6. 現在可以輸入所需要的程式於程式位置 P1、P2及P3，當程式總長度(不包括有異常程式碼的P4)等於 361 bytes時，刪除有異常程式碼的P4程式 
+(按 <font color="#0000FF">MODE MODE MODE 3 4</font> )。注意若果少於 361 bytes時刪除 P4 
+程式，計數機將會自動變回正常程式容量。</p>
+<p>註1: 若執行 Reset All 指令 (按 <font color="#0000FF">SHIFT MODE 3 EXE</font>) 
+，計數機將會自動變回正常容量。</p>
+<p>註2: 未刪除有異常程式碼的P4程式時，若果P1、P2及P3的程式總長度為1 - 360 bytes時離開程式編輯模式(Edit 
+Mode)，計數機將會自動限制總容量為 361 bytes，因此P1、P2及P3的程式總長度無法輸入多於 361 
+bytes，不過在刪除有異常編碼的P4程式後，程式容量會再次大大增加。</p>
+<p>註3: 在刪除有異常程式碼的P4程式後，所有程式的總長度在任何時間必須多於360 bytes，否則程式容量會自動變回正常狀態。</p>
+<p>　</p>
+<p>各位網友若對上述升級方法有任何疑問或意見，歡迎到<a href="http://webcal.forumcircle.com/viewforum.php?f=1">WebCal論壇</a>留言討論。</p>
+<p>　</p>
+<p><a href="upgrade_SC185.html">提升SC185 程式容量秘技</a></p>
+
+<p style="line-height: 200%">
+<font face="Times New Roman, Times, serif"><a href="3650.html">返回fx-3650P及SC185程式集</a></font></p>
+
+
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" src="../../www.freewebhostingarea.com/images/poweredby.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+</body>
+
+
+<!-- Mirrored from webcal.freetzi.com/3650P/upgrade.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 12:15:15 GMT -->
+</html>
